@@ -44,8 +44,10 @@
    // Member functions
    // Result check
    virtual function void perform_res_check ( var_bw_mul_trxn trxn ) ; 
-     bit [ 31 : 0 ] res_expected = trxn.para_mode ? 
-       { trxn.a [ 15 : 8 ] * trxn.b [ 15 : 8 ] , trxn.a [ 7 : 0 ] * trxn.b [ 7 : 0 ] } : trxn.a * trxn.b ; 
+     bit [ 15 : 0 ] res_hi_expected = trxn.a [ 15 : 8 ] * trxn.b [ 15 : 8 ] ;
+     bit [ 15 : 0 ] res_lo_expected = trxn.a [  7 : 0 ] * trxn.b [  7 : 0 ] ;
+
+     bit [ 31 : 0 ] res_expected = trxn.para_mode ? { res_hi_expected , res_lo_expected } : trxn.a * trxn.b ; 
      bit [ 31 : 0 ] res_actual   = trxn.p ;
 
      // Format a result string for reports
@@ -53,8 +55,8 @@
      if ( trxn.para_mode ) 
        results = $sformatf ( 
          "8-bit Multiplications: %d * %d = %d (expected) / %d (actual) | %d * %d = %d (expected) / %d (actual)" , 
-         trxn.a [ 15 : 8 ] , trxn.b [ 15 : 8 ] , res_expected [ 15 : 8 ] , res_actual [ 15 : 8 ] ,  
-         trxn.a [  7 : 0 ] , trxn.b [  7 : 0 ] , res_expected [  7 : 0 ] , res_actual [  7 : 0 ]    
+         trxn.a [ 15 : 8 ] , trxn.b [ 15 : 8 ] , res_expected [ 31 : 16 ] , res_actual [ 31 : 16 ] ,  
+         trxn.a [  7 : 0 ] , trxn.b [  7 : 0 ] , res_expected [ 15 :  0 ] , res_actual [ 15 :  0 ]    
        ) ; 
      else 
        results = $sformatf ( 

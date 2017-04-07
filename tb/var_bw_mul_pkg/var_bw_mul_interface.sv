@@ -32,8 +32,12 @@
    //
    // Clock generator 
    //
-   initial      clk =  1'b0 ; 
-   forever # 10 clk = ~ clk ; 
+   initial begin
+     clk =  1'b0 ; 
+     forever begin
+       # 10 clk = ~ clk ; 
+     end 
+   end 
 
  endinterface : var_bw_mul_interface 
 

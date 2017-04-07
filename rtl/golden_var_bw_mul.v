@@ -18,10 +18,10 @@
 
  module golden_var_bw_mul 
  ( 
-   input                 para_mode ; // 1: 8-bit mul's in parallel; 0: 16-bit mul
-   input    [ 15 : 0 ]   a         ; // Operand A 
-   input    [ 15 : 0 ]   b         ; // Operand B 
-   output   [ 31 : 0 ]   p         ; // Product 
+   input                 para_mode , // 1: 8-bit mul's in parallel; 0: 16-bit mul
+   input    [ 15 : 0 ]   a         , // Operand A 
+   input    [ 15 : 0 ]   b         , // Operand B 
+   output   [ 31 : 0 ]   p           // Product 
  ) ; 
 
    // 

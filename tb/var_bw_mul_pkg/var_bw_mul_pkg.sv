@@ -22,7 +22,6 @@
    import    uvm_pkg::* ; 
    `include "uvm_macros.svh"  
 
-   `include "var_bw_mul_interface.sv" 
    `include "var_bw_mul_trxn.sv"      
    `include "var_bw_mul_driver.sv"    
    `include "var_bw_mul_sequencer.sv" 
@@ -30,6 +29,7 @@
    `include "var_bw_mul_monitor.sv"   
    `include "var_bw_mul_agent.sv"     
    `include "var_bw_mul_env.sv"       
+   `include "var_bw_mul_sequence.sv"
    `include "var_bw_mul_test.sv"      
 
  endpackage : var_bw_mul_pkg 

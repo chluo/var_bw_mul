@@ -17,9 +17,13 @@
  *                  |  Bit-width: 16-bit multiplier or 2 8-bit multipliers. 
  * =================================================================== */
 
-`include "var_bw_mul_pkg.sv"
-
  module top ; 
+   import uvm_pkg::*        ;
+   `include "uvm_macros.svh"
+
+   import var_bw_mul_pkg::* ; 
+   `include "var_bw_mul_macros.sv"
+
    // Interface instance 
    var_bw_mul_interface interf_i ( ) ;
 

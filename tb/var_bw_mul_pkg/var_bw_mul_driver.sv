@@ -49,7 +49,7 @@
        // Drive the trxn onto the interface 
        drive_trxn ( req ) ; 
        // Tell the sequencer that the trxn item is finished
-       seq_item_port.item_done ( req ) ; 
+       seq_item_port.item_done ( ) ; 
        // Drop objection 
        phase.drop_objection ( this ) ; 
      end : driver_loop // forever

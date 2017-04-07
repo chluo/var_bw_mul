@@ -33,17 +33,17 @@
    endfunction : new 
 
    // Build phase 
-   virtual function build_phase ( uvm_phase phase ) ; 
+   virtual function void build_phase ( uvm_phase phase ) ; 
      driver_i    = var_bw_mul_driver   ::type_id::create ( "driver_i"    , this )  ;
      sequencer_i = var_bw_mul_sequencer::type_id::create ( "sequencer_i" , this )  ;
      collector_i = var_bw_mul_collector::type_id::create ( "collector_i" , this )  ; 
      monitor_i   = var_bw_mul_monitor  ::type_id::create ( "monitor_i"   , this )  ;
-   endfunction : = build_phase 
+   endfunction : build_phase 
 
    // Connect phase 
-   virtual function connect_phase ( uvm_phase phase ) ; 
+   virtual function void connect_phase ( uvm_phase phase ) ; 
      driver_i.seq_item_port.connect      ( sequencer_i.seq_item_export  ) ; 
-     collector_i.collector_aport.connect ( collector_i.collector_axport ) ;
+     collector_i.collector_aport.connect ( monitor_i.collector_axport   ) ;
    endfunction : connect_phase 
 
  endclass : var_bw_mul_agent 

@@ -43,4 +43,4 @@
    //
    assign p = para_mode ? { p_08_hi , p_08_lo } : p_16 ; 
 
- endmodule : golden_var_bw_mul 
+ endmodule

@@ -969,4 +969,4 @@
    // 
    assign p = row_00_st_6 + row_01_st_6 ; 
 
-endmodule : dadda_fix_bw_mul 
+endmodule

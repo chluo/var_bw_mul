@@ -7,7 +7,7 @@
 /usr/local/packages/cadence_2015/incisiv13.2/tools/methodology/UVM/CDNS-1.1d/additions/sv/lib/64bit/libuvmpli.so:uvm_pli_boot
 -ACCESS
 +r
-+UVM_TESTNAME=fix_bw_mul_test
++UVM_TESTNAME=var_bw_mul_test
 -MESSAGES
 -XLMODE
 ./INCA_libs/irun.lnx8664.13.20.nc

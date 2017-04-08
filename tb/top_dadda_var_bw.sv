@@ -17,6 +17,8 @@
  *                  |  Bit-width: 16-bit multiplier or 2 8-bit multipliers. 
  * =================================================================== */
 
+ `include "dadda_var_bw_mul.v"
+
  module top ; 
    import uvm_pkg::*        ;
    `include "uvm_macros.svh"
@@ -28,7 +30,7 @@
    var_bw_mul_interface interf_i ( ) ;
 
    // DUT instance 
-   golden_var_bw_mul dut (
+   dadda_var_bw_mul dut (
      .para_mode   ( interf_i.para_mode ) ,
      .a           ( interf_i.a         ) ,
      .b           ( interf_i.b         ) ,

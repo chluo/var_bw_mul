@@ -55,8 +55,8 @@
 /usr/local/packages/cadence_2015/incisiv13.2/tools/uvm/uvm_lib/uvm_sv/src/fix_bw_mul_test.sv
 ../rtl/fix_bw_mul_test.sv
 ../tb/fix_bw_mul_test.sv
-./dadda_fix_bw_mul.v
-/usr/local/packages/cadence_2015/incisiv13.2/tools/uvm/uvm_lib/uvm_sv/src/dadda_fix_bw_mul.v
+./dadda_var_bw_mul.v
+/usr/local/packages/cadence_2015/incisiv13.2/tools/uvm/uvm_lib/uvm_sv/src/dadda_var_bw_mul.v
 ./var_bw_mul_macros.sv
 /usr/local/packages/cadence_2015/incisiv13.2/tools/uvm/uvm_lib/uvm_sv/src/var_bw_mul_macros.sv
 ../rtl/var_bw_mul_macros.sv

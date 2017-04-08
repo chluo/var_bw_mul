@@ -46,8 +46,8 @@
 /home/ecelrc/students/cluo1/ws/var_bw_mul/tb/var_bw_mul_pkg/fix_bw_mul_sequence.sv
 ../tb/var_bw_mul_pkg/fix_bw_mul_test.sv
 /home/ecelrc/students/cluo1/ws/var_bw_mul/tb/var_bw_mul_pkg/fix_bw_mul_test.sv
-../rtl/dadda_fix_bw_mul.v
-/home/ecelrc/students/cluo1/ws/var_bw_mul/rtl/dadda_fix_bw_mul.v
+../rtl/dadda_var_bw_mul.v
+/home/ecelrc/students/cluo1/ws/var_bw_mul/rtl/dadda_var_bw_mul.v
 /usr/local/packages/cadence_2015/incisiv13.2/tools/uvm/uvm_lib/uvm_sv/src/uvm_macros.svh
 /misc/linuxws/packages/cadence_2015/incisiv13.2/tools.lnx86/methodology/UVM/CDNS-1.1d/sv/src/uvm_macros.svh
 ../tb/var_bw_mul_pkg/var_bw_mul_macros.sv

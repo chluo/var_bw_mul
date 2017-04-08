@@ -16,6 +16,6 @@ dump_wave.tcl
 ../tb
 -incdir
 ../tb/var_bw_mul_pkg
-+UVM_TESTNAME=fix_bw_mul_test
++UVM_TESTNAME=var_bw_mul_test
 ../tb/var_bw_mul_pkg/var_bw_mul_pkg.sv
-../tb/top_dadda_fix_bw.sv
+../tb/top_dadda_var_bw.sv

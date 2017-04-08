@@ -17,6 +17,8 @@
  *                  |  Bit-width: 16-bit multiplier or 2 8-bit multipliers. 
  * =================================================================== */
 
+ `include "golden_var_bw_mul.v"
+
  module top ; 
    import uvm_pkg::*        ;
    `include "uvm_macros.svh"

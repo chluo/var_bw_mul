@@ -11,14 +11,14 @@
 /usr/local/packages/cadence_2015/incisiv13.2/tools/methodology/UVM/CDNS-1.1d/additions/sv/lib/64bit/libuvmpli.so
 -INPUT
 dump_wave.tcl
-+UVM_TESTNAME=var_bw_mul_test
++UVM_TESTNAME=fix_bw_mul_test
 -MESSAGES
 -SV_LIB
 /usr/local/packages/cadence_2015/incisiv13.2/tools/methodology/UVM/CDNS-1.1d/additions/sv/lib/64bit/libuvmdpi.so
 +EMGRLOG
 irun.log
 -XLSTIME
-1491606633
+1491683083
 -XLKEEP
 -XLMODE
 ./INCA_libs/irun.lnx8664.13.20.nc

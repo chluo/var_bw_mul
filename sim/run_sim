@@ -10,4 +10,3 @@ irun -uvm                                         \
      +UVM_TESTNAME=var_bw_mul_test                \
      ../tb/var_bw_mul_pkg/var_bw_mul_pkg.sv       \
      ../tb/top.sv                                  
-     # +UVM_TIMEOUT=1000000,YES                     \

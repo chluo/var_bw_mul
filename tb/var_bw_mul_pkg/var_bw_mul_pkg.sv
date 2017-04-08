@@ -32,5 +32,8 @@
    `include "var_bw_mul_sequence.sv"
    `include "var_bw_mul_test.sv"      
 
+   `include "fix_bw_mul_sequence.sv"
+   `include "fix_bw_mul_test.sv"
+
  endpackage : var_bw_mul_pkg 
 

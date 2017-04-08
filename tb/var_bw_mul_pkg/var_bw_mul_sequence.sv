@@ -44,4 +44,4 @@
      end : sequence_loop // forever
    endtask : body 
 
- endclass : var_bw_mul_trxn 
+ endclass : var_bw_mul_sequence 

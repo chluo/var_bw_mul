@@ -54,13 +54,13 @@
      string results ; 
      if ( trxn.para_mode ) 
        results = $sformatf ( 
-         "8-bit Multiplications: %d * %d = %d (expected) / %d (actual) | %d * %d = %d (expected) / %d (actual)" , 
+         "8-bit Multiplications: %h * %h = %h (expected) / %h (actual) | %h * %h = %h (expected) / %h (actual)" , 
          trxn.a [ 15 : 8 ] , trxn.b [ 15 : 8 ] , res_expected [ 31 : 16 ] , res_actual [ 31 : 16 ] ,  
          trxn.a [  7 : 0 ] , trxn.b [  7 : 0 ] , res_expected [ 15 :  0 ] , res_actual [ 15 :  0 ]    
        ) ; 
      else 
        results = $sformatf ( 
-         "16-bit Multiplication: %d * %d = %d (expected) / %d (actual)" , 
+         "16-bit Multiplication: %h * %h = %h (expected) / %h (actual)" , 
          trxn.a , trxn.b , res_expected , res_actual 
        ) ; 
 

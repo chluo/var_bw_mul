@@ -17,6 +17,7 @@
  *                  |  Bit-width: 16-bit multiplier or 2 8-bit multipliers. 
  * =================================================================== */
 
+ `include "var_bw_mul_interface.sv"
  `include "dadda_var_bw_mul.v"
 
  module top ; 

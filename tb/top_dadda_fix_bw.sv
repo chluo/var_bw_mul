@@ -17,6 +17,7 @@
  *                  |  Bit-width: 16-bit multiplier. 
  * =================================================================== */
 
+ `include "var_bw_mul_interface.sv"
  `include "dadda_fix_bw_mul.v"
 
  module top ; 
@@ -31,7 +32,7 @@
 
    // DUT instance 
    dadda_fix_bw_mul dut (
-     .para_mode   ( interf_i.para_mode ) ,
+     //* .para_mode   ( interf_i.para_mode ) ,
      .a           ( interf_i.a         ) ,
      .b           ( interf_i.b         ) ,
      .p           ( interf_i.p         )  

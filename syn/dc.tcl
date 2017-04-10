@@ -1,7 +1,9 @@
 #-------------------------------------------------------------------------------------------------------#
 #                                              VARIABLE DEFINITION                                      #
 #-------------------------------------------------------------------------------------------------------#
+# Change DESIGN_NAME to synthesize other designs
 set DESIGN_NAME dadda_fix_bw_mul
+# Other stuff should not need to be changed
 set REPORTS_DIR ${DESIGN_NAME}.reports
 set RESULTS_DIR ${DESIGN_NAME}.results
 set DCRM_FINAL_AREA_REPORT ${DESIGN_NAME}.area.rpt

@@ -35,7 +35,11 @@
      .para_mode   ( interf_i.para_mode ) ,
      .a           ( interf_i.a         ) ,
      .b           ( interf_i.b         ) ,
-     .p           ( interf_i.p         )  
+     .ci_lo       ( interf_i.ci_lo     ) ,
+     .ci_hi       ( interf_i.ci_hi     ) ,
+     .p           ( interf_i.p         ) ,
+     .co_lo       ( interf_i.co_lo     ) ,
+     .co_hi       ( interf_i.co_hi     )  
    ) ; 
 
    initial begin

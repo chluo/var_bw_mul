@@ -1,6 +1,6 @@
 /* ======================================================================
  *
- * Driver Class for Varaibale Bit-width Multipliers 
+ * Driver Class for Varaibale Bit-width Multipliers/Adders
  * (var_bw_mul_driver)
  *
  * ======================================================================
@@ -12,9 +12,9 @@
  * ----------------------------------------------------------------------
  * Data of Creation |  04-07-2017
  * ----------------------------------------------------------------------
- * Description      |  Driver class for variable bit-width 
- *                  |  multipliers, designed for functional verification.  
- *                  |  Bit-width: 16-bit multiplier or 2 8-bit multipliers. 
+ * Description      |  Driver class for variable bit-width multipliers/ 
+ *                  |  adders, designed for functional verification.  
+ *                  |  Bit-width: 16-bit or 2 8-bit's in parallel. 
  * =================================================================== */
 
  class var_bw_mul_driver extends uvm_driver #( var_bw_mul_trxn ) ; 
@@ -36,6 +36,8 @@
        interf_i.para_mode = trxn.para_mode ; 
        interf_i.a         = trxn.a         ;
        interf_i.b         = trxn.b         ;
+       interf_i.ci_lo     = trxn.ci_lo     ;
+       interf_i.ci_hi     = trxn.ci_hi     ;
      end // @ 
    endtask : drive_trxn 
 
@@ -49,6 +51,7 @@
        // Drive the trxn onto the interface 
        drive_trxn ( req ) ; 
        // Tell the sequencer that the trxn item is finished
+       // No need to return the processed trxn back to the sequencer
        seq_item_port.item_done ( ) ; 
        // Drop objection 
        phase.drop_objection ( this ) ; 

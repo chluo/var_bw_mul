@@ -1,6 +1,6 @@
 /* ======================================================================
  *
- * Collector Class for Varaibale Bit-width Multipliers 
+ * Collector Class for Varaibale Bit-width Multipliers/Adders
  * (var_bw_mul_collector)
  *
  * ======================================================================
@@ -12,9 +12,9 @@
  * ----------------------------------------------------------------------
  * Data of Creation |  04-07-2017
  * ----------------------------------------------------------------------
- * Description      |  Collector class for variable bit-width 
- *                  |  multipliers, designed for functional verification.  
- *                  |  Bit-width: 16-bit multiplier or 2 8-bit multipliers. 
+ * Description      |  Collector class for variable bit-width multipliers/ 
+ *                  |  adders, designed for functional verification.  
+ *                  |  Bit-width: 16-bit or 2 8-bit's in parallel.  
  * =================================================================== */
 
  class var_bw_mul_collector extends uvm_component ; 
@@ -50,6 +50,10 @@
          collected_trxn.a         = interf_i.a         ; 
          collected_trxn.b         = interf_i.b         ; 
          collected_trxn.p         = interf_i.p         ; 
+         collected_trxn.ci_lo     = interf_i.ci_lo     ;
+         collected_trxn.ci_hi     = interf_i.ci_hi     ;
+         collected_trxn.co_lo     = interf_i.co_lo     ;
+         collected_trxn.co_hi     = interf_i.co_hi     ;
          // Send the colleced trxn to the monitor 
          collector_aport.write ( collected_trxn ) ; 
        end // @ 

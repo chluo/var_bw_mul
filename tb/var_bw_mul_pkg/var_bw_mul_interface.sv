@@ -1,6 +1,6 @@
 /* ======================================================================
  *
- * SystemVerilog Interface for Varaibale Bit-width Multipliers 
+ * SystemVerilog Interface for Varaibale Bit-width Multipliers/Adders 
  * (var_bw_mul_interface)
  *
  * ======================================================================
@@ -13,8 +13,8 @@
  * Data of Creation |  04-07-2017
  * ----------------------------------------------------------------------
  * Description      |  SystemVerilog interface for variable bit-width 
- *                  |  multipliers, designed for functional verification.  
- *                  |  Bit-width: 16-bit multiplier or 2 8-bit multipliers. 
+ *                  |  multipliers/adders. 
+ *                  |  Bit-width: 16-bit or 2 8-bit in parallel. 
  * =================================================================== */
 
  interface var_bw_mul_interface ( ) ; 
@@ -28,6 +28,11 @@
    logic   [ 15 : 0 ]   b         ; // Operand B 
    logic   [ 31 : 0 ]   p         ; // Product 
    logic                clk       ; // Dummy clock to help synchronization 
+   // Additional signals for adders
+   logic                ci_lo     ; // Carry-in for the 16-bit adder or the lower 8-bit adder
+   logic                ci_hi     ; // Carry-in for the higher 8-bit adder
+   logic                co_lo     ; // Carry-out for the lower 8-bit adder
+   logic                co_hi     ; // Carry-out for the 16-bit adder or the higher 8-bit adder
 
    //
    // Clock generator 

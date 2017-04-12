@@ -17,9 +17,7 @@
 
  module dadda_var_bw_mul 
  (
-   /* Note: Use the same signal interface as in the variable bit-width 
-    * multipliers, in order to reuse the testbench components */ 
-   input                 para_mode    , // Not used
+   input                 para_mode    , 
    input    [ 15 : 0 ]   a            , // Operand A 
    input    [ 15 : 0 ]   b            , // Operand B 
    output   [ 31 : 0 ]   p              // Product 

@@ -1,7 +1,6 @@
 /* ======================================================================
  *
  * Top Module for Varaibale Bit-width Multiplier Verification 
- * (var_bw_mul_test)
  *
  * ======================================================================
  * Basic Inforation 

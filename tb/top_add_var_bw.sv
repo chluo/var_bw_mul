@@ -1,7 +1,6 @@
 /* ======================================================================
  *
  * Top Module for Varaibale Bit-width Adder Verification 
- * (var_bw_add_test)
  *
  * ======================================================================
  * Basic Inforation 

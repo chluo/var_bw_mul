@@ -1,0 +1,12 @@
+#!/bin/sh
+
+irun -uvm                                         \
+     -access +r +w                                \
+     -input dump_wave.tcl                         \
+     -incdir $UVM_HOME/uvm_lib/uvm_sv/src         \
+     -incdir ../rtl                               \
+     -incdir ../tb                                \
+     -incdir ../tb/var_bw_mul_pkg                 \
+     +UVM_TESTNAME=var_bw_mul_test                \
+     ../tb/var_bw_mul_pkg/var_bw_mul_pkg.sv       \
+     ../tb/top_array_var_bw.sv                     

@@ -1,23 +1,25 @@
 /* ======================================================================
  *
- * Top Module for Fixed Bit-width Multiplier Verification 
+ * Top Module for Varaibale Bit-width Multiplier Verification 
  *
  * ======================================================================
  * Basic Inforation 
  * ----------------------------------------------------------------------
- * Author           |  Chunheng Luo
+ * Author           |  Wei Ye
  * ----------------------------------------------------------------------
- * Email Address    |  Chunheng.Luo@utexas.edu
+ * Email Address    |
  * ----------------------------------------------------------------------
  * Data of Creation |  04-07-2017
  * ----------------------------------------------------------------------
- * Description      |  Top module for verifying fixed bit-width 
+ * Description      |  Top module for verifying variable bit-width 
  *                  |  multipliers, designed for functional verification.  
- *                  |  Bit-width: 16-bit multiplier. 
+ *                  |  Bit-width: 16-bit multiplier or 2 8-bit multipliers. 
  * =================================================================== */
 
  `include "var_bw_mul_interface.sv"
+ `include "array_8_bit_mul.v"
  `include "array_fix_bw_mul.v"
+ `include "array_var_bw_mul_bad.v"
 
  module top ; 
    import uvm_pkg::*        ;
@@ -30,8 +32,8 @@
    var_bw_mul_interface interf_i ( ) ;
 
    // DUT instance 
-   array_fix_bw_mul dut (
-     //* .para_mode   ( interf_i.para_mode ) ,
+   array_var_bw_mul_bad dut (
+     .para_mode   ( interf_i.para_mode ) ,
      .a           ( interf_i.a         ) ,
      .b           ( interf_i.b         ) ,
      .p           ( interf_i.p         )  

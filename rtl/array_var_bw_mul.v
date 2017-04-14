@@ -14,9 +14,9 @@
  * Description      |  16-bit array multiplier. 
  * =================================================================== */
 
- module array_fix_bw_mul 
+ module array_var_bw_mul
  (
-   //* input                 para_mode    , // Not used
+   input                 para_mode    , 
    input    [ 15 : 0 ]   a            , // Operand A 
    input    [ 15 : 0 ]   b            , // Operand B 
    output   [ 31 : 0 ]   p              // Product 
@@ -47,22 +47,22 @@
    //
    // AND's
    // 
-    assign b_00_a =  a  & { 16 { b [  0 ] } } ;  
-    assign b_01_a =  a  & { 16 { b [  1 ] } } ;  
-    assign b_02_a =  a  & { 16 { b [  2 ] } } ;  
-    assign b_03_a =  a  & { 16 { b [  3 ] } } ;  
-    assign b_04_a =  a  & { 16 { b [  4 ] } } ;  
-    assign b_05_a =  a  & { 16 { b [  5 ] } } ;  
-    assign b_06_a =  a  & { 16 { b [  6 ] } } ;  
-    assign b_07_a =  a  & { 16 { b [  7 ] } } ;  
-    assign b_08_a =  a  & { 16 { b [  8 ] } } ;  
-    assign b_09_a =  a  & { 16 { b [  9 ] } } ;  
-    assign b_10_a =  a  & { 16 { b [ 10 ] } } ;  
-    assign b_11_a =  a  & { 16 { b [ 11 ] } } ;  
-    assign b_12_a =  a  & { 16 { b [ 12 ] } } ;  
-    assign b_13_a =  a  & { 16 { b [ 13 ] } } ;  
-    assign b_14_a =  a  & { 16 { b [ 14 ] } } ;  
-    assign b_15_a =  a  & { 16 { b [ 15 ] } } ;  
+   assign b_00_a = ( para_mode ? { { 8 { 1'b0 } } , a [  7 : 0 ] } : a ) & { 16 { b [  0 ] } } ;  
+   assign b_01_a = ( para_mode ? { { 8 { 1'b0 } } , a [  7 : 0 ] } : a ) & { 16 { b [  1 ] } } ;  
+   assign b_02_a = ( para_mode ? { { 8 { 1'b0 } } , a [  7 : 0 ] } : a ) & { 16 { b [  2 ] } } ;  
+   assign b_03_a = ( para_mode ? { { 8 { 1'b0 } } , a [  7 : 0 ] } : a ) & { 16 { b [  3 ] } } ;  
+   assign b_04_a = ( para_mode ? { { 8 { 1'b0 } } , a [  7 : 0 ] } : a ) & { 16 { b [  4 ] } } ;  
+   assign b_05_a = ( para_mode ? { { 8 { 1'b0 } } , a [  7 : 0 ] } : a ) & { 16 { b [  5 ] } } ;  
+   assign b_06_a = ( para_mode ? { { 8 { 1'b0 } } , a [  7 : 0 ] } : a ) & { 16 { b [  6 ] } } ;  
+   assign b_07_a = ( para_mode ? { { 8 { 1'b0 } } , a [  7 : 0 ] } : a ) & { 16 { b [  7 ] } } ;  
+   assign b_08_a = ( para_mode ? { a [ 15 : 8 ] , { 8 { 1'b0 } } } : a ) & { 16 { b [  8 ] } } ;  
+   assign b_09_a = ( para_mode ? { a [ 15 : 8 ] , { 8 { 1'b0 } } } : a ) & { 16 { b [  9 ] } } ;  
+   assign b_10_a = ( para_mode ? { a [ 15 : 8 ] , { 8 { 1'b0 } } } : a ) & { 16 { b [ 10 ] } } ;  
+   assign b_11_a = ( para_mode ? { a [ 15 : 8 ] , { 8 { 1'b0 } } } : a ) & { 16 { b [ 11 ] } } ;  
+   assign b_12_a = ( para_mode ? { a [ 15 : 8 ] , { 8 { 1'b0 } } } : a ) & { 16 { b [ 12 ] } } ;  
+   assign b_13_a = ( para_mode ? { a [ 15 : 8 ] , { 8 { 1'b0 } } } : a ) & { 16 { b [ 13 ] } } ;  
+   assign b_14_a = ( para_mode ? { a [ 15 : 8 ] , { 8 { 1'b0 } } } : a ) & { 16 { b [ 14 ] } } ;  
+   assign b_15_a = ( para_mode ? { a [ 15 : 8 ] , { 8 { 1'b0 } } } : a ) & { 16 { b [ 15 ] } } ;  
  
     assign p [ 0 ] = b_00_a [ 0 ] ;
 

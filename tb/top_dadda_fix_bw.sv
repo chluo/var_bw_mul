@@ -1,7 +1,6 @@
 /* ======================================================================
  *
  * Top Module for Fixed Bit-width Multiplier Verification 
- * (fix_bw_mul_test)
  *
  * ======================================================================
  * Basic Inforation 

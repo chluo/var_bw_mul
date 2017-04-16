@@ -1,0 +1,1 @@
+set rtl_list [ list dadda_var_bw_mul_bad.v dadda_8_bit_mul.v dadda_fix_bw_mul.v ]

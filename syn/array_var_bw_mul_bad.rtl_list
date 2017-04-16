@@ -1,0 +1,1 @@
+set rtl_list [ list array_var_bw_mul_bad.v array_8_bit_mul.v array_fix_bw_mul.v ]

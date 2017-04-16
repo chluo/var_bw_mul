@@ -1,0 +1,105 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -input_pins
+        -max_paths 1
+        -transition_time
+        -capacitance
+Design : dadda_fix_bw_mul
+Version: K-2015.06-SP4
+Date   : Sun Apr 16 12:29:52 2017
+****************************************
+
+Operating Conditions: tt1p05v25c   Library: saed32rvt_tt1p05v25c
+Wire Load Model Mode: enclosed
+
+  Startpoint: b[1] (input port)
+  Endpoint: p[30] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  dadda_fix_bw_mul   8000                  saed32rvt_tt1p05v25c
+
+  Point                           Cap     Trans      Incr       Path
+  ---------------------------------------------------------------------
+  input external delay                               0.00       0.00 r
+  b[1] (in)                     10.16      0.00      0.00       0.00 r
+  U551/A (INVX0_RVT)                       0.00      0.04       0.04 r
+  U551/Y (INVX0_RVT)             3.88      0.04      0.03       0.06 f
+  U1000/A2 (OR2X1_RVT)                     0.04      0.02       0.09 f
+  U1000/Y (OR2X1_RVT)            1.01      0.02      0.03       0.12 f
+  U1001/B0 (HADDX1_RVT)                    0.02      0.02       0.14 f
+  U1001/SO (HADDX1_RVT)          1.98      0.02      0.06       0.21 r
+  U1012/A (FADDX1_RVT)                     0.02      0.04       0.25 r
+  U1012/S (FADDX1_RVT)           0.60      0.02      0.08       0.33 f
+  U536/A (INVX0_RVT)                       0.02      0.01       0.34 f
+  U536/Y (INVX0_RVT)             1.48      0.02      0.02       0.36 r
+  U1014/CI (FADDX1_RVT)                    0.02      0.03       0.40 r
+  U1014/S (FADDX1_RVT)           0.60      0.02      0.08       0.47 f
+  U537/A (INVX0_RVT)                       0.02      0.01       0.49 f
+  U537/Y (INVX0_RVT)             1.98      0.02      0.02       0.51 r
+  U1022/A (FADDX1_RVT)                     0.02      0.04       0.55 r
+  U1022/S (FADDX1_RVT)           1.96      0.03      0.09       0.65 f
+  U1048/A (FADDX1_RVT)                     0.03      0.04       0.69 f
+  U1048/CO (FADDX1_RVT)          1.48      0.02      0.05       0.74 f
+  U1046/CI (FADDX1_RVT)                    0.02      0.03       0.77 f
+  U1046/CO (FADDX1_RVT)          0.60      0.02      0.04       0.82 f
+  U567/A (INVX0_RVT)                       0.02      0.01       0.83 f
+  U567/Y (INVX0_RVT)             1.48      0.02      0.02       0.85 r
+  U1081/CI (FADDX1_RVT)                    0.02      0.03       0.88 r
+  U1081/CO (FADDX1_RVT)          1.48      0.03      0.05       0.93 r
+  U1080/CI (FADDX1_RVT)                    0.03      0.03       0.97 r
+  U1080/CO (FADDX1_RVT)          1.48      0.03      0.06       1.02 r
+  U1079/CI (FADDX1_RVT)                    0.03      0.03       1.05 r
+  U1079/CO (FADDX1_RVT)          1.48      0.03      0.06       1.11 r
+  U1078/CI (FADDX1_RVT)                    0.03      0.03       1.14 r
+  U1078/CO (FADDX1_RVT)          1.48      0.03      0.06       1.20 r
+  U1077/CI (FADDX1_RVT)                    0.03      0.03       1.23 r
+  U1077/CO (FADDX1_RVT)          1.48      0.03      0.06       1.28 r
+  U1076/CI (FADDX1_RVT)                    0.03      0.03       1.32 r
+  U1076/CO (FADDX1_RVT)          1.48      0.03      0.06       1.37 r
+  U1075/CI (FADDX1_RVT)                    0.03      0.03       1.40 r
+  U1075/CO (FADDX1_RVT)          1.48      0.03      0.06       1.46 r
+  U1074/CI (FADDX1_RVT)                    0.03      0.03       1.49 r
+  U1074/CO (FADDX1_RVT)          1.48      0.03      0.06       1.55 r
+  U1073/CI (FADDX1_RVT)                    0.03      0.03       1.58 r
+  U1073/CO (FADDX1_RVT)          1.48      0.03      0.06       1.63 r
+  U1072/CI (FADDX1_RVT)                    0.03      0.03       1.67 r
+  U1072/CO (FADDX1_RVT)          1.48      0.03      0.06       1.72 r
+  U1071/CI (FADDX1_RVT)                    0.03      0.03       1.75 r
+  U1071/CO (FADDX1_RVT)          1.48      0.03      0.06       1.81 r
+  U1070/CI (FADDX1_RVT)                    0.03      0.03       1.84 r
+  U1070/CO (FADDX1_RVT)          1.48      0.03      0.06       1.90 r
+  U1069/CI (FADDX1_RVT)                    0.03      0.03       1.93 r
+  U1069/CO (FADDX1_RVT)          1.48      0.03      0.06       1.99 r
+  U1068/CI (FADDX1_RVT)                    0.03      0.03       2.02 r
+  U1068/CO (FADDX1_RVT)          1.48      0.03      0.06       2.07 r
+  U1067/CI (FADDX1_RVT)                    0.03      0.03       2.11 r
+  U1067/CO (FADDX1_RVT)          1.48      0.03      0.06       2.16 r
+  U1066/CI (FADDX1_RVT)                    0.03      0.03       2.19 r
+  U1066/CO (FADDX1_RVT)          1.48      0.03      0.06       2.25 r
+  U1065/CI (FADDX1_RVT)                    0.03      0.03       2.28 r
+  U1065/CO (FADDX1_RVT)          1.48      0.03      0.06       2.34 r
+  U1064/CI (FADDX1_RVT)                    0.03      0.03       2.37 r
+  U1064/CO (FADDX1_RVT)          1.48      0.03      0.06       2.42 r
+  U1063/CI (FADDX1_RVT)                    0.03      0.03       2.46 r
+  U1063/CO (FADDX1_RVT)          1.48      0.03      0.06       2.51 r
+  U1062/CI (FADDX1_RVT)                    0.03      0.03       2.54 r
+  U1062/CO (FADDX1_RVT)          1.48      0.03      0.06       2.60 r
+  U1061/CI (FADDX1_RVT)                    0.03      0.03       2.63 r
+  U1061/CO (FADDX1_RVT)          1.48      0.03      0.06       2.69 r
+  U1060/CI (FADDX1_RVT)                    0.03      0.03       2.72 r
+  U1060/CO (FADDX1_RVT)          2.20      0.03      0.06       2.78 r
+  U1059/CI (FADDX1_RVT)                    0.03      0.04       2.82 r
+  U1059/S (FADDX1_RVT)           0.00      0.02      0.08       2.89 f
+  p[30] (out)                              0.02      0.00       2.89 f
+  data arrival time                                             2.89
+  ---------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+1

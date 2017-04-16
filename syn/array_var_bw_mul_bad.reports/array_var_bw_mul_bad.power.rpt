@@ -1,0 +1,48 @@
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+Warning: There is no defined clock in the design. (PWR-80)
+Warning: Design has unannotated primary inputs. (PWR-414)
+ 
+****************************************
+Report : power
+        -hier
+        -analysis_effort low
+Design : array_var_bw_mul_bad
+Version: K-2015.06-SP4
+Date   : Sun Apr 16 12:50:23 2017
+****************************************
+
+
+Library(s) Used:
+
+    saed32rvt_tt1p05v25c (File: /usr/local/packages/synopsys_2015/SAED32_EDK/lib/stdcell_rvt/db_nldm/saed32rvt_tt1p05v25c.db)
+
+
+Operating Conditions: tt1p05v25c   Library: saed32rvt_tt1p05v25c
+Wire Load Model Mode: enclosed
+
+Design        Wire Load Model            Library
+------------------------------------------------
+array_var_bw_mul_bad   8000              saed32rvt_tt1p05v25c
+array_fix_bw_mul       8000              saed32rvt_tt1p05v25c
+array_8_bit_mul_1      8000              saed32rvt_tt1p05v25c
+array_8_bit_mul_0      8000              saed32rvt_tt1p05v25c
+
+
+Global Operating Voltage = 1.05 
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000ff
+    Time Units = 1ns
+    Dynamic Power Units = 1uW    (derived from V,C,T units)
+    Leakage Power Units = 1pW
+
+
+--------------------------------------------------------------------------------
+                                       Switch   Int      Leak     Total
+Hierarchy                              Power    Power    Power    Power    %
+--------------------------------------------------------------------------------
+array_var_bw_mul_bad                    244.057  890.159 2.46e+08 1.38e+03 100.0
+  mul_08_lo_i (array_8_bit_mul_0)        30.914  105.534 3.93e+07  175.723  12.7
+  mul_08_hi_i (array_8_bit_mul_1)        30.616  104.492 3.92e+07  174.276  12.6
+  mul_16_i (array_fix_bw_mul)           182.492  646.259 1.62e+08  990.668  71.8
+1

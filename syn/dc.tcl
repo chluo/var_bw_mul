@@ -2,7 +2,13 @@
 #                                              VARIABLE DEFINITION                                      #
 #-------------------------------------------------------------------------------------------------------#
 # Change DESIGN_NAME to synthesize other designs
-set DESIGN_NAME dadda_fix_bw_mul
+# array_fix_bw_mul
+# array_var_bw_mul
+# array_var_bw_mul_bad 
+# dadda_fix_bw_mul
+# dadda_var_bw_mul
+# dadda_var_bw_mul_bad 
+set DESIGN_NAME array_var_bw_mul_bad
 # Other stuff should not need to be changed
 set REPORTS_DIR ${DESIGN_NAME}.reports
 set RESULTS_DIR ${DESIGN_NAME}.results
@@ -34,13 +40,13 @@ source  common.tcl
 #* set_app_var sh_new_variable_message false
 #* set_app_var compile_seqmap_propagate_constants false 
 #* set_app_var sh_enable_page_mode false
-set_app_var report_default_significant_digits 4
+set_app_var report_default_significant_digits 2
 #-------------------------------------------------------------------------------------------------------#
 #                         OPTIMIZATION STRATEGY (HIGHER PRIORITY FOR DELAY OPTIMIZATION)                #
 #-------------------------------------------------------------------------------------------------------#
 #* set_app_var synlib_enable_analyze_dw_power 1
 #* set_dp_smartgen_options -all_options auto -optimize_for speed
-set_app_var compile_ultra_ungroup_dw true ;
+#* set_app_var compile_ultra_ungroup_dw true ;
 
 #-------------------------------------------------------------------------------------------------------#
 #                                              LIBRARY SETUP                                            #
@@ -110,13 +116,20 @@ link
 #* set_dont_touch [get_cell u_clocks_resets/sys_clk_buff] true
 #* set_dont_touch [get_cell u_clocks_resets/sys_clk_slow_buff] true
 #* set_dont_touch [get_cell u_clocks_resets/clk_200_buff] true
+set_dont_touch ${DESIGN_NAME} true
+set_dont_use {                             \
+                saed32rvt_tt1p05v25c/OA*   \
+                saed32rvt_tt1p05v25c/AO*   \
+                saed32rvt_tt1p05v25c/NAND* \
+                saed32rvt_tt1p05v25c/NOR*  \
+                saed32rvt_tt1p05v25c/XOR*  \
+             }
 
 #-------------------------------------------------------------------------------------------------------#
 #                                         SOURCE CONSTRAINTS                                            #
 #-------------------------------------------------------------------------------------------------------#
 #* source -e -v constraints.sdc
 #* set_max_fanout 16 [get_designs $my_toplevel]
-set_max_area 0
 
 #-------------------------------------------------------------------------------------------------------#
 #                                         WIRE LOAD SELECTION                                           #
@@ -176,7 +189,7 @@ set auto_wire_load_selection true
 # }
 
 # timing-driven
-compile_ultra 
+compile_ultra -no_autoungroup
 #* compile_ultra -timing_high_effort_script -retime -no_autoungroup
 #* compile_ultra -incremental -no_autoungroup
 
@@ -203,11 +216,7 @@ report_qor > ${REPORTS_DIR}/${DCRM_FINAL_QOR_REPORT}
 report_threshold_voltage_group > ${REPORTS_DIR}/${DESIGN_NAME}.threshold_volt_group.rpt
 report_timing -input_pins -capacitance -transition_time -nets -significant_digits 4 -nosplit -nworst 10 -max_paths 500 > ${REPORTS_DIR}/${DESIGN_NAME}.timing.rpt
 
-#* if {[shell_is_in_topographical_mode]} {
-#*   report_area -hierarchy -physical -nosplit > ${REPORTS_DIR}/${DCRM_FINAL_AREA_REPORT}
-#* } else {
-#*   report_area -hierarchy -nosplit > ${REPORTS_DIR}/${DCRM_FINAL_AREA_REPORT}
-#* }
+report_area -hierarchy -nosplit > ${REPORTS_DIR}/${DCRM_FINAL_AREA_REPORT}
 
 report_power -nosplit -hier > ${REPORTS_DIR}/${DCRM_FINAL_POWER_REPORT}
 
@@ -220,4 +229,3 @@ report_timing -cap -trans -input_pins -nos > ${REPORTS_DIR}/${DESIGN_NAME}.worst
 report_clock_gating > ${REPORTS_DIR}/${DESIGN_NAME}.clock_gating.rpt
 write_sdc ${RESULTS_DIR}/${DESIGN_NAME}.sdc
 
-exit

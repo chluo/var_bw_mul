@@ -1,0 +1,106 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -input_pins
+        -max_paths 1
+        -transition_time
+        -capacitance
+Design : array_var_bw_mul_bad
+Version: K-2015.06-SP4
+Date   : Sun Apr 16 12:50:23 2017
+****************************************
+
+Operating Conditions: tt1p05v25c   Library: saed32rvt_tt1p05v25c
+Wire Load Model Mode: enclosed
+
+  Startpoint: b[0] (input port)
+  Endpoint: p[30] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  array_var_bw_mul_bad 8000                saed32rvt_tt1p05v25c
+  array_fix_bw_mul   8000                  saed32rvt_tt1p05v25c
+
+  Point                           Cap     Trans      Incr       Path
+  ---------------------------------------------------------------------
+  input external delay                               0.00       0.00 r
+  b[0] (in)                     14.94      0.00      0.00       0.00 r
+  mul_16_i/b[0] (array_fix_bw_mul)                   0.00       0.00 r
+  mul_16_i/U2/A1 (AND2X1_RVT)              0.00      0.05       0.05 r
+  mul_16_i/U2/Y (AND2X1_RVT)     1.98      0.02      0.03       0.08 r
+  mul_16_i/U60/A (FADDX1_RVT)              0.02      0.04       0.13 r
+  mul_16_i/U60/CO (FADDX1_RVT)     1.98     0.03     0.06       0.19 r
+  mul_16_i/U58/A (FADDX1_RVT)              0.03      0.04       0.23 r
+  mul_16_i/U58/S (FADDX1_RVT)     1.96     0.03      0.09       0.33 f
+  mul_16_i/U88/A (FADDX1_RVT)              0.03      0.04       0.37 f
+  mul_16_i/U88/S (FADDX1_RVT)     1.98     0.03      0.09       0.46 r
+  mul_16_i/U118/A (FADDX1_RVT)             0.03      0.04       0.50 r
+  mul_16_i/U118/S (FADDX1_RVT)     1.96     0.03     0.09       0.59 f
+  mul_16_i/U148/A (FADDX1_RVT)             0.03      0.04       0.64 f
+  mul_16_i/U148/S (FADDX1_RVT)     1.98     0.03     0.09       0.73 r
+  mul_16_i/U178/A (FADDX1_RVT)             0.03      0.04       0.77 r
+  mul_16_i/U178/S (FADDX1_RVT)     1.96     0.03     0.09       0.86 f
+  mul_16_i/U208/A (FADDX1_RVT)             0.03      0.04       0.91 f
+  mul_16_i/U208/S (FADDX1_RVT)     1.98     0.03     0.09       1.00 r
+  mul_16_i/U238/A (FADDX1_RVT)             0.03      0.04       1.04 r
+  mul_16_i/U238/S (FADDX1_RVT)     1.96     0.03     0.09       1.13 f
+  mul_16_i/U268/A (FADDX1_RVT)             0.03      0.04       1.17 f
+  mul_16_i/U268/S (FADDX1_RVT)     1.98     0.03     0.09       1.26 r
+  mul_16_i/U298/A (FADDX1_RVT)             0.03      0.04       1.31 r
+  mul_16_i/U298/S (FADDX1_RVT)     1.96     0.03     0.09       1.40 f
+  mul_16_i/U328/A (FADDX1_RVT)             0.03      0.04       1.44 f
+  mul_16_i/U328/S (FADDX1_RVT)     1.98     0.03     0.09       1.53 r
+  mul_16_i/U358/A (FADDX1_RVT)             0.03      0.04       1.58 r
+  mul_16_i/U358/S (FADDX1_RVT)     1.96     0.03     0.09       1.67 f
+  mul_16_i/U388/A (FADDX1_RVT)             0.03      0.04       1.71 f
+  mul_16_i/U388/S (FADDX1_RVT)     1.98     0.03     0.09       1.80 r
+  mul_16_i/U473/A (FADDX1_RVT)             0.03      0.04       1.85 r
+  mul_16_i/U473/S (FADDX1_RVT)     1.96     0.03     0.09       1.94 f
+  mul_16_i/U477/A (FADDX1_RVT)             0.03      0.04       1.98 f
+  mul_16_i/U477/S (FADDX1_RVT)     1.57     0.03     0.09       2.07 r
+  mul_16_i/U476/A2 (AND2X1_RVT)            0.03      0.01       2.08 r
+  mul_16_i/U476/Y (AND2X1_RVT)     2.61     0.02     0.04       2.12 r
+  mul_16_i/U478/A1 (OR2X1_RVT)             0.02      0.02       2.14 r
+  mul_16_i/U478/Y (OR2X1_RVT)     0.56     0.02      0.03       2.17 r
+  mul_16_i/U479/A2 (AND2X1_RVT)            0.02      0.01       2.18 r
+  mul_16_i/U479/Y (AND2X1_RVT)     1.48     0.02     0.03       2.22 r
+  mul_16_i/U495/CI (FADDX1_RVT)            0.02      0.03       2.25 r
+  mul_16_i/U495/CO (FADDX1_RVT)     1.48     0.03     0.05      2.30 r
+  mul_16_i/U494/CI (FADDX1_RVT)            0.03      0.03       2.33 r
+  mul_16_i/U494/CO (FADDX1_RVT)     1.48     0.03     0.06      2.39 r
+  mul_16_i/U493/CI (FADDX1_RVT)            0.03      0.03       2.42 r
+  mul_16_i/U493/CO (FADDX1_RVT)     1.48     0.03     0.06      2.48 r
+  mul_16_i/U492/CI (FADDX1_RVT)            0.03      0.03       2.51 r
+  mul_16_i/U492/CO (FADDX1_RVT)     1.48     0.03     0.06      2.56 r
+  mul_16_i/U491/CI (FADDX1_RVT)            0.03      0.03       2.60 r
+  mul_16_i/U491/CO (FADDX1_RVT)     1.48     0.03     0.06      2.65 r
+  mul_16_i/U490/CI (FADDX1_RVT)            0.03      0.03       2.68 r
+  mul_16_i/U490/CO (FADDX1_RVT)     1.48     0.03     0.06      2.74 r
+  mul_16_i/U489/CI (FADDX1_RVT)            0.03      0.03       2.77 r
+  mul_16_i/U489/CO (FADDX1_RVT)     1.48     0.03     0.06      2.83 r
+  mul_16_i/U488/CI (FADDX1_RVT)            0.03      0.03       2.86 r
+  mul_16_i/U488/CO (FADDX1_RVT)     1.48     0.03     0.06      2.91 r
+  mul_16_i/U487/CI (FADDX1_RVT)            0.03      0.03       2.95 r
+  mul_16_i/U487/CO (FADDX1_RVT)     1.48     0.03     0.06      3.00 r
+  mul_16_i/U486/CI (FADDX1_RVT)            0.03      0.03       3.03 r
+  mul_16_i/U486/CO (FADDX1_RVT)     1.48     0.03     0.06      3.09 r
+  mul_16_i/U485/CI (FADDX1_RVT)            0.03      0.03       3.12 r
+  mul_16_i/U485/CO (FADDX1_RVT)     1.48     0.03     0.06      3.18 r
+  mul_16_i/U484/CI (FADDX1_RVT)            0.03      0.03       3.21 r
+  mul_16_i/U484/CO (FADDX1_RVT)     2.20     0.03     0.06      3.27 r
+  mul_16_i/U483/CI (FADDX1_RVT)            0.03      0.04       3.31 r
+  mul_16_i/U483/S (FADDX1_RVT)     0.55     0.02     0.08       3.39 f
+  mul_16_i/p[30] (array_fix_bw_mul)                  0.00       3.39 f
+  U63/A1 (MUX21X1_RVT)                     0.02      0.01       3.40 f
+  U63/Y (MUX21X1_RVT)            0.00      0.02      0.04       3.44 f
+  p[30] (out)                              0.02      0.00       3.44 f
+  data arrival time                                             3.44
+  ---------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+1

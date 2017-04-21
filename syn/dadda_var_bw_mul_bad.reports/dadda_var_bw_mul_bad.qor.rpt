@@ -4,7 +4,7 @@ Information: Updating design information... (UID-85)
 Report : qor
 Design : dadda_var_bw_mul_bad
 Version: K-2015.06-SP4
-Date   : Sun Apr 16 12:35:51 2017
+Date   : Sun Apr 16 14:49:18 2017
 ****************************************
 
 
@@ -64,12 +64,12 @@ Date   : Sun Apr 16 12:35:51 2017
 
   Compile CPU Statistics
   -----------------------------------------
-  Resource Sharing:                    0.28
+  Resource Sharing:                    0.27
   Logic Optimization:                  0.10
-  Mapping Optimization:                0.74
+  Mapping Optimization:                0.72
   -----------------------------------------
-  Overall Compile Time:                6.70
-  Overall Compile Wall Clock Time:     7.88
+  Overall Compile Time:                6.02
+  Overall Compile Wall Clock Time:     7.15
 
   --------------------------------------------------------------------
 

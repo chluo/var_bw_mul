@@ -1,0 +1,173 @@
+ 
+****************************************
+Report : reference
+Design : vbw_adder_bsln
+Version: K-2015.06-SP4
+Date   : Fri Apr 21 16:54:56 2017
+****************************************
+
+Attributes:
+    b - black box (unknown)
+   bo - allows boundary optimization
+    d - dont_touch
+   mo - map_only
+    h - hierarchical
+    n - noncombinational
+    r - removable
+    s - synthetic operator
+    u - contains unmapped logic
+
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AND2X1_RVT         saed32rvt_tt1p05v25c     2.033152     182   370.033683
+INVX0_RVT          saed32rvt_tt1p05v25c     1.270720       1     1.270720
+INVX2_RVT          saed32rvt_tt1p05v25c     1.524864       1     1.524864
+MUX21X1_RVT        saed32rvt_tt1p05v25c     3.303872       8    26.430977
+NBUFFX2_RVT        saed32rvt_tt1p05v25c     2.033152       6    12.198913
+OR3X1_RVT          saed32rvt_tt1p05v25c     2.541440      16    40.663040
+OR4X1_RVT          saed32rvt_tt1p05v25c     3.558016      32   113.856514
+adder_WIDTH8_0                   39.138175       1     39.138175  h
+adder_WIDTH8_1                   39.138175       1     39.138175  h
+adder_WIDTH8_2                   39.138175       1     39.138175  h
+adder_WIDTH8_3                   39.138175       1     39.138175  h
+adder_WIDTH8_4                   39.138175       1     39.138175  h
+adder_WIDTH8_5                   39.138175       1     39.138175  h
+adder_WIDTH8_6                   39.138175       1     39.138175  h
+adder_WIDTH16_0                  77.768062       1     77.768062  h
+adder_WIDTH16_1                  77.768062       1     77.768062  h
+adder_WIDTH16_2                  77.768062       1     77.768062  h
+adder_WIDTH32                   155.027835       1    155.027835  h
+adder_WIDTH64                   309.039093       1    309.039093  h
+-----------------------------------------------------------------------------
+Total 19 references                                  1537.317048
+
+****************************************
+Design: adder_WIDTH8_0 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AND2X1_RVT         saed32rvt_tt1p05v25c     2.033152       1     2.033152
+FADDX1_RVT         saed32rvt_tt1p05v25c     4.828736       7    33.801151 r
+HADDX1_RVT         saed32rvt_tt1p05v25c     3.303872       1     3.303872 r
+-----------------------------------------------------------------------------
+Total 3 references                                     39.138175
+
+****************************************
+Design: adder_WIDTH8_1 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AND2X1_RVT         saed32rvt_tt1p05v25c     2.033152       1     2.033152
+FADDX1_RVT         saed32rvt_tt1p05v25c     4.828736       7    33.801151 r
+HADDX1_RVT         saed32rvt_tt1p05v25c     3.303872       1     3.303872 r
+-----------------------------------------------------------------------------
+Total 3 references                                     39.138175
+
+****************************************
+Design: adder_WIDTH8_2 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AND2X1_RVT         saed32rvt_tt1p05v25c     2.033152       1     2.033152
+FADDX1_RVT         saed32rvt_tt1p05v25c     4.828736       7    33.801151 r
+HADDX1_RVT         saed32rvt_tt1p05v25c     3.303872       1     3.303872 r
+-----------------------------------------------------------------------------
+Total 3 references                                     39.138175
+
+****************************************
+Design: adder_WIDTH8_3 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AND2X1_RVT         saed32rvt_tt1p05v25c     2.033152       1     2.033152
+FADDX1_RVT         saed32rvt_tt1p05v25c     4.828736       7    33.801151 r
+HADDX1_RVT         saed32rvt_tt1p05v25c     3.303872       1     3.303872 r
+-----------------------------------------------------------------------------
+Total 3 references                                     39.138175
+
+****************************************
+Design: adder_WIDTH8_4 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AND2X1_RVT         saed32rvt_tt1p05v25c     2.033152       1     2.033152
+FADDX1_RVT         saed32rvt_tt1p05v25c     4.828736       7    33.801151 r
+HADDX1_RVT         saed32rvt_tt1p05v25c     3.303872       1     3.303872 r
+-----------------------------------------------------------------------------
+Total 3 references                                     39.138175
+
+****************************************
+Design: adder_WIDTH8_5 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AND2X1_RVT         saed32rvt_tt1p05v25c     2.033152       1     2.033152
+FADDX1_RVT         saed32rvt_tt1p05v25c     4.828736       7    33.801151 r
+HADDX1_RVT         saed32rvt_tt1p05v25c     3.303872       1     3.303872 r
+-----------------------------------------------------------------------------
+Total 3 references                                     39.138175
+
+****************************************
+Design: adder_WIDTH8_6 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AND2X1_RVT         saed32rvt_tt1p05v25c     2.033152       1     2.033152
+FADDX1_RVT         saed32rvt_tt1p05v25c     4.828736       7    33.801151 r
+HADDX1_RVT         saed32rvt_tt1p05v25c     3.303872       1     3.303872 r
+-----------------------------------------------------------------------------
+Total 3 references                                     39.138175
+
+****************************************
+Design: adder_WIDTH16_0 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AND2X1_RVT         saed32rvt_tt1p05v25c     2.033152       1     2.033152
+FADDX1_RVT         saed32rvt_tt1p05v25c     4.828736      15    72.431037 r
+HADDX1_RVT         saed32rvt_tt1p05v25c     3.303872       1     3.303872 r
+-----------------------------------------------------------------------------
+Total 3 references                                     77.768062
+
+****************************************
+Design: adder_WIDTH16_1 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AND2X1_RVT         saed32rvt_tt1p05v25c     2.033152       1     2.033152
+FADDX1_RVT         saed32rvt_tt1p05v25c     4.828736      15    72.431037 r
+HADDX1_RVT         saed32rvt_tt1p05v25c     3.303872       1     3.303872 r
+-----------------------------------------------------------------------------
+Total 3 references                                     77.768062
+
+****************************************
+Design: adder_WIDTH16_2 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AND2X1_RVT         saed32rvt_tt1p05v25c     2.033152       1     2.033152
+FADDX1_RVT         saed32rvt_tt1p05v25c     4.828736      15    72.431037 r
+HADDX1_RVT         saed32rvt_tt1p05v25c     3.303872       1     3.303872 r
+-----------------------------------------------------------------------------
+Total 3 references                                     77.768062
+
+****************************************
+Design: adder_WIDTH32 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AND2X1_RVT         saed32rvt_tt1p05v25c     2.033152       1     2.033152
+FADDX1_RVT         saed32rvt_tt1p05v25c     4.828736      31   149.690811 r
+HADDX1_RVT         saed32rvt_tt1p05v25c     3.303872       1     3.303872 r
+-----------------------------------------------------------------------------
+Total 3 references                                    155.027835
+
+****************************************
+Design: adder_WIDTH64 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+FADDX1_RVT         saed32rvt_tt1p05v25c     4.828736      64   309.039093 r
+-----------------------------------------------------------------------------
+Total 1 references                                    309.039093
+1

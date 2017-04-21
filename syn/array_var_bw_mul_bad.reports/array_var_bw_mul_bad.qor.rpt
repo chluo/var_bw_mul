@@ -4,7 +4,7 @@ Information: Updating design information... (UID-85)
 Report : qor
 Design : array_var_bw_mul_bad
 Version: K-2015.06-SP4
-Date   : Sun Apr 16 12:50:22 2017
+Date   : Sun Apr 16 14:47:21 2017
 ****************************************
 
 
@@ -64,12 +64,12 @@ Date   : Sun Apr 16 12:50:22 2017
 
   Compile CPU Statistics
   -----------------------------------------
-  Resource Sharing:                    0.28
-  Logic Optimization:                  0.10
-  Mapping Optimization:                0.58
+  Resource Sharing:                    0.23
+  Logic Optimization:                  0.09
+  Mapping Optimization:                0.50
   -----------------------------------------
-  Overall Compile Time:                7.00
-  Overall Compile Wall Clock Time:     8.63
+  Overall Compile Time:                5.88
+  Overall Compile Wall Clock Time:     6.99
 
   --------------------------------------------------------------------
 

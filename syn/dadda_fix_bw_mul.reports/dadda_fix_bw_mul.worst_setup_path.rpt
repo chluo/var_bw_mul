@@ -9,7 +9,7 @@ Report : timing
         -capacitance
 Design : dadda_fix_bw_mul
 Version: K-2015.06-SP4
-Date   : Sun Apr 16 12:29:52 2017
+Date   : Sun Apr 16 14:36:02 2017
 ****************************************
 
 Operating Conditions: tt1p05v25c   Library: saed32rvt_tt1p05v25c

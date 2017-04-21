@@ -8,7 +8,10 @@
 # dadda_fix_bw_mul
 # dadda_var_bw_mul
 # dadda_var_bw_mul_bad 
-set DESIGN_NAME array_var_bw_mul_bad
+# vbw_adder_nco
+# vbw_adder_nci
+# vbw_adder_bsln
+set DESIGN_NAME vbw_adder_bsln
 # Other stuff should not need to be changed
 set REPORTS_DIR ${DESIGN_NAME}.reports
 set RESULTS_DIR ${DESIGN_NAME}.results
@@ -123,6 +126,7 @@ set_dont_use {                             \
                 saed32rvt_tt1p05v25c/NAND* \
                 saed32rvt_tt1p05v25c/NOR*  \
                 saed32rvt_tt1p05v25c/XOR*  \
+                saed32rvt_tt1p05v25c/XNOR* \
              }
 
 #-------------------------------------------------------------------------------------------------------#

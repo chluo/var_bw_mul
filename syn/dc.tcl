@@ -11,7 +11,10 @@
 # vbw_adder_nco
 # vbw_adder_nci
 # vbw_adder_bsln
-set DESIGN_NAME vbw_adder_bsln
+# vbw_cla_bsln
+# vbw_cla_kill
+# vbw_cla_nci
+set DESIGN_NAME vbw_cla_nci
 # Other stuff should not need to be changed
 set REPORTS_DIR ${DESIGN_NAME}.reports
 set RESULTS_DIR ${DESIGN_NAME}.results

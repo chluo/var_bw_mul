@@ -1,0 +1,212 @@
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+Warning: There is no defined clock in the design. (PWR-80)
+Warning: Design has unannotated primary inputs. (PWR-414)
+ 
+****************************************
+Report : power
+        -hier
+        -analysis_effort low
+Design : vbw_cla_kill
+Version: K-2015.06-SP4
+Date   : Sun Apr 23 19:56:45 2017
+****************************************
+
+
+Library(s) Used:
+
+    saed32rvt_tt1p05v25c (File: /usr/local/packages/synopsys_2015/SAED32_EDK/lib/stdcell_rvt/db_nldm/saed32rvt_tt1p05v25c.db)
+
+
+Operating Conditions: tt1p05v25c   Library: saed32rvt_tt1p05v25c
+Wire Load Model Mode: enclosed
+
+Design        Wire Load Model            Library
+------------------------------------------------
+vbw_cla_kill           8000              saed32rvt_tt1p05v25c
+MFA_0                  ForQA             saed32rvt_tt1p05v25c
+LA4_4                  ForQA             saed32rvt_tt1p05v25c
+LA4_20                 ForQA             saed32rvt_tt1p05v25c
+LA4_3                  ForQA             saed32rvt_tt1p05v25c
+LA4_2                  ForQA             saed32rvt_tt1p05v25c
+LA4_1                  ForQA             saed32rvt_tt1p05v25c
+LA4_0                  ForQA             saed32rvt_tt1p05v25c
+LA4_19                 ForQA             saed32rvt_tt1p05v25c
+LA4_18                 ForQA             saed32rvt_tt1p05v25c
+LA4_17                 ForQA             saed32rvt_tt1p05v25c
+LA4_16                 ForQA             saed32rvt_tt1p05v25c
+LA4_15                 ForQA             saed32rvt_tt1p05v25c
+LA4_14                 ForQA             saed32rvt_tt1p05v25c
+LA4_13                 ForQA             saed32rvt_tt1p05v25c
+LA4_12                 ForQA             saed32rvt_tt1p05v25c
+LA4_11                 ForQA             saed32rvt_tt1p05v25c
+LA4_10                 ForQA             saed32rvt_tt1p05v25c
+LA4_9                  ForQA             saed32rvt_tt1p05v25c
+LA4_8                  ForQA             saed32rvt_tt1p05v25c
+LA4_7                  ForQA             saed32rvt_tt1p05v25c
+LA4_6                  ForQA             saed32rvt_tt1p05v25c
+LA4_5                  ForQA             saed32rvt_tt1p05v25c
+MFA_63                 ForQA             saed32rvt_tt1p05v25c
+MFA_62                 ForQA             saed32rvt_tt1p05v25c
+MFA_61                 ForQA             saed32rvt_tt1p05v25c
+MFA_60                 ForQA             saed32rvt_tt1p05v25c
+MFA_59                 ForQA             saed32rvt_tt1p05v25c
+MFA_58                 ForQA             saed32rvt_tt1p05v25c
+MFA_57                 ForQA             saed32rvt_tt1p05v25c
+MFA_56                 ForQA             saed32rvt_tt1p05v25c
+MFA_55                 ForQA             saed32rvt_tt1p05v25c
+MFA_54                 ForQA             saed32rvt_tt1p05v25c
+MFA_53                 ForQA             saed32rvt_tt1p05v25c
+MFA_52                 ForQA             saed32rvt_tt1p05v25c
+MFA_51                 ForQA             saed32rvt_tt1p05v25c
+MFA_50                 ForQA             saed32rvt_tt1p05v25c
+MFA_49                 ForQA             saed32rvt_tt1p05v25c
+MFA_48                 ForQA             saed32rvt_tt1p05v25c
+MFA_47                 ForQA             saed32rvt_tt1p05v25c
+MFA_46                 ForQA             saed32rvt_tt1p05v25c
+MFA_45                 ForQA             saed32rvt_tt1p05v25c
+MFA_44                 ForQA             saed32rvt_tt1p05v25c
+MFA_43                 ForQA             saed32rvt_tt1p05v25c
+MFA_42                 ForQA             saed32rvt_tt1p05v25c
+MFA_41                 ForQA             saed32rvt_tt1p05v25c
+MFA_40                 ForQA             saed32rvt_tt1p05v25c
+MFA_39                 ForQA             saed32rvt_tt1p05v25c
+MFA_38                 ForQA             saed32rvt_tt1p05v25c
+MFA_37                 ForQA             saed32rvt_tt1p05v25c
+MFA_36                 ForQA             saed32rvt_tt1p05v25c
+MFA_35                 ForQA             saed32rvt_tt1p05v25c
+MFA_34                 ForQA             saed32rvt_tt1p05v25c
+MFA_33                 ForQA             saed32rvt_tt1p05v25c
+MFA_32                 ForQA             saed32rvt_tt1p05v25c
+MFA_31                 ForQA             saed32rvt_tt1p05v25c
+MFA_30                 ForQA             saed32rvt_tt1p05v25c
+MFA_29                 ForQA             saed32rvt_tt1p05v25c
+MFA_28                 ForQA             saed32rvt_tt1p05v25c
+MFA_27                 ForQA             saed32rvt_tt1p05v25c
+MFA_26                 ForQA             saed32rvt_tt1p05v25c
+MFA_25                 ForQA             saed32rvt_tt1p05v25c
+MFA_24                 ForQA             saed32rvt_tt1p05v25c
+MFA_23                 ForQA             saed32rvt_tt1p05v25c
+MFA_22                 ForQA             saed32rvt_tt1p05v25c
+MFA_21                 ForQA             saed32rvt_tt1p05v25c
+MFA_20                 ForQA             saed32rvt_tt1p05v25c
+MFA_19                 ForQA             saed32rvt_tt1p05v25c
+MFA_18                 ForQA             saed32rvt_tt1p05v25c
+MFA_17                 ForQA             saed32rvt_tt1p05v25c
+MFA_16                 ForQA             saed32rvt_tt1p05v25c
+MFA_15                 ForQA             saed32rvt_tt1p05v25c
+MFA_14                 ForQA             saed32rvt_tt1p05v25c
+MFA_13                 ForQA             saed32rvt_tt1p05v25c
+MFA_12                 ForQA             saed32rvt_tt1p05v25c
+MFA_11                 ForQA             saed32rvt_tt1p05v25c
+MFA_10                 ForQA             saed32rvt_tt1p05v25c
+MFA_9                  ForQA             saed32rvt_tt1p05v25c
+MFA_8                  ForQA             saed32rvt_tt1p05v25c
+MFA_7                  ForQA             saed32rvt_tt1p05v25c
+MFA_6                  ForQA             saed32rvt_tt1p05v25c
+MFA_5                  ForQA             saed32rvt_tt1p05v25c
+MFA_4                  ForQA             saed32rvt_tt1p05v25c
+MFA_3                  ForQA             saed32rvt_tt1p05v25c
+MFA_2                  ForQA             saed32rvt_tt1p05v25c
+MFA_1                  ForQA             saed32rvt_tt1p05v25c
+
+
+Global Operating Voltage = 1.05 
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000ff
+    Time Units = 1ns
+    Dynamic Power Units = 1uW    (derived from V,C,T units)
+    Leakage Power Units = 1pW
+
+
+--------------------------------------------------------------------------------
+                                       Switch   Int      Leak     Total
+Hierarchy                              Power    Power    Power    Power    %
+--------------------------------------------------------------------------------
+vbw_cla_kill                             43.887  102.466 1.32e+08  278.543 100.0
+  layer3 (LA4_20)                         0.675    1.219 1.82e+06    3.716   1.3
+  layer2_3_ (LA4_3)                       0.912    2.015 2.20e+06    5.127   1.8
+  layer2_2_ (LA4_2)                       0.956    2.000 2.19e+06    5.143   1.8
+  layer2_1_ (LA4_1)                       0.910    1.899 2.19e+06    4.998   1.8
+  layer2_0_ (LA4_0)                       0.941    1.974 2.19e+06    5.101   1.8
+  layer1_15_ (LA4_19)                     1.057    2.873 2.48e+06    6.413   2.3
+  layer1_14_ (LA4_18)                     1.200    3.047 2.49e+06    6.736   2.4
+  layer1_13_ (LA4_17)                     1.199    3.063 2.50e+06    6.764   2.4
+  layer1_12_ (LA4_16)                     1.104    2.911 2.45e+06    6.469   2.3
+  layer1_11_ (LA4_15)                     1.055    2.874 2.48e+06    6.408   2.3
+  layer1_10_ (LA4_14)                     1.209    3.064 2.49e+06    6.764   2.4
+  layer1_9_ (LA4_13)                      1.200    3.075 2.49e+06    6.766   2.4
+  layer1_8_ (LA4_12)                      1.036    2.747 2.42e+06    6.207   2.2
+  layer1_7_ (LA4_11)                      1.000    2.687 2.45e+06    6.137   2.2
+  layer1_6_ (LA4_10)                      1.196    3.034 2.49e+06    6.715   2.4
+  layer1_5_ (LA4_9)                       1.170    3.001 2.49e+06    6.665   2.4
+  layer1_4_ (LA4_8)                       1.072    2.827 2.45e+06    6.352   2.3
+  layer1_3_ (LA4_7)                       1.064    2.890 2.48e+06    6.432   2.3
+  layer1_2_ (LA4_6)                       1.230    3.118 2.50e+06    6.846   2.5
+  layer1_1_ (LA4_5)                       1.172    3.005 2.49e+06    6.666   2.4
+  layer1_0_ (LA4_4)                       1.000    2.664 2.41e+06    6.079   2.2
+  mfa_inst_63_ (MFA_63)                   0.210    0.601 1.21e+06    2.024   0.7
+  mfa_inst_62_ (MFA_62)                   0.360    0.677 1.21e+06    2.251   0.8
+  mfa_inst_61_ (MFA_61)                   0.347    0.672 1.21e+06    2.230   0.8
+  mfa_inst_60_ (MFA_60)                   0.279    0.642 1.21e+06    2.134   0.8
+  mfa_inst_59_ (MFA_59)                   0.253    0.647 1.21e+06    2.113   0.8
+  mfa_inst_58_ (MFA_58)                   0.368    0.697 1.21e+06    2.278   0.8
+  mfa_inst_57_ (MFA_57)                   0.349    0.694 1.21e+06    2.257   0.8
+  mfa_inst_56_ (MFA_56)                   0.286    0.682 1.21e+06    2.182   0.8
+  mfa_inst_55_ (MFA_55)                   0.207    0.599 1.21e+06    2.018   0.7
+  mfa_inst_54_ (MFA_54)                   0.363    0.677 1.21e+06    2.252   0.8
+  mfa_inst_53_ (MFA_53)                   0.348    0.677 1.21e+06    2.238   0.8
+  mfa_inst_52_ (MFA_52)                   0.281    0.641 1.21e+06    2.133   0.8
+  mfa_inst_51_ (MFA_51)                   0.254    0.650 1.21e+06    2.117   0.8
+  mfa_inst_50_ (MFA_50)                   0.365    0.700 1.21e+06    2.276   0.8
+  mfa_inst_49_ (MFA_49)                   0.353    0.708 1.21e+06    2.273   0.8
+  mfa_inst_48_ (MFA_48)                   0.280    0.693 1.21e+06    2.186   0.8
+  mfa_inst_47_ (MFA_47)                   0.211    0.604 1.21e+06    2.028   0.7
+  mfa_inst_46_ (MFA_46)                   0.368    0.693 1.21e+06    2.273   0.8
+  mfa_inst_45_ (MFA_45)                   0.348    0.681 1.21e+06    2.242   0.8
+  mfa_inst_44_ (MFA_44)                   0.280    0.638 1.21e+06    2.130   0.8
+  mfa_inst_43_ (MFA_43)                   0.256    0.652 1.21e+06    2.120   0.8
+  mfa_inst_42_ (MFA_42)                   0.365    0.688 1.21e+06    2.266   0.8
+  mfa_inst_41_ (MFA_41)                   0.356    0.703 1.21e+06    2.273   0.8
+  mfa_inst_40_ (MFA_40)                   0.283    0.673 1.21e+06    2.169   0.8
+  mfa_inst_39_ (MFA_39)                   0.208    0.596 1.21e+06    2.015   0.7
+  mfa_inst_38_ (MFA_38)                   0.366    0.682 1.21e+06    2.260   0.8
+  mfa_inst_37_ (MFA_37)                   0.360    0.691 1.21e+06    2.264   0.8
+  mfa_inst_36_ (MFA_36)                   0.284    0.650 1.21e+06    2.148   0.8
+  mfa_inst_35_ (MFA_35)                   0.258    0.665 1.21e+06    2.135   0.8
+  mfa_inst_34_ (MFA_34)                   0.359    0.699 1.21e+06    2.272   0.8
+  mfa_inst_33_ (MFA_33)                   0.346    0.705 1.21e+06    2.264   0.8
+  mfa_inst_32_ (MFA_32)                   0.281    0.716 1.21e+06    2.212   0.8
+  mfa_inst_31_ (MFA_31)                   0.197    0.577 1.21e+06    1.985   0.7
+  mfa_inst_30_ (MFA_30)                   0.360    0.686 1.21e+06    2.259   0.8
+  mfa_inst_29_ (MFA_29)                   0.345    0.676 1.21e+06    2.234   0.8
+  mfa_inst_28_ (MFA_28)                   0.282    0.646 1.21e+06    2.140   0.8
+  mfa_inst_27_ (MFA_27)                   0.255    0.654 1.21e+06    2.123   0.8
+  mfa_inst_26_ (MFA_26)                   0.365    0.693 1.21e+06    2.270   0.8
+  mfa_inst_25_ (MFA_25)                   0.348    0.693 1.21e+06    2.254   0.8
+  mfa_inst_24_ (MFA_24)                   0.276    0.663 1.21e+06    2.154   0.8
+  mfa_inst_23_ (MFA_23)                   0.205    0.598 1.21e+06    2.017   0.7
+  mfa_inst_22_ (MFA_22)                   0.366    0.684 1.21e+06    2.262   0.8
+  mfa_inst_21_ (MFA_21)                   0.355    0.683 1.21e+06    2.251   0.8
+  mfa_inst_20_ (MFA_20)                   0.277    0.641 1.21e+06    2.132   0.8
+  mfa_inst_19_ (MFA_19)                   0.257    0.658 1.21e+06    2.129   0.8
+  mfa_inst_18_ (MFA_18)                   0.353    0.687 1.21e+06    2.254   0.8
+  mfa_inst_17_ (MFA_17)                   0.344    0.699 1.21e+06    2.257   0.8
+  mfa_inst_16_ (MFA_16)                   0.278    0.694 1.21e+06    2.186   0.8
+  mfa_inst_15_ (MFA_15)                   0.209    0.605 1.21e+06    2.027   0.7
+  mfa_inst_14_ (MFA_14)                   0.361    0.682 1.21e+06    2.257   0.8
+  mfa_inst_13_ (MFA_13)                   0.352    0.679 1.21e+06    2.244   0.8
+  mfa_inst_12_ (MFA_12)                   0.280    0.644 1.21e+06    2.136   0.8
+  mfa_inst_11_ (MFA_11)                   0.250    0.646 1.21e+06    2.110   0.8
+  mfa_inst_10_ (MFA_10)                   0.367    0.697 1.21e+06    2.278   0.8
+  mfa_inst_9_ (MFA_9)                     0.357    0.696 1.21e+06    2.263   0.8
+  mfa_inst_8_ (MFA_8)                     0.285    0.672 1.21e+06    2.168   0.8
+  mfa_inst_7_ (MFA_7)                     0.210    0.600 1.21e+06    2.023   0.7
+  mfa_inst_6_ (MFA_6)                     0.360    0.683 1.21e+06    2.257   0.8
+  mfa_inst_5_ (MFA_5)                     0.348    0.680 1.21e+06    2.242   0.8
+  mfa_inst_4_ (MFA_4)                     0.286    0.656 1.21e+06    2.155   0.8
+  mfa_inst_3_ (MFA_3)                     0.256    0.664 1.21e+06    2.134   0.8
+  mfa_inst_2_ (MFA_2)                     0.363    0.708 1.21e+06    2.283   0.8
+  mfa_inst_1_ (MFA_1)                     0.351    0.718 1.21e+06    2.283   0.8
+  mfa_inst_0_ (MFA_0)                     0.285    0.721 1.21e+06    2.221   0.8
+1

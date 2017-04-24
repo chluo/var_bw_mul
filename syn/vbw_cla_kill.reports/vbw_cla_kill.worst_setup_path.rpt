@@ -1,0 +1,118 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -input_pins
+        -max_paths 1
+        -transition_time
+        -capacitance
+Design : vbw_cla_kill
+Version: K-2015.06-SP4
+Date   : Sun Apr 23 19:56:45 2017
+****************************************
+
+Operating Conditions: tt1p05v25c   Library: saed32rvt_tt1p05v25c
+Wire Load Model Mode: enclosed
+
+  Startpoint: a[1] (input port)
+  Endpoint: s[63] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  vbw_cla_kill       8000                  saed32rvt_tt1p05v25c
+  LA4_4              ForQA                 saed32rvt_tt1p05v25c
+  LA4_0              ForQA                 saed32rvt_tt1p05v25c
+  LA4_20             ForQA                 saed32rvt_tt1p05v25c
+  LA4_3              ForQA                 saed32rvt_tt1p05v25c
+  LA4_19             ForQA                 saed32rvt_tt1p05v25c
+
+  Point                           Cap     Trans      Incr       Path
+  ---------------------------------------------------------------------
+  input external delay                               0.00       0.00 f
+  a[1] (in)                      1.67      0.00      0.00       0.00 f
+  mfa_inst_1_/a (MFA_1)                              0.00       0.00 f
+  mfa_inst_1_/U2/A0 (HADDX1_RVT)           0.00      0.03       0.03 f
+  mfa_inst_1_/U2/SO (HADDX1_RVT)     2.67     0.03     0.06     0.08 r
+  mfa_inst_1_/p (MFA_1)                              0.00       0.08 r
+  layer1_0_/p[1] (LA4_4)                             0.00       0.08 r
+  layer1_0_/U2/A2 (AND2X1_RVT)             0.03      0.02       0.10 r
+  layer1_0_/U2/Y (AND2X1_RVT)     0.93     0.02      0.03       0.13 r
+  layer1_0_/U3/A2 (OR2X1_RVT)              0.02      0.02       0.15 r
+  layer1_0_/U3/Y (OR2X1_RVT)     0.78      0.01      0.03       0.18 r
+  layer1_0_/U4/A2 (AND2X1_RVT)             0.01      0.01       0.19 r
+  layer1_0_/U4/Y (AND2X1_RVT)     0.93     0.02      0.03       0.22 r
+  layer1_0_/U5/A2 (OR2X1_RVT)              0.02      0.02       0.24 r
+  layer1_0_/U5/Y (OR2X1_RVT)     0.78      0.01      0.03       0.26 r
+  layer1_0_/U6/A2 (AND2X1_RVT)             0.01      0.01       0.28 r
+  layer1_0_/U6/Y (AND2X1_RVT)     0.93     0.02      0.03       0.31 r
+  layer1_0_/U7/A2 (OR2X1_RVT)              0.02      0.02       0.32 r
+  layer1_0_/U7/Y (OR2X1_RVT)     1.25      0.02      0.03       0.35 r
+  layer1_0_/G (LA4_4)                                0.00       0.35 r
+  layer2_0_/g[0] (LA4_0)                             0.00       0.35 r
+  layer2_0_/U6/A1 (AND2X1_RVT)             0.02      0.02       0.37 r
+  layer2_0_/U6/Y (AND2X1_RVT)     0.93     0.02      0.03       0.40 r
+  layer2_0_/U7/A2 (OR2X1_RVT)              0.02      0.02       0.41 r
+  layer2_0_/U7/Y (OR2X1_RVT)     0.78      0.02      0.03       0.44 r
+  layer2_0_/U8/A2 (AND2X1_RVT)             0.02      0.01       0.46 r
+  layer2_0_/U8/Y (AND2X1_RVT)     0.93     0.02      0.03       0.49 r
+  layer2_0_/U9/A2 (OR2X1_RVT)              0.02      0.02       0.50 r
+  layer2_0_/U9/Y (OR2X1_RVT)     0.78      0.02      0.03       0.53 r
+  layer2_0_/U10/A2 (AND2X1_RVT)            0.02      0.01       0.54 r
+  layer2_0_/U10/Y (AND2X1_RVT)     0.93     0.02     0.03       0.57 r
+  layer2_0_/U11/A2 (OR2X1_RVT)             0.02      0.02       0.59 r
+  layer2_0_/U11/Y (OR2X1_RVT)     1.25     0.02      0.03       0.62 r
+  layer2_0_/G (LA4_0)                                0.00       0.62 r
+  layer3/g[0] (LA4_20)                               0.00       0.62 r
+  layer3/U2/A1 (OR2X1_RVT)                 0.02      0.02       0.64 r
+  layer3/U2/Y (OR2X1_RVT)        2.86      0.02      0.04       0.68 r
+  layer3/U3/A2 (AND2X1_RVT)                0.02      0.02       0.69 r
+  layer3/U3/Y (AND2X1_RVT)       0.93      0.02      0.03       0.73 r
+  layer3/U4/A2 (OR2X1_RVT)                 0.02      0.02       0.74 r
+  layer3/U4/Y (OR2X1_RVT)        2.86      0.02      0.04       0.78 r
+  layer3/U5/A2 (AND2X1_RVT)                0.02      0.02       0.79 r
+  layer3/U5/Y (AND2X1_RVT)       0.93      0.02      0.03       0.83 r
+  layer3/U6/A2 (OR2X1_RVT)                 0.02      0.02       0.84 r
+  layer3/U6/Y (OR2X1_RVT)        2.30      0.02      0.04       0.88 r
+  layer3/co[3] (LA4_20)                              0.00       0.88 r
+  layer2_3_/ci (LA4_3)                               0.00       0.88 r
+  layer2_3_/U1/A1 (AND2X1_RVT)             0.02      0.02       0.89 r
+  layer2_3_/U1/Y (AND2X1_RVT)     0.93     0.02      0.03       0.92 r
+  layer2_3_/U2/A2 (OR2X1_RVT)              0.02      0.02       0.94 r
+  layer2_3_/U2/Y (OR2X1_RVT)     2.24      0.02      0.03       0.97 r
+  layer2_3_/U3/A2 (AND2X1_RVT)             0.02      0.02       0.99 r
+  layer2_3_/U3/Y (AND2X1_RVT)     0.93     0.02      0.03       1.02 r
+  layer2_3_/U4/A2 (OR2X1_RVT)              0.02      0.02       1.04 r
+  layer2_3_/U4/Y (OR2X1_RVT)     2.24      0.02      0.03       1.07 r
+  layer2_3_/U12/A2 (AND2X1_RVT)            0.02      0.02       1.09 r
+  layer2_3_/U12/Y (AND2X1_RVT)     0.93     0.02     0.03       1.12 r
+  layer2_3_/U13/A2 (OR2X1_RVT)             0.02      0.02       1.13 r
+  layer2_3_/U13/Y (OR2X1_RVT)     1.68     0.02      0.03       1.17 r
+  layer2_3_/co[3] (LA4_3)                            0.00       1.17 r
+  layer1_15_/ci (LA4_19)                             0.00       1.17 r
+  layer1_15_/U8/A1 (AND2X1_RVT)            0.02      0.02       1.18 r
+  layer1_15_/U8/Y (AND2X1_RVT)     0.93     0.02     0.03       1.21 r
+  layer1_15_/U9/A2 (OR2X1_RVT)             0.02      0.02       1.23 r
+  layer1_15_/U9/Y (OR2X1_RVT)     1.62     0.02      0.03       1.26 r
+  layer1_15_/U10/A2 (AND2X1_RVT)           0.02      0.01       1.27 r
+  layer1_15_/U10/Y (AND2X1_RVT)     0.93     0.02     0.03      1.30 r
+  layer1_15_/U11/A2 (OR2X1_RVT)            0.02      0.02       1.32 r
+  layer1_15_/U11/Y (OR2X1_RVT)     1.62     0.02     0.03       1.35 r
+  layer1_15_/U12/A2 (AND2X1_RVT)           0.02      0.01       1.37 r
+  layer1_15_/U12/Y (AND2X1_RVT)     0.93     0.02     0.03      1.40 r
+  layer1_15_/U13/A2 (OR2X1_RVT)            0.02      0.02       1.41 r
+  layer1_15_/U13/Y (OR2X1_RVT)     1.06     0.02     0.03       1.44 r
+  layer1_15_/co[3] (LA4_19)                          0.00       1.44 r
+  mfa_inst_63_/ci (MFA_63)                           0.00       1.44 r
+  mfa_inst_63_/U3/A0 (HADDX1_RVT)          0.02      0.02       1.47 r
+  mfa_inst_63_/U3/SO (HADDX1_RVT)     0.00     0.01     0.05     1.52 f
+  mfa_inst_63_/s (MFA_63)                            0.00       1.52 f
+  s[63] (out)                              0.01      0.00       1.52 f
+  data arrival time                                             1.52
+  ---------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+1

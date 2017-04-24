@@ -4,9 +4,9 @@ Report : constraint
         -all_violators
 Design : vbw_cla_nci
 Version: K-2015.06-SP4
-Date   : Sun Apr 23 19:57:45 2017
+Date   : Mon Apr 24 11:33:37 2017
 ****************************************
 
-This design has no constraints.
+This design has no violated constraints.
 
 1

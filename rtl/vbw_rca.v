@@ -190,7 +190,7 @@ endmodule
 
 // Baseline design
 // uses adders in different bit widths and muxes
-module vbw_adder_bsln
+module vbw_rca_bsln
 (
     input   [63:0]      a,
     input   [63:0]      b,
@@ -208,7 +208,7 @@ module vbw_adder_bsln
     assign co = (control==2'b00)?controlled_co:1'b0;
 
     // 1x 64bit
-    adder #(64) add64(a, b, controlled_ci, s64, controlled_co);
+    adder #(64) add64_0(a, b, controlled_ci, s64, controlled_co);
 
     // 2x 32bit
     adder #(32) add32_1(a[63:32], b[63:32], 1'b0, s32[63:32], );
@@ -233,6 +233,52 @@ module vbw_adder_bsln
             2'b01: s = {s32[63:32], s64[31:0]};
             2'b10: s = {s16[63:16], s64[15:0]};
             2'b11: s = {s8[63:8], s64[7:0]};
+        endcase
+    end
+
+endmodule
+
+// Baseline design (variant)
+// uses adders in different bit widths and muxes
+module vbw_rca_bsln2
+(
+    input   [63:0]      a,
+    input   [63:0]      b,
+    input               ci,
+    input   [1:0]       control,
+    output  reg     [63:0]      s,
+    output              co
+);
+
+    wire    [63:0]      s64, s32, s16, s8;
+    wire                controlled_ci;
+    wire                controlled_co;
+
+    assign controlled_ci = (control==2'b00)?ci:1'b0;
+    assign co = (control==2'b00)?controlled_co:1'b0;
+
+    // 1x 64bit
+    adder #(64) add64_0(a, b, controlled_ci, s64, controlled_co);
+
+    // 2x 32bit
+    adder #(32) add32_1(a[63:32], b[63:32], 1'b0, s32[63:32], );
+
+    // 4x 16bit
+    adder #(16) add16_3(a[63:48], b[63:48], 1'b0, s16[63:48], );
+    adder #(16) add16_2(a[31:16], b[31:16], 1'b0, s16[31:16], );
+
+    // 8x 8bit
+    adder #(8) add8_7(a[63:56], b[63:56], 1'b0, s8[63:56], );
+    adder #(8) add8_6(a[47:40], b[47:40], 1'b0, s8[47:40], );
+    adder #(8) add8_5(a[31:24], b[31:24], 1'b0, s8[31:24], );
+    adder #(8) add8_4(a[15:8], b[15:8], 1'b0, s8[15:8], );
+
+    always @(*) begin
+        case (control)
+            2'b00: s = s64;
+            2'b01: s = {s32[63:32], s64[31:0]};
+            2'b10: s = {s16[63:48], s32[47:32], s16[31:16], s64[15:0]};
+            2'b11: s = {s8[63:56], s16[55:48], s8[47:40], s32[39:32], s8[31:24], s16[23:16], s8[15:8], s64[7:0]};
         endcase
     end
 

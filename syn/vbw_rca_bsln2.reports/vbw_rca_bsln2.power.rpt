@@ -1,0 +1,58 @@
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+Warning: There is no defined clock in the design. (PWR-80)
+Warning: Design has unannotated primary inputs. (PWR-414)
+ 
+****************************************
+Report : power
+        -hier
+        -analysis_effort low
+Design : vbw_rca_bsln2
+Version: K-2015.06-SP4
+Date   : Mon Apr 24 11:52:28 2017
+****************************************
+
+
+Library(s) Used:
+
+    saed32rvt_tt1p05v25c (File: /usr/local/packages/synopsys_2015/SAED32_EDK/lib/stdcell_rvt/db_nldm/saed32rvt_tt1p05v25c.db)
+
+
+Operating Conditions: tt1p05v25c   Library: saed32rvt_tt1p05v25c
+Wire Load Model Mode: enclosed
+
+Design        Wire Load Model            Library
+------------------------------------------------
+vbw_rca_bsln2          8000              saed32rvt_tt1p05v25c
+adder_WIDTH64          8000              saed32rvt_tt1p05v25c
+adder_WIDTH32          ForQA             saed32rvt_tt1p05v25c
+adder_WIDTH16_1        ForQA             saed32rvt_tt1p05v25c
+adder_WIDTH8_3         ForQA             saed32rvt_tt1p05v25c
+adder_WIDTH16_0        ForQA             saed32rvt_tt1p05v25c
+adder_WIDTH8_0         ForQA             saed32rvt_tt1p05v25c
+adder_WIDTH8_1         ForQA             saed32rvt_tt1p05v25c
+adder_WIDTH8_2         ForQA             saed32rvt_tt1p05v25c
+
+
+Global Operating Voltage = 1.05 
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000ff
+    Time Units = 1ns
+    Dynamic Power Units = 1uW    (derived from V,C,T units)
+    Leakage Power Units = 1pW
+
+
+--------------------------------------------------------------------------------
+                                       Switch   Int      Leak     Total
+Hierarchy                              Power    Power    Power    Power    %
+--------------------------------------------------------------------------------
+vbw_rca_bsln2                            48.417  227.534 1.16e+08  392.430 100.0
+  add8_4 (adder_WIDTH8_0)                 1.770    7.188 4.24e+06   13.199   3.4
+  add8_5 (adder_WIDTH8_1)                 1.813    7.285 4.24e+06   13.340   3.4
+  add8_6 (adder_WIDTH8_2)                 1.839    7.378 4.24e+06   13.457   3.4
+  add8_7 (adder_WIDTH8_3)                 1.837    7.371 4.24e+06   13.448   3.4
+  add16_2 (adder_WIDTH16_0)               3.913   16.041 8.31e+06   28.265   7.2
+  add16_3 (adder_WIDTH16_1)               3.975   16.229 8.31e+06   28.512   7.3
+  add32_1 (adder_WIDTH32)                 8.376   34.311 1.64e+07   59.130  15.1
+  add64_0 (adder_WIDTH64)                14.925   64.774 3.25e+07  112.186  28.6
+1

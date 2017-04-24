@@ -1,0 +1,1684 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -nworst 10
+        -input_pins
+        -nets
+        -max_paths 500
+        -transition_time
+        -capacitance
+Design : vbw_cla_nci
+Version: K-2015.06-SP4
+Date   : Sun Apr 23 19:57:45 2017
+****************************************
+
+Operating Conditions: tt1p05v25c   Library: saed32rvt_tt1p05v25c
+Wire Load Model Mode: enclosed
+
+  Startpoint: s[63] (internal pin)
+  Endpoint: s[63] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  s[63] (out)                                      0.0000    0.0000     0.0000 r
+  data arrival time                                                     0.0000
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: s[62] (internal pin)
+  Endpoint: s[62] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  s[62] (out)                                      0.0000    0.0000     0.0000 r
+  data arrival time                                                     0.0000
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: s[61] (internal pin)
+  Endpoint: s[61] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  s[61] (out)                                      0.0000    0.0000     0.0000 r
+  data arrival time                                                     0.0000
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: s[60] (internal pin)
+  Endpoint: s[60] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  s[60] (out)                                      0.0000    0.0000     0.0000 r
+  data arrival time                                                     0.0000
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: s[59] (internal pin)
+  Endpoint: s[59] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  s[59] (out)                                      0.0000    0.0000     0.0000 r
+  data arrival time                                                     0.0000
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: s[58] (internal pin)
+  Endpoint: s[58] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  s[58] (out)                                      0.0000    0.0000     0.0000 r
+  data arrival time                                                     0.0000
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: s[57] (internal pin)
+  Endpoint: s[57] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  s[57] (out)                                      0.0000    0.0000     0.0000 r
+  data arrival time                                                     0.0000
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: s[56] (internal pin)
+  Endpoint: s[56] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  s[56] (out)                                      0.0000    0.0000     0.0000 r
+  data arrival time                                                     0.0000
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: s[55] (internal pin)
+  Endpoint: s[55] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  s[55] (out)                                      0.0000    0.0000     0.0000 r
+  data arrival time                                                     0.0000
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: s[54] (internal pin)
+  Endpoint: s[54] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  s[54] (out)                                      0.0000    0.0000     0.0000 r
+  data arrival time                                                     0.0000
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: s[53] (internal pin)
+  Endpoint: s[53] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  s[53] (out)                                      0.0000    0.0000     0.0000 r
+  data arrival time                                                     0.0000
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: s[52] (internal pin)
+  Endpoint: s[52] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  s[52] (out)                                      0.0000    0.0000     0.0000 r
+  data arrival time                                                     0.0000
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: s[51] (internal pin)
+  Endpoint: s[51] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  s[51] (out)                                      0.0000    0.0000     0.0000 r
+  data arrival time                                                     0.0000
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: s[50] (internal pin)
+  Endpoint: s[50] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  s[50] (out)                                      0.0000    0.0000     0.0000 r
+  data arrival time                                                     0.0000
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: s[49] (internal pin)
+  Endpoint: s[49] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  s[49] (out)                                      0.0000    0.0000     0.0000 r
+  data arrival time                                                     0.0000
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: s[48] (internal pin)
+  Endpoint: s[48] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  s[48] (out)                                      0.0000    0.0000     0.0000 r
+  data arrival time                                                     0.0000
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: s[47] (internal pin)
+  Endpoint: s[47] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  s[47] (out)                                      0.0000    0.0000     0.0000 r
+  data arrival time                                                     0.0000
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: s[46] (internal pin)
+  Endpoint: s[46] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  s[46] (out)                                      0.0000    0.0000     0.0000 r
+  data arrival time                                                     0.0000
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: s[45] (internal pin)
+  Endpoint: s[45] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  s[45] (out)                                      0.0000    0.0000     0.0000 r
+  data arrival time                                                     0.0000
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: s[44] (internal pin)
+  Endpoint: s[44] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  s[44] (out)                                      0.0000    0.0000     0.0000 r
+  data arrival time                                                     0.0000
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: s[43] (internal pin)
+  Endpoint: s[43] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  s[43] (out)                                      0.0000    0.0000     0.0000 r
+  data arrival time                                                     0.0000
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: s[42] (internal pin)
+  Endpoint: s[42] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  s[42] (out)                                      0.0000    0.0000     0.0000 r
+  data arrival time                                                     0.0000
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: s[41] (internal pin)
+  Endpoint: s[41] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  s[41] (out)                                      0.0000    0.0000     0.0000 r
+  data arrival time                                                     0.0000
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: s[40] (internal pin)
+  Endpoint: s[40] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  s[40] (out)                                      0.0000    0.0000     0.0000 r
+  data arrival time                                                     0.0000
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: s[39] (internal pin)
+  Endpoint: s[39] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  s[39] (out)                                      0.0000    0.0000     0.0000 r
+  data arrival time                                                     0.0000
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: s[38] (internal pin)
+  Endpoint: s[38] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  s[38] (out)                                      0.0000    0.0000     0.0000 r
+  data arrival time                                                     0.0000
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: s[37] (internal pin)
+  Endpoint: s[37] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  s[37] (out)                                      0.0000    0.0000     0.0000 r
+  data arrival time                                                     0.0000
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: s[36] (internal pin)
+  Endpoint: s[36] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  s[36] (out)                                      0.0000    0.0000     0.0000 r
+  data arrival time                                                     0.0000
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: s[35] (internal pin)
+  Endpoint: s[35] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  s[35] (out)                                      0.0000    0.0000     0.0000 r
+  data arrival time                                                     0.0000
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: s[34] (internal pin)
+  Endpoint: s[34] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  s[34] (out)                                      0.0000    0.0000     0.0000 r
+  data arrival time                                                     0.0000
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: s[33] (internal pin)
+  Endpoint: s[33] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  s[33] (out)                                      0.0000    0.0000     0.0000 r
+  data arrival time                                                     0.0000
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: s[32] (internal pin)
+  Endpoint: s[32] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  s[32] (out)                                      0.0000    0.0000     0.0000 r
+  data arrival time                                                     0.0000
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: s[31] (internal pin)
+  Endpoint: s[31] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  s[31] (out)                                      0.0000    0.0000     0.0000 r
+  data arrival time                                                     0.0000
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: s[30] (internal pin)
+  Endpoint: s[30] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  s[30] (out)                                      0.0000    0.0000     0.0000 r
+  data arrival time                                                     0.0000
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: s[29] (internal pin)
+  Endpoint: s[29] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  s[29] (out)                                      0.0000    0.0000     0.0000 r
+  data arrival time                                                     0.0000
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: s[28] (internal pin)
+  Endpoint: s[28] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  s[28] (out)                                      0.0000    0.0000     0.0000 r
+  data arrival time                                                     0.0000
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: s[27] (internal pin)
+  Endpoint: s[27] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  s[27] (out)                                      0.0000    0.0000     0.0000 r
+  data arrival time                                                     0.0000
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: s[26] (internal pin)
+  Endpoint: s[26] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  s[26] (out)                                      0.0000    0.0000     0.0000 r
+  data arrival time                                                     0.0000
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: s[25] (internal pin)
+  Endpoint: s[25] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  s[25] (out)                                      0.0000    0.0000     0.0000 r
+  data arrival time                                                     0.0000
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: s[24] (internal pin)
+  Endpoint: s[24] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  s[24] (out)                                      0.0000    0.0000     0.0000 r
+  data arrival time                                                     0.0000
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: s[23] (internal pin)
+  Endpoint: s[23] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  s[23] (out)                                      0.0000    0.0000     0.0000 r
+  data arrival time                                                     0.0000
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: s[22] (internal pin)
+  Endpoint: s[22] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  s[22] (out)                                      0.0000    0.0000     0.0000 r
+  data arrival time                                                     0.0000
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: s[21] (internal pin)
+  Endpoint: s[21] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  s[21] (out)                                      0.0000    0.0000     0.0000 r
+  data arrival time                                                     0.0000
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: s[20] (internal pin)
+  Endpoint: s[20] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  s[20] (out)                                      0.0000    0.0000     0.0000 r
+  data arrival time                                                     0.0000
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: s[19] (internal pin)
+  Endpoint: s[19] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  s[19] (out)                                      0.0000    0.0000     0.0000 r
+  data arrival time                                                     0.0000
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: s[18] (internal pin)
+  Endpoint: s[18] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  s[18] (out)                                      0.0000    0.0000     0.0000 r
+  data arrival time                                                     0.0000
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: s[17] (internal pin)
+  Endpoint: s[17] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  s[17] (out)                                      0.0000    0.0000     0.0000 r
+  data arrival time                                                     0.0000
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: s[16] (internal pin)
+  Endpoint: s[16] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  s[16] (out)                                      0.0000    0.0000     0.0000 r
+  data arrival time                                                     0.0000
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: s[15] (internal pin)
+  Endpoint: s[15] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  s[15] (out)                                      0.0000    0.0000     0.0000 r
+  data arrival time                                                     0.0000
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: s[14] (internal pin)
+  Endpoint: s[14] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  s[14] (out)                                      0.0000    0.0000     0.0000 r
+  data arrival time                                                     0.0000
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: s[13] (internal pin)
+  Endpoint: s[13] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  s[13] (out)                                      0.0000    0.0000     0.0000 r
+  data arrival time                                                     0.0000
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: s[12] (internal pin)
+  Endpoint: s[12] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  s[12] (out)                                      0.0000    0.0000     0.0000 r
+  data arrival time                                                     0.0000
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: s[11] (internal pin)
+  Endpoint: s[11] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  s[11] (out)                                      0.0000    0.0000     0.0000 r
+  data arrival time                                                     0.0000
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: s[10] (internal pin)
+  Endpoint: s[10] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  s[10] (out)                                      0.0000    0.0000     0.0000 r
+  data arrival time                                                     0.0000
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: s[9] (internal pin)
+  Endpoint: s[9] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  s[9] (out)                                       0.0000    0.0000     0.0000 r
+  data arrival time                                                     0.0000
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: s[8] (internal pin)
+  Endpoint: s[8] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  s[8] (out)                                       0.0000    0.0000     0.0000 r
+  data arrival time                                                     0.0000
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: s[7] (internal pin)
+  Endpoint: s[7] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  s[7] (out)                                       0.0000    0.0000     0.0000 r
+  data arrival time                                                     0.0000
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: s[6] (internal pin)
+  Endpoint: s[6] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  s[6] (out)                                       0.0000    0.0000     0.0000 r
+  data arrival time                                                     0.0000
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: s[5] (internal pin)
+  Endpoint: s[5] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  s[5] (out)                                       0.0000    0.0000     0.0000 r
+  data arrival time                                                     0.0000
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: s[4] (internal pin)
+  Endpoint: s[4] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  s[4] (out)                                       0.0000    0.0000     0.0000 r
+  data arrival time                                                     0.0000
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: s[3] (internal pin)
+  Endpoint: s[3] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  s[3] (out)                                       0.0000    0.0000     0.0000 r
+  data arrival time                                                     0.0000
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: s[2] (internal pin)
+  Endpoint: s[2] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  s[2] (out)                                       0.0000    0.0000     0.0000 r
+  data arrival time                                                     0.0000
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: s[1] (internal pin)
+  Endpoint: s[1] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  s[1] (out)                                       0.0000    0.0000     0.0000 r
+  data arrival time                                                     0.0000
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: s[0] (internal pin)
+  Endpoint: s[0] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  s[0] (out)                                       0.0000    0.0000     0.0000 r
+  data arrival time                                                     0.0000
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: s[63] (internal pin)
+  Endpoint: s[63] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  s[63] (out)                                      0.0000    0.0000     0.0000 f
+  data arrival time                                                     0.0000
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: s[62] (internal pin)
+  Endpoint: s[62] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  s[62] (out)                                      0.0000    0.0000     0.0000 f
+  data arrival time                                                     0.0000
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: s[61] (internal pin)
+  Endpoint: s[61] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  s[61] (out)                                      0.0000    0.0000     0.0000 f
+  data arrival time                                                     0.0000
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: s[60] (internal pin)
+  Endpoint: s[60] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  s[60] (out)                                      0.0000    0.0000     0.0000 f
+  data arrival time                                                     0.0000
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: s[59] (internal pin)
+  Endpoint: s[59] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  s[59] (out)                                      0.0000    0.0000     0.0000 f
+  data arrival time                                                     0.0000
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: s[58] (internal pin)
+  Endpoint: s[58] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  s[58] (out)                                      0.0000    0.0000     0.0000 f
+  data arrival time                                                     0.0000
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: s[57] (internal pin)
+  Endpoint: s[57] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  s[57] (out)                                      0.0000    0.0000     0.0000 f
+  data arrival time                                                     0.0000
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: s[56] (internal pin)
+  Endpoint: s[56] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  s[56] (out)                                      0.0000    0.0000     0.0000 f
+  data arrival time                                                     0.0000
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: s[55] (internal pin)
+  Endpoint: s[55] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  s[55] (out)                                      0.0000    0.0000     0.0000 f
+  data arrival time                                                     0.0000
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: s[54] (internal pin)
+  Endpoint: s[54] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  s[54] (out)                                      0.0000    0.0000     0.0000 f
+  data arrival time                                                     0.0000
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: s[53] (internal pin)
+  Endpoint: s[53] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  s[53] (out)                                      0.0000    0.0000     0.0000 f
+  data arrival time                                                     0.0000
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: s[52] (internal pin)
+  Endpoint: s[52] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  s[52] (out)                                      0.0000    0.0000     0.0000 f
+  data arrival time                                                     0.0000
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: s[51] (internal pin)
+  Endpoint: s[51] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  s[51] (out)                                      0.0000    0.0000     0.0000 f
+  data arrival time                                                     0.0000
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: s[50] (internal pin)
+  Endpoint: s[50] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  s[50] (out)                                      0.0000    0.0000     0.0000 f
+  data arrival time                                                     0.0000
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: s[49] (internal pin)
+  Endpoint: s[49] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  s[49] (out)                                      0.0000    0.0000     0.0000 f
+  data arrival time                                                     0.0000
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: s[48] (internal pin)
+  Endpoint: s[48] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  s[48] (out)                                      0.0000    0.0000     0.0000 f
+  data arrival time                                                     0.0000
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: s[47] (internal pin)
+  Endpoint: s[47] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  s[47] (out)                                      0.0000    0.0000     0.0000 f
+  data arrival time                                                     0.0000
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: s[46] (internal pin)
+  Endpoint: s[46] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  s[46] (out)                                      0.0000    0.0000     0.0000 f
+  data arrival time                                                     0.0000
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: s[45] (internal pin)
+  Endpoint: s[45] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  s[45] (out)                                      0.0000    0.0000     0.0000 f
+  data arrival time                                                     0.0000
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: s[44] (internal pin)
+  Endpoint: s[44] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  s[44] (out)                                      0.0000    0.0000     0.0000 f
+  data arrival time                                                     0.0000
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: s[43] (internal pin)
+  Endpoint: s[43] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  s[43] (out)                                      0.0000    0.0000     0.0000 f
+  data arrival time                                                     0.0000
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: s[42] (internal pin)
+  Endpoint: s[42] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  s[42] (out)                                      0.0000    0.0000     0.0000 f
+  data arrival time                                                     0.0000
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: s[41] (internal pin)
+  Endpoint: s[41] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  s[41] (out)                                      0.0000    0.0000     0.0000 f
+  data arrival time                                                     0.0000
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: s[40] (internal pin)
+  Endpoint: s[40] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  s[40] (out)                                      0.0000    0.0000     0.0000 f
+  data arrival time                                                     0.0000
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: s[39] (internal pin)
+  Endpoint: s[39] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  s[39] (out)                                      0.0000    0.0000     0.0000 f
+  data arrival time                                                     0.0000
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: s[38] (internal pin)
+  Endpoint: s[38] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  s[38] (out)                                      0.0000    0.0000     0.0000 f
+  data arrival time                                                     0.0000
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: s[37] (internal pin)
+  Endpoint: s[37] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  s[37] (out)                                      0.0000    0.0000     0.0000 f
+  data arrival time                                                     0.0000
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: s[36] (internal pin)
+  Endpoint: s[36] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  s[36] (out)                                      0.0000    0.0000     0.0000 f
+  data arrival time                                                     0.0000
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: s[35] (internal pin)
+  Endpoint: s[35] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  s[35] (out)                                      0.0000    0.0000     0.0000 f
+  data arrival time                                                     0.0000
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: s[34] (internal pin)
+  Endpoint: s[34] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  s[34] (out)                                      0.0000    0.0000     0.0000 f
+  data arrival time                                                     0.0000
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: s[33] (internal pin)
+  Endpoint: s[33] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  s[33] (out)                                      0.0000    0.0000     0.0000 f
+  data arrival time                                                     0.0000
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: s[32] (internal pin)
+  Endpoint: s[32] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  s[32] (out)                                      0.0000    0.0000     0.0000 f
+  data arrival time                                                     0.0000
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: s[31] (internal pin)
+  Endpoint: s[31] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  s[31] (out)                                      0.0000    0.0000     0.0000 f
+  data arrival time                                                     0.0000
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: s[30] (internal pin)
+  Endpoint: s[30] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  s[30] (out)                                      0.0000    0.0000     0.0000 f
+  data arrival time                                                     0.0000
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: s[29] (internal pin)
+  Endpoint: s[29] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  s[29] (out)                                      0.0000    0.0000     0.0000 f
+  data arrival time                                                     0.0000
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: s[28] (internal pin)
+  Endpoint: s[28] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  s[28] (out)                                      0.0000    0.0000     0.0000 f
+  data arrival time                                                     0.0000
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: s[27] (internal pin)
+  Endpoint: s[27] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  s[27] (out)                                      0.0000    0.0000     0.0000 f
+  data arrival time                                                     0.0000
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: s[26] (internal pin)
+  Endpoint: s[26] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  s[26] (out)                                      0.0000    0.0000     0.0000 f
+  data arrival time                                                     0.0000
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: s[25] (internal pin)
+  Endpoint: s[25] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  s[25] (out)                                      0.0000    0.0000     0.0000 f
+  data arrival time                                                     0.0000
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: s[24] (internal pin)
+  Endpoint: s[24] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  s[24] (out)                                      0.0000    0.0000     0.0000 f
+  data arrival time                                                     0.0000
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: s[23] (internal pin)
+  Endpoint: s[23] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  s[23] (out)                                      0.0000    0.0000     0.0000 f
+  data arrival time                                                     0.0000
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: s[22] (internal pin)
+  Endpoint: s[22] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  s[22] (out)                                      0.0000    0.0000     0.0000 f
+  data arrival time                                                     0.0000
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: s[21] (internal pin)
+  Endpoint: s[21] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  s[21] (out)                                      0.0000    0.0000     0.0000 f
+  data arrival time                                                     0.0000
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: s[20] (internal pin)
+  Endpoint: s[20] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  s[20] (out)                                      0.0000    0.0000     0.0000 f
+  data arrival time                                                     0.0000
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: s[19] (internal pin)
+  Endpoint: s[19] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  s[19] (out)                                      0.0000    0.0000     0.0000 f
+  data arrival time                                                     0.0000
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: s[18] (internal pin)
+  Endpoint: s[18] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  s[18] (out)                                      0.0000    0.0000     0.0000 f
+  data arrival time                                                     0.0000
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: s[17] (internal pin)
+  Endpoint: s[17] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  s[17] (out)                                      0.0000    0.0000     0.0000 f
+  data arrival time                                                     0.0000
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: s[16] (internal pin)
+  Endpoint: s[16] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  s[16] (out)                                      0.0000    0.0000     0.0000 f
+  data arrival time                                                     0.0000
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: s[15] (internal pin)
+  Endpoint: s[15] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  s[15] (out)                                      0.0000    0.0000     0.0000 f
+  data arrival time                                                     0.0000
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: s[14] (internal pin)
+  Endpoint: s[14] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  s[14] (out)                                      0.0000    0.0000     0.0000 f
+  data arrival time                                                     0.0000
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: s[13] (internal pin)
+  Endpoint: s[13] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  s[13] (out)                                      0.0000    0.0000     0.0000 f
+  data arrival time                                                     0.0000
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: s[12] (internal pin)
+  Endpoint: s[12] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  s[12] (out)                                      0.0000    0.0000     0.0000 f
+  data arrival time                                                     0.0000
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: s[11] (internal pin)
+  Endpoint: s[11] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  s[11] (out)                                      0.0000    0.0000     0.0000 f
+  data arrival time                                                     0.0000
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: s[10] (internal pin)
+  Endpoint: s[10] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  s[10] (out)                                      0.0000    0.0000     0.0000 f
+  data arrival time                                                     0.0000
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: s[9] (internal pin)
+  Endpoint: s[9] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  s[9] (out)                                       0.0000    0.0000     0.0000 f
+  data arrival time                                                     0.0000
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: s[8] (internal pin)
+  Endpoint: s[8] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  s[8] (out)                                       0.0000    0.0000     0.0000 f
+  data arrival time                                                     0.0000
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: s[7] (internal pin)
+  Endpoint: s[7] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  s[7] (out)                                       0.0000    0.0000     0.0000 f
+  data arrival time                                                     0.0000
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: s[6] (internal pin)
+  Endpoint: s[6] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  s[6] (out)                                       0.0000    0.0000     0.0000 f
+  data arrival time                                                     0.0000
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: s[5] (internal pin)
+  Endpoint: s[5] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  s[5] (out)                                       0.0000    0.0000     0.0000 f
+  data arrival time                                                     0.0000
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: s[4] (internal pin)
+  Endpoint: s[4] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  s[4] (out)                                       0.0000    0.0000     0.0000 f
+  data arrival time                                                     0.0000
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: s[3] (internal pin)
+  Endpoint: s[3] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  s[3] (out)                                       0.0000    0.0000     0.0000 f
+  data arrival time                                                     0.0000
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: s[2] (internal pin)
+  Endpoint: s[2] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  s[2] (out)                                       0.0000    0.0000     0.0000 f
+  data arrival time                                                     0.0000
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: s[1] (internal pin)
+  Endpoint: s[1] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  s[1] (out)                                       0.0000    0.0000     0.0000 f
+  data arrival time                                                     0.0000
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: s[0] (internal pin)
+  Endpoint: s[0] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  s[0] (out)                                       0.0000    0.0000     0.0000 f
+  data arrival time                                                     0.0000
+  -------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+1

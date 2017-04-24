@@ -90,7 +90,7 @@ module cla_adder
             
             LA4 layer1 [7:0]    (g, p, ci1, g1, p1, internal_ci);
             LA4 layer2 [1:0]    (g1, p1, ci2, g2, p2, ci1);
-            LA4 layer3          ({2'b0,g2}, {2'b0,p2}, ci, g3, p3, ci2);
+            LA2 layer3          (g2, p2, ci, g3, p3, ci2);
 
             assign co = g3 | (p3 & ci);
         end
@@ -107,7 +107,7 @@ module cla_adder
             wire                p2, g2;
             
             LA4 layer1 [1:0]    (g, p, ci1, g1, p1, internal_ci);
-            LA4 layer2          ({2'b0,g1}, {2'b0,p1}, ci, g2, p2, ci1);
+            LA2 layer2          (g1, p1, ci, g2, p2, ci1);
             assign co = g2 | (p2 & ci);
         end
     endgenerate

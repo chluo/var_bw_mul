@@ -134,31 +134,27 @@ module vbw_cla_bsln
     assign co = (control==2'b00)?controlled_co:1'b0;
 
     // 1x 64bit
-    cla_adder #(64) add64(a, b, controlled_ci, s64, controlled_co);
+    cla_adder #(64) add64_0(a, b, controlled_ci, s64, controlled_co);
 
     // 2x 32bit
     cla_adder #(32) add32_1(a[63:32], b[63:32], 1'b0, s32[63:32], );
 
     // 4x 16bit
     cla_adder #(16) add16_3(a[63:48], b[63:48], 1'b0, s16[63:48], );
-    cla_adder #(16) add16_2(a[47:32], b[47:32], 1'b0, s16[47:32], );
-    cla_adder #(16) add16_1(a[31:16], b[31:16], 1'b0, s16[31:16], );
+    cla_adder #(16) add16_2(a[31:16], b[31:16], 1'b0, s16[31:16], );
 
     // 8x 8bit
     cla_adder #(8) add8_7(a[63:56], b[63:56], 1'b0, s8[63:56], );
-    cla_adder #(8) add8_6(a[55:48], b[55:48], 1'b0, s8[55:48], );
-    cla_adder #(8) add8_5(a[47:40], b[47:40], 1'b0, s8[47:40], );
-    cla_adder #(8) add8_4(a[39:32], b[39:32], 1'b0, s8[39:32], );
-    cla_adder #(8) add8_3(a[31:24], b[31:24], 1'b0, s8[31:24], );
-    cla_adder #(8) add8_2(a[23:16], b[23:16], 1'b0, s8[23:16], );
-    cla_adder #(8) add8_1(a[15:8], b[15:8], 1'b0, s8[15:8], );
+    cla_adder #(8) add8_6(a[47:40], b[47:40], 1'b0, s8[47:40], );
+    cla_adder #(8) add8_5(a[31:24], b[31:24], 1'b0, s8[31:24], );
+    cla_adder #(8) add8_4(a[15:8], b[15:8], 1'b0, s8[15:8], );
 
     always @(*) begin
         case (control)
             2'b00: s = s64;
             2'b01: s = {s32[63:32], s64[31:0]};
-            2'b10: s = {s16[63:16], s64[15:0]};
-            2'b11: s = {s8[63:8], s64[7:0]};
+            2'b10: s = {s16[63:48], s32[47:32], s16[31:16], s64[15:0]};
+            2'b11: s = {s8[63:56], s16[55:48], s8[47:40], s32[39:32], s8[31:24], s16[23:16], s8[15:8], s64[7:0]};
         endcase
     end
 

@@ -9,13 +9,13 @@ Report : timing
         -capacitance
 Design : vbw_cla_bsln
 Version: K-2015.06-SP4
-Date   : Sun Apr 23 19:50:34 2017
+Date   : Wed Apr 26 19:35:11 2017
 ****************************************
 
 Operating Conditions: tt1p05v25c   Library: saed32rvt_tt1p05v25c
 Wire Load Model Mode: enclosed
 
-  Startpoint: a[1] (input port)
+  Startpoint: b[1] (input port)
   Endpoint: s[63] (output port)
   Path Group: (none)
   Path Type: max
@@ -23,101 +23,111 @@ Wire Load Model Mode: enclosed
   Des/Clust/Port     Wire Load Model       Library
   ------------------------------------------------
   vbw_cla_bsln       8000                  saed32rvt_tt1p05v25c
+  MFA_57             ForQA                 saed32rvt_tt1p05v25c
   cla_adder_WIDTH64  8000                  saed32rvt_tt1p05v25c
   LA4_20             ForQA                 saed32rvt_tt1p05v25c
   LA4_16             ForQA                 saed32rvt_tt1p05v25c
-  LA4_67             ForQA                 saed32rvt_tt1p05v25c
+  LA4_48             ForQA                 saed32rvt_tt1p05v25c
   LA4_19             ForQA                 saed32rvt_tt1p05v25c
   LA4_35             ForQA                 saed32rvt_tt1p05v25c
+  MFA_119            ForQA                 saed32rvt_tt1p05v25c
 
   Point                                          Cap     Trans      Incr       Path
   ------------------------------------------------------------------------------------
   input external delay                                              0.00       0.00 f
-  a[1] (in)                                     1.67      0.00      0.00       0.00 f
-  add64/a[1] (cla_adder_WIDTH64)                                    0.00       0.00 f
-  add64/mfa_inst_1_/a (MFA_57)                                      0.00       0.00 f
-  add64/mfa_inst_1_/U2/A0 (HADDX1_RVT)                    0.00      0.03       0.03 f
-  add64/mfa_inst_1_/U2/SO (HADDX1_RVT)          2.67      0.03      0.06       0.08 r
-  add64/mfa_inst_1_/p (MFA_57)                                      0.00       0.08 r
-  add64/genblk1_layer1_0_/p[1] (LA4_20)                             0.00       0.08 r
-  add64/genblk1_layer1_0_/U2/A2 (AND2X1_RVT)              0.03      0.02       0.10 r
-  add64/genblk1_layer1_0_/U2/Y (AND2X1_RVT)     0.93      0.02      0.03       0.13 r
-  add64/genblk1_layer1_0_/U3/A2 (OR2X1_RVT)               0.02      0.02       0.15 r
-  add64/genblk1_layer1_0_/U3/Y (OR2X1_RVT)      0.78      0.01      0.03       0.18 r
-  add64/genblk1_layer1_0_/U4/A2 (AND2X1_RVT)              0.01      0.01       0.19 r
-  add64/genblk1_layer1_0_/U4/Y (AND2X1_RVT)     0.93      0.02      0.03       0.22 r
-  add64/genblk1_layer1_0_/U5/A2 (OR2X1_RVT)               0.02      0.02       0.24 r
-  add64/genblk1_layer1_0_/U5/Y (OR2X1_RVT)      0.78      0.01      0.03       0.26 r
-  add64/genblk1_layer1_0_/U6/A2 (AND2X1_RVT)              0.01      0.01       0.28 r
-  add64/genblk1_layer1_0_/U6/Y (AND2X1_RVT)     0.93      0.02      0.03       0.31 r
-  add64/genblk1_layer1_0_/U7/A2 (OR2X1_RVT)               0.02      0.02       0.32 r
-  add64/genblk1_layer1_0_/U7/Y (OR2X1_RVT)      1.25      0.02      0.03       0.35 r
-  add64/genblk1_layer1_0_/G (LA4_20)                                0.00       0.35 r
-  add64/genblk1_layer2_0_/g[0] (LA4_16)                             0.00       0.35 r
-  add64/genblk1_layer2_0_/U6/A1 (AND2X1_RVT)              0.02      0.02       0.37 r
-  add64/genblk1_layer2_0_/U6/Y (AND2X1_RVT)     0.93      0.02      0.03       0.40 r
-  add64/genblk1_layer2_0_/U7/A2 (OR2X1_RVT)               0.02      0.02       0.41 r
-  add64/genblk1_layer2_0_/U7/Y (OR2X1_RVT)      0.78      0.02      0.03       0.44 r
-  add64/genblk1_layer2_0_/U8/A2 (AND2X1_RVT)              0.02      0.01       0.46 r
-  add64/genblk1_layer2_0_/U8/Y (AND2X1_RVT)     0.93      0.02      0.03       0.49 r
-  add64/genblk1_layer2_0_/U9/A2 (OR2X1_RVT)               0.02      0.02       0.50 r
-  add64/genblk1_layer2_0_/U9/Y (OR2X1_RVT)      0.78      0.02      0.03       0.53 r
-  add64/genblk1_layer2_0_/U10/A2 (AND2X1_RVT)             0.02      0.01       0.54 r
-  add64/genblk1_layer2_0_/U10/Y (AND2X1_RVT)     0.93     0.02      0.03       0.57 r
-  add64/genblk1_layer2_0_/U11/A2 (OR2X1_RVT)              0.02      0.02       0.59 r
-  add64/genblk1_layer2_0_/U11/Y (OR2X1_RVT)     1.25      0.02      0.03       0.62 r
-  add64/genblk1_layer2_0_/G (LA4_16)                                0.00       0.62 r
-  add64/genblk1_layer3/g[0] (LA4_67)                                0.00       0.62 r
-  add64/genblk1_layer3/U2/A1 (OR2X1_RVT)                  0.02      0.02       0.64 r
-  add64/genblk1_layer3/U2/Y (OR2X1_RVT)         2.86      0.02      0.04       0.68 r
-  add64/genblk1_layer3/U3/A2 (AND2X1_RVT)                 0.02      0.02       0.69 r
-  add64/genblk1_layer3/U3/Y (AND2X1_RVT)        0.93      0.02      0.03       0.73 r
-  add64/genblk1_layer3/U4/A2 (OR2X1_RVT)                  0.02      0.02       0.74 r
-  add64/genblk1_layer3/U4/Y (OR2X1_RVT)         2.86      0.02      0.04       0.78 r
-  add64/genblk1_layer3/U12/A2 (AND2X1_RVT)                0.02      0.02       0.79 r
-  add64/genblk1_layer3/U12/Y (AND2X1_RVT)       0.93      0.02      0.03       0.83 r
-  add64/genblk1_layer3/U13/A2 (OR2X1_RVT)                 0.02      0.02       0.84 r
-  add64/genblk1_layer3/U13/Y (OR2X1_RVT)        2.30      0.02      0.04       0.88 r
-  add64/genblk1_layer3/co[3] (LA4_67)                               0.00       0.88 r
-  add64/genblk1_layer2_3_/ci (LA4_19)                               0.00       0.88 r
-  add64/genblk1_layer2_3_/U8/A1 (AND2X1_RVT)              0.02      0.02       0.89 r
-  add64/genblk1_layer2_3_/U8/Y (AND2X1_RVT)     0.93      0.02      0.03       0.92 r
-  add64/genblk1_layer2_3_/U9/A2 (OR2X1_RVT)               0.02      0.02       0.94 r
-  add64/genblk1_layer2_3_/U9/Y (OR2X1_RVT)      2.24      0.02      0.03       0.97 r
-  add64/genblk1_layer2_3_/U10/A2 (AND2X1_RVT)             0.02      0.02       0.99 r
-  add64/genblk1_layer2_3_/U10/Y (AND2X1_RVT)     0.93     0.02      0.03       1.02 r
-  add64/genblk1_layer2_3_/U11/A2 (OR2X1_RVT)              0.02      0.02       1.04 r
-  add64/genblk1_layer2_3_/U11/Y (OR2X1_RVT)     2.24      0.02      0.03       1.07 r
-  add64/genblk1_layer2_3_/U12/A2 (AND2X1_RVT)             0.02      0.02       1.09 r
-  add64/genblk1_layer2_3_/U12/Y (AND2X1_RVT)     0.93     0.02      0.03       1.12 r
-  add64/genblk1_layer2_3_/U13/A2 (OR2X1_RVT)              0.02      0.02       1.13 r
-  add64/genblk1_layer2_3_/U13/Y (OR2X1_RVT)     1.68      0.02      0.03       1.17 r
-  add64/genblk1_layer2_3_/co[3] (LA4_19)                            0.00       1.17 r
-  add64/genblk1_layer1_15_/ci (LA4_35)                              0.00       1.17 r
-  add64/genblk1_layer1_15_/U8/A1 (AND2X1_RVT)             0.02      0.02       1.18 r
-  add64/genblk1_layer1_15_/U8/Y (AND2X1_RVT)     0.93     0.02      0.03       1.21 r
-  add64/genblk1_layer1_15_/U9/A2 (OR2X1_RVT)              0.02      0.02       1.23 r
-  add64/genblk1_layer1_15_/U9/Y (OR2X1_RVT)     1.62      0.02      0.03       1.26 r
-  add64/genblk1_layer1_15_/U10/A2 (AND2X1_RVT)            0.02      0.01       1.27 r
-  add64/genblk1_layer1_15_/U10/Y (AND2X1_RVT)     0.93     0.02     0.03       1.30 r
-  add64/genblk1_layer1_15_/U11/A2 (OR2X1_RVT)             0.02      0.02       1.32 r
-  add64/genblk1_layer1_15_/U11/Y (OR2X1_RVT)     1.62     0.02      0.03       1.35 r
-  add64/genblk1_layer1_15_/U12/A2 (AND2X1_RVT)            0.02      0.01       1.37 r
-  add64/genblk1_layer1_15_/U12/Y (AND2X1_RVT)     0.93     0.02     0.03       1.40 r
-  add64/genblk1_layer1_15_/U13/A2 (OR2X1_RVT)             0.02      0.02       1.41 r
-  add64/genblk1_layer1_15_/U13/Y (OR2X1_RVT)     1.06     0.02      0.03       1.44 r
-  add64/genblk1_layer1_15_/co[3] (LA4_35)                           0.00       1.44 r
-  add64/mfa_inst_63_/ci (MFA_119)                                   0.00       1.44 r
-  add64/mfa_inst_63_/U3/A0 (HADDX1_RVT)                   0.02      0.02       1.47 r
-  add64/mfa_inst_63_/U3/SO (HADDX1_RVT)         0.55      0.02      0.06       1.52 f
-  add64/mfa_inst_63_/s (MFA_119)                                    0.00       1.52 f
-  add64/s[63] (cla_adder_WIDTH64)                                   0.00       1.52 f
-  U284/A2 (AND2X1_RVT)                                    0.02      0.01       1.54 f
-  U284/Y (AND2X1_RVT)                           0.65      0.02      0.03       1.57 f
-  U285/A4 (OR4X1_RVT)                                     0.02      0.01       1.58 f
-  U285/Y (OR4X1_RVT)                            0.00      0.01      0.06       1.63 f
-  s[63] (out)                                             0.01      0.00       1.63 f
-  data arrival time                                                            1.63
+  b[1] (in)                                     1.15      0.00      0.00       0.00 f
+  add64_0/b[1] (cla_adder_WIDTH64)                                  0.00       0.00 f
+  add64_0/mfa_inst_1_/b (MFA_57)                                    0.00       0.00 f
+  add64_0/mfa_inst_1_/U1/A (INVX0_RVT)                    0.00      0.01       0.01 f
+  add64_0/mfa_inst_1_/U1/Y (INVX0_RVT)          1.60      0.01      0.01       0.03 r
+  add64_0/mfa_inst_1_/U3/A1 (OR2X1_RVT)                   0.01      0.02       0.04 r
+  add64_0/mfa_inst_1_/U3/Y (OR2X1_RVT)          1.68      0.02      0.04       0.08 r
+  add64_0/mfa_inst_1_/U4/A2 (NAND2X0_RVT)                 0.02      0.01       0.09 r
+  add64_0/mfa_inst_1_/U4/Y (NAND2X0_RVT)        2.14      0.05      0.03       0.13 f
+  add64_0/mfa_inst_1_/p (MFA_57)                                    0.00       0.13 f
+  add64_0/genblk1_layer1_0_/p[1] (LA4_20)                           0.00       0.13 f
+  add64_0/genblk1_layer1_0_/U2/A1 (NAND2X0_RVT)           0.05      0.02       0.14 f
+  add64_0/genblk1_layer1_0_/U2/Y (NAND2X0_RVT)     0.78     0.03     0.03      0.18 r
+  add64_0/genblk1_layer1_0_/U4/A1 (NAND2X0_RVT)           0.03      0.01       0.19 r
+  add64_0/genblk1_layer1_0_/U4/Y (NAND2X0_RVT)     0.78     0.03     0.02      0.22 f
+  add64_0/genblk1_layer1_0_/U5/A1 (NAND2X0_RVT)           0.03      0.01       0.23 f
+  add64_0/genblk1_layer1_0_/U5/Y (NAND2X0_RVT)     0.78     0.03     0.03      0.26 r
+  add64_0/genblk1_layer1_0_/U7/A1 (NAND2X0_RVT)           0.03      0.01       0.27 r
+  add64_0/genblk1_layer1_0_/U7/Y (NAND2X0_RVT)     0.83     0.03     0.02      0.29 f
+  add64_0/genblk1_layer1_0_/U8/A1 (AND2X1_RVT)            0.03      0.01       0.31 f
+  add64_0/genblk1_layer1_0_/U8/Y (AND2X1_RVT)     0.93     0.02     0.03       0.34 f
+  add64_0/genblk1_layer1_0_/U9/A2 (OR2X1_RVT)             0.02      0.02       0.36 f
+  add64_0/genblk1_layer1_0_/U9/Y (OR2X1_RVT)     1.08     0.02      0.03       0.39 f
+  add64_0/genblk1_layer1_0_/G (LA4_20)                              0.00       0.39 f
+  add64_0/genblk1_layer2_0_/g[0] (LA4_16)                           0.00       0.39 f
+  add64_0/genblk1_layer2_0_/U2/A2 (NAND2X0_RVT)           0.02      0.01       0.40 f
+  add64_0/genblk1_layer2_0_/U2/Y (NAND2X0_RVT)     0.78     0.02     0.02      0.42 r
+  add64_0/genblk1_layer2_0_/U4/A1 (NAND2X0_RVT)           0.02      0.01       0.44 r
+  add64_0/genblk1_layer2_0_/U4/Y (NAND2X0_RVT)     0.78     0.03     0.02      0.46 f
+  add64_0/genblk1_layer2_0_/U5/A1 (NAND2X0_RVT)           0.03      0.01       0.47 f
+  add64_0/genblk1_layer2_0_/U5/Y (NAND2X0_RVT)     0.78     0.03     0.03      0.50 r
+  add64_0/genblk1_layer2_0_/U7/A1 (NAND2X0_RVT)           0.03      0.01       0.51 r
+  add64_0/genblk1_layer2_0_/U7/Y (NAND2X0_RVT)     0.83     0.03     0.02      0.53 f
+  add64_0/genblk1_layer2_0_/U8/A1 (AND2X1_RVT)            0.03      0.01       0.55 f
+  add64_0/genblk1_layer2_0_/U8/Y (AND2X1_RVT)     0.93     0.02     0.03       0.58 f
+  add64_0/genblk1_layer2_0_/U9/A2 (OR2X1_RVT)             0.02      0.02       0.60 f
+  add64_0/genblk1_layer2_0_/U9/Y (OR2X1_RVT)     1.08     0.01      0.03       0.63 f
+  add64_0/genblk1_layer2_0_/G (LA4_16)                              0.00       0.63 f
+  add64_0/genblk1_layer3/g[0] (LA4_48)                              0.00       0.63 f
+  add64_0/genblk1_layer3/U10/A (INVX0_RVT)                0.01      0.01       0.64 f
+  add64_0/genblk1_layer3/U10/Y (INVX0_RVT)      0.78      0.01      0.01       0.65 r
+  add64_0/genblk1_layer3/U12/A1 (NAND2X0_RVT)             0.01      0.01       0.67 r
+  add64_0/genblk1_layer3/U12/Y (NAND2X0_RVT)     3.37     0.06      0.04       0.71 f
+  add64_0/genblk1_layer3/U13/A2 (NAND2X0_RVT)             0.06      0.01       0.73 f
+  add64_0/genblk1_layer3/U13/Y (NAND2X0_RVT)     0.70     0.04      0.04       0.77 r
+  add64_0/genblk1_layer3/U14/A2 (NAND2X0_RVT)             0.04      0.01       0.78 r
+  add64_0/genblk1_layer3/U14/Y (NAND2X0_RVT)     3.37     0.06      0.05       0.83 f
+  add64_0/genblk1_layer3/U15/A2 (NAND2X0_RVT)             0.06      0.01       0.84 f
+  add64_0/genblk1_layer3/U15/Y (NAND2X0_RVT)     0.70     0.04      0.04       0.89 r
+  add64_0/genblk1_layer3/U16/A2 (NAND2X0_RVT)             0.04      0.01       0.90 r
+  add64_0/genblk1_layer3/U16/Y (NAND2X0_RVT)     2.89     0.06      0.05       0.94 f
+  add64_0/genblk1_layer3/co[3] (LA4_48)                             0.00       0.94 f
+  add64_0/genblk1_layer2_3_/ci (LA4_19)                             0.00       0.94 f
+  add64_0/genblk1_layer2_3_/U11/A1 (NAND2X0_RVT)          0.06      0.02       0.96 f
+  add64_0/genblk1_layer2_3_/U11/Y (NAND2X0_RVT)     0.70     0.03     0.04     1.00 r
+  add64_0/genblk1_layer2_3_/U12/A2 (NAND2X0_RVT)          0.03      0.01       1.01 r
+  add64_0/genblk1_layer2_3_/U12/Y (NAND2X0_RVT)     2.81     0.05     0.04     1.05 f
+  add64_0/genblk1_layer2_3_/U13/A2 (NAND2X0_RVT)          0.05      0.01       1.07 f
+  add64_0/genblk1_layer2_3_/U13/Y (NAND2X0_RVT)     0.70     0.04     0.04     1.10 r
+  add64_0/genblk1_layer2_3_/U14/A2 (NAND2X0_RVT)          0.04      0.01       1.12 r
+  add64_0/genblk1_layer2_3_/U14/Y (NAND2X0_RVT)     2.81     0.05     0.04     1.16 f
+  add64_0/genblk1_layer2_3_/U15/A2 (NAND2X0_RVT)          0.05      0.01       1.18 f
+  add64_0/genblk1_layer2_3_/U15/Y (NAND2X0_RVT)     0.70     0.04     0.04     1.21 r
+  add64_0/genblk1_layer2_3_/U16/A2 (NAND2X0_RVT)          0.04      0.01       1.22 r
+  add64_0/genblk1_layer2_3_/U16/Y (NAND2X0_RVT)     2.32     0.05     0.04     1.26 f
+  add64_0/genblk1_layer2_3_/co[3] (LA4_19)                          0.00       1.26 f
+  add64_0/genblk1_layer1_15_/ci (LA4_35)                            0.00       1.26 f
+  add64_0/genblk1_layer1_15_/U11/A1 (NAND2X0_RVT)         0.05      0.02       1.28 f
+  add64_0/genblk1_layer1_15_/U11/Y (NAND2X0_RVT)     0.70     0.03     0.03     1.31 r
+  add64_0/genblk1_layer1_15_/U12/A2 (NAND2X0_RVT)         0.03      0.01       1.33 r
+  add64_0/genblk1_layer1_15_/U12/Y (NAND2X0_RVT)     2.24     0.05     0.04     1.36 f
+  add64_0/genblk1_layer1_15_/U13/A2 (NAND2X0_RVT)         0.05      0.01       1.38 f
+  add64_0/genblk1_layer1_15_/U13/Y (NAND2X0_RVT)     0.70     0.03     0.03     1.41 r
+  add64_0/genblk1_layer1_15_/U14/A2 (NAND2X0_RVT)         0.03      0.01       1.42 r
+  add64_0/genblk1_layer1_15_/U14/Y (NAND2X0_RVT)     2.24     0.05     0.04     1.46 f
+  add64_0/genblk1_layer1_15_/U15/A2 (NAND2X0_RVT)         0.05      0.01       1.48 f
+  add64_0/genblk1_layer1_15_/U15/Y (NAND2X0_RVT)     0.70     0.03     0.03     1.51 r
+  add64_0/genblk1_layer1_15_/U16/A2 (NAND2X0_RVT)         0.03      0.01       1.52 r
+  add64_0/genblk1_layer1_15_/U16/Y (NAND2X0_RVT)     1.76     0.04     0.03     1.56 f
+  add64_0/genblk1_layer1_15_/co[3] (LA4_35)                         0.00       1.56 f
+  add64_0/mfa_inst_63_/ci (MFA_119)                                 0.00       1.56 f
+  add64_0/mfa_inst_63_/U5/S0 (MUX21X1_RVT)                0.04      0.03       1.58 f
+  add64_0/mfa_inst_63_/U5/Y (MUX21X1_RVT)       0.78      0.02      0.06       1.64 f
+  add64_0/mfa_inst_63_/U7/A1 (NAND2X0_RVT)                0.02      0.01       1.66 f
+  add64_0/mfa_inst_63_/U7/Y (NAND2X0_RVT)       0.48      0.02      0.02       1.68 r
+  add64_0/mfa_inst_63_/s (MFA_119)                                  0.00       1.68 r
+  add64_0/s[63] (cla_adder_WIDTH64)                                 0.00       1.68 r
+  U258/A2 (NAND2X0_RVT)                                   0.02      0.01       1.69 r
+  U258/Y (NAND2X0_RVT)                          0.60      0.03      0.02       1.71 f
+  U260/A3 (NAND4X0_RVT)                                   0.03      0.01       1.72 f
+  U260/Y (NAND4X0_RVT)                          0.00      0.03      0.03       1.75 r
+  s[63] (out)                                             0.03      0.00       1.75 r
+  data arrival time                                                            1.75
   ------------------------------------------------------------------------------------
   (Path is unconstrained)
 

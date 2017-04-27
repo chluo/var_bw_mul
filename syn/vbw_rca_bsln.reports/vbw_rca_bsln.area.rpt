@@ -1,0 +1,55 @@
+ 
+****************************************
+Report : area
+Design : vbw_rca_bsln
+Version: K-2015.06-SP4
+Date   : Wed Apr 26 19:42:04 2017
+****************************************
+
+Library(s) Used:
+
+    saed32rvt_tt1p05v25c (File: /usr/local/packages/synopsys_2015/SAED32_EDK/lib/stdcell_rvt/db_nldm/saed32rvt_tt1p05v25c.db)
+
+Number of ports:                          820
+Number of nets:                          2368
+Number of cells:                         1647
+Number of combinational cells:           1634
+Number of sequential cells:                 1
+Number of macros/black boxes:               0
+Number of buf/inv:                         51
+Number of references:                      19
+
+Combinational area:               2909.948850
+Buf/Inv area:                       68.618881
+Noncombinational area:               0.000000
+Macro/Black Box area:                0.000000
+Net Interconnect area:             571.701252
+
+Total cell area:                  2909.948850
+Total area:                       3481.650102
+
+Hierarchical area distribution
+------------------------------
+
+                                  Global cell area          Local cell area
+                                  ------------------  ---------------------------- 
+Hierarchical cell                 Absolute   Percent  Combi-     Noncombi-  Black-
+                                  Total      Total    national   national   boxes   Design
+--------------------------------  ---------  -------  ---------  ---------  ------  ---------------
+vbw_rca_bsln                      2909.9489    100.0   413.2381     0.0000  0.0000  vbw_rca_bsln
+add16_1                            199.2489      6.8   199.2489     0.0000  0.0000  adder_WIDTH16_0
+add16_2                            199.2489      6.8   199.2489     0.0000  0.0000  adder_WIDTH16_1
+add16_3                            199.2489      6.8   199.2489     0.0000  0.0000  adder_WIDTH16_2
+add32_1                            402.5641     13.8   402.5641     0.0000  0.0000  adder_WIDTH32
+add64_0                            813.2608     27.9   813.2608     0.0000  0.0000  adder_WIDTH64
+add8_1                              97.5913      3.4    97.5913     0.0000  0.0000  adder_WIDTH8_0
+add8_2                              97.5913      3.4    97.5913     0.0000  0.0000  adder_WIDTH8_1
+add8_3                              97.5913      3.4    97.5913     0.0000  0.0000  adder_WIDTH8_2
+add8_4                              97.5913      3.4    97.5913     0.0000  0.0000  adder_WIDTH8_3
+add8_5                              97.5913      3.4    97.5913     0.0000  0.0000  adder_WIDTH8_4
+add8_6                              97.5913      3.4    97.5913     0.0000  0.0000  adder_WIDTH8_5
+add8_7                              97.5913      3.4    97.5913     0.0000  0.0000  adder_WIDTH8_6
+--------------------------------  ---------  -------  ---------  ---------  ------  ---------------
+Total                                                 2909.9489     0.0000  0.0000
+
+1

@@ -1,18 +1,23 @@
 /////////////////////////////////////////////////////////////
 // Created by: Synopsys DC Ultra(TM) in wire load mode
 // Version   : K-2015.06-SP4
-// Date      : Mon Apr 24 11:33:35 2017
+// Date      : Wed Apr 26 19:44:04 2017
 /////////////////////////////////////////////////////////////
 
 
 module MFA_0 ( a, b, ci, p, g, s );
   input a, b, ci;
   output p, g, s;
+  wire   n1, n2, n3, n4, n5;
 
-
-  AND2X1_RVT U1 ( .A1(a), .A2(b), .Y(g) );
-  HADDX1_RVT U2 ( .A0(a), .B0(b), .SO(p) );
-  HADDX1_RVT U3 ( .A0(ci), .B0(p), .SO(s) );
+  INVX0_RVT U1 ( .A(b), .Y(n1) );
+  NAND2X0_RVT U2 ( .A1(a), .A2(n1), .Y(n2) );
+  OR2X1_RVT U3 ( .A1(n1), .A2(a), .Y(n3) );
+  NAND2X0_RVT U4 ( .A1(n2), .A2(n3), .Y(p) );
+  MUX21X1_RVT U5 ( .A1(n2), .A2(p), .S0(ci), .Y(n5) );
+  OR2X1_RVT U6 ( .A1(ci), .A2(n3), .Y(n4) );
+  NAND2X0_RVT U7 ( .A1(n5), .A2(n4), .Y(s) );
+  AND2X1_RVT U8 ( .A1(a), .A2(b), .Y(g) );
 endmodule
 
 
@@ -22,14 +27,15 @@ module LA2_30 ( g, p, ci, G, P, co );
   output [1:0] co;
   input ci;
   output G, P;
-  wire   ci, n1, n2;
+  wire   ci, n1, n2, n3;
   assign co[0] = ci;
 
   AND2X1_RVT U1 ( .A1(g[0]), .A2(p[1]), .Y(n1) );
   OR2X1_RVT U2 ( .A1(g[1]), .A2(n1), .Y(G) );
-  AND2X1_RVT U3 ( .A1(ci), .A2(p[0]), .Y(n2) );
-  OR2X1_RVT U4 ( .A1(g[0]), .A2(n2), .Y(co[1]) );
-  AND2X1_RVT U5 ( .A1(p[1]), .A2(p[0]), .Y(P) );
+  AND2X1_RVT U3 ( .A1(p[1]), .A2(p[0]), .Y(P) );
+  INVX0_RVT U4 ( .A(g[0]), .Y(n3) );
+  NAND2X0_RVT U5 ( .A1(ci), .A2(p[0]), .Y(n2) );
+  NAND2X0_RVT U6 ( .A1(n3), .A2(n2), .Y(co[1]) );
 endmodule
 
 
@@ -39,13 +45,14 @@ module LA2_62 ( g, p, ci, G, P, co );
   output [1:0] co;
   input ci;
   output G, P;
-  wire   n1, n2;
+  wire   n1, n2, n3;
 
   AND2X1_RVT U1 ( .A1(g[0]), .A2(p[1]), .Y(n1) );
   OR2X1_RVT U2 ( .A1(g[1]), .A2(n1), .Y(G) );
-  AND2X1_RVT U3 ( .A1(ci), .A2(p[0]), .Y(n2) );
-  OR2X1_RVT U4 ( .A1(g[0]), .A2(n2), .Y(co[1]) );
-  AND2X1_RVT U5 ( .A1(p[1]), .A2(p[0]), .Y(P) );
+  AND2X1_RVT U3 ( .A1(p[1]), .A2(p[0]), .Y(P) );
+  INVX0_RVT U4 ( .A(g[0]), .Y(n3) );
+  NAND2X0_RVT U5 ( .A1(ci), .A2(p[0]), .Y(n2) );
+  NAND2X0_RVT U6 ( .A1(n3), .A2(n2), .Y(co[1]) );
 endmodule
 
 
@@ -55,13 +62,14 @@ module LA2_1 ( g, p, ci, G, P, co );
   output [1:0] co;
   input ci;
   output G, P;
-  wire   n1, n2;
+  wire   n1, n2, n3;
 
   AND2X1_RVT U1 ( .A1(g[0]), .A2(p[1]), .Y(n1) );
   OR2X1_RVT U2 ( .A1(g[1]), .A2(n1), .Y(G) );
-  AND2X1_RVT U3 ( .A1(ci), .A2(p[0]), .Y(n2) );
-  OR2X1_RVT U4 ( .A1(g[0]), .A2(n2), .Y(co[1]) );
-  AND2X1_RVT U5 ( .A1(p[1]), .A2(p[0]), .Y(P) );
+  AND2X1_RVT U3 ( .A1(p[1]), .A2(p[0]), .Y(P) );
+  INVX0_RVT U4 ( .A(g[0]), .Y(n3) );
+  NAND2X0_RVT U5 ( .A1(ci), .A2(p[0]), .Y(n2) );
+  NAND2X0_RVT U6 ( .A1(n3), .A2(n2), .Y(co[1]) );
 endmodule
 
 
@@ -71,13 +79,14 @@ module LA2_0 ( g, p, ci, G, P, co );
   output [1:0] co;
   input ci;
   output G, P;
-  wire   n1, n2;
+  wire   n1, n2, n3;
 
   AND2X1_RVT U1 ( .A1(g[0]), .A2(p[1]), .Y(n1) );
   OR2X1_RVT U2 ( .A1(g[1]), .A2(n1), .Y(G) );
-  AND2X1_RVT U3 ( .A1(ci), .A2(p[0]), .Y(n2) );
-  OR2X1_RVT U4 ( .A1(g[0]), .A2(n2), .Y(co[1]) );
-  AND2X1_RVT U5 ( .A1(p[1]), .A2(p[0]), .Y(P) );
+  AND2X1_RVT U3 ( .A1(p[1]), .A2(p[0]), .Y(P) );
+  INVX0_RVT U4 ( .A(g[0]), .Y(n3) );
+  NAND2X0_RVT U5 ( .A1(ci), .A2(p[0]), .Y(n2) );
+  NAND2X0_RVT U6 ( .A1(n3), .A2(n2), .Y(co[1]) );
 endmodule
 
 
@@ -87,13 +96,14 @@ module LA2_5 ( g, p, ci, G, P, co );
   output [1:0] co;
   input ci;
   output G, P;
-  wire   n1, n2;
+  wire   n1, n2, n3;
 
   AND2X1_RVT U1 ( .A1(g[0]), .A2(p[1]), .Y(n1) );
   OR2X1_RVT U2 ( .A1(g[1]), .A2(n1), .Y(G) );
-  AND2X1_RVT U3 ( .A1(ci), .A2(p[0]), .Y(n2) );
-  OR2X1_RVT U4 ( .A1(g[0]), .A2(n2), .Y(co[1]) );
-  AND2X1_RVT U5 ( .A1(p[1]), .A2(p[0]), .Y(P) );
+  AND2X1_RVT U3 ( .A1(p[1]), .A2(p[0]), .Y(P) );
+  INVX0_RVT U4 ( .A(g[0]), .Y(n3) );
+  NAND2X0_RVT U5 ( .A1(ci), .A2(p[0]), .Y(n2) );
+  NAND2X0_RVT U6 ( .A1(n3), .A2(n2), .Y(co[1]) );
 endmodule
 
 
@@ -103,13 +113,14 @@ module LA2_4 ( g, p, ci, G, P, co );
   output [1:0] co;
   input ci;
   output G, P;
-  wire   n1, n2;
+  wire   n1, n2, n3;
 
-  AND2X1_RVT U1 ( .A1(ci), .A2(p[0]), .Y(n1) );
-  OR2X1_RVT U2 ( .A1(g[0]), .A2(n1), .Y(co[1]) );
-  AND2X1_RVT U3 ( .A1(g[0]), .A2(p[1]), .Y(n2) );
-  OR2X1_RVT U4 ( .A1(g[1]), .A2(n2), .Y(G) );
-  AND2X1_RVT U5 ( .A1(p[1]), .A2(p[0]), .Y(P) );
+  AND2X1_RVT U1 ( .A1(g[0]), .A2(p[1]), .Y(n1) );
+  OR2X1_RVT U2 ( .A1(g[1]), .A2(n1), .Y(G) );
+  AND2X1_RVT U3 ( .A1(p[1]), .A2(p[0]), .Y(P) );
+  INVX0_RVT U4 ( .A(g[0]), .Y(n3) );
+  NAND2X0_RVT U5 ( .A1(ci), .A2(p[0]), .Y(n2) );
+  NAND2X0_RVT U6 ( .A1(n3), .A2(n2), .Y(co[1]) );
 endmodule
 
 
@@ -119,13 +130,14 @@ module LA2_3 ( g, p, ci, G, P, co );
   output [1:0] co;
   input ci;
   output G, P;
-  wire   n1, n2;
+  wire   n1, n2, n3;
 
   AND2X1_RVT U1 ( .A1(g[0]), .A2(p[1]), .Y(n1) );
   OR2X1_RVT U2 ( .A1(g[1]), .A2(n1), .Y(G) );
-  AND2X1_RVT U3 ( .A1(ci), .A2(p[0]), .Y(n2) );
-  OR2X1_RVT U4 ( .A1(g[0]), .A2(n2), .Y(co[1]) );
-  AND2X1_RVT U5 ( .A1(p[1]), .A2(p[0]), .Y(P) );
+  AND2X1_RVT U3 ( .A1(p[1]), .A2(p[0]), .Y(P) );
+  INVX0_RVT U4 ( .A(g[0]), .Y(n3) );
+  NAND2X0_RVT U5 ( .A1(ci), .A2(p[0]), .Y(n2) );
+  NAND2X0_RVT U6 ( .A1(n3), .A2(n2), .Y(co[1]) );
 endmodule
 
 
@@ -135,13 +147,14 @@ module LA2_2 ( g, p, ci, G, P, co );
   output [1:0] co;
   input ci;
   output G, P;
-  wire   n1, n2;
+  wire   n1, n2, n3;
 
   AND2X1_RVT U1 ( .A1(g[0]), .A2(p[1]), .Y(n1) );
   OR2X1_RVT U2 ( .A1(g[1]), .A2(n1), .Y(G) );
-  AND2X1_RVT U3 ( .A1(ci), .A2(p[0]), .Y(n2) );
-  OR2X1_RVT U4 ( .A1(g[0]), .A2(n2), .Y(co[1]) );
-  AND2X1_RVT U5 ( .A1(p[1]), .A2(p[0]), .Y(P) );
+  AND2X1_RVT U3 ( .A1(p[1]), .A2(p[0]), .Y(P) );
+  INVX0_RVT U4 ( .A(g[0]), .Y(n3) );
+  NAND2X0_RVT U5 ( .A1(ci), .A2(p[0]), .Y(n2) );
+  NAND2X0_RVT U6 ( .A1(n3), .A2(n2), .Y(co[1]) );
 endmodule
 
 
@@ -151,14 +164,15 @@ module LA2_13 ( g, p, ci, G, P, co );
   output [1:0] co;
   input ci;
   output G, P;
-  wire   ci, n1, n2;
+  wire   ci, n1, n2, n3;
   assign co[0] = ci;
 
-  AND2X1_RVT U1 ( .A1(ci), .A2(p[0]), .Y(n1) );
-  OR2X1_RVT U2 ( .A1(g[0]), .A2(n1), .Y(co[1]) );
-  AND2X1_RVT U3 ( .A1(g[0]), .A2(p[1]), .Y(n2) );
-  OR2X1_RVT U4 ( .A1(g[1]), .A2(n2), .Y(G) );
-  AND2X1_RVT U5 ( .A1(p[1]), .A2(p[0]), .Y(P) );
+  AND2X1_RVT U1 ( .A1(g[0]), .A2(p[1]), .Y(n1) );
+  OR2X1_RVT U2 ( .A1(g[1]), .A2(n1), .Y(G) );
+  AND2X1_RVT U3 ( .A1(p[1]), .A2(p[0]), .Y(P) );
+  INVX0_RVT U4 ( .A(g[0]), .Y(n3) );
+  NAND2X0_RVT U5 ( .A1(ci), .A2(p[0]), .Y(n2) );
+  NAND2X0_RVT U6 ( .A1(n3), .A2(n2), .Y(co[1]) );
 endmodule
 
 
@@ -168,14 +182,15 @@ module LA2_12 ( g, p, ci, G, P, co );
   output [1:0] co;
   input ci;
   output G, P;
-  wire   ci, n1, n2;
+  wire   ci, n1, n2, n3;
   assign co[0] = ci;
 
-  AND2X1_RVT U1 ( .A1(ci), .A2(p[0]), .Y(n1) );
-  OR2X1_RVT U2 ( .A1(g[0]), .A2(n1), .Y(co[1]) );
-  AND2X1_RVT U3 ( .A1(g[0]), .A2(p[1]), .Y(n2) );
-  OR2X1_RVT U4 ( .A1(g[1]), .A2(n2), .Y(G) );
-  AND2X1_RVT U5 ( .A1(p[1]), .A2(p[0]), .Y(P) );
+  AND2X1_RVT U1 ( .A1(g[0]), .A2(p[1]), .Y(n1) );
+  OR2X1_RVT U2 ( .A1(g[1]), .A2(n1), .Y(G) );
+  AND2X1_RVT U3 ( .A1(p[1]), .A2(p[0]), .Y(P) );
+  INVX0_RVT U4 ( .A(g[0]), .Y(n3) );
+  NAND2X0_RVT U5 ( .A1(ci), .A2(p[0]), .Y(n2) );
+  NAND2X0_RVT U6 ( .A1(n3), .A2(n2), .Y(co[1]) );
 endmodule
 
 
@@ -185,14 +200,15 @@ module LA2_11 ( g, p, ci, G, P, co );
   output [1:0] co;
   input ci;
   output G, P;
-  wire   ci, n1, n2;
+  wire   ci, n1, n2, n3;
   assign co[0] = ci;
 
-  AND2X1_RVT U1 ( .A1(ci), .A2(p[0]), .Y(n1) );
-  OR2X1_RVT U2 ( .A1(g[0]), .A2(n1), .Y(co[1]) );
-  AND2X1_RVT U3 ( .A1(g[0]), .A2(p[1]), .Y(n2) );
-  OR2X1_RVT U4 ( .A1(g[1]), .A2(n2), .Y(G) );
-  AND2X1_RVT U5 ( .A1(p[1]), .A2(p[0]), .Y(P) );
+  AND2X1_RVT U1 ( .A1(g[0]), .A2(p[1]), .Y(n1) );
+  OR2X1_RVT U2 ( .A1(g[1]), .A2(n1), .Y(G) );
+  AND2X1_RVT U3 ( .A1(p[1]), .A2(p[0]), .Y(P) );
+  INVX0_RVT U4 ( .A(g[0]), .Y(n3) );
+  NAND2X0_RVT U5 ( .A1(ci), .A2(p[0]), .Y(n2) );
+  NAND2X0_RVT U6 ( .A1(n3), .A2(n2), .Y(co[1]) );
 endmodule
 
 
@@ -202,14 +218,15 @@ module LA2_10 ( g, p, ci, G, P, co );
   output [1:0] co;
   input ci;
   output G, P;
-  wire   ci, n1, n2;
+  wire   ci, n1, n2, n3;
   assign co[0] = ci;
 
-  AND2X1_RVT U1 ( .A1(ci), .A2(p[0]), .Y(n1) );
-  OR2X1_RVT U2 ( .A1(g[0]), .A2(n1), .Y(co[1]) );
-  AND2X1_RVT U3 ( .A1(g[0]), .A2(p[1]), .Y(n2) );
-  OR2X1_RVT U4 ( .A1(g[1]), .A2(n2), .Y(G) );
-  AND2X1_RVT U5 ( .A1(p[1]), .A2(p[0]), .Y(P) );
+  AND2X1_RVT U1 ( .A1(g[0]), .A2(p[1]), .Y(n1) );
+  OR2X1_RVT U2 ( .A1(g[1]), .A2(n1), .Y(G) );
+  AND2X1_RVT U3 ( .A1(p[1]), .A2(p[0]), .Y(P) );
+  INVX0_RVT U4 ( .A(g[0]), .Y(n3) );
+  NAND2X0_RVT U5 ( .A1(ci), .A2(p[0]), .Y(n2) );
+  NAND2X0_RVT U6 ( .A1(n3), .A2(n2), .Y(co[1]) );
 endmodule
 
 
@@ -219,14 +236,15 @@ module LA2_9 ( g, p, ci, G, P, co );
   output [1:0] co;
   input ci;
   output G, P;
-  wire   ci, n1, n2;
+  wire   ci, n1, n2, n3;
   assign co[0] = ci;
 
-  AND2X1_RVT U1 ( .A1(ci), .A2(p[0]), .Y(n1) );
-  OR2X1_RVT U2 ( .A1(g[0]), .A2(n1), .Y(co[1]) );
-  AND2X1_RVT U3 ( .A1(g[0]), .A2(p[1]), .Y(n2) );
-  OR2X1_RVT U4 ( .A1(g[1]), .A2(n2), .Y(G) );
-  AND2X1_RVT U5 ( .A1(p[1]), .A2(p[0]), .Y(P) );
+  AND2X1_RVT U1 ( .A1(g[0]), .A2(p[1]), .Y(n1) );
+  OR2X1_RVT U2 ( .A1(g[1]), .A2(n1), .Y(G) );
+  AND2X1_RVT U3 ( .A1(p[1]), .A2(p[0]), .Y(P) );
+  INVX0_RVT U4 ( .A(g[0]), .Y(n3) );
+  NAND2X0_RVT U5 ( .A1(ci), .A2(p[0]), .Y(n2) );
+  NAND2X0_RVT U6 ( .A1(n3), .A2(n2), .Y(co[1]) );
 endmodule
 
 
@@ -236,14 +254,15 @@ module LA2_8 ( g, p, ci, G, P, co );
   output [1:0] co;
   input ci;
   output G, P;
-  wire   ci, n1, n2;
+  wire   ci, n1, n2, n3;
   assign co[0] = ci;
 
-  AND2X1_RVT U1 ( .A1(ci), .A2(p[0]), .Y(n1) );
-  OR2X1_RVT U2 ( .A1(g[0]), .A2(n1), .Y(co[1]) );
-  AND2X1_RVT U3 ( .A1(g[0]), .A2(p[1]), .Y(n2) );
-  OR2X1_RVT U4 ( .A1(g[1]), .A2(n2), .Y(G) );
-  AND2X1_RVT U5 ( .A1(p[1]), .A2(p[0]), .Y(P) );
+  AND2X1_RVT U1 ( .A1(g[0]), .A2(p[1]), .Y(n1) );
+  OR2X1_RVT U2 ( .A1(g[1]), .A2(n1), .Y(G) );
+  AND2X1_RVT U3 ( .A1(p[1]), .A2(p[0]), .Y(P) );
+  INVX0_RVT U4 ( .A(g[0]), .Y(n3) );
+  NAND2X0_RVT U5 ( .A1(ci), .A2(p[0]), .Y(n2) );
+  NAND2X0_RVT U6 ( .A1(n3), .A2(n2), .Y(co[1]) );
 endmodule
 
 
@@ -253,14 +272,15 @@ module LA2_7 ( g, p, ci, G, P, co );
   output [1:0] co;
   input ci;
   output G, P;
-  wire   ci, n1, n2;
+  wire   ci, n1, n2, n3;
   assign co[0] = ci;
 
-  AND2X1_RVT U1 ( .A1(ci), .A2(p[0]), .Y(n1) );
-  OR2X1_RVT U2 ( .A1(g[0]), .A2(n1), .Y(co[1]) );
-  AND2X1_RVT U3 ( .A1(g[0]), .A2(p[1]), .Y(n2) );
-  OR2X1_RVT U4 ( .A1(g[1]), .A2(n2), .Y(G) );
-  AND2X1_RVT U5 ( .A1(p[1]), .A2(p[0]), .Y(P) );
+  AND2X1_RVT U1 ( .A1(g[0]), .A2(p[1]), .Y(n1) );
+  OR2X1_RVT U2 ( .A1(g[1]), .A2(n1), .Y(G) );
+  AND2X1_RVT U3 ( .A1(p[1]), .A2(p[0]), .Y(P) );
+  INVX0_RVT U4 ( .A(g[0]), .Y(n3) );
+  NAND2X0_RVT U5 ( .A1(ci), .A2(p[0]), .Y(n2) );
+  NAND2X0_RVT U6 ( .A1(n3), .A2(n2), .Y(co[1]) );
 endmodule
 
 
@@ -270,14 +290,15 @@ module LA2_6 ( g, p, ci, G, P, co );
   output [1:0] co;
   input ci;
   output G, P;
-  wire   ci, n1, n2;
+  wire   ci, n1, n2, n3;
   assign co[0] = ci;
 
-  AND2X1_RVT U1 ( .A1(ci), .A2(p[0]), .Y(n1) );
-  OR2X1_RVT U2 ( .A1(g[0]), .A2(n1), .Y(co[1]) );
-  AND2X1_RVT U3 ( .A1(g[0]), .A2(p[1]), .Y(n2) );
-  OR2X1_RVT U4 ( .A1(g[1]), .A2(n2), .Y(G) );
-  AND2X1_RVT U5 ( .A1(p[1]), .A2(p[0]), .Y(P) );
+  AND2X1_RVT U1 ( .A1(g[0]), .A2(p[1]), .Y(n1) );
+  OR2X1_RVT U2 ( .A1(g[1]), .A2(n1), .Y(G) );
+  AND2X1_RVT U3 ( .A1(p[1]), .A2(p[0]), .Y(P) );
+  INVX0_RVT U4 ( .A(g[0]), .Y(n3) );
+  NAND2X0_RVT U5 ( .A1(ci), .A2(p[0]), .Y(n2) );
+  NAND2X0_RVT U6 ( .A1(n3), .A2(n2), .Y(co[1]) );
 endmodule
 
 
@@ -287,14 +308,15 @@ module LA2_29 ( g, p, ci, G, P, co );
   output [1:0] co;
   input ci;
   output G, P;
-  wire   ci, n1, n2;
+  wire   ci, n1, n2, n3;
   assign co[0] = ci;
 
   AND2X1_RVT U1 ( .A1(g[0]), .A2(p[1]), .Y(n1) );
   OR2X1_RVT U2 ( .A1(g[1]), .A2(n1), .Y(G) );
-  AND2X1_RVT U3 ( .A1(ci), .A2(p[0]), .Y(n2) );
-  OR2X1_RVT U4 ( .A1(g[0]), .A2(n2), .Y(co[1]) );
-  AND2X1_RVT U5 ( .A1(p[1]), .A2(p[0]), .Y(P) );
+  AND2X1_RVT U3 ( .A1(p[1]), .A2(p[0]), .Y(P) );
+  INVX0_RVT U4 ( .A(g[0]), .Y(n3) );
+  NAND2X0_RVT U5 ( .A1(ci), .A2(p[0]), .Y(n2) );
+  NAND2X0_RVT U6 ( .A1(n3), .A2(n2), .Y(co[1]) );
 endmodule
 
 
@@ -304,14 +326,15 @@ module LA2_28 ( g, p, ci, G, P, co );
   output [1:0] co;
   input ci;
   output G, P;
-  wire   ci, n1, n2;
+  wire   ci, n1, n2, n3;
   assign co[0] = ci;
 
-  AND2X1_RVT U1 ( .A1(ci), .A2(p[0]), .Y(n1) );
-  OR2X1_RVT U2 ( .A1(g[0]), .A2(n1), .Y(co[1]) );
-  AND2X1_RVT U3 ( .A1(g[0]), .A2(p[1]), .Y(n2) );
-  OR2X1_RVT U4 ( .A1(g[1]), .A2(n2), .Y(G) );
-  AND2X1_RVT U5 ( .A1(p[1]), .A2(p[0]), .Y(P) );
+  AND2X1_RVT U1 ( .A1(g[0]), .A2(p[1]), .Y(n1) );
+  OR2X1_RVT U2 ( .A1(g[1]), .A2(n1), .Y(G) );
+  AND2X1_RVT U3 ( .A1(p[1]), .A2(p[0]), .Y(P) );
+  INVX0_RVT U4 ( .A(g[0]), .Y(n3) );
+  NAND2X0_RVT U5 ( .A1(ci), .A2(p[0]), .Y(n2) );
+  NAND2X0_RVT U6 ( .A1(n3), .A2(n2), .Y(co[1]) );
 endmodule
 
 
@@ -321,14 +344,15 @@ module LA2_27 ( g, p, ci, G, P, co );
   output [1:0] co;
   input ci;
   output G, P;
-  wire   ci, n1, n2;
+  wire   ci, n1, n2, n3;
   assign co[0] = ci;
 
-  AND2X1_RVT U1 ( .A1(ci), .A2(p[0]), .Y(n1) );
-  OR2X1_RVT U2 ( .A1(g[0]), .A2(n1), .Y(co[1]) );
-  AND2X1_RVT U3 ( .A1(g[0]), .A2(p[1]), .Y(n2) );
-  OR2X1_RVT U4 ( .A1(g[1]), .A2(n2), .Y(G) );
-  AND2X1_RVT U5 ( .A1(p[1]), .A2(p[0]), .Y(P) );
+  AND2X1_RVT U1 ( .A1(g[0]), .A2(p[1]), .Y(n1) );
+  OR2X1_RVT U2 ( .A1(g[1]), .A2(n1), .Y(G) );
+  AND2X1_RVT U3 ( .A1(p[1]), .A2(p[0]), .Y(P) );
+  INVX0_RVT U4 ( .A(g[0]), .Y(n3) );
+  NAND2X0_RVT U5 ( .A1(ci), .A2(p[0]), .Y(n2) );
+  NAND2X0_RVT U6 ( .A1(n3), .A2(n2), .Y(co[1]) );
 endmodule
 
 
@@ -338,14 +362,15 @@ module LA2_26 ( g, p, ci, G, P, co );
   output [1:0] co;
   input ci;
   output G, P;
-  wire   ci, n1, n2;
+  wire   ci, n1, n2, n3;
   assign co[0] = ci;
 
-  AND2X1_RVT U1 ( .A1(ci), .A2(p[0]), .Y(n1) );
-  OR2X1_RVT U2 ( .A1(g[0]), .A2(n1), .Y(co[1]) );
-  AND2X1_RVT U3 ( .A1(g[0]), .A2(p[1]), .Y(n2) );
-  OR2X1_RVT U4 ( .A1(g[1]), .A2(n2), .Y(G) );
-  AND2X1_RVT U5 ( .A1(p[1]), .A2(p[0]), .Y(P) );
+  AND2X1_RVT U1 ( .A1(g[0]), .A2(p[1]), .Y(n1) );
+  OR2X1_RVT U2 ( .A1(g[1]), .A2(n1), .Y(G) );
+  AND2X1_RVT U3 ( .A1(p[1]), .A2(p[0]), .Y(P) );
+  INVX0_RVT U4 ( .A(g[0]), .Y(n3) );
+  NAND2X0_RVT U5 ( .A1(ci), .A2(p[0]), .Y(n2) );
+  NAND2X0_RVT U6 ( .A1(n3), .A2(n2), .Y(co[1]) );
 endmodule
 
 
@@ -355,14 +380,15 @@ module LA2_25 ( g, p, ci, G, P, co );
   output [1:0] co;
   input ci;
   output G, P;
-  wire   ci, n1, n2;
+  wire   ci, n1, n2, n3;
   assign co[0] = ci;
 
-  AND2X1_RVT U1 ( .A1(ci), .A2(p[0]), .Y(n1) );
-  OR2X1_RVT U2 ( .A1(g[0]), .A2(n1), .Y(co[1]) );
-  AND2X1_RVT U3 ( .A1(g[0]), .A2(p[1]), .Y(n2) );
-  OR2X1_RVT U4 ( .A1(g[1]), .A2(n2), .Y(G) );
-  AND2X1_RVT U5 ( .A1(p[1]), .A2(p[0]), .Y(P) );
+  AND2X1_RVT U1 ( .A1(g[0]), .A2(p[1]), .Y(n1) );
+  OR2X1_RVT U2 ( .A1(g[1]), .A2(n1), .Y(G) );
+  AND2X1_RVT U3 ( .A1(p[1]), .A2(p[0]), .Y(P) );
+  INVX0_RVT U4 ( .A(g[0]), .Y(n3) );
+  NAND2X0_RVT U5 ( .A1(ci), .A2(p[0]), .Y(n2) );
+  NAND2X0_RVT U6 ( .A1(n3), .A2(n2), .Y(co[1]) );
 endmodule
 
 
@@ -372,14 +398,15 @@ module LA2_24 ( g, p, ci, G, P, co );
   output [1:0] co;
   input ci;
   output G, P;
-  wire   ci, n1, n2;
+  wire   ci, n1, n2, n3;
   assign co[0] = ci;
 
-  AND2X1_RVT U1 ( .A1(ci), .A2(p[0]), .Y(n1) );
-  OR2X1_RVT U2 ( .A1(g[0]), .A2(n1), .Y(co[1]) );
-  AND2X1_RVT U3 ( .A1(g[0]), .A2(p[1]), .Y(n2) );
-  OR2X1_RVT U4 ( .A1(g[1]), .A2(n2), .Y(G) );
-  AND2X1_RVT U5 ( .A1(p[1]), .A2(p[0]), .Y(P) );
+  AND2X1_RVT U1 ( .A1(g[0]), .A2(p[1]), .Y(n1) );
+  OR2X1_RVT U2 ( .A1(g[1]), .A2(n1), .Y(G) );
+  AND2X1_RVT U3 ( .A1(p[1]), .A2(p[0]), .Y(P) );
+  INVX0_RVT U4 ( .A(g[0]), .Y(n3) );
+  NAND2X0_RVT U5 ( .A1(ci), .A2(p[0]), .Y(n2) );
+  NAND2X0_RVT U6 ( .A1(n3), .A2(n2), .Y(co[1]) );
 endmodule
 
 
@@ -389,14 +416,15 @@ module LA2_23 ( g, p, ci, G, P, co );
   output [1:0] co;
   input ci;
   output G, P;
-  wire   ci, n1, n2;
+  wire   ci, n1, n2, n3;
   assign co[0] = ci;
 
-  AND2X1_RVT U1 ( .A1(ci), .A2(p[0]), .Y(n1) );
-  OR2X1_RVT U2 ( .A1(g[0]), .A2(n1), .Y(co[1]) );
-  AND2X1_RVT U3 ( .A1(g[0]), .A2(p[1]), .Y(n2) );
-  OR2X1_RVT U4 ( .A1(g[1]), .A2(n2), .Y(G) );
-  AND2X1_RVT U5 ( .A1(p[1]), .A2(p[0]), .Y(P) );
+  AND2X1_RVT U1 ( .A1(g[0]), .A2(p[1]), .Y(n1) );
+  OR2X1_RVT U2 ( .A1(g[1]), .A2(n1), .Y(G) );
+  AND2X1_RVT U3 ( .A1(p[1]), .A2(p[0]), .Y(P) );
+  INVX0_RVT U4 ( .A(g[0]), .Y(n3) );
+  NAND2X0_RVT U5 ( .A1(ci), .A2(p[0]), .Y(n2) );
+  NAND2X0_RVT U6 ( .A1(n3), .A2(n2), .Y(co[1]) );
 endmodule
 
 
@@ -406,14 +434,15 @@ module LA2_22 ( g, p, ci, G, P, co );
   output [1:0] co;
   input ci;
   output G, P;
-  wire   ci, n1, n2;
+  wire   ci, n1, n2, n3;
   assign co[0] = ci;
 
-  AND2X1_RVT U1 ( .A1(ci), .A2(p[0]), .Y(n1) );
-  OR2X1_RVT U2 ( .A1(g[0]), .A2(n1), .Y(co[1]) );
-  AND2X1_RVT U3 ( .A1(g[0]), .A2(p[1]), .Y(n2) );
-  OR2X1_RVT U4 ( .A1(g[1]), .A2(n2), .Y(G) );
-  AND2X1_RVT U5 ( .A1(p[1]), .A2(p[0]), .Y(P) );
+  AND2X1_RVT U1 ( .A1(g[0]), .A2(p[1]), .Y(n1) );
+  OR2X1_RVT U2 ( .A1(g[1]), .A2(n1), .Y(G) );
+  AND2X1_RVT U3 ( .A1(p[1]), .A2(p[0]), .Y(P) );
+  INVX0_RVT U4 ( .A(g[0]), .Y(n3) );
+  NAND2X0_RVT U5 ( .A1(ci), .A2(p[0]), .Y(n2) );
+  NAND2X0_RVT U6 ( .A1(n3), .A2(n2), .Y(co[1]) );
 endmodule
 
 
@@ -423,14 +452,15 @@ module LA2_21 ( g, p, ci, G, P, co );
   output [1:0] co;
   input ci;
   output G, P;
-  wire   ci, n1, n2;
+  wire   ci, n1, n2, n3;
   assign co[0] = ci;
 
   AND2X1_RVT U1 ( .A1(g[0]), .A2(p[1]), .Y(n1) );
   OR2X1_RVT U2 ( .A1(g[1]), .A2(n1), .Y(G) );
-  AND2X1_RVT U3 ( .A1(ci), .A2(p[0]), .Y(n2) );
-  OR2X1_RVT U4 ( .A1(g[0]), .A2(n2), .Y(co[1]) );
-  AND2X1_RVT U5 ( .A1(p[1]), .A2(p[0]), .Y(P) );
+  AND2X1_RVT U3 ( .A1(p[1]), .A2(p[0]), .Y(P) );
+  INVX0_RVT U4 ( .A(g[0]), .Y(n3) );
+  NAND2X0_RVT U5 ( .A1(ci), .A2(p[0]), .Y(n2) );
+  NAND2X0_RVT U6 ( .A1(n3), .A2(n2), .Y(co[1]) );
 endmodule
 
 
@@ -440,14 +470,15 @@ module LA2_20 ( g, p, ci, G, P, co );
   output [1:0] co;
   input ci;
   output G, P;
-  wire   ci, n1, n2;
+  wire   ci, n1, n2, n3;
   assign co[0] = ci;
 
   AND2X1_RVT U1 ( .A1(g[0]), .A2(p[1]), .Y(n1) );
   OR2X1_RVT U2 ( .A1(g[1]), .A2(n1), .Y(G) );
-  AND2X1_RVT U3 ( .A1(ci), .A2(p[0]), .Y(n2) );
-  OR2X1_RVT U4 ( .A1(g[0]), .A2(n2), .Y(co[1]) );
-  AND2X1_RVT U5 ( .A1(p[1]), .A2(p[0]), .Y(P) );
+  AND2X1_RVT U3 ( .A1(p[1]), .A2(p[0]), .Y(P) );
+  INVX0_RVT U4 ( .A(g[0]), .Y(n3) );
+  NAND2X0_RVT U5 ( .A1(ci), .A2(p[0]), .Y(n2) );
+  NAND2X0_RVT U6 ( .A1(n3), .A2(n2), .Y(co[1]) );
 endmodule
 
 
@@ -457,14 +488,15 @@ module LA2_19 ( g, p, ci, G, P, co );
   output [1:0] co;
   input ci;
   output G, P;
-  wire   ci, n1, n2;
+  wire   ci, n1, n2, n3;
   assign co[0] = ci;
 
   AND2X1_RVT U1 ( .A1(g[0]), .A2(p[1]), .Y(n1) );
   OR2X1_RVT U2 ( .A1(g[1]), .A2(n1), .Y(G) );
-  AND2X1_RVT U3 ( .A1(ci), .A2(p[0]), .Y(n2) );
-  OR2X1_RVT U4 ( .A1(g[0]), .A2(n2), .Y(co[1]) );
-  AND2X1_RVT U5 ( .A1(p[1]), .A2(p[0]), .Y(P) );
+  AND2X1_RVT U3 ( .A1(p[1]), .A2(p[0]), .Y(P) );
+  INVX0_RVT U4 ( .A(g[0]), .Y(n3) );
+  NAND2X0_RVT U5 ( .A1(ci), .A2(p[0]), .Y(n2) );
+  NAND2X0_RVT U6 ( .A1(n3), .A2(n2), .Y(co[1]) );
 endmodule
 
 
@@ -474,14 +506,15 @@ module LA2_18 ( g, p, ci, G, P, co );
   output [1:0] co;
   input ci;
   output G, P;
-  wire   ci, n1, n2;
+  wire   ci, n1, n2, n3;
   assign co[0] = ci;
 
   AND2X1_RVT U1 ( .A1(g[0]), .A2(p[1]), .Y(n1) );
   OR2X1_RVT U2 ( .A1(g[1]), .A2(n1), .Y(G) );
-  AND2X1_RVT U3 ( .A1(ci), .A2(p[0]), .Y(n2) );
-  OR2X1_RVT U4 ( .A1(g[0]), .A2(n2), .Y(co[1]) );
-  AND2X1_RVT U5 ( .A1(p[1]), .A2(p[0]), .Y(P) );
+  AND2X1_RVT U3 ( .A1(p[1]), .A2(p[0]), .Y(P) );
+  INVX0_RVT U4 ( .A(g[0]), .Y(n3) );
+  NAND2X0_RVT U5 ( .A1(ci), .A2(p[0]), .Y(n2) );
+  NAND2X0_RVT U6 ( .A1(n3), .A2(n2), .Y(co[1]) );
 endmodule
 
 
@@ -491,14 +524,15 @@ module LA2_17 ( g, p, ci, G, P, co );
   output [1:0] co;
   input ci;
   output G, P;
-  wire   ci, n1, n2;
+  wire   ci, n1, n2, n3;
   assign co[0] = ci;
 
   AND2X1_RVT U1 ( .A1(g[0]), .A2(p[1]), .Y(n1) );
   OR2X1_RVT U2 ( .A1(g[1]), .A2(n1), .Y(G) );
-  AND2X1_RVT U3 ( .A1(ci), .A2(p[0]), .Y(n2) );
-  OR2X1_RVT U4 ( .A1(g[0]), .A2(n2), .Y(co[1]) );
-  AND2X1_RVT U5 ( .A1(p[1]), .A2(p[0]), .Y(P) );
+  AND2X1_RVT U3 ( .A1(p[1]), .A2(p[0]), .Y(P) );
+  INVX0_RVT U4 ( .A(g[0]), .Y(n3) );
+  NAND2X0_RVT U5 ( .A1(ci), .A2(p[0]), .Y(n2) );
+  NAND2X0_RVT U6 ( .A1(n3), .A2(n2), .Y(co[1]) );
 endmodule
 
 
@@ -508,14 +542,15 @@ module LA2_16 ( g, p, ci, G, P, co );
   output [1:0] co;
   input ci;
   output G, P;
-  wire   ci, n1, n2;
+  wire   ci, n1, n2, n3;
   assign co[0] = ci;
 
   AND2X1_RVT U1 ( .A1(g[0]), .A2(p[1]), .Y(n1) );
   OR2X1_RVT U2 ( .A1(g[1]), .A2(n1), .Y(G) );
-  AND2X1_RVT U3 ( .A1(ci), .A2(p[0]), .Y(n2) );
-  OR2X1_RVT U4 ( .A1(g[0]), .A2(n2), .Y(co[1]) );
-  AND2X1_RVT U5 ( .A1(p[1]), .A2(p[0]), .Y(P) );
+  AND2X1_RVT U3 ( .A1(p[1]), .A2(p[0]), .Y(P) );
+  INVX0_RVT U4 ( .A(g[0]), .Y(n3) );
+  NAND2X0_RVT U5 ( .A1(ci), .A2(p[0]), .Y(n2) );
+  NAND2X0_RVT U6 ( .A1(n3), .A2(n2), .Y(co[1]) );
 endmodule
 
 
@@ -525,14 +560,15 @@ module LA2_15 ( g, p, ci, G, P, co );
   output [1:0] co;
   input ci;
   output G, P;
-  wire   ci, n1, n2;
+  wire   ci, n1, n2, n3;
   assign co[0] = ci;
 
   AND2X1_RVT U1 ( .A1(g[0]), .A2(p[1]), .Y(n1) );
   OR2X1_RVT U2 ( .A1(g[1]), .A2(n1), .Y(G) );
-  AND2X1_RVT U3 ( .A1(ci), .A2(p[0]), .Y(n2) );
-  OR2X1_RVT U4 ( .A1(g[0]), .A2(n2), .Y(co[1]) );
-  AND2X1_RVT U5 ( .A1(p[1]), .A2(p[0]), .Y(P) );
+  AND2X1_RVT U3 ( .A1(p[1]), .A2(p[0]), .Y(P) );
+  INVX0_RVT U4 ( .A(g[0]), .Y(n3) );
+  NAND2X0_RVT U5 ( .A1(ci), .A2(p[0]), .Y(n2) );
+  NAND2X0_RVT U6 ( .A1(n3), .A2(n2), .Y(co[1]) );
 endmodule
 
 
@@ -542,14 +578,15 @@ module LA2_14 ( g, p, ci, G, P, co );
   output [1:0] co;
   input ci;
   output G, P;
-  wire   ci, n1, n2;
+  wire   ci, n1, n2, n3;
   assign co[0] = ci;
 
   AND2X1_RVT U1 ( .A1(g[0]), .A2(p[1]), .Y(n1) );
   OR2X1_RVT U2 ( .A1(g[1]), .A2(n1), .Y(G) );
-  AND2X1_RVT U3 ( .A1(ci), .A2(p[0]), .Y(n2) );
-  OR2X1_RVT U4 ( .A1(g[0]), .A2(n2), .Y(co[1]) );
-  AND2X1_RVT U5 ( .A1(p[1]), .A2(p[0]), .Y(P) );
+  AND2X1_RVT U3 ( .A1(p[1]), .A2(p[0]), .Y(P) );
+  INVX0_RVT U4 ( .A(g[0]), .Y(n3) );
+  NAND2X0_RVT U5 ( .A1(ci), .A2(p[0]), .Y(n2) );
+  NAND2X0_RVT U6 ( .A1(n3), .A2(n2), .Y(co[1]) );
 endmodule
 
 
@@ -559,14 +596,15 @@ module LA2_61 ( g, p, ci, G, P, co );
   output [1:0] co;
   input ci;
   output G, P;
-  wire   ci, n1, n2;
+  wire   ci, n1, n2, n3;
   assign co[0] = ci;
 
   AND2X1_RVT U1 ( .A1(g[0]), .A2(p[1]), .Y(n1) );
   OR2X1_RVT U2 ( .A1(g[1]), .A2(n1), .Y(G) );
-  AND2X1_RVT U3 ( .A1(ci), .A2(p[0]), .Y(n2) );
-  OR2X1_RVT U4 ( .A1(g[0]), .A2(n2), .Y(co[1]) );
-  AND2X1_RVT U5 ( .A1(p[1]), .A2(p[0]), .Y(P) );
+  AND2X1_RVT U3 ( .A1(p[1]), .A2(p[0]), .Y(P) );
+  INVX0_RVT U4 ( .A(g[0]), .Y(n3) );
+  NAND2X0_RVT U5 ( .A1(ci), .A2(p[0]), .Y(n2) );
+  NAND2X0_RVT U6 ( .A1(n3), .A2(n2), .Y(co[1]) );
 endmodule
 
 
@@ -576,14 +614,15 @@ module LA2_60 ( g, p, ci, G, P, co );
   output [1:0] co;
   input ci;
   output G, P;
-  wire   ci, n1, n2;
+  wire   ci, n1, n2, n3;
   assign co[0] = ci;
 
-  AND2X1_RVT U1 ( .A1(ci), .A2(p[0]), .Y(n1) );
-  OR2X1_RVT U2 ( .A1(g[0]), .A2(n1), .Y(co[1]) );
-  AND2X1_RVT U3 ( .A1(g[0]), .A2(p[1]), .Y(n2) );
-  OR2X1_RVT U4 ( .A1(g[1]), .A2(n2), .Y(G) );
-  AND2X1_RVT U5 ( .A1(p[1]), .A2(p[0]), .Y(P) );
+  AND2X1_RVT U1 ( .A1(g[0]), .A2(p[1]), .Y(n1) );
+  OR2X1_RVT U2 ( .A1(g[1]), .A2(n1), .Y(G) );
+  AND2X1_RVT U3 ( .A1(p[1]), .A2(p[0]), .Y(P) );
+  INVX0_RVT U4 ( .A(g[0]), .Y(n3) );
+  NAND2X0_RVT U5 ( .A1(ci), .A2(p[0]), .Y(n2) );
+  NAND2X0_RVT U6 ( .A1(n3), .A2(n2), .Y(co[1]) );
 endmodule
 
 
@@ -593,14 +632,15 @@ module LA2_59 ( g, p, ci, G, P, co );
   output [1:0] co;
   input ci;
   output G, P;
-  wire   ci, n1, n2;
+  wire   ci, n1, n2, n3;
   assign co[0] = ci;
 
-  AND2X1_RVT U1 ( .A1(ci), .A2(p[0]), .Y(n1) );
-  OR2X1_RVT U2 ( .A1(g[0]), .A2(n1), .Y(co[1]) );
-  AND2X1_RVT U3 ( .A1(g[0]), .A2(p[1]), .Y(n2) );
-  OR2X1_RVT U4 ( .A1(g[1]), .A2(n2), .Y(G) );
-  AND2X1_RVT U5 ( .A1(p[1]), .A2(p[0]), .Y(P) );
+  AND2X1_RVT U1 ( .A1(g[0]), .A2(p[1]), .Y(n1) );
+  OR2X1_RVT U2 ( .A1(g[1]), .A2(n1), .Y(G) );
+  AND2X1_RVT U3 ( .A1(p[1]), .A2(p[0]), .Y(P) );
+  INVX0_RVT U4 ( .A(g[0]), .Y(n3) );
+  NAND2X0_RVT U5 ( .A1(ci), .A2(p[0]), .Y(n2) );
+  NAND2X0_RVT U6 ( .A1(n3), .A2(n2), .Y(co[1]) );
 endmodule
 
 
@@ -610,14 +650,15 @@ module LA2_58 ( g, p, ci, G, P, co );
   output [1:0] co;
   input ci;
   output G, P;
-  wire   ci, n1, n2;
+  wire   ci, n1, n2, n3;
   assign co[0] = ci;
 
-  AND2X1_RVT U1 ( .A1(ci), .A2(p[0]), .Y(n1) );
-  OR2X1_RVT U2 ( .A1(g[0]), .A2(n1), .Y(co[1]) );
-  AND2X1_RVT U3 ( .A1(g[0]), .A2(p[1]), .Y(n2) );
-  OR2X1_RVT U4 ( .A1(g[1]), .A2(n2), .Y(G) );
-  AND2X1_RVT U5 ( .A1(p[1]), .A2(p[0]), .Y(P) );
+  AND2X1_RVT U1 ( .A1(g[0]), .A2(p[1]), .Y(n1) );
+  OR2X1_RVT U2 ( .A1(g[1]), .A2(n1), .Y(G) );
+  AND2X1_RVT U3 ( .A1(p[1]), .A2(p[0]), .Y(P) );
+  INVX0_RVT U4 ( .A(g[0]), .Y(n3) );
+  NAND2X0_RVT U5 ( .A1(ci), .A2(p[0]), .Y(n2) );
+  NAND2X0_RVT U6 ( .A1(n3), .A2(n2), .Y(co[1]) );
 endmodule
 
 
@@ -627,14 +668,15 @@ module LA2_57 ( g, p, ci, G, P, co );
   output [1:0] co;
   input ci;
   output G, P;
-  wire   ci, n1, n2;
+  wire   ci, n1, n2, n3;
   assign co[0] = ci;
 
-  AND2X1_RVT U1 ( .A1(ci), .A2(p[0]), .Y(n1) );
-  OR2X1_RVT U2 ( .A1(g[0]), .A2(n1), .Y(co[1]) );
-  AND2X1_RVT U3 ( .A1(g[0]), .A2(p[1]), .Y(n2) );
-  OR2X1_RVT U4 ( .A1(g[1]), .A2(n2), .Y(G) );
-  AND2X1_RVT U5 ( .A1(p[1]), .A2(p[0]), .Y(P) );
+  AND2X1_RVT U1 ( .A1(g[0]), .A2(p[1]), .Y(n1) );
+  OR2X1_RVT U2 ( .A1(g[1]), .A2(n1), .Y(G) );
+  AND2X1_RVT U3 ( .A1(p[1]), .A2(p[0]), .Y(P) );
+  INVX0_RVT U4 ( .A(g[0]), .Y(n3) );
+  NAND2X0_RVT U5 ( .A1(ci), .A2(p[0]), .Y(n2) );
+  NAND2X0_RVT U6 ( .A1(n3), .A2(n2), .Y(co[1]) );
 endmodule
 
 
@@ -644,14 +686,15 @@ module LA2_56 ( g, p, ci, G, P, co );
   output [1:0] co;
   input ci;
   output G, P;
-  wire   ci, n1, n2;
+  wire   ci, n1, n2, n3;
   assign co[0] = ci;
 
-  AND2X1_RVT U1 ( .A1(ci), .A2(p[0]), .Y(n1) );
-  OR2X1_RVT U2 ( .A1(g[0]), .A2(n1), .Y(co[1]) );
-  AND2X1_RVT U3 ( .A1(g[0]), .A2(p[1]), .Y(n2) );
-  OR2X1_RVT U4 ( .A1(g[1]), .A2(n2), .Y(G) );
-  AND2X1_RVT U5 ( .A1(p[1]), .A2(p[0]), .Y(P) );
+  AND2X1_RVT U1 ( .A1(g[0]), .A2(p[1]), .Y(n1) );
+  OR2X1_RVT U2 ( .A1(g[1]), .A2(n1), .Y(G) );
+  AND2X1_RVT U3 ( .A1(p[1]), .A2(p[0]), .Y(P) );
+  INVX0_RVT U4 ( .A(g[0]), .Y(n3) );
+  NAND2X0_RVT U5 ( .A1(ci), .A2(p[0]), .Y(n2) );
+  NAND2X0_RVT U6 ( .A1(n3), .A2(n2), .Y(co[1]) );
 endmodule
 
 
@@ -661,14 +704,15 @@ module LA2_55 ( g, p, ci, G, P, co );
   output [1:0] co;
   input ci;
   output G, P;
-  wire   ci, n1, n2;
+  wire   ci, n1, n2, n3;
   assign co[0] = ci;
 
-  AND2X1_RVT U1 ( .A1(ci), .A2(p[0]), .Y(n1) );
-  OR2X1_RVT U2 ( .A1(g[0]), .A2(n1), .Y(co[1]) );
-  AND2X1_RVT U3 ( .A1(g[0]), .A2(p[1]), .Y(n2) );
-  OR2X1_RVT U4 ( .A1(g[1]), .A2(n2), .Y(G) );
-  AND2X1_RVT U5 ( .A1(p[1]), .A2(p[0]), .Y(P) );
+  AND2X1_RVT U1 ( .A1(g[0]), .A2(p[1]), .Y(n1) );
+  OR2X1_RVT U2 ( .A1(g[1]), .A2(n1), .Y(G) );
+  AND2X1_RVT U3 ( .A1(p[1]), .A2(p[0]), .Y(P) );
+  INVX0_RVT U4 ( .A(g[0]), .Y(n3) );
+  NAND2X0_RVT U5 ( .A1(ci), .A2(p[0]), .Y(n2) );
+  NAND2X0_RVT U6 ( .A1(n3), .A2(n2), .Y(co[1]) );
 endmodule
 
 
@@ -678,14 +722,15 @@ module LA2_54 ( g, p, ci, G, P, co );
   output [1:0] co;
   input ci;
   output G, P;
-  wire   ci, n1, n2;
+  wire   ci, n1, n2, n3;
   assign co[0] = ci;
 
-  AND2X1_RVT U1 ( .A1(ci), .A2(p[0]), .Y(n1) );
-  OR2X1_RVT U2 ( .A1(g[0]), .A2(n1), .Y(co[1]) );
-  AND2X1_RVT U3 ( .A1(g[0]), .A2(p[1]), .Y(n2) );
-  OR2X1_RVT U4 ( .A1(g[1]), .A2(n2), .Y(G) );
-  AND2X1_RVT U5 ( .A1(p[1]), .A2(p[0]), .Y(P) );
+  AND2X1_RVT U1 ( .A1(g[0]), .A2(p[1]), .Y(n1) );
+  OR2X1_RVT U2 ( .A1(g[1]), .A2(n1), .Y(G) );
+  AND2X1_RVT U3 ( .A1(p[1]), .A2(p[0]), .Y(P) );
+  INVX0_RVT U4 ( .A(g[0]), .Y(n3) );
+  NAND2X0_RVT U5 ( .A1(ci), .A2(p[0]), .Y(n2) );
+  NAND2X0_RVT U6 ( .A1(n3), .A2(n2), .Y(co[1]) );
 endmodule
 
 
@@ -695,14 +740,15 @@ module LA2_53 ( g, p, ci, G, P, co );
   output [1:0] co;
   input ci;
   output G, P;
-  wire   ci, n1, n2;
+  wire   ci, n1, n2, n3;
   assign co[0] = ci;
 
-  AND2X1_RVT U1 ( .A1(ci), .A2(p[0]), .Y(n1) );
-  OR2X1_RVT U2 ( .A1(g[0]), .A2(n1), .Y(co[1]) );
-  AND2X1_RVT U3 ( .A1(g[0]), .A2(p[1]), .Y(n2) );
-  OR2X1_RVT U4 ( .A1(g[1]), .A2(n2), .Y(G) );
-  AND2X1_RVT U5 ( .A1(p[1]), .A2(p[0]), .Y(P) );
+  AND2X1_RVT U1 ( .A1(g[0]), .A2(p[1]), .Y(n1) );
+  OR2X1_RVT U2 ( .A1(g[1]), .A2(n1), .Y(G) );
+  AND2X1_RVT U3 ( .A1(p[1]), .A2(p[0]), .Y(P) );
+  INVX0_RVT U4 ( .A(g[0]), .Y(n3) );
+  NAND2X0_RVT U5 ( .A1(ci), .A2(p[0]), .Y(n2) );
+  NAND2X0_RVT U6 ( .A1(n3), .A2(n2), .Y(co[1]) );
 endmodule
 
 
@@ -712,14 +758,15 @@ module LA2_52 ( g, p, ci, G, P, co );
   output [1:0] co;
   input ci;
   output G, P;
-  wire   ci, n1, n2;
+  wire   ci, n1, n2, n3;
   assign co[0] = ci;
 
-  AND2X1_RVT U1 ( .A1(ci), .A2(p[0]), .Y(n1) );
-  OR2X1_RVT U2 ( .A1(g[0]), .A2(n1), .Y(co[1]) );
-  AND2X1_RVT U3 ( .A1(g[0]), .A2(p[1]), .Y(n2) );
-  OR2X1_RVT U4 ( .A1(g[1]), .A2(n2), .Y(G) );
-  AND2X1_RVT U5 ( .A1(p[1]), .A2(p[0]), .Y(P) );
+  AND2X1_RVT U1 ( .A1(g[0]), .A2(p[1]), .Y(n1) );
+  OR2X1_RVT U2 ( .A1(g[1]), .A2(n1), .Y(G) );
+  AND2X1_RVT U3 ( .A1(p[1]), .A2(p[0]), .Y(P) );
+  INVX0_RVT U4 ( .A(g[0]), .Y(n3) );
+  NAND2X0_RVT U5 ( .A1(ci), .A2(p[0]), .Y(n2) );
+  NAND2X0_RVT U6 ( .A1(n3), .A2(n2), .Y(co[1]) );
 endmodule
 
 
@@ -729,14 +776,15 @@ module LA2_51 ( g, p, ci, G, P, co );
   output [1:0] co;
   input ci;
   output G, P;
-  wire   ci, n1, n2;
+  wire   ci, n1, n2, n3;
   assign co[0] = ci;
 
-  AND2X1_RVT U1 ( .A1(ci), .A2(p[0]), .Y(n1) );
-  OR2X1_RVT U2 ( .A1(g[0]), .A2(n1), .Y(co[1]) );
-  AND2X1_RVT U3 ( .A1(g[0]), .A2(p[1]), .Y(n2) );
-  OR2X1_RVT U4 ( .A1(g[1]), .A2(n2), .Y(G) );
-  AND2X1_RVT U5 ( .A1(p[1]), .A2(p[0]), .Y(P) );
+  AND2X1_RVT U1 ( .A1(g[0]), .A2(p[1]), .Y(n1) );
+  OR2X1_RVT U2 ( .A1(g[1]), .A2(n1), .Y(G) );
+  AND2X1_RVT U3 ( .A1(p[1]), .A2(p[0]), .Y(P) );
+  INVX0_RVT U4 ( .A(g[0]), .Y(n3) );
+  NAND2X0_RVT U5 ( .A1(ci), .A2(p[0]), .Y(n2) );
+  NAND2X0_RVT U6 ( .A1(n3), .A2(n2), .Y(co[1]) );
 endmodule
 
 
@@ -746,14 +794,15 @@ module LA2_50 ( g, p, ci, G, P, co );
   output [1:0] co;
   input ci;
   output G, P;
-  wire   ci, n1, n2;
+  wire   ci, n1, n2, n3;
   assign co[0] = ci;
 
-  AND2X1_RVT U1 ( .A1(ci), .A2(p[0]), .Y(n1) );
-  OR2X1_RVT U2 ( .A1(g[0]), .A2(n1), .Y(co[1]) );
-  AND2X1_RVT U3 ( .A1(g[0]), .A2(p[1]), .Y(n2) );
-  OR2X1_RVT U4 ( .A1(g[1]), .A2(n2), .Y(G) );
-  AND2X1_RVT U5 ( .A1(p[1]), .A2(p[0]), .Y(P) );
+  AND2X1_RVT U1 ( .A1(g[0]), .A2(p[1]), .Y(n1) );
+  OR2X1_RVT U2 ( .A1(g[1]), .A2(n1), .Y(G) );
+  AND2X1_RVT U3 ( .A1(p[1]), .A2(p[0]), .Y(P) );
+  INVX0_RVT U4 ( .A(g[0]), .Y(n3) );
+  NAND2X0_RVT U5 ( .A1(ci), .A2(p[0]), .Y(n2) );
+  NAND2X0_RVT U6 ( .A1(n3), .A2(n2), .Y(co[1]) );
 endmodule
 
 
@@ -763,14 +812,15 @@ module LA2_49 ( g, p, ci, G, P, co );
   output [1:0] co;
   input ci;
   output G, P;
-  wire   ci, n1, n2;
+  wire   ci, n1, n2, n3;
   assign co[0] = ci;
 
-  AND2X1_RVT U1 ( .A1(ci), .A2(p[0]), .Y(n1) );
-  OR2X1_RVT U2 ( .A1(g[0]), .A2(n1), .Y(co[1]) );
-  AND2X1_RVT U3 ( .A1(g[0]), .A2(p[1]), .Y(n2) );
-  OR2X1_RVT U4 ( .A1(g[1]), .A2(n2), .Y(G) );
-  AND2X1_RVT U5 ( .A1(p[1]), .A2(p[0]), .Y(P) );
+  AND2X1_RVT U1 ( .A1(g[0]), .A2(p[1]), .Y(n1) );
+  OR2X1_RVT U2 ( .A1(g[1]), .A2(n1), .Y(G) );
+  AND2X1_RVT U3 ( .A1(p[1]), .A2(p[0]), .Y(P) );
+  INVX0_RVT U4 ( .A(g[0]), .Y(n3) );
+  NAND2X0_RVT U5 ( .A1(ci), .A2(p[0]), .Y(n2) );
+  NAND2X0_RVT U6 ( .A1(n3), .A2(n2), .Y(co[1]) );
 endmodule
 
 
@@ -780,14 +830,15 @@ module LA2_48 ( g, p, ci, G, P, co );
   output [1:0] co;
   input ci;
   output G, P;
-  wire   ci, n1, n2;
+  wire   ci, n1, n2, n3;
   assign co[0] = ci;
 
-  AND2X1_RVT U1 ( .A1(ci), .A2(p[0]), .Y(n1) );
-  OR2X1_RVT U2 ( .A1(g[0]), .A2(n1), .Y(co[1]) );
-  AND2X1_RVT U3 ( .A1(g[0]), .A2(p[1]), .Y(n2) );
-  OR2X1_RVT U4 ( .A1(g[1]), .A2(n2), .Y(G) );
-  AND2X1_RVT U5 ( .A1(p[1]), .A2(p[0]), .Y(P) );
+  AND2X1_RVT U1 ( .A1(g[0]), .A2(p[1]), .Y(n1) );
+  OR2X1_RVT U2 ( .A1(g[1]), .A2(n1), .Y(G) );
+  AND2X1_RVT U3 ( .A1(p[1]), .A2(p[0]), .Y(P) );
+  INVX0_RVT U4 ( .A(g[0]), .Y(n3) );
+  NAND2X0_RVT U5 ( .A1(ci), .A2(p[0]), .Y(n2) );
+  NAND2X0_RVT U6 ( .A1(n3), .A2(n2), .Y(co[1]) );
 endmodule
 
 
@@ -797,14 +848,15 @@ module LA2_47 ( g, p, ci, G, P, co );
   output [1:0] co;
   input ci;
   output G, P;
-  wire   ci, n1, n2;
+  wire   ci, n1, n2, n3;
   assign co[0] = ci;
 
-  AND2X1_RVT U1 ( .A1(ci), .A2(p[0]), .Y(n1) );
-  OR2X1_RVT U2 ( .A1(g[0]), .A2(n1), .Y(co[1]) );
-  AND2X1_RVT U3 ( .A1(g[0]), .A2(p[1]), .Y(n2) );
-  OR2X1_RVT U4 ( .A1(g[1]), .A2(n2), .Y(G) );
-  AND2X1_RVT U5 ( .A1(p[1]), .A2(p[0]), .Y(P) );
+  AND2X1_RVT U1 ( .A1(g[0]), .A2(p[1]), .Y(n1) );
+  OR2X1_RVT U2 ( .A1(g[1]), .A2(n1), .Y(G) );
+  AND2X1_RVT U3 ( .A1(p[1]), .A2(p[0]), .Y(P) );
+  INVX0_RVT U4 ( .A(g[0]), .Y(n3) );
+  NAND2X0_RVT U5 ( .A1(ci), .A2(p[0]), .Y(n2) );
+  NAND2X0_RVT U6 ( .A1(n3), .A2(n2), .Y(co[1]) );
 endmodule
 
 
@@ -814,14 +866,15 @@ module LA2_46 ( g, p, ci, G, P, co );
   output [1:0] co;
   input ci;
   output G, P;
-  wire   ci, n1, n2;
+  wire   ci, n1, n2, n3;
   assign co[0] = ci;
 
-  AND2X1_RVT U1 ( .A1(ci), .A2(p[0]), .Y(n1) );
-  OR2X1_RVT U2 ( .A1(g[0]), .A2(n1), .Y(co[1]) );
-  AND2X1_RVT U3 ( .A1(g[0]), .A2(p[1]), .Y(n2) );
-  OR2X1_RVT U4 ( .A1(g[1]), .A2(n2), .Y(G) );
-  AND2X1_RVT U5 ( .A1(p[1]), .A2(p[0]), .Y(P) );
+  AND2X1_RVT U1 ( .A1(g[0]), .A2(p[1]), .Y(n1) );
+  OR2X1_RVT U2 ( .A1(g[1]), .A2(n1), .Y(G) );
+  AND2X1_RVT U3 ( .A1(p[1]), .A2(p[0]), .Y(P) );
+  INVX0_RVT U4 ( .A(g[0]), .Y(n3) );
+  NAND2X0_RVT U5 ( .A1(ci), .A2(p[0]), .Y(n2) );
+  NAND2X0_RVT U6 ( .A1(n3), .A2(n2), .Y(co[1]) );
 endmodule
 
 
@@ -831,14 +884,15 @@ module LA2_45 ( g, p, ci, G, P, co );
   output [1:0] co;
   input ci;
   output G, P;
-  wire   ci, n1, n2;
+  wire   ci, n1, n2, n3;
   assign co[0] = ci;
 
-  AND2X1_RVT U1 ( .A1(ci), .A2(p[0]), .Y(n1) );
-  OR2X1_RVT U2 ( .A1(g[0]), .A2(n1), .Y(co[1]) );
-  AND2X1_RVT U3 ( .A1(g[0]), .A2(p[1]), .Y(n2) );
-  OR2X1_RVT U4 ( .A1(g[1]), .A2(n2), .Y(G) );
-  AND2X1_RVT U5 ( .A1(p[1]), .A2(p[0]), .Y(P) );
+  AND2X1_RVT U1 ( .A1(g[0]), .A2(p[1]), .Y(n1) );
+  OR2X1_RVT U2 ( .A1(g[1]), .A2(n1), .Y(G) );
+  AND2X1_RVT U3 ( .A1(p[1]), .A2(p[0]), .Y(P) );
+  INVX0_RVT U4 ( .A(g[0]), .Y(n3) );
+  NAND2X0_RVT U5 ( .A1(ci), .A2(p[0]), .Y(n2) );
+  NAND2X0_RVT U6 ( .A1(n3), .A2(n2), .Y(co[1]) );
 endmodule
 
 
@@ -848,14 +902,15 @@ module LA2_44 ( g, p, ci, G, P, co );
   output [1:0] co;
   input ci;
   output G, P;
-  wire   ci, n1, n2;
+  wire   ci, n1, n2, n3;
   assign co[0] = ci;
 
   AND2X1_RVT U1 ( .A1(g[0]), .A2(p[1]), .Y(n1) );
   OR2X1_RVT U2 ( .A1(g[1]), .A2(n1), .Y(G) );
-  AND2X1_RVT U3 ( .A1(ci), .A2(p[0]), .Y(n2) );
-  OR2X1_RVT U4 ( .A1(g[0]), .A2(n2), .Y(co[1]) );
-  AND2X1_RVT U5 ( .A1(p[1]), .A2(p[0]), .Y(P) );
+  AND2X1_RVT U3 ( .A1(p[1]), .A2(p[0]), .Y(P) );
+  INVX0_RVT U4 ( .A(g[0]), .Y(n3) );
+  NAND2X0_RVT U5 ( .A1(ci), .A2(p[0]), .Y(n2) );
+  NAND2X0_RVT U6 ( .A1(n3), .A2(n2), .Y(co[1]) );
 endmodule
 
 
@@ -865,14 +920,15 @@ module LA2_43 ( g, p, ci, G, P, co );
   output [1:0] co;
   input ci;
   output G, P;
-  wire   ci, n1, n2;
+  wire   ci, n1, n2, n3;
   assign co[0] = ci;
 
   AND2X1_RVT U1 ( .A1(g[0]), .A2(p[1]), .Y(n1) );
   OR2X1_RVT U2 ( .A1(g[1]), .A2(n1), .Y(G) );
-  AND2X1_RVT U3 ( .A1(ci), .A2(p[0]), .Y(n2) );
-  OR2X1_RVT U4 ( .A1(g[0]), .A2(n2), .Y(co[1]) );
-  AND2X1_RVT U5 ( .A1(p[1]), .A2(p[0]), .Y(P) );
+  AND2X1_RVT U3 ( .A1(p[1]), .A2(p[0]), .Y(P) );
+  INVX0_RVT U4 ( .A(g[0]), .Y(n3) );
+  NAND2X0_RVT U5 ( .A1(ci), .A2(p[0]), .Y(n2) );
+  NAND2X0_RVT U6 ( .A1(n3), .A2(n2), .Y(co[1]) );
 endmodule
 
 
@@ -882,14 +938,15 @@ module LA2_42 ( g, p, ci, G, P, co );
   output [1:0] co;
   input ci;
   output G, P;
-  wire   ci, n1, n2;
+  wire   ci, n1, n2, n3;
   assign co[0] = ci;
 
   AND2X1_RVT U1 ( .A1(g[0]), .A2(p[1]), .Y(n1) );
   OR2X1_RVT U2 ( .A1(g[1]), .A2(n1), .Y(G) );
-  AND2X1_RVT U3 ( .A1(ci), .A2(p[0]), .Y(n2) );
-  OR2X1_RVT U4 ( .A1(g[0]), .A2(n2), .Y(co[1]) );
-  AND2X1_RVT U5 ( .A1(p[1]), .A2(p[0]), .Y(P) );
+  AND2X1_RVT U3 ( .A1(p[1]), .A2(p[0]), .Y(P) );
+  INVX0_RVT U4 ( .A(g[0]), .Y(n3) );
+  NAND2X0_RVT U5 ( .A1(ci), .A2(p[0]), .Y(n2) );
+  NAND2X0_RVT U6 ( .A1(n3), .A2(n2), .Y(co[1]) );
 endmodule
 
 
@@ -899,14 +956,15 @@ module LA2_41 ( g, p, ci, G, P, co );
   output [1:0] co;
   input ci;
   output G, P;
-  wire   ci, n1, n2;
+  wire   ci, n1, n2, n3;
   assign co[0] = ci;
 
   AND2X1_RVT U1 ( .A1(g[0]), .A2(p[1]), .Y(n1) );
   OR2X1_RVT U2 ( .A1(g[1]), .A2(n1), .Y(G) );
-  AND2X1_RVT U3 ( .A1(ci), .A2(p[0]), .Y(n2) );
-  OR2X1_RVT U4 ( .A1(g[0]), .A2(n2), .Y(co[1]) );
-  AND2X1_RVT U5 ( .A1(p[1]), .A2(p[0]), .Y(P) );
+  AND2X1_RVT U3 ( .A1(p[1]), .A2(p[0]), .Y(P) );
+  INVX0_RVT U4 ( .A(g[0]), .Y(n3) );
+  NAND2X0_RVT U5 ( .A1(ci), .A2(p[0]), .Y(n2) );
+  NAND2X0_RVT U6 ( .A1(n3), .A2(n2), .Y(co[1]) );
 endmodule
 
 
@@ -916,14 +974,15 @@ module LA2_40 ( g, p, ci, G, P, co );
   output [1:0] co;
   input ci;
   output G, P;
-  wire   ci, n1, n2;
+  wire   ci, n1, n2, n3;
   assign co[0] = ci;
 
   AND2X1_RVT U1 ( .A1(g[0]), .A2(p[1]), .Y(n1) );
   OR2X1_RVT U2 ( .A1(g[1]), .A2(n1), .Y(G) );
-  AND2X1_RVT U3 ( .A1(ci), .A2(p[0]), .Y(n2) );
-  OR2X1_RVT U4 ( .A1(g[0]), .A2(n2), .Y(co[1]) );
-  AND2X1_RVT U5 ( .A1(p[1]), .A2(p[0]), .Y(P) );
+  AND2X1_RVT U3 ( .A1(p[1]), .A2(p[0]), .Y(P) );
+  INVX0_RVT U4 ( .A(g[0]), .Y(n3) );
+  NAND2X0_RVT U5 ( .A1(ci), .A2(p[0]), .Y(n2) );
+  NAND2X0_RVT U6 ( .A1(n3), .A2(n2), .Y(co[1]) );
 endmodule
 
 
@@ -933,14 +992,15 @@ module LA2_39 ( g, p, ci, G, P, co );
   output [1:0] co;
   input ci;
   output G, P;
-  wire   ci, n1, n2;
+  wire   ci, n1, n2, n3;
   assign co[0] = ci;
 
   AND2X1_RVT U1 ( .A1(g[0]), .A2(p[1]), .Y(n1) );
   OR2X1_RVT U2 ( .A1(g[1]), .A2(n1), .Y(G) );
-  AND2X1_RVT U3 ( .A1(ci), .A2(p[0]), .Y(n2) );
-  OR2X1_RVT U4 ( .A1(g[0]), .A2(n2), .Y(co[1]) );
-  AND2X1_RVT U5 ( .A1(p[1]), .A2(p[0]), .Y(P) );
+  AND2X1_RVT U3 ( .A1(p[1]), .A2(p[0]), .Y(P) );
+  INVX0_RVT U4 ( .A(g[0]), .Y(n3) );
+  NAND2X0_RVT U5 ( .A1(ci), .A2(p[0]), .Y(n2) );
+  NAND2X0_RVT U6 ( .A1(n3), .A2(n2), .Y(co[1]) );
 endmodule
 
 
@@ -950,14 +1010,15 @@ module LA2_38 ( g, p, ci, G, P, co );
   output [1:0] co;
   input ci;
   output G, P;
-  wire   ci, n1, n2;
+  wire   ci, n1, n2, n3;
   assign co[0] = ci;
 
   AND2X1_RVT U1 ( .A1(g[0]), .A2(p[1]), .Y(n1) );
   OR2X1_RVT U2 ( .A1(g[1]), .A2(n1), .Y(G) );
-  AND2X1_RVT U3 ( .A1(ci), .A2(p[0]), .Y(n2) );
-  OR2X1_RVT U4 ( .A1(g[0]), .A2(n2), .Y(co[1]) );
-  AND2X1_RVT U5 ( .A1(p[1]), .A2(p[0]), .Y(P) );
+  AND2X1_RVT U3 ( .A1(p[1]), .A2(p[0]), .Y(P) );
+  INVX0_RVT U4 ( .A(g[0]), .Y(n3) );
+  NAND2X0_RVT U5 ( .A1(ci), .A2(p[0]), .Y(n2) );
+  NAND2X0_RVT U6 ( .A1(n3), .A2(n2), .Y(co[1]) );
 endmodule
 
 
@@ -967,14 +1028,15 @@ module LA2_37 ( g, p, ci, G, P, co );
   output [1:0] co;
   input ci;
   output G, P;
-  wire   ci, n1, n2;
+  wire   ci, n1, n2, n3;
   assign co[0] = ci;
 
   AND2X1_RVT U1 ( .A1(g[0]), .A2(p[1]), .Y(n1) );
   OR2X1_RVT U2 ( .A1(g[1]), .A2(n1), .Y(G) );
-  AND2X1_RVT U3 ( .A1(ci), .A2(p[0]), .Y(n2) );
-  OR2X1_RVT U4 ( .A1(g[0]), .A2(n2), .Y(co[1]) );
-  AND2X1_RVT U5 ( .A1(p[1]), .A2(p[0]), .Y(P) );
+  AND2X1_RVT U3 ( .A1(p[1]), .A2(p[0]), .Y(P) );
+  INVX0_RVT U4 ( .A(g[0]), .Y(n3) );
+  NAND2X0_RVT U5 ( .A1(ci), .A2(p[0]), .Y(n2) );
+  NAND2X0_RVT U6 ( .A1(n3), .A2(n2), .Y(co[1]) );
 endmodule
 
 
@@ -984,14 +1046,15 @@ module LA2_36 ( g, p, ci, G, P, co );
   output [1:0] co;
   input ci;
   output G, P;
-  wire   ci, n1, n2;
+  wire   ci, n1, n2, n3;
   assign co[0] = ci;
 
   AND2X1_RVT U1 ( .A1(g[0]), .A2(p[1]), .Y(n1) );
   OR2X1_RVT U2 ( .A1(g[1]), .A2(n1), .Y(G) );
-  AND2X1_RVT U3 ( .A1(ci), .A2(p[0]), .Y(n2) );
-  OR2X1_RVT U4 ( .A1(g[0]), .A2(n2), .Y(co[1]) );
-  AND2X1_RVT U5 ( .A1(p[1]), .A2(p[0]), .Y(P) );
+  AND2X1_RVT U3 ( .A1(p[1]), .A2(p[0]), .Y(P) );
+  INVX0_RVT U4 ( .A(g[0]), .Y(n3) );
+  NAND2X0_RVT U5 ( .A1(ci), .A2(p[0]), .Y(n2) );
+  NAND2X0_RVT U6 ( .A1(n3), .A2(n2), .Y(co[1]) );
 endmodule
 
 
@@ -1001,14 +1064,15 @@ module LA2_35 ( g, p, ci, G, P, co );
   output [1:0] co;
   input ci;
   output G, P;
-  wire   ci, n1, n2;
+  wire   ci, n1, n2, n3;
   assign co[0] = ci;
 
   AND2X1_RVT U1 ( .A1(g[0]), .A2(p[1]), .Y(n1) );
   OR2X1_RVT U2 ( .A1(g[1]), .A2(n1), .Y(G) );
-  AND2X1_RVT U3 ( .A1(ci), .A2(p[0]), .Y(n2) );
-  OR2X1_RVT U4 ( .A1(g[0]), .A2(n2), .Y(co[1]) );
-  AND2X1_RVT U5 ( .A1(p[1]), .A2(p[0]), .Y(P) );
+  AND2X1_RVT U3 ( .A1(p[1]), .A2(p[0]), .Y(P) );
+  INVX0_RVT U4 ( .A(g[0]), .Y(n3) );
+  NAND2X0_RVT U5 ( .A1(ci), .A2(p[0]), .Y(n2) );
+  NAND2X0_RVT U6 ( .A1(n3), .A2(n2), .Y(co[1]) );
 endmodule
 
 
@@ -1018,14 +1082,15 @@ module LA2_34 ( g, p, ci, G, P, co );
   output [1:0] co;
   input ci;
   output G, P;
-  wire   ci, n1, n2;
+  wire   ci, n1, n2, n3;
   assign co[0] = ci;
 
   AND2X1_RVT U1 ( .A1(g[0]), .A2(p[1]), .Y(n1) );
   OR2X1_RVT U2 ( .A1(g[1]), .A2(n1), .Y(G) );
-  AND2X1_RVT U3 ( .A1(ci), .A2(p[0]), .Y(n2) );
-  OR2X1_RVT U4 ( .A1(g[0]), .A2(n2), .Y(co[1]) );
-  AND2X1_RVT U5 ( .A1(p[1]), .A2(p[0]), .Y(P) );
+  AND2X1_RVT U3 ( .A1(p[1]), .A2(p[0]), .Y(P) );
+  INVX0_RVT U4 ( .A(g[0]), .Y(n3) );
+  NAND2X0_RVT U5 ( .A1(ci), .A2(p[0]), .Y(n2) );
+  NAND2X0_RVT U6 ( .A1(n3), .A2(n2), .Y(co[1]) );
 endmodule
 
 
@@ -1035,14 +1100,15 @@ module LA2_33 ( g, p, ci, G, P, co );
   output [1:0] co;
   input ci;
   output G, P;
-  wire   ci, n1, n2;
+  wire   ci, n1, n2, n3;
   assign co[0] = ci;
 
   AND2X1_RVT U1 ( .A1(g[0]), .A2(p[1]), .Y(n1) );
   OR2X1_RVT U2 ( .A1(g[1]), .A2(n1), .Y(G) );
-  AND2X1_RVT U3 ( .A1(ci), .A2(p[0]), .Y(n2) );
-  OR2X1_RVT U4 ( .A1(g[0]), .A2(n2), .Y(co[1]) );
-  AND2X1_RVT U5 ( .A1(p[1]), .A2(p[0]), .Y(P) );
+  AND2X1_RVT U3 ( .A1(p[1]), .A2(p[0]), .Y(P) );
+  INVX0_RVT U4 ( .A(g[0]), .Y(n3) );
+  NAND2X0_RVT U5 ( .A1(ci), .A2(p[0]), .Y(n2) );
+  NAND2X0_RVT U6 ( .A1(n3), .A2(n2), .Y(co[1]) );
 endmodule
 
 
@@ -1052,14 +1118,15 @@ module LA2_32 ( g, p, ci, G, P, co );
   output [1:0] co;
   input ci;
   output G, P;
-  wire   ci, n1, n2;
+  wire   ci, n1, n2, n3;
   assign co[0] = ci;
 
   AND2X1_RVT U1 ( .A1(g[0]), .A2(p[1]), .Y(n1) );
   OR2X1_RVT U2 ( .A1(g[1]), .A2(n1), .Y(G) );
-  AND2X1_RVT U3 ( .A1(ci), .A2(p[0]), .Y(n2) );
-  OR2X1_RVT U4 ( .A1(g[0]), .A2(n2), .Y(co[1]) );
-  AND2X1_RVT U5 ( .A1(p[1]), .A2(p[0]), .Y(P) );
+  AND2X1_RVT U3 ( .A1(p[1]), .A2(p[0]), .Y(P) );
+  INVX0_RVT U4 ( .A(g[0]), .Y(n3) );
+  NAND2X0_RVT U5 ( .A1(ci), .A2(p[0]), .Y(n2) );
+  NAND2X0_RVT U6 ( .A1(n3), .A2(n2), .Y(co[1]) );
 endmodule
 
 
@@ -1069,707 +1136,1023 @@ module LA2_31 ( g, p, ci, G, P, co );
   output [1:0] co;
   input ci;
   output G, P;
-  wire   ci, n1, n2;
+  wire   ci, n1, n2, n3;
   assign co[0] = ci;
 
   AND2X1_RVT U1 ( .A1(g[0]), .A2(p[1]), .Y(n1) );
   OR2X1_RVT U2 ( .A1(g[1]), .A2(n1), .Y(G) );
-  AND2X1_RVT U3 ( .A1(ci), .A2(p[0]), .Y(n2) );
-  OR2X1_RVT U4 ( .A1(g[0]), .A2(n2), .Y(co[1]) );
-  AND2X1_RVT U5 ( .A1(p[1]), .A2(p[0]), .Y(P) );
+  AND2X1_RVT U3 ( .A1(p[1]), .A2(p[0]), .Y(P) );
+  INVX0_RVT U4 ( .A(g[0]), .Y(n3) );
+  NAND2X0_RVT U5 ( .A1(ci), .A2(p[0]), .Y(n2) );
+  NAND2X0_RVT U6 ( .A1(n3), .A2(n2), .Y(co[1]) );
 endmodule
 
 
 module MFA_63 ( a, b, ci, p, g, s );
   input a, b, ci;
   output p, g, s;
+  wire   n1, n2, n3, n4, n5;
 
-
-  AND2X1_RVT U1 ( .A1(a), .A2(b), .Y(g) );
-  HADDX1_RVT U2 ( .A0(a), .B0(b), .SO(p) );
-  HADDX1_RVT U3 ( .A0(ci), .B0(p), .SO(s) );
+  INVX0_RVT U1 ( .A(b), .Y(n1) );
+  NAND2X0_RVT U2 ( .A1(a), .A2(n1), .Y(n2) );
+  OR2X1_RVT U3 ( .A1(n1), .A2(a), .Y(n3) );
+  NAND2X0_RVT U4 ( .A1(n2), .A2(n3), .Y(p) );
+  MUX21X1_RVT U5 ( .A1(n2), .A2(p), .S0(ci), .Y(n5) );
+  OR2X1_RVT U6 ( .A1(ci), .A2(n3), .Y(n4) );
+  NAND2X0_RVT U7 ( .A1(n5), .A2(n4), .Y(s) );
+  AND2X1_RVT U8 ( .A1(a), .A2(b), .Y(g) );
 endmodule
 
 
 module MFA_62 ( a, b, ci, p, g, s );
   input a, b, ci;
   output p, g, s;
+  wire   n1, n2, n3, n4, n5;
 
-
-  AND2X1_RVT U1 ( .A1(a), .A2(b), .Y(g) );
-  HADDX1_RVT U2 ( .A0(a), .B0(b), .SO(p) );
-  HADDX1_RVT U3 ( .A0(ci), .B0(p), .SO(s) );
+  INVX0_RVT U1 ( .A(b), .Y(n1) );
+  NAND2X0_RVT U2 ( .A1(a), .A2(n1), .Y(n2) );
+  OR2X1_RVT U3 ( .A1(n1), .A2(a), .Y(n3) );
+  NAND2X0_RVT U4 ( .A1(n2), .A2(n3), .Y(p) );
+  MUX21X1_RVT U5 ( .A1(n2), .A2(p), .S0(ci), .Y(n5) );
+  OR2X1_RVT U6 ( .A1(ci), .A2(n3), .Y(n4) );
+  NAND2X0_RVT U7 ( .A1(n5), .A2(n4), .Y(s) );
+  AND2X1_RVT U8 ( .A1(a), .A2(b), .Y(g) );
 endmodule
 
 
 module MFA_61 ( a, b, ci, p, g, s );
   input a, b, ci;
   output p, g, s;
+  wire   n1, n2, n3, n4, n5;
 
-
-  AND2X1_RVT U1 ( .A1(a), .A2(b), .Y(g) );
-  HADDX1_RVT U2 ( .A0(a), .B0(b), .SO(p) );
-  HADDX1_RVT U3 ( .A0(ci), .B0(p), .SO(s) );
+  INVX0_RVT U1 ( .A(b), .Y(n1) );
+  NAND2X0_RVT U2 ( .A1(a), .A2(n1), .Y(n2) );
+  OR2X1_RVT U3 ( .A1(n1), .A2(a), .Y(n3) );
+  NAND2X0_RVT U4 ( .A1(n2), .A2(n3), .Y(p) );
+  MUX21X1_RVT U5 ( .A1(n2), .A2(p), .S0(ci), .Y(n5) );
+  OR2X1_RVT U6 ( .A1(ci), .A2(n3), .Y(n4) );
+  NAND2X0_RVT U7 ( .A1(n5), .A2(n4), .Y(s) );
+  AND2X1_RVT U8 ( .A1(a), .A2(b), .Y(g) );
 endmodule
 
 
 module MFA_60 ( a, b, ci, p, g, s );
   input a, b, ci;
   output p, g, s;
+  wire   n1, n2, n3, n4, n5;
 
-
-  AND2X1_RVT U1 ( .A1(a), .A2(b), .Y(g) );
-  HADDX1_RVT U2 ( .A0(a), .B0(b), .SO(p) );
-  HADDX1_RVT U3 ( .A0(ci), .B0(p), .SO(s) );
+  INVX0_RVT U1 ( .A(b), .Y(n1) );
+  NAND2X0_RVT U2 ( .A1(a), .A2(n1), .Y(n2) );
+  OR2X1_RVT U3 ( .A1(n1), .A2(a), .Y(n3) );
+  NAND2X0_RVT U4 ( .A1(n2), .A2(n3), .Y(p) );
+  MUX21X1_RVT U5 ( .A1(n2), .A2(p), .S0(ci), .Y(n5) );
+  OR2X1_RVT U6 ( .A1(ci), .A2(n3), .Y(n4) );
+  NAND2X0_RVT U7 ( .A1(n5), .A2(n4), .Y(s) );
+  AND2X1_RVT U8 ( .A1(a), .A2(b), .Y(g) );
 endmodule
 
 
 module MFA_59 ( a, b, ci, p, g, s );
   input a, b, ci;
   output p, g, s;
+  wire   n1, n2, n3, n4, n5;
 
-
-  AND2X1_RVT U1 ( .A1(a), .A2(b), .Y(g) );
-  HADDX1_RVT U2 ( .A0(a), .B0(b), .SO(p) );
-  HADDX1_RVT U3 ( .A0(ci), .B0(p), .SO(s) );
+  INVX0_RVT U1 ( .A(b), .Y(n1) );
+  NAND2X0_RVT U2 ( .A1(a), .A2(n1), .Y(n2) );
+  OR2X1_RVT U3 ( .A1(n1), .A2(a), .Y(n3) );
+  NAND2X0_RVT U4 ( .A1(n2), .A2(n3), .Y(p) );
+  MUX21X1_RVT U5 ( .A1(n2), .A2(p), .S0(ci), .Y(n5) );
+  OR2X1_RVT U6 ( .A1(ci), .A2(n3), .Y(n4) );
+  NAND2X0_RVT U7 ( .A1(n5), .A2(n4), .Y(s) );
+  AND2X1_RVT U8 ( .A1(a), .A2(b), .Y(g) );
 endmodule
 
 
 module MFA_58 ( a, b, ci, p, g, s );
   input a, b, ci;
   output p, g, s;
+  wire   n1, n2, n3, n4, n5;
 
-
-  AND2X1_RVT U1 ( .A1(a), .A2(b), .Y(g) );
-  HADDX1_RVT U2 ( .A0(a), .B0(b), .SO(p) );
-  HADDX1_RVT U3 ( .A0(ci), .B0(p), .SO(s) );
+  INVX0_RVT U1 ( .A(b), .Y(n1) );
+  NAND2X0_RVT U2 ( .A1(a), .A2(n1), .Y(n2) );
+  OR2X1_RVT U3 ( .A1(n1), .A2(a), .Y(n3) );
+  NAND2X0_RVT U4 ( .A1(n2), .A2(n3), .Y(p) );
+  MUX21X1_RVT U5 ( .A1(n2), .A2(p), .S0(ci), .Y(n5) );
+  OR2X1_RVT U6 ( .A1(ci), .A2(n3), .Y(n4) );
+  NAND2X0_RVT U7 ( .A1(n5), .A2(n4), .Y(s) );
+  AND2X1_RVT U8 ( .A1(a), .A2(b), .Y(g) );
 endmodule
 
 
 module MFA_57 ( a, b, ci, p, g, s );
   input a, b, ci;
   output p, g, s;
+  wire   n1, n2, n3, n4, n5;
 
-
-  AND2X1_RVT U1 ( .A1(a), .A2(b), .Y(g) );
-  HADDX1_RVT U2 ( .A0(a), .B0(b), .SO(p) );
-  HADDX1_RVT U3 ( .A0(ci), .B0(p), .SO(s) );
+  INVX0_RVT U1 ( .A(b), .Y(n1) );
+  NAND2X0_RVT U2 ( .A1(a), .A2(n1), .Y(n2) );
+  OR2X1_RVT U3 ( .A1(n1), .A2(a), .Y(n3) );
+  NAND2X0_RVT U4 ( .A1(n2), .A2(n3), .Y(p) );
+  MUX21X1_RVT U5 ( .A1(n2), .A2(p), .S0(ci), .Y(n5) );
+  OR2X1_RVT U6 ( .A1(ci), .A2(n3), .Y(n4) );
+  NAND2X0_RVT U7 ( .A1(n5), .A2(n4), .Y(s) );
+  AND2X1_RVT U8 ( .A1(a), .A2(b), .Y(g) );
 endmodule
 
 
 module MFA_56 ( a, b, ci, p, g, s );
   input a, b, ci;
   output p, g, s;
+  wire   n1, n2, n3, n4, n5;
 
-
-  AND2X1_RVT U1 ( .A1(a), .A2(b), .Y(g) );
-  HADDX1_RVT U2 ( .A0(a), .B0(b), .SO(p) );
-  HADDX1_RVT U3 ( .A0(ci), .B0(p), .SO(s) );
+  INVX0_RVT U1 ( .A(b), .Y(n1) );
+  NAND2X0_RVT U2 ( .A1(a), .A2(n1), .Y(n2) );
+  OR2X1_RVT U3 ( .A1(n1), .A2(a), .Y(n3) );
+  NAND2X0_RVT U4 ( .A1(n2), .A2(n3), .Y(p) );
+  MUX21X1_RVT U5 ( .A1(n2), .A2(p), .S0(ci), .Y(n5) );
+  OR2X1_RVT U6 ( .A1(ci), .A2(n3), .Y(n4) );
+  NAND2X0_RVT U7 ( .A1(n5), .A2(n4), .Y(s) );
+  AND2X1_RVT U8 ( .A1(a), .A2(b), .Y(g) );
 endmodule
 
 
 module MFA_55 ( a, b, ci, p, g, s );
   input a, b, ci;
   output p, g, s;
+  wire   n1, n2, n3, n4, n5;
 
-
-  AND2X1_RVT U1 ( .A1(a), .A2(b), .Y(g) );
-  HADDX1_RVT U2 ( .A0(a), .B0(b), .SO(p) );
-  HADDX1_RVT U3 ( .A0(ci), .B0(p), .SO(s) );
+  INVX0_RVT U1 ( .A(b), .Y(n1) );
+  NAND2X0_RVT U2 ( .A1(a), .A2(n1), .Y(n2) );
+  OR2X1_RVT U3 ( .A1(n1), .A2(a), .Y(n3) );
+  NAND2X0_RVT U4 ( .A1(n2), .A2(n3), .Y(p) );
+  MUX21X1_RVT U5 ( .A1(n2), .A2(p), .S0(ci), .Y(n5) );
+  OR2X1_RVT U6 ( .A1(ci), .A2(n3), .Y(n4) );
+  NAND2X0_RVT U7 ( .A1(n5), .A2(n4), .Y(s) );
+  AND2X1_RVT U8 ( .A1(a), .A2(b), .Y(g) );
 endmodule
 
 
 module MFA_54 ( a, b, ci, p, g, s );
   input a, b, ci;
   output p, g, s;
+  wire   n1, n2, n3, n4, n5;
 
-
-  AND2X1_RVT U1 ( .A1(a), .A2(b), .Y(g) );
-  HADDX1_RVT U2 ( .A0(a), .B0(b), .SO(p) );
-  HADDX1_RVT U3 ( .A0(ci), .B0(p), .SO(s) );
+  INVX0_RVT U1 ( .A(b), .Y(n1) );
+  NAND2X0_RVT U2 ( .A1(a), .A2(n1), .Y(n2) );
+  OR2X1_RVT U3 ( .A1(n1), .A2(a), .Y(n3) );
+  NAND2X0_RVT U4 ( .A1(n2), .A2(n3), .Y(p) );
+  MUX21X1_RVT U5 ( .A1(n2), .A2(p), .S0(ci), .Y(n5) );
+  OR2X1_RVT U6 ( .A1(ci), .A2(n3), .Y(n4) );
+  NAND2X0_RVT U7 ( .A1(n5), .A2(n4), .Y(s) );
+  AND2X1_RVT U8 ( .A1(a), .A2(b), .Y(g) );
 endmodule
 
 
 module MFA_53 ( a, b, ci, p, g, s );
   input a, b, ci;
   output p, g, s;
+  wire   n1, n2, n3, n4, n5;
 
-
-  AND2X1_RVT U1 ( .A1(a), .A2(b), .Y(g) );
-  HADDX1_RVT U2 ( .A0(a), .B0(b), .SO(p) );
-  HADDX1_RVT U3 ( .A0(ci), .B0(p), .SO(s) );
+  INVX0_RVT U1 ( .A(b), .Y(n1) );
+  NAND2X0_RVT U2 ( .A1(a), .A2(n1), .Y(n2) );
+  OR2X1_RVT U3 ( .A1(n1), .A2(a), .Y(n3) );
+  NAND2X0_RVT U4 ( .A1(n2), .A2(n3), .Y(p) );
+  MUX21X1_RVT U5 ( .A1(n2), .A2(p), .S0(ci), .Y(n5) );
+  OR2X1_RVT U6 ( .A1(ci), .A2(n3), .Y(n4) );
+  NAND2X0_RVT U7 ( .A1(n5), .A2(n4), .Y(s) );
+  AND2X1_RVT U8 ( .A1(a), .A2(b), .Y(g) );
 endmodule
 
 
 module MFA_52 ( a, b, ci, p, g, s );
   input a, b, ci;
   output p, g, s;
+  wire   n1, n2, n3, n4, n5;
 
-
-  AND2X1_RVT U1 ( .A1(a), .A2(b), .Y(g) );
-  HADDX1_RVT U2 ( .A0(a), .B0(b), .SO(p) );
-  HADDX1_RVT U3 ( .A0(ci), .B0(p), .SO(s) );
+  INVX0_RVT U1 ( .A(b), .Y(n1) );
+  NAND2X0_RVT U2 ( .A1(a), .A2(n1), .Y(n2) );
+  OR2X1_RVT U3 ( .A1(n1), .A2(a), .Y(n3) );
+  NAND2X0_RVT U4 ( .A1(n2), .A2(n3), .Y(p) );
+  MUX21X1_RVT U5 ( .A1(n2), .A2(p), .S0(ci), .Y(n5) );
+  OR2X1_RVT U6 ( .A1(ci), .A2(n3), .Y(n4) );
+  NAND2X0_RVT U7 ( .A1(n5), .A2(n4), .Y(s) );
+  AND2X1_RVT U8 ( .A1(a), .A2(b), .Y(g) );
 endmodule
 
 
 module MFA_51 ( a, b, ci, p, g, s );
   input a, b, ci;
   output p, g, s;
+  wire   n1, n2, n3, n4, n5;
 
-
-  AND2X1_RVT U1 ( .A1(a), .A2(b), .Y(g) );
-  HADDX1_RVT U2 ( .A0(a), .B0(b), .SO(p) );
-  HADDX1_RVT U3 ( .A0(ci), .B0(p), .SO(s) );
+  INVX0_RVT U1 ( .A(b), .Y(n1) );
+  NAND2X0_RVT U2 ( .A1(a), .A2(n1), .Y(n2) );
+  OR2X1_RVT U3 ( .A1(n1), .A2(a), .Y(n3) );
+  NAND2X0_RVT U4 ( .A1(n2), .A2(n3), .Y(p) );
+  MUX21X1_RVT U5 ( .A1(n2), .A2(p), .S0(ci), .Y(n5) );
+  OR2X1_RVT U6 ( .A1(ci), .A2(n3), .Y(n4) );
+  NAND2X0_RVT U7 ( .A1(n5), .A2(n4), .Y(s) );
+  AND2X1_RVT U8 ( .A1(a), .A2(b), .Y(g) );
 endmodule
 
 
 module MFA_50 ( a, b, ci, p, g, s );
   input a, b, ci;
   output p, g, s;
+  wire   n1, n2, n3, n4, n5;
 
-
-  AND2X1_RVT U1 ( .A1(a), .A2(b), .Y(g) );
-  HADDX1_RVT U2 ( .A0(a), .B0(b), .SO(p) );
-  HADDX1_RVT U3 ( .A0(ci), .B0(p), .SO(s) );
+  INVX0_RVT U1 ( .A(b), .Y(n1) );
+  NAND2X0_RVT U2 ( .A1(a), .A2(n1), .Y(n2) );
+  OR2X1_RVT U3 ( .A1(n1), .A2(a), .Y(n3) );
+  NAND2X0_RVT U4 ( .A1(n2), .A2(n3), .Y(p) );
+  MUX21X1_RVT U5 ( .A1(n2), .A2(p), .S0(ci), .Y(n5) );
+  OR2X1_RVT U6 ( .A1(ci), .A2(n3), .Y(n4) );
+  NAND2X0_RVT U7 ( .A1(n5), .A2(n4), .Y(s) );
+  AND2X1_RVT U8 ( .A1(a), .A2(b), .Y(g) );
 endmodule
 
 
 module MFA_49 ( a, b, ci, p, g, s );
   input a, b, ci;
   output p, g, s;
+  wire   n1, n2, n3, n4, n5;
 
-
-  AND2X1_RVT U1 ( .A1(a), .A2(b), .Y(g) );
-  HADDX1_RVT U2 ( .A0(a), .B0(b), .SO(p) );
-  HADDX1_RVT U3 ( .A0(ci), .B0(p), .SO(s) );
+  INVX0_RVT U1 ( .A(b), .Y(n1) );
+  NAND2X0_RVT U2 ( .A1(a), .A2(n1), .Y(n2) );
+  OR2X1_RVT U3 ( .A1(n1), .A2(a), .Y(n3) );
+  NAND2X0_RVT U4 ( .A1(n2), .A2(n3), .Y(p) );
+  MUX21X1_RVT U5 ( .A1(n2), .A2(p), .S0(ci), .Y(n5) );
+  OR2X1_RVT U6 ( .A1(ci), .A2(n3), .Y(n4) );
+  NAND2X0_RVT U7 ( .A1(n5), .A2(n4), .Y(s) );
+  AND2X1_RVT U8 ( .A1(a), .A2(b), .Y(g) );
 endmodule
 
 
 module MFA_48 ( a, b, ci, p, g, s );
   input a, b, ci;
   output p, g, s;
+  wire   n1, n2, n3, n4, n5;
 
-
-  AND2X1_RVT U1 ( .A1(a), .A2(b), .Y(g) );
-  HADDX1_RVT U2 ( .A0(a), .B0(b), .SO(p) );
-  HADDX1_RVT U3 ( .A0(ci), .B0(p), .SO(s) );
+  INVX0_RVT U1 ( .A(b), .Y(n1) );
+  NAND2X0_RVT U2 ( .A1(a), .A2(n1), .Y(n2) );
+  OR2X1_RVT U3 ( .A1(n1), .A2(a), .Y(n3) );
+  NAND2X0_RVT U4 ( .A1(n2), .A2(n3), .Y(p) );
+  MUX21X1_RVT U5 ( .A1(n2), .A2(p), .S0(ci), .Y(n5) );
+  OR2X1_RVT U6 ( .A1(ci), .A2(n3), .Y(n4) );
+  NAND2X0_RVT U7 ( .A1(n5), .A2(n4), .Y(s) );
+  AND2X1_RVT U8 ( .A1(a), .A2(b), .Y(g) );
 endmodule
 
 
 module MFA_47 ( a, b, ci, p, g, s );
   input a, b, ci;
   output p, g, s;
+  wire   n1, n2, n3, n4, n5;
 
-
-  AND2X1_RVT U1 ( .A1(a), .A2(b), .Y(g) );
-  HADDX1_RVT U2 ( .A0(a), .B0(b), .SO(p) );
-  HADDX1_RVT U3 ( .A0(ci), .B0(p), .SO(s) );
+  INVX0_RVT U1 ( .A(b), .Y(n1) );
+  NAND2X0_RVT U2 ( .A1(a), .A2(n1), .Y(n2) );
+  OR2X1_RVT U3 ( .A1(n1), .A2(a), .Y(n3) );
+  NAND2X0_RVT U4 ( .A1(n2), .A2(n3), .Y(p) );
+  MUX21X1_RVT U5 ( .A1(n2), .A2(p), .S0(ci), .Y(n5) );
+  OR2X1_RVT U6 ( .A1(ci), .A2(n3), .Y(n4) );
+  NAND2X0_RVT U7 ( .A1(n5), .A2(n4), .Y(s) );
+  AND2X1_RVT U8 ( .A1(a), .A2(b), .Y(g) );
 endmodule
 
 
 module MFA_46 ( a, b, ci, p, g, s );
   input a, b, ci;
   output p, g, s;
+  wire   n1, n2, n3, n4, n5;
 
-
-  AND2X1_RVT U1 ( .A1(a), .A2(b), .Y(g) );
-  HADDX1_RVT U2 ( .A0(a), .B0(b), .SO(p) );
-  HADDX1_RVT U3 ( .A0(ci), .B0(p), .SO(s) );
+  INVX0_RVT U1 ( .A(b), .Y(n1) );
+  NAND2X0_RVT U2 ( .A1(a), .A2(n1), .Y(n2) );
+  OR2X1_RVT U3 ( .A1(n1), .A2(a), .Y(n3) );
+  NAND2X0_RVT U4 ( .A1(n2), .A2(n3), .Y(p) );
+  MUX21X1_RVT U5 ( .A1(n2), .A2(p), .S0(ci), .Y(n5) );
+  OR2X1_RVT U6 ( .A1(ci), .A2(n3), .Y(n4) );
+  NAND2X0_RVT U7 ( .A1(n5), .A2(n4), .Y(s) );
+  AND2X1_RVT U8 ( .A1(a), .A2(b), .Y(g) );
 endmodule
 
 
 module MFA_45 ( a, b, ci, p, g, s );
   input a, b, ci;
   output p, g, s;
+  wire   n1, n2, n3, n4, n5;
 
-
-  AND2X1_RVT U1 ( .A1(a), .A2(b), .Y(g) );
-  HADDX1_RVT U2 ( .A0(a), .B0(b), .SO(p) );
-  HADDX1_RVT U3 ( .A0(ci), .B0(p), .SO(s) );
+  INVX0_RVT U1 ( .A(b), .Y(n1) );
+  NAND2X0_RVT U2 ( .A1(a), .A2(n1), .Y(n2) );
+  OR2X1_RVT U3 ( .A1(n1), .A2(a), .Y(n3) );
+  NAND2X0_RVT U4 ( .A1(n2), .A2(n3), .Y(p) );
+  MUX21X1_RVT U5 ( .A1(n2), .A2(p), .S0(ci), .Y(n5) );
+  OR2X1_RVT U6 ( .A1(ci), .A2(n3), .Y(n4) );
+  NAND2X0_RVT U7 ( .A1(n5), .A2(n4), .Y(s) );
+  AND2X1_RVT U8 ( .A1(a), .A2(b), .Y(g) );
 endmodule
 
 
 module MFA_44 ( a, b, ci, p, g, s );
   input a, b, ci;
   output p, g, s;
+  wire   n1, n2, n3, n4, n5;
 
-
-  AND2X1_RVT U1 ( .A1(a), .A2(b), .Y(g) );
-  HADDX1_RVT U2 ( .A0(a), .B0(b), .SO(p) );
-  HADDX1_RVT U3 ( .A0(ci), .B0(p), .SO(s) );
+  INVX0_RVT U1 ( .A(b), .Y(n1) );
+  NAND2X0_RVT U2 ( .A1(a), .A2(n1), .Y(n2) );
+  OR2X1_RVT U3 ( .A1(n1), .A2(a), .Y(n3) );
+  NAND2X0_RVT U4 ( .A1(n2), .A2(n3), .Y(p) );
+  MUX21X1_RVT U5 ( .A1(n2), .A2(p), .S0(ci), .Y(n5) );
+  OR2X1_RVT U6 ( .A1(ci), .A2(n3), .Y(n4) );
+  NAND2X0_RVT U7 ( .A1(n5), .A2(n4), .Y(s) );
+  AND2X1_RVT U8 ( .A1(a), .A2(b), .Y(g) );
 endmodule
 
 
 module MFA_43 ( a, b, ci, p, g, s );
   input a, b, ci;
   output p, g, s;
+  wire   n1, n2, n3, n4, n5;
 
-
-  AND2X1_RVT U1 ( .A1(a), .A2(b), .Y(g) );
-  HADDX1_RVT U2 ( .A0(a), .B0(b), .SO(p) );
-  HADDX1_RVT U3 ( .A0(ci), .B0(p), .SO(s) );
+  INVX0_RVT U1 ( .A(b), .Y(n1) );
+  NAND2X0_RVT U2 ( .A1(a), .A2(n1), .Y(n2) );
+  OR2X1_RVT U3 ( .A1(n1), .A2(a), .Y(n3) );
+  NAND2X0_RVT U4 ( .A1(n2), .A2(n3), .Y(p) );
+  MUX21X1_RVT U5 ( .A1(n2), .A2(p), .S0(ci), .Y(n5) );
+  OR2X1_RVT U6 ( .A1(ci), .A2(n3), .Y(n4) );
+  NAND2X0_RVT U7 ( .A1(n5), .A2(n4), .Y(s) );
+  AND2X1_RVT U8 ( .A1(a), .A2(b), .Y(g) );
 endmodule
 
 
 module MFA_42 ( a, b, ci, p, g, s );
   input a, b, ci;
   output p, g, s;
+  wire   n1, n2, n3, n4, n5;
 
-
-  AND2X1_RVT U1 ( .A1(a), .A2(b), .Y(g) );
-  HADDX1_RVT U2 ( .A0(a), .B0(b), .SO(p) );
-  HADDX1_RVT U3 ( .A0(ci), .B0(p), .SO(s) );
+  INVX0_RVT U1 ( .A(b), .Y(n1) );
+  NAND2X0_RVT U2 ( .A1(a), .A2(n1), .Y(n2) );
+  OR2X1_RVT U3 ( .A1(n1), .A2(a), .Y(n3) );
+  NAND2X0_RVT U4 ( .A1(n2), .A2(n3), .Y(p) );
+  MUX21X1_RVT U5 ( .A1(n2), .A2(p), .S0(ci), .Y(n5) );
+  OR2X1_RVT U6 ( .A1(ci), .A2(n3), .Y(n4) );
+  NAND2X0_RVT U7 ( .A1(n5), .A2(n4), .Y(s) );
+  AND2X1_RVT U8 ( .A1(a), .A2(b), .Y(g) );
 endmodule
 
 
 module MFA_41 ( a, b, ci, p, g, s );
   input a, b, ci;
   output p, g, s;
+  wire   n1, n2, n3, n4, n5;
 
-
-  AND2X1_RVT U1 ( .A1(a), .A2(b), .Y(g) );
-  HADDX1_RVT U2 ( .A0(a), .B0(b), .SO(p) );
-  HADDX1_RVT U3 ( .A0(ci), .B0(p), .SO(s) );
+  INVX0_RVT U1 ( .A(b), .Y(n1) );
+  NAND2X0_RVT U2 ( .A1(a), .A2(n1), .Y(n2) );
+  OR2X1_RVT U3 ( .A1(n1), .A2(a), .Y(n3) );
+  NAND2X0_RVT U4 ( .A1(n2), .A2(n3), .Y(p) );
+  MUX21X1_RVT U5 ( .A1(n2), .A2(p), .S0(ci), .Y(n5) );
+  OR2X1_RVT U6 ( .A1(ci), .A2(n3), .Y(n4) );
+  NAND2X0_RVT U7 ( .A1(n5), .A2(n4), .Y(s) );
+  AND2X1_RVT U8 ( .A1(a), .A2(b), .Y(g) );
 endmodule
 
 
 module MFA_40 ( a, b, ci, p, g, s );
   input a, b, ci;
   output p, g, s;
+  wire   n1, n2, n3, n4, n5;
 
-
-  AND2X1_RVT U1 ( .A1(a), .A2(b), .Y(g) );
-  HADDX1_RVT U2 ( .A0(a), .B0(b), .SO(p) );
-  HADDX1_RVT U3 ( .A0(ci), .B0(p), .SO(s) );
+  INVX0_RVT U1 ( .A(b), .Y(n1) );
+  NAND2X0_RVT U2 ( .A1(a), .A2(n1), .Y(n2) );
+  OR2X1_RVT U3 ( .A1(n1), .A2(a), .Y(n3) );
+  NAND2X0_RVT U4 ( .A1(n2), .A2(n3), .Y(p) );
+  MUX21X1_RVT U5 ( .A1(n2), .A2(p), .S0(ci), .Y(n5) );
+  OR2X1_RVT U6 ( .A1(ci), .A2(n3), .Y(n4) );
+  NAND2X0_RVT U7 ( .A1(n5), .A2(n4), .Y(s) );
+  AND2X1_RVT U8 ( .A1(a), .A2(b), .Y(g) );
 endmodule
 
 
 module MFA_39 ( a, b, ci, p, g, s );
   input a, b, ci;
   output p, g, s;
+  wire   n1, n2, n3, n4, n5;
 
-
-  AND2X1_RVT U1 ( .A1(a), .A2(b), .Y(g) );
-  HADDX1_RVT U2 ( .A0(a), .B0(b), .SO(p) );
-  HADDX1_RVT U3 ( .A0(ci), .B0(p), .SO(s) );
+  INVX0_RVT U1 ( .A(b), .Y(n1) );
+  NAND2X0_RVT U2 ( .A1(a), .A2(n1), .Y(n2) );
+  OR2X1_RVT U3 ( .A1(n1), .A2(a), .Y(n3) );
+  NAND2X0_RVT U4 ( .A1(n2), .A2(n3), .Y(p) );
+  MUX21X1_RVT U5 ( .A1(n2), .A2(p), .S0(ci), .Y(n5) );
+  OR2X1_RVT U6 ( .A1(ci), .A2(n3), .Y(n4) );
+  NAND2X0_RVT U7 ( .A1(n5), .A2(n4), .Y(s) );
+  AND2X1_RVT U8 ( .A1(a), .A2(b), .Y(g) );
 endmodule
 
 
 module MFA_38 ( a, b, ci, p, g, s );
   input a, b, ci;
   output p, g, s;
+  wire   n1, n2, n3, n4, n5;
 
-
-  AND2X1_RVT U1 ( .A1(a), .A2(b), .Y(g) );
-  HADDX1_RVT U2 ( .A0(a), .B0(b), .SO(p) );
-  HADDX1_RVT U3 ( .A0(ci), .B0(p), .SO(s) );
+  INVX0_RVT U1 ( .A(b), .Y(n1) );
+  NAND2X0_RVT U2 ( .A1(a), .A2(n1), .Y(n2) );
+  OR2X1_RVT U3 ( .A1(n1), .A2(a), .Y(n3) );
+  NAND2X0_RVT U4 ( .A1(n2), .A2(n3), .Y(p) );
+  MUX21X1_RVT U5 ( .A1(n2), .A2(p), .S0(ci), .Y(n5) );
+  OR2X1_RVT U6 ( .A1(ci), .A2(n3), .Y(n4) );
+  NAND2X0_RVT U7 ( .A1(n5), .A2(n4), .Y(s) );
+  AND2X1_RVT U8 ( .A1(a), .A2(b), .Y(g) );
 endmodule
 
 
 module MFA_37 ( a, b, ci, p, g, s );
   input a, b, ci;
   output p, g, s;
+  wire   n1, n2, n3, n4, n5;
 
-
-  AND2X1_RVT U1 ( .A1(a), .A2(b), .Y(g) );
-  HADDX1_RVT U2 ( .A0(a), .B0(b), .SO(p) );
-  HADDX1_RVT U3 ( .A0(ci), .B0(p), .SO(s) );
+  INVX0_RVT U1 ( .A(b), .Y(n1) );
+  NAND2X0_RVT U2 ( .A1(a), .A2(n1), .Y(n2) );
+  OR2X1_RVT U3 ( .A1(n1), .A2(a), .Y(n3) );
+  NAND2X0_RVT U4 ( .A1(n2), .A2(n3), .Y(p) );
+  MUX21X1_RVT U5 ( .A1(n2), .A2(p), .S0(ci), .Y(n5) );
+  OR2X1_RVT U6 ( .A1(ci), .A2(n3), .Y(n4) );
+  NAND2X0_RVT U7 ( .A1(n5), .A2(n4), .Y(s) );
+  AND2X1_RVT U8 ( .A1(a), .A2(b), .Y(g) );
 endmodule
 
 
 module MFA_36 ( a, b, ci, p, g, s );
   input a, b, ci;
   output p, g, s;
+  wire   n1, n2, n3, n4, n5;
 
-
-  AND2X1_RVT U1 ( .A1(a), .A2(b), .Y(g) );
-  HADDX1_RVT U2 ( .A0(a), .B0(b), .SO(p) );
-  HADDX1_RVT U3 ( .A0(ci), .B0(p), .SO(s) );
+  INVX0_RVT U1 ( .A(b), .Y(n1) );
+  NAND2X0_RVT U2 ( .A1(a), .A2(n1), .Y(n2) );
+  OR2X1_RVT U3 ( .A1(n1), .A2(a), .Y(n3) );
+  NAND2X0_RVT U4 ( .A1(n2), .A2(n3), .Y(p) );
+  MUX21X1_RVT U5 ( .A1(n2), .A2(p), .S0(ci), .Y(n5) );
+  OR2X1_RVT U6 ( .A1(ci), .A2(n3), .Y(n4) );
+  NAND2X0_RVT U7 ( .A1(n5), .A2(n4), .Y(s) );
+  AND2X1_RVT U8 ( .A1(a), .A2(b), .Y(g) );
 endmodule
 
 
 module MFA_35 ( a, b, ci, p, g, s );
   input a, b, ci;
   output p, g, s;
+  wire   n1, n2, n3, n4, n5;
 
-
-  AND2X1_RVT U1 ( .A1(a), .A2(b), .Y(g) );
-  HADDX1_RVT U2 ( .A0(a), .B0(b), .SO(p) );
-  HADDX1_RVT U3 ( .A0(ci), .B0(p), .SO(s) );
+  INVX0_RVT U1 ( .A(b), .Y(n1) );
+  NAND2X0_RVT U2 ( .A1(a), .A2(n1), .Y(n2) );
+  OR2X1_RVT U3 ( .A1(n1), .A2(a), .Y(n3) );
+  NAND2X0_RVT U4 ( .A1(n2), .A2(n3), .Y(p) );
+  MUX21X1_RVT U5 ( .A1(n2), .A2(p), .S0(ci), .Y(n5) );
+  OR2X1_RVT U6 ( .A1(ci), .A2(n3), .Y(n4) );
+  NAND2X0_RVT U7 ( .A1(n5), .A2(n4), .Y(s) );
+  AND2X1_RVT U8 ( .A1(a), .A2(b), .Y(g) );
 endmodule
 
 
 module MFA_34 ( a, b, ci, p, g, s );
   input a, b, ci;
   output p, g, s;
+  wire   n1, n2, n3, n4, n5;
 
-
-  AND2X1_RVT U1 ( .A1(a), .A2(b), .Y(g) );
-  HADDX1_RVT U2 ( .A0(a), .B0(b), .SO(p) );
-  HADDX1_RVT U3 ( .A0(ci), .B0(p), .SO(s) );
+  INVX0_RVT U1 ( .A(b), .Y(n1) );
+  NAND2X0_RVT U2 ( .A1(a), .A2(n1), .Y(n2) );
+  OR2X1_RVT U3 ( .A1(n1), .A2(a), .Y(n3) );
+  NAND2X0_RVT U4 ( .A1(n2), .A2(n3), .Y(p) );
+  MUX21X1_RVT U5 ( .A1(n2), .A2(p), .S0(ci), .Y(n5) );
+  OR2X1_RVT U6 ( .A1(ci), .A2(n3), .Y(n4) );
+  NAND2X0_RVT U7 ( .A1(n5), .A2(n4), .Y(s) );
+  AND2X1_RVT U8 ( .A1(a), .A2(b), .Y(g) );
 endmodule
 
 
 module MFA_33 ( a, b, ci, p, g, s );
   input a, b, ci;
   output p, g, s;
+  wire   n1, n2, n3, n4, n5;
 
-
-  AND2X1_RVT U1 ( .A1(a), .A2(b), .Y(g) );
-  HADDX1_RVT U2 ( .A0(a), .B0(b), .SO(p) );
-  HADDX1_RVT U3 ( .A0(ci), .B0(p), .SO(s) );
+  INVX0_RVT U1 ( .A(b), .Y(n1) );
+  NAND2X0_RVT U2 ( .A1(a), .A2(n1), .Y(n2) );
+  OR2X1_RVT U3 ( .A1(n1), .A2(a), .Y(n3) );
+  NAND2X0_RVT U4 ( .A1(n2), .A2(n3), .Y(p) );
+  MUX21X1_RVT U5 ( .A1(n2), .A2(p), .S0(ci), .Y(n5) );
+  OR2X1_RVT U6 ( .A1(ci), .A2(n3), .Y(n4) );
+  NAND2X0_RVT U7 ( .A1(n5), .A2(n4), .Y(s) );
+  AND2X1_RVT U8 ( .A1(a), .A2(b), .Y(g) );
 endmodule
 
 
 module MFA_32 ( a, b, ci, p, g, s );
   input a, b, ci;
   output p, g, s;
+  wire   n1, n2, n3, n4, n5;
 
-
-  AND2X1_RVT U1 ( .A1(a), .A2(b), .Y(g) );
-  HADDX1_RVT U2 ( .A0(a), .B0(b), .SO(p) );
-  HADDX1_RVT U3 ( .A0(ci), .B0(p), .SO(s) );
+  INVX0_RVT U1 ( .A(b), .Y(n1) );
+  NAND2X0_RVT U2 ( .A1(a), .A2(n1), .Y(n2) );
+  OR2X1_RVT U3 ( .A1(n1), .A2(a), .Y(n3) );
+  NAND2X0_RVT U4 ( .A1(n2), .A2(n3), .Y(p) );
+  MUX21X1_RVT U5 ( .A1(n2), .A2(p), .S0(ci), .Y(n5) );
+  OR2X1_RVT U6 ( .A1(ci), .A2(n3), .Y(n4) );
+  NAND2X0_RVT U7 ( .A1(n5), .A2(n4), .Y(s) );
+  AND2X1_RVT U8 ( .A1(a), .A2(b), .Y(g) );
 endmodule
 
 
 module MFA_31 ( a, b, ci, p, g, s );
   input a, b, ci;
   output p, g, s;
+  wire   n1, n2, n3, n4, n5;
 
-
-  AND2X1_RVT U1 ( .A1(a), .A2(b), .Y(g) );
-  HADDX1_RVT U2 ( .A0(a), .B0(b), .SO(p) );
-  HADDX1_RVT U3 ( .A0(ci), .B0(p), .SO(s) );
+  INVX0_RVT U1 ( .A(b), .Y(n1) );
+  NAND2X0_RVT U2 ( .A1(a), .A2(n1), .Y(n2) );
+  OR2X1_RVT U3 ( .A1(n1), .A2(a), .Y(n3) );
+  NAND2X0_RVT U4 ( .A1(n2), .A2(n3), .Y(p) );
+  MUX21X1_RVT U5 ( .A1(n2), .A2(p), .S0(ci), .Y(n5) );
+  OR2X1_RVT U6 ( .A1(ci), .A2(n3), .Y(n4) );
+  NAND2X0_RVT U7 ( .A1(n5), .A2(n4), .Y(s) );
+  AND2X1_RVT U8 ( .A1(a), .A2(b), .Y(g) );
 endmodule
 
 
 module MFA_30 ( a, b, ci, p, g, s );
   input a, b, ci;
   output p, g, s;
+  wire   n1, n2, n3, n4, n5;
 
-
-  AND2X1_RVT U1 ( .A1(a), .A2(b), .Y(g) );
-  HADDX1_RVT U2 ( .A0(a), .B0(b), .SO(p) );
-  HADDX1_RVT U3 ( .A0(ci), .B0(p), .SO(s) );
+  INVX0_RVT U1 ( .A(b), .Y(n1) );
+  NAND2X0_RVT U2 ( .A1(a), .A2(n1), .Y(n2) );
+  OR2X1_RVT U3 ( .A1(n1), .A2(a), .Y(n3) );
+  NAND2X0_RVT U4 ( .A1(n2), .A2(n3), .Y(p) );
+  MUX21X1_RVT U5 ( .A1(n2), .A2(p), .S0(ci), .Y(n5) );
+  OR2X1_RVT U6 ( .A1(ci), .A2(n3), .Y(n4) );
+  NAND2X0_RVT U7 ( .A1(n5), .A2(n4), .Y(s) );
+  AND2X1_RVT U8 ( .A1(a), .A2(b), .Y(g) );
 endmodule
 
 
 module MFA_29 ( a, b, ci, p, g, s );
   input a, b, ci;
   output p, g, s;
+  wire   n1, n2, n3, n4, n5;
 
-
-  AND2X1_RVT U1 ( .A1(a), .A2(b), .Y(g) );
-  HADDX1_RVT U2 ( .A0(a), .B0(b), .SO(p) );
-  HADDX1_RVT U3 ( .A0(ci), .B0(p), .SO(s) );
+  INVX0_RVT U1 ( .A(b), .Y(n1) );
+  NAND2X0_RVT U2 ( .A1(a), .A2(n1), .Y(n2) );
+  OR2X1_RVT U3 ( .A1(n1), .A2(a), .Y(n3) );
+  NAND2X0_RVT U4 ( .A1(n2), .A2(n3), .Y(p) );
+  MUX21X1_RVT U5 ( .A1(n2), .A2(p), .S0(ci), .Y(n5) );
+  OR2X1_RVT U6 ( .A1(ci), .A2(n3), .Y(n4) );
+  NAND2X0_RVT U7 ( .A1(n5), .A2(n4), .Y(s) );
+  AND2X1_RVT U8 ( .A1(a), .A2(b), .Y(g) );
 endmodule
 
 
 module MFA_28 ( a, b, ci, p, g, s );
   input a, b, ci;
   output p, g, s;
+  wire   n1, n2, n3, n4, n5;
 
-
-  AND2X1_RVT U1 ( .A1(a), .A2(b), .Y(g) );
-  HADDX1_RVT U2 ( .A0(a), .B0(b), .SO(p) );
-  HADDX1_RVT U3 ( .A0(ci), .B0(p), .SO(s) );
+  INVX0_RVT U1 ( .A(b), .Y(n1) );
+  NAND2X0_RVT U2 ( .A1(a), .A2(n1), .Y(n2) );
+  OR2X1_RVT U3 ( .A1(n1), .A2(a), .Y(n3) );
+  NAND2X0_RVT U4 ( .A1(n2), .A2(n3), .Y(p) );
+  MUX21X1_RVT U5 ( .A1(n2), .A2(p), .S0(ci), .Y(n5) );
+  OR2X1_RVT U6 ( .A1(ci), .A2(n3), .Y(n4) );
+  NAND2X0_RVT U7 ( .A1(n5), .A2(n4), .Y(s) );
+  AND2X1_RVT U8 ( .A1(a), .A2(b), .Y(g) );
 endmodule
 
 
 module MFA_27 ( a, b, ci, p, g, s );
   input a, b, ci;
   output p, g, s;
+  wire   n1, n2, n3, n4, n5;
 
-
-  AND2X1_RVT U1 ( .A1(a), .A2(b), .Y(g) );
-  HADDX1_RVT U2 ( .A0(a), .B0(b), .SO(p) );
-  HADDX1_RVT U3 ( .A0(ci), .B0(p), .SO(s) );
+  INVX0_RVT U1 ( .A(b), .Y(n1) );
+  NAND2X0_RVT U2 ( .A1(a), .A2(n1), .Y(n2) );
+  OR2X1_RVT U3 ( .A1(n1), .A2(a), .Y(n3) );
+  NAND2X0_RVT U4 ( .A1(n2), .A2(n3), .Y(p) );
+  MUX21X1_RVT U5 ( .A1(n2), .A2(p), .S0(ci), .Y(n5) );
+  OR2X1_RVT U6 ( .A1(ci), .A2(n3), .Y(n4) );
+  NAND2X0_RVT U7 ( .A1(n5), .A2(n4), .Y(s) );
+  AND2X1_RVT U8 ( .A1(a), .A2(b), .Y(g) );
 endmodule
 
 
 module MFA_26 ( a, b, ci, p, g, s );
   input a, b, ci;
   output p, g, s;
+  wire   n1, n2, n3, n4, n5;
 
-
-  AND2X1_RVT U1 ( .A1(a), .A2(b), .Y(g) );
-  HADDX1_RVT U2 ( .A0(a), .B0(b), .SO(p) );
-  HADDX1_RVT U3 ( .A0(ci), .B0(p), .SO(s) );
+  INVX0_RVT U1 ( .A(b), .Y(n1) );
+  NAND2X0_RVT U2 ( .A1(a), .A2(n1), .Y(n2) );
+  OR2X1_RVT U3 ( .A1(n1), .A2(a), .Y(n3) );
+  NAND2X0_RVT U4 ( .A1(n2), .A2(n3), .Y(p) );
+  MUX21X1_RVT U5 ( .A1(n2), .A2(p), .S0(ci), .Y(n5) );
+  OR2X1_RVT U6 ( .A1(ci), .A2(n3), .Y(n4) );
+  NAND2X0_RVT U7 ( .A1(n5), .A2(n4), .Y(s) );
+  AND2X1_RVT U8 ( .A1(a), .A2(b), .Y(g) );
 endmodule
 
 
 module MFA_25 ( a, b, ci, p, g, s );
   input a, b, ci;
   output p, g, s;
+  wire   n1, n2, n3, n4, n5;
 
-
-  AND2X1_RVT U1 ( .A1(a), .A2(b), .Y(g) );
-  HADDX1_RVT U2 ( .A0(a), .B0(b), .SO(p) );
-  HADDX1_RVT U3 ( .A0(ci), .B0(p), .SO(s) );
+  INVX0_RVT U1 ( .A(b), .Y(n1) );
+  NAND2X0_RVT U2 ( .A1(a), .A2(n1), .Y(n2) );
+  OR2X1_RVT U3 ( .A1(n1), .A2(a), .Y(n3) );
+  NAND2X0_RVT U4 ( .A1(n2), .A2(n3), .Y(p) );
+  MUX21X1_RVT U5 ( .A1(n2), .A2(p), .S0(ci), .Y(n5) );
+  OR2X1_RVT U6 ( .A1(ci), .A2(n3), .Y(n4) );
+  NAND2X0_RVT U7 ( .A1(n5), .A2(n4), .Y(s) );
+  AND2X1_RVT U8 ( .A1(a), .A2(b), .Y(g) );
 endmodule
 
 
 module MFA_24 ( a, b, ci, p, g, s );
   input a, b, ci;
   output p, g, s;
+  wire   n1, n2, n3, n4, n5;
 
-
-  AND2X1_RVT U1 ( .A1(a), .A2(b), .Y(g) );
-  HADDX1_RVT U2 ( .A0(a), .B0(b), .SO(p) );
-  HADDX1_RVT U3 ( .A0(ci), .B0(p), .SO(s) );
+  INVX0_RVT U1 ( .A(b), .Y(n1) );
+  NAND2X0_RVT U2 ( .A1(a), .A2(n1), .Y(n2) );
+  OR2X1_RVT U3 ( .A1(n1), .A2(a), .Y(n3) );
+  NAND2X0_RVT U4 ( .A1(n2), .A2(n3), .Y(p) );
+  MUX21X1_RVT U5 ( .A1(n2), .A2(p), .S0(ci), .Y(n5) );
+  OR2X1_RVT U6 ( .A1(ci), .A2(n3), .Y(n4) );
+  NAND2X0_RVT U7 ( .A1(n5), .A2(n4), .Y(s) );
+  AND2X1_RVT U8 ( .A1(a), .A2(b), .Y(g) );
 endmodule
 
 
 module MFA_23 ( a, b, ci, p, g, s );
   input a, b, ci;
   output p, g, s;
+  wire   n1, n2, n3, n4, n5;
 
-
-  AND2X1_RVT U1 ( .A1(a), .A2(b), .Y(g) );
-  HADDX1_RVT U2 ( .A0(a), .B0(b), .SO(p) );
-  HADDX1_RVT U3 ( .A0(ci), .B0(p), .SO(s) );
+  INVX0_RVT U1 ( .A(b), .Y(n1) );
+  NAND2X0_RVT U2 ( .A1(a), .A2(n1), .Y(n2) );
+  OR2X1_RVT U3 ( .A1(n1), .A2(a), .Y(n3) );
+  NAND2X0_RVT U4 ( .A1(n2), .A2(n3), .Y(p) );
+  MUX21X1_RVT U5 ( .A1(n2), .A2(p), .S0(ci), .Y(n5) );
+  OR2X1_RVT U6 ( .A1(ci), .A2(n3), .Y(n4) );
+  NAND2X0_RVT U7 ( .A1(n5), .A2(n4), .Y(s) );
+  AND2X1_RVT U8 ( .A1(a), .A2(b), .Y(g) );
 endmodule
 
 
 module MFA_22 ( a, b, ci, p, g, s );
   input a, b, ci;
   output p, g, s;
+  wire   n1, n2, n3, n4, n5;
 
-
-  AND2X1_RVT U1 ( .A1(a), .A2(b), .Y(g) );
-  HADDX1_RVT U2 ( .A0(a), .B0(b), .SO(p) );
-  HADDX1_RVT U3 ( .A0(ci), .B0(p), .SO(s) );
+  INVX0_RVT U1 ( .A(b), .Y(n1) );
+  NAND2X0_RVT U2 ( .A1(a), .A2(n1), .Y(n2) );
+  OR2X1_RVT U3 ( .A1(n1), .A2(a), .Y(n3) );
+  NAND2X0_RVT U4 ( .A1(n2), .A2(n3), .Y(p) );
+  MUX21X1_RVT U5 ( .A1(n2), .A2(p), .S0(ci), .Y(n5) );
+  OR2X1_RVT U6 ( .A1(ci), .A2(n3), .Y(n4) );
+  NAND2X0_RVT U7 ( .A1(n5), .A2(n4), .Y(s) );
+  AND2X1_RVT U8 ( .A1(a), .A2(b), .Y(g) );
 endmodule
 
 
 module MFA_21 ( a, b, ci, p, g, s );
   input a, b, ci;
   output p, g, s;
+  wire   n1, n2, n3, n4, n5;
 
-
-  AND2X1_RVT U1 ( .A1(a), .A2(b), .Y(g) );
-  HADDX1_RVT U2 ( .A0(a), .B0(b), .SO(p) );
-  HADDX1_RVT U3 ( .A0(ci), .B0(p), .SO(s) );
+  INVX0_RVT U1 ( .A(b), .Y(n1) );
+  NAND2X0_RVT U2 ( .A1(a), .A2(n1), .Y(n2) );
+  OR2X1_RVT U3 ( .A1(n1), .A2(a), .Y(n3) );
+  NAND2X0_RVT U4 ( .A1(n2), .A2(n3), .Y(p) );
+  MUX21X1_RVT U5 ( .A1(n2), .A2(p), .S0(ci), .Y(n5) );
+  OR2X1_RVT U6 ( .A1(ci), .A2(n3), .Y(n4) );
+  NAND2X0_RVT U7 ( .A1(n5), .A2(n4), .Y(s) );
+  AND2X1_RVT U8 ( .A1(a), .A2(b), .Y(g) );
 endmodule
 
 
 module MFA_20 ( a, b, ci, p, g, s );
   input a, b, ci;
   output p, g, s;
+  wire   n1, n2, n3, n4, n5;
 
-
-  AND2X1_RVT U1 ( .A1(a), .A2(b), .Y(g) );
-  HADDX1_RVT U2 ( .A0(a), .B0(b), .SO(p) );
-  HADDX1_RVT U3 ( .A0(ci), .B0(p), .SO(s) );
+  INVX0_RVT U1 ( .A(b), .Y(n1) );
+  NAND2X0_RVT U2 ( .A1(a), .A2(n1), .Y(n2) );
+  OR2X1_RVT U3 ( .A1(n1), .A2(a), .Y(n3) );
+  NAND2X0_RVT U4 ( .A1(n2), .A2(n3), .Y(p) );
+  MUX21X1_RVT U5 ( .A1(n2), .A2(p), .S0(ci), .Y(n5) );
+  OR2X1_RVT U6 ( .A1(ci), .A2(n3), .Y(n4) );
+  NAND2X0_RVT U7 ( .A1(n5), .A2(n4), .Y(s) );
+  AND2X1_RVT U8 ( .A1(a), .A2(b), .Y(g) );
 endmodule
 
 
 module MFA_19 ( a, b, ci, p, g, s );
   input a, b, ci;
   output p, g, s;
+  wire   n1, n2, n3, n4, n5;
 
-
-  AND2X1_RVT U1 ( .A1(a), .A2(b), .Y(g) );
-  HADDX1_RVT U2 ( .A0(a), .B0(b), .SO(p) );
-  HADDX1_RVT U3 ( .A0(ci), .B0(p), .SO(s) );
+  INVX0_RVT U1 ( .A(b), .Y(n1) );
+  NAND2X0_RVT U2 ( .A1(a), .A2(n1), .Y(n2) );
+  OR2X1_RVT U3 ( .A1(n1), .A2(a), .Y(n3) );
+  NAND2X0_RVT U4 ( .A1(n2), .A2(n3), .Y(p) );
+  MUX21X1_RVT U5 ( .A1(n2), .A2(p), .S0(ci), .Y(n5) );
+  OR2X1_RVT U6 ( .A1(ci), .A2(n3), .Y(n4) );
+  NAND2X0_RVT U7 ( .A1(n5), .A2(n4), .Y(s) );
+  AND2X1_RVT U8 ( .A1(a), .A2(b), .Y(g) );
 endmodule
 
 
 module MFA_18 ( a, b, ci, p, g, s );
   input a, b, ci;
   output p, g, s;
+  wire   n1, n2, n3, n4, n5;
 
-
-  AND2X1_RVT U1 ( .A1(a), .A2(b), .Y(g) );
-  HADDX1_RVT U2 ( .A0(a), .B0(b), .SO(p) );
-  HADDX1_RVT U3 ( .A0(ci), .B0(p), .SO(s) );
+  INVX0_RVT U1 ( .A(b), .Y(n1) );
+  NAND2X0_RVT U2 ( .A1(a), .A2(n1), .Y(n2) );
+  OR2X1_RVT U3 ( .A1(n1), .A2(a), .Y(n3) );
+  NAND2X0_RVT U4 ( .A1(n2), .A2(n3), .Y(p) );
+  MUX21X1_RVT U5 ( .A1(n2), .A2(p), .S0(ci), .Y(n5) );
+  OR2X1_RVT U6 ( .A1(ci), .A2(n3), .Y(n4) );
+  NAND2X0_RVT U7 ( .A1(n5), .A2(n4), .Y(s) );
+  AND2X1_RVT U8 ( .A1(a), .A2(b), .Y(g) );
 endmodule
 
 
 module MFA_17 ( a, b, ci, p, g, s );
   input a, b, ci;
   output p, g, s;
+  wire   n1, n2, n3, n4, n5;
 
-
-  AND2X1_RVT U1 ( .A1(a), .A2(b), .Y(g) );
-  HADDX1_RVT U2 ( .A0(a), .B0(b), .SO(p) );
-  HADDX1_RVT U3 ( .A0(ci), .B0(p), .SO(s) );
+  INVX0_RVT U1 ( .A(b), .Y(n1) );
+  NAND2X0_RVT U2 ( .A1(a), .A2(n1), .Y(n2) );
+  OR2X1_RVT U3 ( .A1(n1), .A2(a), .Y(n3) );
+  NAND2X0_RVT U4 ( .A1(n2), .A2(n3), .Y(p) );
+  MUX21X1_RVT U5 ( .A1(n2), .A2(p), .S0(ci), .Y(n5) );
+  OR2X1_RVT U6 ( .A1(ci), .A2(n3), .Y(n4) );
+  NAND2X0_RVT U7 ( .A1(n5), .A2(n4), .Y(s) );
+  AND2X1_RVT U8 ( .A1(a), .A2(b), .Y(g) );
 endmodule
 
 
 module MFA_16 ( a, b, ci, p, g, s );
   input a, b, ci;
   output p, g, s;
+  wire   n1, n2, n3, n4, n5;
 
-
-  AND2X1_RVT U1 ( .A1(a), .A2(b), .Y(g) );
-  HADDX1_RVT U2 ( .A0(a), .B0(b), .SO(p) );
-  HADDX1_RVT U3 ( .A0(ci), .B0(p), .SO(s) );
+  INVX0_RVT U1 ( .A(b), .Y(n1) );
+  NAND2X0_RVT U2 ( .A1(a), .A2(n1), .Y(n2) );
+  OR2X1_RVT U3 ( .A1(n1), .A2(a), .Y(n3) );
+  NAND2X0_RVT U4 ( .A1(n2), .A2(n3), .Y(p) );
+  MUX21X1_RVT U5 ( .A1(n2), .A2(p), .S0(ci), .Y(n5) );
+  OR2X1_RVT U6 ( .A1(ci), .A2(n3), .Y(n4) );
+  NAND2X0_RVT U7 ( .A1(n5), .A2(n4), .Y(s) );
+  AND2X1_RVT U8 ( .A1(a), .A2(b), .Y(g) );
 endmodule
 
 
 module MFA_15 ( a, b, ci, p, g, s );
   input a, b, ci;
   output p, g, s;
+  wire   n1, n2, n3, n4, n5;
 
-
-  AND2X1_RVT U1 ( .A1(a), .A2(b), .Y(g) );
-  HADDX1_RVT U2 ( .A0(a), .B0(b), .SO(p) );
-  HADDX1_RVT U3 ( .A0(ci), .B0(p), .SO(s) );
+  INVX0_RVT U1 ( .A(b), .Y(n1) );
+  NAND2X0_RVT U2 ( .A1(a), .A2(n1), .Y(n2) );
+  OR2X1_RVT U3 ( .A1(n1), .A2(a), .Y(n3) );
+  NAND2X0_RVT U4 ( .A1(n2), .A2(n3), .Y(p) );
+  MUX21X1_RVT U5 ( .A1(n2), .A2(p), .S0(ci), .Y(n5) );
+  OR2X1_RVT U6 ( .A1(ci), .A2(n3), .Y(n4) );
+  NAND2X0_RVT U7 ( .A1(n5), .A2(n4), .Y(s) );
+  AND2X1_RVT U8 ( .A1(a), .A2(b), .Y(g) );
 endmodule
 
 
 module MFA_14 ( a, b, ci, p, g, s );
   input a, b, ci;
   output p, g, s;
+  wire   n1, n2, n3, n4, n5;
 
-
-  AND2X1_RVT U1 ( .A1(a), .A2(b), .Y(g) );
-  HADDX1_RVT U2 ( .A0(a), .B0(b), .SO(p) );
-  HADDX1_RVT U3 ( .A0(ci), .B0(p), .SO(s) );
+  INVX0_RVT U1 ( .A(b), .Y(n1) );
+  NAND2X0_RVT U2 ( .A1(a), .A2(n1), .Y(n2) );
+  OR2X1_RVT U3 ( .A1(n1), .A2(a), .Y(n3) );
+  NAND2X0_RVT U4 ( .A1(n2), .A2(n3), .Y(p) );
+  MUX21X1_RVT U5 ( .A1(n2), .A2(p), .S0(ci), .Y(n5) );
+  OR2X1_RVT U6 ( .A1(ci), .A2(n3), .Y(n4) );
+  NAND2X0_RVT U7 ( .A1(n5), .A2(n4), .Y(s) );
+  AND2X1_RVT U8 ( .A1(a), .A2(b), .Y(g) );
 endmodule
 
 
 module MFA_13 ( a, b, ci, p, g, s );
   input a, b, ci;
   output p, g, s;
+  wire   n1, n2, n3, n4, n5;
 
-
-  AND2X1_RVT U1 ( .A1(a), .A2(b), .Y(g) );
-  HADDX1_RVT U2 ( .A0(a), .B0(b), .SO(p) );
-  HADDX1_RVT U3 ( .A0(ci), .B0(p), .SO(s) );
+  INVX0_RVT U1 ( .A(b), .Y(n1) );
+  NAND2X0_RVT U2 ( .A1(a), .A2(n1), .Y(n2) );
+  OR2X1_RVT U3 ( .A1(n1), .A2(a), .Y(n3) );
+  NAND2X0_RVT U4 ( .A1(n2), .A2(n3), .Y(p) );
+  MUX21X1_RVT U5 ( .A1(n2), .A2(p), .S0(ci), .Y(n5) );
+  OR2X1_RVT U6 ( .A1(ci), .A2(n3), .Y(n4) );
+  NAND2X0_RVT U7 ( .A1(n5), .A2(n4), .Y(s) );
+  AND2X1_RVT U8 ( .A1(a), .A2(b), .Y(g) );
 endmodule
 
 
 module MFA_12 ( a, b, ci, p, g, s );
   input a, b, ci;
   output p, g, s;
+  wire   n1, n2, n3, n4, n5;
 
-
-  AND2X1_RVT U1 ( .A1(a), .A2(b), .Y(g) );
-  HADDX1_RVT U2 ( .A0(a), .B0(b), .SO(p) );
-  HADDX1_RVT U3 ( .A0(ci), .B0(p), .SO(s) );
+  INVX0_RVT U1 ( .A(b), .Y(n1) );
+  NAND2X0_RVT U2 ( .A1(a), .A2(n1), .Y(n2) );
+  OR2X1_RVT U3 ( .A1(n1), .A2(a), .Y(n3) );
+  NAND2X0_RVT U4 ( .A1(n2), .A2(n3), .Y(p) );
+  MUX21X1_RVT U5 ( .A1(n2), .A2(p), .S0(ci), .Y(n5) );
+  OR2X1_RVT U6 ( .A1(ci), .A2(n3), .Y(n4) );
+  NAND2X0_RVT U7 ( .A1(n5), .A2(n4), .Y(s) );
+  AND2X1_RVT U8 ( .A1(a), .A2(b), .Y(g) );
 endmodule
 
 
 module MFA_11 ( a, b, ci, p, g, s );
   input a, b, ci;
   output p, g, s;
+  wire   n1, n2, n3, n4, n5;
 
-
-  AND2X1_RVT U1 ( .A1(a), .A2(b), .Y(g) );
-  HADDX1_RVT U2 ( .A0(a), .B0(b), .SO(p) );
-  HADDX1_RVT U3 ( .A0(ci), .B0(p), .SO(s) );
+  INVX0_RVT U1 ( .A(b), .Y(n1) );
+  NAND2X0_RVT U2 ( .A1(a), .A2(n1), .Y(n2) );
+  OR2X1_RVT U3 ( .A1(n1), .A2(a), .Y(n3) );
+  NAND2X0_RVT U4 ( .A1(n2), .A2(n3), .Y(p) );
+  MUX21X1_RVT U5 ( .A1(n2), .A2(p), .S0(ci), .Y(n5) );
+  OR2X1_RVT U6 ( .A1(ci), .A2(n3), .Y(n4) );
+  NAND2X0_RVT U7 ( .A1(n5), .A2(n4), .Y(s) );
+  AND2X1_RVT U8 ( .A1(a), .A2(b), .Y(g) );
 endmodule
 
 
 module MFA_10 ( a, b, ci, p, g, s );
   input a, b, ci;
   output p, g, s;
+  wire   n1, n2, n3, n4, n5;
 
-
-  AND2X1_RVT U1 ( .A1(a), .A2(b), .Y(g) );
-  HADDX1_RVT U2 ( .A0(a), .B0(b), .SO(p) );
-  HADDX1_RVT U3 ( .A0(ci), .B0(p), .SO(s) );
+  INVX0_RVT U1 ( .A(b), .Y(n1) );
+  NAND2X0_RVT U2 ( .A1(a), .A2(n1), .Y(n2) );
+  OR2X1_RVT U3 ( .A1(n1), .A2(a), .Y(n3) );
+  NAND2X0_RVT U4 ( .A1(n2), .A2(n3), .Y(p) );
+  MUX21X1_RVT U5 ( .A1(n2), .A2(p), .S0(ci), .Y(n5) );
+  OR2X1_RVT U6 ( .A1(ci), .A2(n3), .Y(n4) );
+  NAND2X0_RVT U7 ( .A1(n5), .A2(n4), .Y(s) );
+  AND2X1_RVT U8 ( .A1(a), .A2(b), .Y(g) );
 endmodule
 
 
 module MFA_9 ( a, b, ci, p, g, s );
   input a, b, ci;
   output p, g, s;
+  wire   n1, n2, n3, n4, n5;
 
-
-  AND2X1_RVT U1 ( .A1(a), .A2(b), .Y(g) );
-  HADDX1_RVT U2 ( .A0(a), .B0(b), .SO(p) );
-  HADDX1_RVT U3 ( .A0(ci), .B0(p), .SO(s) );
+  INVX0_RVT U1 ( .A(b), .Y(n1) );
+  NAND2X0_RVT U2 ( .A1(a), .A2(n1), .Y(n2) );
+  OR2X1_RVT U3 ( .A1(n1), .A2(a), .Y(n3) );
+  NAND2X0_RVT U4 ( .A1(n2), .A2(n3), .Y(p) );
+  MUX21X1_RVT U5 ( .A1(n2), .A2(p), .S0(ci), .Y(n5) );
+  OR2X1_RVT U6 ( .A1(ci), .A2(n3), .Y(n4) );
+  NAND2X0_RVT U7 ( .A1(n5), .A2(n4), .Y(s) );
+  AND2X1_RVT U8 ( .A1(a), .A2(b), .Y(g) );
 endmodule
 
 
 module MFA_8 ( a, b, ci, p, g, s );
   input a, b, ci;
   output p, g, s;
+  wire   n1, n2, n3, n4, n5;
 
-
-  AND2X1_RVT U1 ( .A1(a), .A2(b), .Y(g) );
-  HADDX1_RVT U2 ( .A0(a), .B0(b), .SO(p) );
-  HADDX1_RVT U3 ( .A0(ci), .B0(p), .SO(s) );
+  INVX0_RVT U1 ( .A(b), .Y(n1) );
+  NAND2X0_RVT U2 ( .A1(a), .A2(n1), .Y(n2) );
+  OR2X1_RVT U3 ( .A1(n1), .A2(a), .Y(n3) );
+  NAND2X0_RVT U4 ( .A1(n2), .A2(n3), .Y(p) );
+  MUX21X1_RVT U5 ( .A1(n2), .A2(p), .S0(ci), .Y(n5) );
+  OR2X1_RVT U6 ( .A1(ci), .A2(n3), .Y(n4) );
+  NAND2X0_RVT U7 ( .A1(n5), .A2(n4), .Y(s) );
+  AND2X1_RVT U8 ( .A1(a), .A2(b), .Y(g) );
 endmodule
 
 
 module MFA_7 ( a, b, ci, p, g, s );
   input a, b, ci;
   output p, g, s;
+  wire   n1, n2, n3, n4, n5;
 
-
-  AND2X1_RVT U1 ( .A1(a), .A2(b), .Y(g) );
-  HADDX1_RVT U2 ( .A0(a), .B0(b), .SO(p) );
-  HADDX1_RVT U3 ( .A0(ci), .B0(p), .SO(s) );
+  INVX0_RVT U1 ( .A(b), .Y(n1) );
+  NAND2X0_RVT U2 ( .A1(a), .A2(n1), .Y(n2) );
+  OR2X1_RVT U3 ( .A1(n1), .A2(a), .Y(n3) );
+  NAND2X0_RVT U4 ( .A1(n2), .A2(n3), .Y(p) );
+  MUX21X1_RVT U5 ( .A1(n2), .A2(p), .S0(ci), .Y(n5) );
+  OR2X1_RVT U6 ( .A1(ci), .A2(n3), .Y(n4) );
+  NAND2X0_RVT U7 ( .A1(n5), .A2(n4), .Y(s) );
+  AND2X1_RVT U8 ( .A1(a), .A2(b), .Y(g) );
 endmodule
 
 
 module MFA_6 ( a, b, ci, p, g, s );
   input a, b, ci;
   output p, g, s;
+  wire   n1, n2, n3, n4, n5;
 
-
-  AND2X1_RVT U1 ( .A1(a), .A2(b), .Y(g) );
-  HADDX1_RVT U2 ( .A0(a), .B0(b), .SO(p) );
-  HADDX1_RVT U3 ( .A0(ci), .B0(p), .SO(s) );
+  INVX0_RVT U1 ( .A(b), .Y(n1) );
+  NAND2X0_RVT U2 ( .A1(a), .A2(n1), .Y(n2) );
+  OR2X1_RVT U3 ( .A1(n1), .A2(a), .Y(n3) );
+  NAND2X0_RVT U4 ( .A1(n2), .A2(n3), .Y(p) );
+  MUX21X1_RVT U5 ( .A1(n2), .A2(p), .S0(ci), .Y(n5) );
+  OR2X1_RVT U6 ( .A1(ci), .A2(n3), .Y(n4) );
+  NAND2X0_RVT U7 ( .A1(n5), .A2(n4), .Y(s) );
+  AND2X1_RVT U8 ( .A1(a), .A2(b), .Y(g) );
 endmodule
 
 
 module MFA_5 ( a, b, ci, p, g, s );
   input a, b, ci;
   output p, g, s;
+  wire   n1, n2, n3, n4, n5;
 
-
-  AND2X1_RVT U1 ( .A1(a), .A2(b), .Y(g) );
-  HADDX1_RVT U2 ( .A0(a), .B0(b), .SO(p) );
-  HADDX1_RVT U3 ( .A0(ci), .B0(p), .SO(s) );
+  INVX0_RVT U1 ( .A(b), .Y(n1) );
+  NAND2X0_RVT U2 ( .A1(a), .A2(n1), .Y(n2) );
+  OR2X1_RVT U3 ( .A1(n1), .A2(a), .Y(n3) );
+  NAND2X0_RVT U4 ( .A1(n2), .A2(n3), .Y(p) );
+  MUX21X1_RVT U5 ( .A1(n2), .A2(p), .S0(ci), .Y(n5) );
+  OR2X1_RVT U6 ( .A1(ci), .A2(n3), .Y(n4) );
+  NAND2X0_RVT U7 ( .A1(n5), .A2(n4), .Y(s) );
+  AND2X1_RVT U8 ( .A1(a), .A2(b), .Y(g) );
 endmodule
 
 
 module MFA_4 ( a, b, ci, p, g, s );
   input a, b, ci;
   output p, g, s;
+  wire   n1, n2, n3, n4, n5;
 
-
-  AND2X1_RVT U1 ( .A1(a), .A2(b), .Y(g) );
-  HADDX1_RVT U2 ( .A0(a), .B0(b), .SO(p) );
-  HADDX1_RVT U3 ( .A0(ci), .B0(p), .SO(s) );
+  INVX0_RVT U1 ( .A(b), .Y(n1) );
+  NAND2X0_RVT U2 ( .A1(a), .A2(n1), .Y(n2) );
+  OR2X1_RVT U3 ( .A1(n1), .A2(a), .Y(n3) );
+  NAND2X0_RVT U4 ( .A1(n2), .A2(n3), .Y(p) );
+  MUX21X1_RVT U5 ( .A1(n2), .A2(p), .S0(ci), .Y(n5) );
+  OR2X1_RVT U6 ( .A1(ci), .A2(n3), .Y(n4) );
+  NAND2X0_RVT U7 ( .A1(n5), .A2(n4), .Y(s) );
+  AND2X1_RVT U8 ( .A1(a), .A2(b), .Y(g) );
 endmodule
 
 
 module MFA_3 ( a, b, ci, p, g, s );
   input a, b, ci;
   output p, g, s;
+  wire   n1, n2, n3, n4, n5;
 
-
-  AND2X1_RVT U1 ( .A1(a), .A2(b), .Y(g) );
-  HADDX1_RVT U2 ( .A0(a), .B0(b), .SO(p) );
-  HADDX1_RVT U3 ( .A0(ci), .B0(p), .SO(s) );
+  INVX0_RVT U1 ( .A(b), .Y(n1) );
+  NAND2X0_RVT U2 ( .A1(a), .A2(n1), .Y(n2) );
+  OR2X1_RVT U3 ( .A1(n1), .A2(a), .Y(n3) );
+  NAND2X0_RVT U4 ( .A1(n2), .A2(n3), .Y(p) );
+  MUX21X1_RVT U5 ( .A1(n2), .A2(p), .S0(ci), .Y(n5) );
+  OR2X1_RVT U6 ( .A1(ci), .A2(n3), .Y(n4) );
+  NAND2X0_RVT U7 ( .A1(n5), .A2(n4), .Y(s) );
+  AND2X1_RVT U8 ( .A1(a), .A2(b), .Y(g) );
 endmodule
 
 
 module MFA_2 ( a, b, ci, p, g, s );
   input a, b, ci;
   output p, g, s;
+  wire   n1, n2, n3, n4, n5;
 
-
-  AND2X1_RVT U1 ( .A1(a), .A2(b), .Y(g) );
-  HADDX1_RVT U2 ( .A0(a), .B0(b), .SO(p) );
-  HADDX1_RVT U3 ( .A0(ci), .B0(p), .SO(s) );
+  INVX0_RVT U1 ( .A(b), .Y(n1) );
+  NAND2X0_RVT U2 ( .A1(a), .A2(n1), .Y(n2) );
+  OR2X1_RVT U3 ( .A1(n1), .A2(a), .Y(n3) );
+  NAND2X0_RVT U4 ( .A1(n2), .A2(n3), .Y(p) );
+  MUX21X1_RVT U5 ( .A1(n2), .A2(p), .S0(ci), .Y(n5) );
+  OR2X1_RVT U6 ( .A1(ci), .A2(n3), .Y(n4) );
+  NAND2X0_RVT U7 ( .A1(n5), .A2(n4), .Y(s) );
+  AND2X1_RVT U8 ( .A1(a), .A2(b), .Y(g) );
 endmodule
 
 
 module MFA_1 ( a, b, ci, p, g, s );
   input a, b, ci;
   output p, g, s;
+  wire   n1, n2, n3, n4, n5;
 
-
-  AND2X1_RVT U1 ( .A1(a), .A2(b), .Y(g) );
-  HADDX1_RVT U2 ( .A0(a), .B0(b), .SO(p) );
-  HADDX1_RVT U3 ( .A0(ci), .B0(p), .SO(s) );
+  INVX0_RVT U1 ( .A(b), .Y(n1) );
+  NAND2X0_RVT U2 ( .A1(a), .A2(n1), .Y(n2) );
+  OR2X1_RVT U3 ( .A1(n1), .A2(a), .Y(n3) );
+  NAND2X0_RVT U4 ( .A1(n2), .A2(n3), .Y(p) );
+  MUX21X1_RVT U5 ( .A1(n2), .A2(p), .S0(ci), .Y(n5) );
+  OR2X1_RVT U6 ( .A1(ci), .A2(n3), .Y(n4) );
+  NAND2X0_RVT U7 ( .A1(n5), .A2(n4), .Y(s) );
+  AND2X1_RVT U8 ( .A1(a), .A2(b), .Y(g) );
 endmodule
 
 
@@ -2052,23 +2435,23 @@ module vbw_cla_nci ( a, b, ci, control, s, co );
   LA2_1 layer5_1_ ( .g(g5[3:2]), .p(p5[3:2]), .ci(ci6_controlled_1_), .G(g6[1]), .P(p6[1]), .co({ci5[3], SYNOPSYS_UNCONNECTED_6}) );
   LA2_62 layer6 ( .g(g6), .p(p6), .ci(ci_controlled), .G(g7), .P(p7), .co({
         ci6_1_, SYNOPSYS_UNCONNECTED_7}) );
-  INVX0_RVT U25 ( .A(control[1]), .Y(n13) );
-  INVX0_RVT U26 ( .A(control[0]), .Y(n10) );
-  AND3X1_RVT U27 ( .A1(ci), .A2(n13), .A3(n10), .Y(ci_controlled) );
-  AND2X1_RVT U28 ( .A1(ci_controlled), .A2(p7), .Y(n9) );
-  AND3X1_RVT U29 ( .A1(g7), .A2(n10), .A3(n13), .Y(n8) );
-  OR2X1_RVT U30 ( .A1(n9), .A2(n8), .Y(co) );
-  OR2X1_RVT U31 ( .A1(n13), .A2(n10), .Y(n12) );
+  INVX0_RVT U25 ( .A(control[1]), .Y(n11) );
+  INVX0_RVT U26 ( .A(control[0]), .Y(n13) );
+  AND3X1_RVT U27 ( .A1(ci), .A2(n11), .A3(n13), .Y(ci_controlled) );
+  NAND3X0_RVT U28 ( .A1(n13), .A2(g7), .A3(n11), .Y(n9) );
+  NAND2X0_RVT U29 ( .A1(ci_controlled), .A2(p7), .Y(n8) );
+  NAND2X0_RVT U30 ( .A1(n9), .A2(n8), .Y(co) );
+  NAND2X0_RVT U31 ( .A1(control[1]), .A2(control[0]), .Y(n12) );
   AND2X1_RVT U32 ( .A1(ci4[1]), .A2(n12), .Y(ci4_controlled[1]) );
-  AND2X1_RVT U33 ( .A1(ci5[1]), .A2(n13), .Y(ci4_controlled[2]) );
+  AND2X1_RVT U33 ( .A1(ci5[1]), .A2(n11), .Y(ci4_controlled[2]) );
   AND2X1_RVT U34 ( .A1(ci4[3]), .A2(n12), .Y(ci4_controlled[3]) );
-  OR2X1_RVT U35 ( .A1(control[1]), .A2(n10), .Y(n11) );
-  AND2X1_RVT U36 ( .A1(ci6_1_), .A2(n11), .Y(ci6_controlled_1_) );
-  AND2X1_RVT U37 ( .A1(ci6_controlled_1_), .A2(n13), .Y(ci4_controlled[4]) );
+  NAND2X0_RVT U35 ( .A1(n11), .A2(control[0]), .Y(n10) );
+  AND2X1_RVT U36 ( .A1(n10), .A2(ci6_1_), .Y(ci6_controlled_1_) );
+  AND2X1_RVT U37 ( .A1(ci6_controlled_1_), .A2(n11), .Y(ci4_controlled[4]) );
   AND2X1_RVT U38 ( .A1(ci4[5]), .A2(n12), .Y(ci4_controlled[5]) );
-  AND2X1_RVT U39 ( .A1(ci5[3]), .A2(n13), .Y(ci4_controlled[6]) );
+  AND2X1_RVT U39 ( .A1(ci5[3]), .A2(n11), .Y(ci4_controlled[6]) );
   AND2X1_RVT U40 ( .A1(ci4[7]), .A2(n12), .Y(ci4_controlled[7]) );
-  OR2X1_RVT U41 ( .A1(control[0]), .A2(n13), .Y(n14) );
+  NAND2X0_RVT U41 ( .A1(control[1]), .A2(n13), .Y(n14) );
   AND2X1_RVT U42 ( .A1(ci5[1]), .A2(n14), .Y(ci5_controlled[1]) );
   AND2X1_RVT U43 ( .A1(ci6_controlled_1_), .A2(n14), .Y(ci5_controlled[2]) );
   AND2X1_RVT U44 ( .A1(ci5[3]), .A2(n14), .Y(ci5_controlled[3]) );

@@ -1,0 +1,208 @@
+ 
+****************************************
+Report : reference
+Design : vbw_rca_bsln
+Version: K-2015.06-SP4
+Date   : Wed Apr 26 19:42:04 2017
+****************************************
+
+Attributes:
+    b - black box (unknown)
+   bo - allows boundary optimization
+    d - dont_touch
+   mo - map_only
+    h - hierarchical
+    n - noncombinational
+    r - removable
+    s - synthetic operator
+    u - contains unmapped logic
+
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AND2X1_RVT         saed32rvt_tt1p05v25c     2.033152       6    12.198913
+INVX0_RVT          saed32rvt_tt1p05v25c     1.270720       2     2.541440
+MUX21X1_RVT        saed32rvt_tt1p05v25c     3.303872       8    26.430977
+NAND2X0_RVT        saed32rvt_tt1p05v25c     1.524864     176   268.376057
+NAND3X0_RVT        saed32rvt_tt1p05v25c     1.779008      16    28.464128
+NAND4X0_RVT        saed32rvt_tt1p05v25c     2.033152      32    65.060867
+NBUFFX2_RVT        saed32rvt_tt1p05v25c     2.033152       5    10.165761
+adder_WIDTH8_0                   97.591298       1     97.591298  h
+adder_WIDTH8_1                   97.591298       1     97.591298  h
+adder_WIDTH8_2                   97.591298       1     97.591298  h
+adder_WIDTH8_3                   97.591298       1     97.591298  h
+adder_WIDTH8_4                   97.591298       1     97.591298  h
+adder_WIDTH8_5                   97.591298       1     97.591298  h
+adder_WIDTH8_6                   97.591298       1     97.591298  h
+adder_WIDTH16_0                 199.248900       1    199.248900  h
+adder_WIDTH16_1                 199.248900       1    199.248900  h
+adder_WIDTH16_2                 199.248900       1    199.248900  h
+adder_WIDTH32                   402.564105       1    402.564105  h
+adder_WIDTH64                   813.260818       1    813.260818  h
+-----------------------------------------------------------------------------
+Total 19 references                                  2909.948850
+
+****************************************
+Design: adder_WIDTH8_0 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AND2X1_RVT         saed32rvt_tt1p05v25c     2.033152      12    24.397825
+INVX0_RVT          saed32rvt_tt1p05v25c     1.270720       4     5.082880
+MUX21X1_RVT        saed32rvt_tt1p05v25c     3.303872       1     3.303872
+NAND2X0_RVT        saed32rvt_tt1p05v25c     1.524864      24    36.596735
+NAND3X0_RVT        saed32rvt_tt1p05v25c     1.779008       1     1.779008
+OR2X1_RVT          saed32rvt_tt1p05v25c     2.033152      13    26.430977
+-----------------------------------------------------------------------------
+Total 6 references                                     97.591298
+
+****************************************
+Design: adder_WIDTH8_1 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AND2X1_RVT         saed32rvt_tt1p05v25c     2.033152      12    24.397825
+INVX0_RVT          saed32rvt_tt1p05v25c     1.270720       4     5.082880
+MUX21X1_RVT        saed32rvt_tt1p05v25c     3.303872       1     3.303872
+NAND2X0_RVT        saed32rvt_tt1p05v25c     1.524864      24    36.596735
+NAND3X0_RVT        saed32rvt_tt1p05v25c     1.779008       1     1.779008
+OR2X1_RVT          saed32rvt_tt1p05v25c     2.033152      13    26.430977
+-----------------------------------------------------------------------------
+Total 6 references                                     97.591298
+
+****************************************
+Design: adder_WIDTH8_2 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AND2X1_RVT         saed32rvt_tt1p05v25c     2.033152      12    24.397825
+INVX0_RVT          saed32rvt_tt1p05v25c     1.270720       4     5.082880
+MUX21X1_RVT        saed32rvt_tt1p05v25c     3.303872       1     3.303872
+NAND2X0_RVT        saed32rvt_tt1p05v25c     1.524864      24    36.596735
+NAND3X0_RVT        saed32rvt_tt1p05v25c     1.779008       1     1.779008
+OR2X1_RVT          saed32rvt_tt1p05v25c     2.033152      13    26.430977
+-----------------------------------------------------------------------------
+Total 6 references                                     97.591298
+
+****************************************
+Design: adder_WIDTH8_3 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AND2X1_RVT         saed32rvt_tt1p05v25c     2.033152      12    24.397825
+INVX0_RVT          saed32rvt_tt1p05v25c     1.270720       4     5.082880
+MUX21X1_RVT        saed32rvt_tt1p05v25c     3.303872       1     3.303872
+NAND2X0_RVT        saed32rvt_tt1p05v25c     1.524864      24    36.596735
+NAND3X0_RVT        saed32rvt_tt1p05v25c     1.779008       1     1.779008
+OR2X1_RVT          saed32rvt_tt1p05v25c     2.033152      13    26.430977
+-----------------------------------------------------------------------------
+Total 6 references                                     97.591298
+
+****************************************
+Design: adder_WIDTH8_4 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AND2X1_RVT         saed32rvt_tt1p05v25c     2.033152      12    24.397825
+INVX0_RVT          saed32rvt_tt1p05v25c     1.270720       4     5.082880
+MUX21X1_RVT        saed32rvt_tt1p05v25c     3.303872       1     3.303872
+NAND2X0_RVT        saed32rvt_tt1p05v25c     1.524864      24    36.596735
+NAND3X0_RVT        saed32rvt_tt1p05v25c     1.779008       1     1.779008
+OR2X1_RVT          saed32rvt_tt1p05v25c     2.033152      13    26.430977
+-----------------------------------------------------------------------------
+Total 6 references                                     97.591298
+
+****************************************
+Design: adder_WIDTH8_5 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AND2X1_RVT         saed32rvt_tt1p05v25c     2.033152      12    24.397825
+INVX0_RVT          saed32rvt_tt1p05v25c     1.270720       4     5.082880
+MUX21X1_RVT        saed32rvt_tt1p05v25c     3.303872       1     3.303872
+NAND2X0_RVT        saed32rvt_tt1p05v25c     1.524864      24    36.596735
+NAND3X0_RVT        saed32rvt_tt1p05v25c     1.779008       1     1.779008
+OR2X1_RVT          saed32rvt_tt1p05v25c     2.033152      13    26.430977
+-----------------------------------------------------------------------------
+Total 6 references                                     97.591298
+
+****************************************
+Design: adder_WIDTH8_6 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AND2X1_RVT         saed32rvt_tt1p05v25c     2.033152      12    24.397825
+INVX0_RVT          saed32rvt_tt1p05v25c     1.270720       4     5.082880
+MUX21X1_RVT        saed32rvt_tt1p05v25c     3.303872       1     3.303872
+NAND2X0_RVT        saed32rvt_tt1p05v25c     1.524864      24    36.596735
+NAND3X0_RVT        saed32rvt_tt1p05v25c     1.779008       1     1.779008
+OR2X1_RVT          saed32rvt_tt1p05v25c     2.033152      13    26.430977
+-----------------------------------------------------------------------------
+Total 6 references                                     97.591298
+
+****************************************
+Design: adder_WIDTH16_0 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AND2X1_RVT         saed32rvt_tt1p05v25c     2.033152      28    56.928259
+INVX0_RVT          saed32rvt_tt1p05v25c     1.270720       4     5.082880
+MUX21X1_RVT        saed32rvt_tt1p05v25c     3.303872       1     3.303872
+NAND2X0_RVT        saed32rvt_tt1p05v25c     1.524864      48    73.193470
+NAND3X0_RVT        saed32rvt_tt1p05v25c     1.779008       1     1.779008
+OR2X1_RVT          saed32rvt_tt1p05v25c     2.033152      29    58.961411
+-----------------------------------------------------------------------------
+Total 6 references                                    199.248900
+
+****************************************
+Design: adder_WIDTH16_1 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AND2X1_RVT         saed32rvt_tt1p05v25c     2.033152      28    56.928259
+INVX0_RVT          saed32rvt_tt1p05v25c     1.270720       4     5.082880
+MUX21X1_RVT        saed32rvt_tt1p05v25c     3.303872       1     3.303872
+NAND2X0_RVT        saed32rvt_tt1p05v25c     1.524864      48    73.193470
+NAND3X0_RVT        saed32rvt_tt1p05v25c     1.779008       1     1.779008
+OR2X1_RVT          saed32rvt_tt1p05v25c     2.033152      29    58.961411
+-----------------------------------------------------------------------------
+Total 6 references                                    199.248900
+
+****************************************
+Design: adder_WIDTH16_2 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AND2X1_RVT         saed32rvt_tt1p05v25c     2.033152      28    56.928259
+INVX0_RVT          saed32rvt_tt1p05v25c     1.270720       4     5.082880
+MUX21X1_RVT        saed32rvt_tt1p05v25c     3.303872       1     3.303872
+NAND2X0_RVT        saed32rvt_tt1p05v25c     1.524864      48    73.193470
+NAND3X0_RVT        saed32rvt_tt1p05v25c     1.779008       1     1.779008
+OR2X1_RVT          saed32rvt_tt1p05v25c     2.033152      29    58.961411
+-----------------------------------------------------------------------------
+Total 6 references                                    199.248900
+
+****************************************
+Design: adder_WIDTH32 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AND2X1_RVT         saed32rvt_tt1p05v25c     2.033152      60   121.989126
+INVX0_RVT          saed32rvt_tt1p05v25c     1.270720       4     5.082880
+MUX21X1_RVT        saed32rvt_tt1p05v25c     3.303872       1     3.303872
+NAND2X0_RVT        saed32rvt_tt1p05v25c     1.524864      96   146.386940
+NAND3X0_RVT        saed32rvt_tt1p05v25c     1.779008       1     1.779008
+OR2X1_RVT          saed32rvt_tt1p05v25c     2.033152      61   124.022278
+-----------------------------------------------------------------------------
+Total 6 references                                    402.564105
+
+****************************************
+Design: adder_WIDTH64 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AND2X1_RVT         saed32rvt_tt1p05v25c     2.033152     128   260.243469
+NAND2X0_RVT        saed32rvt_tt1p05v25c     1.524864     192   292.773880
+OR2X1_RVT          saed32rvt_tt1p05v25c     2.033152     128   260.243469
+-----------------------------------------------------------------------------
+Total 3 references                                    813.260818
+1

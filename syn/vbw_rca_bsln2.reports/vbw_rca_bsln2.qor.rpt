@@ -4,14 +4,14 @@ Information: Updating design information... (UID-85)
 Report : qor
 Design : vbw_rca_bsln2
 Version: K-2015.06-SP4
-Date   : Mon Apr 24 11:52:26 2017
+Date   : Wed Apr 26 19:42:46 2017
 ****************************************
 
 
   Timing Path Group (none)
   -----------------------------------
-  Levels of Logic:              70.00
-  Critical Path Length:          6.11
+  Levels of Logic:             134.00
+  Critical Path Length:          5.98
   Critical Path Slack:         uninit
   Critical Path Clk Period:       n/a
   Total Negative Slack:          0.00
@@ -26,12 +26,12 @@ Date   : Mon Apr 24 11:52:26 2017
   -----------------------------------
   Hierarchical Cell Count:          8
   Hierarchical Port Count:        496
-  Leaf Cell Count:                338
-  Buf/Inv Cell Count:               4
+  Leaf Cell Count:               1286
+  Buf/Inv Cell Count:              34
   Buf Cell Count:                   2
-  Inv Cell Count:                   2
+  Inv Cell Count:                  32
   CT Buf/Inv Cell Count:            0
-  Combinational Cell Count:       338
+  Combinational Cell Count:      1286
   Sequential Cell Count:            0
   Macro Count:                      0
   -----------------------------------
@@ -39,21 +39,21 @@ Date   : Mon Apr 24 11:52:26 2017
 
   Area
   -----------------------------------
-  Combinational Area:         1177.70
+  Combinational Area:         2323.64
   Noncombinational Area:         0.00
-  Buf/Inv Area:                  6.61
+  Buf/Inv Area:                 44.98
   Total Buffer Area:             4.07
-  Total Inverter Area:           2.54
+  Total Inverter Area:          40.92
   Macro/Black Box Area:          0.00
-  Net Area:                    178.65
+  Net Area:                    439.98
   -----------------------------------
-  Cell Area:                  1177.70
-  Design Area:                1356.36
+  Cell Area:                  2323.64
+  Design Area:                2763.62
 
 
   Design Rules
   -----------------------------------
-  Total Number of Nets:           616
+  Total Number of Nets:          1418
   Nets With Violations:             0
   Max Trans Violations:             0
   Max Cap Violations:               0
@@ -64,12 +64,12 @@ Date   : Mon Apr 24 11:52:26 2017
 
   Compile CPU Statistics
   -----------------------------------------
-  Resource Sharing:                    0.27
-  Logic Optimization:                  0.08
-  Mapping Optimization:                0.46
+  Resource Sharing:                    0.55
+  Logic Optimization:                  0.12
+  Mapping Optimization:                0.79
   -----------------------------------------
-  Overall Compile Time:                4.15
-  Overall Compile Wall Clock Time:     5.39
+  Overall Compile Time:                5.55
+  Overall Compile Wall Clock Time:     6.72
 
   --------------------------------------------------------------------
 

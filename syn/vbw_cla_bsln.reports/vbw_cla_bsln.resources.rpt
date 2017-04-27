@@ -3,201 +3,9 @@
 Report : resources
 Design : vbw_cla_bsln
 Version: K-2015.06-SP4
-Date   : Sun Apr 23 19:50:34 2017
+Date   : Wed Apr 26 19:35:11 2017
 ****************************************
 
-
-No implementations to report
-
-No resource sharing information to report.
- 
-****************************************
-Design : cla_adder_WIDTH8_4
-****************************************
-
-No implementations to report
-
-No resource sharing information to report.
- 
-****************************************
-Design : LA4_48
-****************************************
-
-No implementations to report
-
-No resource sharing information to report.
- 
-****************************************
-Design : MFA_152
-****************************************
-
-No implementations to report
-
-No resource sharing information to report.
- 
-****************************************
-Design : MFA_159
-****************************************
-
-No implementations to report
-
-No resource sharing information to report.
- 
-****************************************
-Design : MFA_153
-****************************************
-
-No implementations to report
-
-No resource sharing information to report.
- 
-****************************************
-Design : MFA_154
-****************************************
-
-No implementations to report
-
-No resource sharing information to report.
- 
-****************************************
-Design : MFA_155
-****************************************
-
-No implementations to report
-
-No resource sharing information to report.
- 
-****************************************
-Design : MFA_156
-****************************************
-
-No implementations to report
-
-No resource sharing information to report.
- 
-****************************************
-Design : MFA_157
-****************************************
-
-No implementations to report
-
-No resource sharing information to report.
- 
-****************************************
-Design : MFA_158
-****************************************
-
-No implementations to report
-
-No resource sharing information to report.
- 
-****************************************
-Design : LA4_50
-****************************************
-
-No implementations to report
-
-No resource sharing information to report.
- 
-****************************************
-Design : LA4_49
-****************************************
-
-No implementations to report
-
-No resource sharing information to report.
- 
-****************************************
-Design : cla_adder_WIDTH8_3
-****************************************
-
-No implementations to report
-
-No resource sharing information to report.
- 
-****************************************
-Design : LA4_45
-****************************************
-
-No implementations to report
-
-No resource sharing information to report.
- 
-****************************************
-Design : MFA_144
-****************************************
-
-No implementations to report
-
-No resource sharing information to report.
- 
-****************************************
-Design : MFA_151
-****************************************
-
-No implementations to report
-
-No resource sharing information to report.
- 
-****************************************
-Design : MFA_145
-****************************************
-
-No implementations to report
-
-No resource sharing information to report.
- 
-****************************************
-Design : MFA_146
-****************************************
-
-No implementations to report
-
-No resource sharing information to report.
- 
-****************************************
-Design : MFA_147
-****************************************
-
-No implementations to report
-
-No resource sharing information to report.
- 
-****************************************
-Design : MFA_148
-****************************************
-
-No implementations to report
-
-No resource sharing information to report.
- 
-****************************************
-Design : MFA_149
-****************************************
-
-No implementations to report
-
-No resource sharing information to report.
- 
-****************************************
-Design : MFA_150
-****************************************
-
-No implementations to report
-
-No resource sharing information to report.
- 
-****************************************
-Design : LA4_47
-****************************************
-
-No implementations to report
-
-No resource sharing information to report.
- 
-****************************************
-Design : LA4_46
-****************************************
 
 No implementations to report
 
@@ -212,7 +20,7 @@ No implementations to report
 No resource sharing information to report.
  
 ****************************************
-Design : LA4_42
+Design : LA2_2
 ****************************************
 
 No implementations to report
@@ -284,7 +92,7 @@ No implementations to report
 No resource sharing information to report.
  
 ****************************************
-Design : LA4_44
+Design : LA4_41
 ****************************************
 
 No implementations to report
@@ -292,7 +100,7 @@ No implementations to report
 No resource sharing information to report.
  
 ****************************************
-Design : LA4_43
+Design : LA4_40
 ****************************************
 
 No implementations to report
@@ -308,7 +116,7 @@ No implementations to report
 No resource sharing information to report.
  
 ****************************************
-Design : LA4_39
+Design : LA2_1
 ****************************************
 
 No implementations to report
@@ -380,7 +188,7 @@ No implementations to report
 No resource sharing information to report.
  
 ****************************************
-Design : LA4_41
+Design : LA4_39
 ****************************************
 
 No implementations to report
@@ -388,7 +196,7 @@ No implementations to report
 No resource sharing information to report.
  
 ****************************************
-Design : LA4_40
+Design : LA4_38
 ****************************************
 
 No implementations to report
@@ -404,7 +212,7 @@ No implementations to report
 No resource sharing information to report.
  
 ****************************************
-Design : LA4_36
+Design : LA2_0
 ****************************************
 
 No implementations to report
@@ -476,14 +284,6 @@ No implementations to report
 No resource sharing information to report.
  
 ****************************************
-Design : LA4_38
-****************************************
-
-No implementations to report
-
-No resource sharing information to report.
- 
-****************************************
 Design : LA4_37
 ****************************************
 
@@ -492,7 +292,7 @@ No implementations to report
 No resource sharing information to report.
  
 ****************************************
-Design : cla_adder_WIDTH16_0
+Design : LA4_36
 ****************************************
 
 No implementations to report
@@ -500,7 +300,7 @@ No implementations to report
 No resource sharing information to report.
  
 ****************************************
-Design : MFA_168
+Design : cla_adder_WIDTH8_3
 ****************************************
 
 No implementations to report
@@ -508,271 +308,7 @@ No implementations to report
 No resource sharing information to report.
  
 ****************************************
-Design : MFA_183
-****************************************
-
-No implementations to report
-
-No resource sharing information to report.
- 
-****************************************
-Design : MFA_169
-****************************************
-
-No implementations to report
-
-No resource sharing information to report.
- 
-****************************************
-Design : MFA_170
-****************************************
-
-No implementations to report
-
-No resource sharing information to report.
- 
-****************************************
-Design : MFA_171
-****************************************
-
-No implementations to report
-
-No resource sharing information to report.
- 
-****************************************
-Design : MFA_172
-****************************************
-
-No implementations to report
-
-No resource sharing information to report.
- 
-****************************************
-Design : MFA_173
-****************************************
-
-No implementations to report
-
-No resource sharing information to report.
- 
-****************************************
-Design : MFA_174
-****************************************
-
-No implementations to report
-
-No resource sharing information to report.
- 
-****************************************
-Design : MFA_175
-****************************************
-
-No implementations to report
-
-No resource sharing information to report.
- 
-****************************************
-Design : MFA_176
-****************************************
-
-No implementations to report
-
-No resource sharing information to report.
- 
-****************************************
-Design : MFA_177
-****************************************
-
-No implementations to report
-
-No resource sharing information to report.
- 
-****************************************
-Design : MFA_178
-****************************************
-
-No implementations to report
-
-No resource sharing information to report.
- 
-****************************************
-Design : MFA_179
-****************************************
-
-No implementations to report
-
-No resource sharing information to report.
- 
-****************************************
-Design : MFA_180
-****************************************
-
-No implementations to report
-
-No resource sharing information to report.
- 
-****************************************
-Design : MFA_181
-****************************************
-
-No implementations to report
-
-No resource sharing information to report.
- 
-****************************************
-Design : MFA_182
-****************************************
-
-No implementations to report
-
-No resource sharing information to report.
- 
-****************************************
-Design : LA4_55
-****************************************
-
-No implementations to report
-
-No resource sharing information to report.
- 
-****************************************
-Design : LA4_59
-****************************************
-
-No implementations to report
-
-No resource sharing information to report.
- 
-****************************************
-Design : LA4_56
-****************************************
-
-No implementations to report
-
-No resource sharing information to report.
- 
-****************************************
-Design : LA4_57
-****************************************
-
-No implementations to report
-
-No resource sharing information to report.
- 
-****************************************
-Design : LA4_58
-****************************************
-
-No implementations to report
-
-No resource sharing information to report.
- 
-****************************************
-Design : cla_adder_WIDTH8_5
-****************************************
-
-No implementations to report
-
-No resource sharing information to report.
- 
-****************************************
-Design : LA4_51
-****************************************
-
-No implementations to report
-
-No resource sharing information to report.
- 
-****************************************
-Design : MFA_160
-****************************************
-
-No implementations to report
-
-No resource sharing information to report.
- 
-****************************************
-Design : MFA_167
-****************************************
-
-No implementations to report
-
-No resource sharing information to report.
- 
-****************************************
-Design : MFA_161
-****************************************
-
-No implementations to report
-
-No resource sharing information to report.
- 
-****************************************
-Design : MFA_162
-****************************************
-
-No implementations to report
-
-No resource sharing information to report.
- 
-****************************************
-Design : MFA_163
-****************************************
-
-No implementations to report
-
-No resource sharing information to report.
- 
-****************************************
-Design : MFA_164
-****************************************
-
-No implementations to report
-
-No resource sharing information to report.
- 
-****************************************
-Design : MFA_165
-****************************************
-
-No implementations to report
-
-No resource sharing information to report.
- 
-****************************************
-Design : MFA_166
-****************************************
-
-No implementations to report
-
-No resource sharing information to report.
- 
-****************************************
-Design : LA4_53
-****************************************
-
-No implementations to report
-
-No resource sharing information to report.
- 
-****************************************
-Design : LA4_52
-****************************************
-
-No implementations to report
-
-No resource sharing information to report.
- 
-****************************************
-Design : cla_adder_WIDTH8_6
-****************************************
-
-No implementations to report
-
-No resource sharing information to report.
- 
-****************************************
-Design : LA4_54
+Design : LA2_3
 ****************************************
 
 No implementations to report
@@ -860,183 +396,183 @@ No implementations to report
 No resource sharing information to report.
  
 ****************************************
+Design : cla_adder_WIDTH16_0
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : MFA_144
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : MFA_159
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : MFA_145
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : MFA_146
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : MFA_147
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : MFA_148
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : MFA_149
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : MFA_150
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : MFA_151
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : MFA_152
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : MFA_153
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : MFA_154
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : MFA_155
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : MFA_156
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : MFA_157
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : MFA_158
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : LA4_42
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : LA4_46
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : LA4_43
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : LA4_44
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : LA4_45
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
 Design : cla_adder_WIDTH16_1
-****************************************
-
-No implementations to report
-
-No resource sharing information to report.
- 
-****************************************
-Design : MFA_184
-****************************************
-
-No implementations to report
-
-No resource sharing information to report.
- 
-****************************************
-Design : MFA_199
-****************************************
-
-No implementations to report
-
-No resource sharing information to report.
- 
-****************************************
-Design : MFA_185
-****************************************
-
-No implementations to report
-
-No resource sharing information to report.
- 
-****************************************
-Design : MFA_186
-****************************************
-
-No implementations to report
-
-No resource sharing information to report.
- 
-****************************************
-Design : MFA_187
-****************************************
-
-No implementations to report
-
-No resource sharing information to report.
- 
-****************************************
-Design : MFA_188
-****************************************
-
-No implementations to report
-
-No resource sharing information to report.
- 
-****************************************
-Design : MFA_189
-****************************************
-
-No implementations to report
-
-No resource sharing information to report.
- 
-****************************************
-Design : MFA_190
-****************************************
-
-No implementations to report
-
-No resource sharing information to report.
- 
-****************************************
-Design : MFA_191
-****************************************
-
-No implementations to report
-
-No resource sharing information to report.
- 
-****************************************
-Design : MFA_192
-****************************************
-
-No implementations to report
-
-No resource sharing information to report.
- 
-****************************************
-Design : MFA_193
-****************************************
-
-No implementations to report
-
-No resource sharing information to report.
- 
-****************************************
-Design : MFA_194
-****************************************
-
-No implementations to report
-
-No resource sharing information to report.
- 
-****************************************
-Design : MFA_195
-****************************************
-
-No implementations to report
-
-No resource sharing information to report.
- 
-****************************************
-Design : MFA_196
-****************************************
-
-No implementations to report
-
-No resource sharing information to report.
- 
-****************************************
-Design : MFA_197
-****************************************
-
-No implementations to report
-
-No resource sharing information to report.
- 
-****************************************
-Design : MFA_198
-****************************************
-
-No implementations to report
-
-No resource sharing information to report.
- 
-****************************************
-Design : LA4_60
-****************************************
-
-No implementations to report
-
-No resource sharing information to report.
- 
-****************************************
-Design : LA4_64
-****************************************
-
-No implementations to report
-
-No resource sharing information to report.
- 
-****************************************
-Design : LA4_62
-****************************************
-
-No implementations to report
-
-No resource sharing information to report.
- 
-****************************************
-Design : LA4_63
-****************************************
-
-No implementations to report
-
-No resource sharing information to report.
- 
-****************************************
-Design : LA4_61
-****************************************
-
-No implementations to report
-
-No resource sharing information to report.
- 
-****************************************
-Design : cla_adder_WIDTH16_2
 ****************************************
 
 No implementations to report
@@ -1180,14 +716,6 @@ No implementations to report
 No resource sharing information to report.
  
 ****************************************
-Design : LA4_2
-****************************************
-
-No implementations to report
-
-No resource sharing information to report.
- 
-****************************************
 Design : LA4_3
 ****************************************
 
@@ -1204,7 +732,15 @@ No implementations to report
 No resource sharing information to report.
  
 ****************************************
-Design : LA4_65
+Design : LA4_47
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : LA4_2
 ****************************************
 
 No implementations to report
@@ -1524,7 +1060,7 @@ No implementations to report
 No resource sharing information to report.
  
 ****************************************
-Design : LA4_66
+Design : LA2_4
 ****************************************
 
 No implementations to report
@@ -2228,7 +1764,7 @@ No implementations to report
 No resource sharing information to report.
  
 ****************************************
-Design : LA4_67
+Design : LA4_48
 ****************************************
 
 No implementations to report

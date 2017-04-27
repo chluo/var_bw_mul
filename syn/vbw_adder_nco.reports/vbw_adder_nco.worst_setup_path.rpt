@@ -9,7 +9,7 @@ Report : timing
         -capacitance
 Design : vbw_adder_nco
 Version: K-2015.06-SP4
-Date   : Fri Apr 21 16:52:48 2017
+Date   : Wed Apr 26 19:37:56 2017
 ****************************************
 
 Operating Conditions: tt1p05v25c   Library: saed32rvt_tt1p05v25c
@@ -50,210 +50,336 @@ Wire Load Model Mode: enclosed
 
   Point                                          Cap     Trans      Incr       Path
   ------------------------------------------------------------------------------------
-  input external delay                                              0.00       0.00 f
-  control[1] (in)                               0.60      0.00      0.00       0.00 f
-  U9/A (INVX0_RVT)                                        0.00      0.01       0.01 f
-  U9/Y (INVX0_RVT)                              2.94      0.02      0.02       0.03 r
-  U12/A1 (AND2X1_RVT)                                     0.02      0.02       0.05 r
-  U12/Y (AND2X1_RVT)                            1.80      0.02      0.03       0.09 r
-  U14/A1 (AND2X1_RVT)                                     0.02      0.02       0.10 r
-  U14/Y (AND2X1_RVT)                            1.98      0.02      0.03       0.14 r
-  genblk1_0__adder_inst/ci (adder_nco_WIDTH8_7)                     0.00       0.14 r
-  genblk1_0__adder_inst/adder_inst/ci (adder_WIDTH7_7)              0.00       0.14 r
-  genblk1_0__adder_inst/adder_inst/U7/A (FADDX1_RVT)      0.02      0.04       0.18 r
-  genblk1_0__adder_inst/adder_inst/U7/CO (FADDX1_RVT)     1.70     0.03     0.06     0.24 r
-  genblk1_0__adder_inst/adder_inst/U6/CI (FADDX1_RVT)     0.03      0.03       0.27 r
-  genblk1_0__adder_inst/adder_inst/U6/CO (FADDX1_RVT)     1.70     0.03     0.06     0.33 r
-  genblk1_0__adder_inst/adder_inst/U5/CI (FADDX1_RVT)     0.03      0.03       0.35 r
-  genblk1_0__adder_inst/adder_inst/U5/CO (FADDX1_RVT)     1.70     0.03     0.06     0.41 r
-  genblk1_0__adder_inst/adder_inst/U4/CI (FADDX1_RVT)     0.03      0.03       0.44 r
-  genblk1_0__adder_inst/adder_inst/U4/CO (FADDX1_RVT)     1.70     0.03     0.06     0.50 r
-  genblk1_0__adder_inst/adder_inst/U3/CI (FADDX1_RVT)     0.03      0.03       0.53 r
-  genblk1_0__adder_inst/adder_inst/U3/CO (FADDX1_RVT)     1.70     0.03     0.06     0.58 r
-  genblk1_0__adder_inst/adder_inst/U2/CI (FADDX1_RVT)     0.03      0.03       0.61 r
-  genblk1_0__adder_inst/adder_inst/U2/CO (FADDX1_RVT)     1.70     0.03     0.06     0.67 r
-  genblk1_0__adder_inst/adder_inst/U1/CI (FADDX1_RVT)     0.03      0.03       0.70 r
-  genblk1_0__adder_inst/adder_inst/U1/CO (FADDX1_RVT)     1.70     0.03     0.06     0.75 r
-  genblk1_0__adder_inst/adder_inst/co (adder_WIDTH7_7)              0.00       0.75 r
-  genblk1_0__adder_inst/mfa_inst/ci (MFA_nco_7)                     0.00       0.75 r
-  genblk1_0__adder_inst/mfa_inst/U3/CI (FADDX1_RVT)       0.03      0.03       0.78 r
-  genblk1_0__adder_inst/mfa_inst/U3/CO (FADDX1_RVT)     0.84     0.03     0.05     0.84 r
-  genblk1_0__adder_inst/mfa_inst/U2/A1 (AND2X1_RVT)       0.03      0.01       0.85 r
-  genblk1_0__adder_inst/mfa_inst/U2/Y (AND2X1_RVT)     1.98     0.02     0.03     0.88 r
-  genblk1_0__adder_inst/mfa_inst/co (MFA_nco_7)                     0.00       0.88 r
-  genblk1_0__adder_inst/co (adder_nco_WIDTH8_7)                     0.00       0.88 r
-  genblk1_1__adder_inst/ci (adder_nco_WIDTH8_6)                     0.00       0.88 r
-  genblk1_1__adder_inst/adder_inst/ci (adder_WIDTH7_6)              0.00       0.88 r
-  genblk1_1__adder_inst/adder_inst/U7/A (FADDX1_RVT)      0.02      0.04       0.93 r
-  genblk1_1__adder_inst/adder_inst/U7/CO (FADDX1_RVT)     1.70     0.03     0.06     0.99 r
-  genblk1_1__adder_inst/adder_inst/U6/CI (FADDX1_RVT)     0.03      0.03       1.02 r
-  genblk1_1__adder_inst/adder_inst/U6/CO (FADDX1_RVT)     1.70     0.03     0.06     1.07 r
-  genblk1_1__adder_inst/adder_inst/U5/CI (FADDX1_RVT)     0.03      0.03       1.10 r
-  genblk1_1__adder_inst/adder_inst/U5/CO (FADDX1_RVT)     1.70     0.03     0.06     1.16 r
-  genblk1_1__adder_inst/adder_inst/U4/CI (FADDX1_RVT)     0.03      0.03       1.19 r
-  genblk1_1__adder_inst/adder_inst/U4/CO (FADDX1_RVT)     1.70     0.03     0.06     1.25 r
-  genblk1_1__adder_inst/adder_inst/U3/CI (FADDX1_RVT)     0.03      0.03       1.28 r
-  genblk1_1__adder_inst/adder_inst/U3/CO (FADDX1_RVT)     1.70     0.03     0.06     1.33 r
-  genblk1_1__adder_inst/adder_inst/U2/CI (FADDX1_RVT)     0.03      0.03       1.36 r
-  genblk1_1__adder_inst/adder_inst/U2/CO (FADDX1_RVT)     1.70     0.03     0.06     1.42 r
-  genblk1_1__adder_inst/adder_inst/U1/CI (FADDX1_RVT)     0.03      0.03       1.45 r
-  genblk1_1__adder_inst/adder_inst/U1/CO (FADDX1_RVT)     1.70     0.03     0.06     1.50 r
-  genblk1_1__adder_inst/adder_inst/co (adder_WIDTH7_6)              0.00       1.50 r
-  genblk1_1__adder_inst/mfa_inst/ci (MFA_nco_6)                     0.00       1.50 r
-  genblk1_1__adder_inst/mfa_inst/U3/CI (FADDX1_RVT)       0.03      0.03       1.53 r
-  genblk1_1__adder_inst/mfa_inst/U3/CO (FADDX1_RVT)     0.84     0.03     0.05     1.58 r
-  genblk1_1__adder_inst/mfa_inst/U2/A1 (AND2X1_RVT)       0.03      0.01       1.60 r
-  genblk1_1__adder_inst/mfa_inst/U2/Y (AND2X1_RVT)     1.98     0.02     0.03     1.63 r
-  genblk1_1__adder_inst/mfa_inst/co (MFA_nco_6)                     0.00       1.63 r
-  genblk1_1__adder_inst/co (adder_nco_WIDTH8_6)                     0.00       1.63 r
-  genblk1_2__adder_inst/ci (adder_nco_WIDTH8_5)                     0.00       1.63 r
-  genblk1_2__adder_inst/adder_inst/ci (adder_WIDTH7_5)              0.00       1.63 r
-  genblk1_2__adder_inst/adder_inst/U7/A (FADDX1_RVT)      0.02      0.04       1.68 r
-  genblk1_2__adder_inst/adder_inst/U7/CO (FADDX1_RVT)     1.70     0.03     0.06     1.74 r
-  genblk1_2__adder_inst/adder_inst/U6/CI (FADDX1_RVT)     0.03      0.03       1.77 r
-  genblk1_2__adder_inst/adder_inst/U6/CO (FADDX1_RVT)     1.70     0.03     0.06     1.82 r
-  genblk1_2__adder_inst/adder_inst/U5/CI (FADDX1_RVT)     0.03      0.03       1.85 r
-  genblk1_2__adder_inst/adder_inst/U5/CO (FADDX1_RVT)     1.70     0.03     0.06     1.91 r
-  genblk1_2__adder_inst/adder_inst/U4/CI (FADDX1_RVT)     0.03      0.03       1.94 r
-  genblk1_2__adder_inst/adder_inst/U4/CO (FADDX1_RVT)     1.70     0.03     0.06     1.99 r
-  genblk1_2__adder_inst/adder_inst/U3/CI (FADDX1_RVT)     0.03      0.03       2.02 r
-  genblk1_2__adder_inst/adder_inst/U3/CO (FADDX1_RVT)     1.70     0.03     0.06     2.08 r
-  genblk1_2__adder_inst/adder_inst/U2/CI (FADDX1_RVT)     0.03      0.03       2.11 r
-  genblk1_2__adder_inst/adder_inst/U2/CO (FADDX1_RVT)     1.70     0.03     0.06     2.17 r
-  genblk1_2__adder_inst/adder_inst/U1/CI (FADDX1_RVT)     0.03      0.03       2.20 r
-  genblk1_2__adder_inst/adder_inst/U1/CO (FADDX1_RVT)     1.70     0.03     0.06     2.25 r
-  genblk1_2__adder_inst/adder_inst/co (adder_WIDTH7_5)              0.00       2.25 r
-  genblk1_2__adder_inst/mfa_inst/ci (MFA_nco_5)                     0.00       2.25 r
-  genblk1_2__adder_inst/mfa_inst/U3/CI (FADDX1_RVT)       0.03      0.03       2.28 r
-  genblk1_2__adder_inst/mfa_inst/U3/CO (FADDX1_RVT)     0.84     0.03     0.05     2.33 r
-  genblk1_2__adder_inst/mfa_inst/U2/A1 (AND2X1_RVT)       0.03      0.01       2.35 r
-  genblk1_2__adder_inst/mfa_inst/U2/Y (AND2X1_RVT)     1.98     0.02     0.03     2.38 r
-  genblk1_2__adder_inst/mfa_inst/co (MFA_nco_5)                     0.00       2.38 r
-  genblk1_2__adder_inst/co (adder_nco_WIDTH8_5)                     0.00       2.38 r
-  genblk1_3__adder_inst/ci (adder_nco_WIDTH8_4)                     0.00       2.38 r
-  genblk1_3__adder_inst/adder_inst/ci (adder_WIDTH7_4)              0.00       2.38 r
-  genblk1_3__adder_inst/adder_inst/U7/A (FADDX1_RVT)      0.02      0.04       2.43 r
-  genblk1_3__adder_inst/adder_inst/U7/CO (FADDX1_RVT)     1.70     0.03     0.06     2.49 r
-  genblk1_3__adder_inst/adder_inst/U6/CI (FADDX1_RVT)     0.03      0.03       2.52 r
-  genblk1_3__adder_inst/adder_inst/U6/CO (FADDX1_RVT)     1.70     0.03     0.06     2.57 r
-  genblk1_3__adder_inst/adder_inst/U5/CI (FADDX1_RVT)     0.03      0.03       2.60 r
-  genblk1_3__adder_inst/adder_inst/U5/CO (FADDX1_RVT)     1.70     0.03     0.06     2.66 r
-  genblk1_3__adder_inst/adder_inst/U4/CI (FADDX1_RVT)     0.03      0.03       2.69 r
-  genblk1_3__adder_inst/adder_inst/U4/CO (FADDX1_RVT)     1.70     0.03     0.06     2.74 r
-  genblk1_3__adder_inst/adder_inst/U3/CI (FADDX1_RVT)     0.03      0.03       2.77 r
-  genblk1_3__adder_inst/adder_inst/U3/CO (FADDX1_RVT)     1.70     0.03     0.06     2.83 r
-  genblk1_3__adder_inst/adder_inst/U2/CI (FADDX1_RVT)     0.03      0.03       2.86 r
-  genblk1_3__adder_inst/adder_inst/U2/CO (FADDX1_RVT)     1.70     0.03     0.06     2.92 r
-  genblk1_3__adder_inst/adder_inst/U1/CI (FADDX1_RVT)     0.03      0.03       2.94 r
-  genblk1_3__adder_inst/adder_inst/U1/CO (FADDX1_RVT)     1.70     0.03     0.06     3.00 r
-  genblk1_3__adder_inst/adder_inst/co (adder_WIDTH7_4)              0.00       3.00 r
-  genblk1_3__adder_inst/mfa_inst/ci (MFA_nco_4)                     0.00       3.00 r
-  genblk1_3__adder_inst/mfa_inst/U3/CI (FADDX1_RVT)       0.03      0.03       3.03 r
-  genblk1_3__adder_inst/mfa_inst/U3/CO (FADDX1_RVT)     0.84     0.03     0.05     3.08 r
-  genblk1_3__adder_inst/mfa_inst/U2/A1 (AND2X1_RVT)       0.03      0.01       3.10 r
-  genblk1_3__adder_inst/mfa_inst/U2/Y (AND2X1_RVT)     1.98     0.02     0.03     3.13 r
-  genblk1_3__adder_inst/mfa_inst/co (MFA_nco_4)                     0.00       3.13 r
-  genblk1_3__adder_inst/co (adder_nco_WIDTH8_4)                     0.00       3.13 r
-  genblk1_4__adder_inst/ci (adder_nco_WIDTH8_3)                     0.00       3.13 r
-  genblk1_4__adder_inst/adder_inst/ci (adder_WIDTH7_3)              0.00       3.13 r
-  genblk1_4__adder_inst/adder_inst/U7/A (FADDX1_RVT)      0.02      0.04       3.17 r
-  genblk1_4__adder_inst/adder_inst/U7/CO (FADDX1_RVT)     1.70     0.03     0.06     3.24 r
-  genblk1_4__adder_inst/adder_inst/U6/CI (FADDX1_RVT)     0.03      0.03       3.26 r
-  genblk1_4__adder_inst/adder_inst/U6/CO (FADDX1_RVT)     1.70     0.03     0.06     3.32 r
-  genblk1_4__adder_inst/adder_inst/U5/CI (FADDX1_RVT)     0.03      0.03       3.35 r
-  genblk1_4__adder_inst/adder_inst/U5/CO (FADDX1_RVT)     1.70     0.03     0.06     3.41 r
-  genblk1_4__adder_inst/adder_inst/U4/CI (FADDX1_RVT)     0.03      0.03       3.44 r
-  genblk1_4__adder_inst/adder_inst/U4/CO (FADDX1_RVT)     1.70     0.03     0.06     3.49 r
-  genblk1_4__adder_inst/adder_inst/U3/CI (FADDX1_RVT)     0.03      0.03       3.52 r
-  genblk1_4__adder_inst/adder_inst/U3/CO (FADDX1_RVT)     1.70     0.03     0.06     3.58 r
-  genblk1_4__adder_inst/adder_inst/U2/CI (FADDX1_RVT)     0.03      0.03       3.61 r
-  genblk1_4__adder_inst/adder_inst/U2/CO (FADDX1_RVT)     1.70     0.03     0.06     3.66 r
-  genblk1_4__adder_inst/adder_inst/U1/CI (FADDX1_RVT)     0.03      0.03       3.69 r
-  genblk1_4__adder_inst/adder_inst/U1/CO (FADDX1_RVT)     1.70     0.03     0.06     3.75 r
-  genblk1_4__adder_inst/adder_inst/co (adder_WIDTH7_3)              0.00       3.75 r
-  genblk1_4__adder_inst/mfa_inst/ci (MFA_nco_3)                     0.00       3.75 r
-  genblk1_4__adder_inst/mfa_inst/U3/CI (FADDX1_RVT)       0.03      0.03       3.78 r
-  genblk1_4__adder_inst/mfa_inst/U3/CO (FADDX1_RVT)     0.84     0.03     0.05     3.83 r
-  genblk1_4__adder_inst/mfa_inst/U2/A1 (AND2X1_RVT)       0.03      0.01       3.84 r
-  genblk1_4__adder_inst/mfa_inst/U2/Y (AND2X1_RVT)     1.98     0.02     0.03     3.88 r
-  genblk1_4__adder_inst/mfa_inst/co (MFA_nco_3)                     0.00       3.88 r
-  genblk1_4__adder_inst/co (adder_nco_WIDTH8_3)                     0.00       3.88 r
-  genblk1_5__adder_inst/ci (adder_nco_WIDTH8_2)                     0.00       3.88 r
-  genblk1_5__adder_inst/adder_inst/ci (adder_WIDTH7_2)              0.00       3.88 r
-  genblk1_5__adder_inst/adder_inst/U7/A (FADDX1_RVT)      0.02      0.04       3.92 r
-  genblk1_5__adder_inst/adder_inst/U7/CO (FADDX1_RVT)     1.70     0.03     0.06     3.98 r
-  genblk1_5__adder_inst/adder_inst/U6/CI (FADDX1_RVT)     0.03      0.03       4.01 r
-  genblk1_5__adder_inst/adder_inst/U6/CO (FADDX1_RVT)     1.70     0.03     0.06     4.07 r
-  genblk1_5__adder_inst/adder_inst/U5/CI (FADDX1_RVT)     0.03      0.03       4.10 r
-  genblk1_5__adder_inst/adder_inst/U5/CO (FADDX1_RVT)     1.70     0.03     0.06     4.16 r
-  genblk1_5__adder_inst/adder_inst/U4/CI (FADDX1_RVT)     0.03      0.03       4.18 r
-  genblk1_5__adder_inst/adder_inst/U4/CO (FADDX1_RVT)     1.70     0.03     0.06     4.24 r
-  genblk1_5__adder_inst/adder_inst/U3/CI (FADDX1_RVT)     0.03      0.03       4.27 r
-  genblk1_5__adder_inst/adder_inst/U3/CO (FADDX1_RVT)     1.70     0.03     0.06     4.33 r
-  genblk1_5__adder_inst/adder_inst/U2/CI (FADDX1_RVT)     0.03      0.03       4.36 r
-  genblk1_5__adder_inst/adder_inst/U2/CO (FADDX1_RVT)     1.70     0.03     0.06     4.41 r
-  genblk1_5__adder_inst/adder_inst/U1/CI (FADDX1_RVT)     0.03      0.03       4.44 r
-  genblk1_5__adder_inst/adder_inst/U1/CO (FADDX1_RVT)     1.70     0.03     0.06     4.50 r
-  genblk1_5__adder_inst/adder_inst/co (adder_WIDTH7_2)              0.00       4.50 r
-  genblk1_5__adder_inst/mfa_inst/ci (MFA_nco_2)                     0.00       4.50 r
-  genblk1_5__adder_inst/mfa_inst/U3/CI (FADDX1_RVT)       0.03      0.03       4.53 r
-  genblk1_5__adder_inst/mfa_inst/U3/CO (FADDX1_RVT)     0.84     0.03     0.05     4.58 r
-  genblk1_5__adder_inst/mfa_inst/U2/A1 (AND2X1_RVT)       0.03      0.01       4.59 r
-  genblk1_5__adder_inst/mfa_inst/U2/Y (AND2X1_RVT)     1.98     0.02     0.03     4.63 r
-  genblk1_5__adder_inst/mfa_inst/co (MFA_nco_2)                     0.00       4.63 r
-  genblk1_5__adder_inst/co (adder_nco_WIDTH8_2)                     0.00       4.63 r
-  genblk1_6__adder_inst/ci (adder_nco_WIDTH8_1)                     0.00       4.63 r
-  genblk1_6__adder_inst/adder_inst/ci (adder_WIDTH7_1)              0.00       4.63 r
-  genblk1_6__adder_inst/adder_inst/U7/A (FADDX1_RVT)      0.02      0.04       4.67 r
-  genblk1_6__adder_inst/adder_inst/U7/CO (FADDX1_RVT)     1.70     0.03     0.06     4.73 r
-  genblk1_6__adder_inst/adder_inst/U6/CI (FADDX1_RVT)     0.03      0.03       4.76 r
-  genblk1_6__adder_inst/adder_inst/U6/CO (FADDX1_RVT)     1.70     0.03     0.06     4.82 r
-  genblk1_6__adder_inst/adder_inst/U5/CI (FADDX1_RVT)     0.03      0.03       4.85 r
-  genblk1_6__adder_inst/adder_inst/U5/CO (FADDX1_RVT)     1.70     0.03     0.06     4.90 r
-  genblk1_6__adder_inst/adder_inst/U4/CI (FADDX1_RVT)     0.03      0.03       4.93 r
-  genblk1_6__adder_inst/adder_inst/U4/CO (FADDX1_RVT)     1.70     0.03     0.06     4.99 r
-  genblk1_6__adder_inst/adder_inst/U3/CI (FADDX1_RVT)     0.03      0.03       5.02 r
-  genblk1_6__adder_inst/adder_inst/U3/CO (FADDX1_RVT)     1.70     0.03     0.06     5.08 r
-  genblk1_6__adder_inst/adder_inst/U2/CI (FADDX1_RVT)     0.03      0.03       5.10 r
-  genblk1_6__adder_inst/adder_inst/U2/CO (FADDX1_RVT)     1.70     0.03     0.06     5.16 r
-  genblk1_6__adder_inst/adder_inst/U1/CI (FADDX1_RVT)     0.03      0.03       5.19 r
-  genblk1_6__adder_inst/adder_inst/U1/CO (FADDX1_RVT)     1.70     0.03     0.06     5.25 r
-  genblk1_6__adder_inst/adder_inst/co (adder_WIDTH7_1)              0.00       5.25 r
-  genblk1_6__adder_inst/mfa_inst/ci (MFA_nco_1)                     0.00       5.25 r
-  genblk1_6__adder_inst/mfa_inst/U3/CI (FADDX1_RVT)       0.03      0.03       5.28 r
-  genblk1_6__adder_inst/mfa_inst/U3/CO (FADDX1_RVT)     0.84     0.03     0.05     5.33 r
-  genblk1_6__adder_inst/mfa_inst/U2/A1 (AND2X1_RVT)       0.03      0.01       5.34 r
-  genblk1_6__adder_inst/mfa_inst/U2/Y (AND2X1_RVT)     1.98     0.02     0.03     5.38 r
-  genblk1_6__adder_inst/mfa_inst/co (MFA_nco_1)                     0.00       5.38 r
-  genblk1_6__adder_inst/co (adder_nco_WIDTH8_1)                     0.00       5.38 r
-  genblk1_7__adder_inst/ci (adder_nco_WIDTH8_0)                     0.00       5.38 r
-  genblk1_7__adder_inst/adder_inst/ci (adder_WIDTH7_0)              0.00       5.38 r
-  genblk1_7__adder_inst/adder_inst/U7/A (FADDX1_RVT)      0.02      0.04       5.42 r
-  genblk1_7__adder_inst/adder_inst/U7/CO (FADDX1_RVT)     1.70     0.03     0.06     5.48 r
-  genblk1_7__adder_inst/adder_inst/U6/CI (FADDX1_RVT)     0.03      0.03       5.51 r
-  genblk1_7__adder_inst/adder_inst/U6/CO (FADDX1_RVT)     1.70     0.03     0.06     5.57 r
-  genblk1_7__adder_inst/adder_inst/U5/CI (FADDX1_RVT)     0.03      0.03       5.60 r
-  genblk1_7__adder_inst/adder_inst/U5/CO (FADDX1_RVT)     1.70     0.03     0.06     5.65 r
-  genblk1_7__adder_inst/adder_inst/U4/CI (FADDX1_RVT)     0.03      0.03       5.68 r
-  genblk1_7__adder_inst/adder_inst/U4/CO (FADDX1_RVT)     1.70     0.03     0.06     5.74 r
-  genblk1_7__adder_inst/adder_inst/U3/CI (FADDX1_RVT)     0.03      0.03       5.77 r
-  genblk1_7__adder_inst/adder_inst/U3/CO (FADDX1_RVT)     1.70     0.03     0.06     5.82 r
-  genblk1_7__adder_inst/adder_inst/U2/CI (FADDX1_RVT)     0.03      0.03       5.85 r
-  genblk1_7__adder_inst/adder_inst/U2/CO (FADDX1_RVT)     1.70     0.03     0.06     5.91 r
-  genblk1_7__adder_inst/adder_inst/U1/CI (FADDX1_RVT)     0.03      0.03       5.94 r
-  genblk1_7__adder_inst/adder_inst/U1/CO (FADDX1_RVT)     1.70     0.03     0.06     6.00 r
-  genblk1_7__adder_inst/adder_inst/co (adder_WIDTH7_0)              0.00       6.00 r
-  genblk1_7__adder_inst/mfa_inst/ci (MFA_nco_0)                     0.00       6.00 r
-  genblk1_7__adder_inst/mfa_inst/U3/CI (FADDX1_RVT)       0.03      0.03       6.03 r
-  genblk1_7__adder_inst/mfa_inst/U3/CO (FADDX1_RVT)     0.84     0.03     0.05     6.08 r
-  genblk1_7__adder_inst/mfa_inst/U2/A1 (AND2X1_RVT)       0.03      0.01       6.09 r
-  genblk1_7__adder_inst/mfa_inst/U2/Y (AND2X1_RVT)     0.56     0.01     0.03     6.12 r
-  genblk1_7__adder_inst/mfa_inst/co (MFA_nco_0)                     0.00       6.12 r
-  genblk1_7__adder_inst/co (adder_nco_WIDTH8_0)                     0.00       6.12 r
-  U13/A2 (AND2X1_RVT)                                     0.01      0.01       6.13 r
-  U13/Y (AND2X1_RVT)                            0.00      0.01      0.02       6.16 r
-  co (out)                                                0.01      0.00       6.16 r
-  data arrival time                                                            6.16
+  input external delay                                              0.00       0.00 r
+  control[1] (in)                               1.78      0.00      0.00       0.00 r
+  U9/A1 (NOR2X0_RVT)                                      0.00      0.02       0.02 r
+  U9/Y (NOR2X0_RVT)                             1.79      0.02      0.04       0.06 f
+  U11/A1 (AND2X1_RVT)                                     0.02      0.02       0.08 f
+  U11/Y (AND2X1_RVT)                            1.19      0.02      0.03       0.11 f
+  genblk1_0__adder_inst/ci (adder_nco_WIDTH8_7)                     0.00       0.11 f
+  genblk1_0__adder_inst/adder_inst/ci (adder_WIDTH7_7)              0.00       0.11 f
+  genblk1_0__adder_inst/adder_inst/U4/A2 (NAND2X0_RVT)     0.02     0.01       0.12 f
+  genblk1_0__adder_inst/adder_inst/U4/Y (NAND2X0_RVT)     1.59     0.03     0.03     0.15 r
+  genblk1_0__adder_inst/adder_inst/U10/A2 (NAND2X0_RVT)     0.03     0.01      0.16 r
+  genblk1_0__adder_inst/adder_inst/U10/Y (NAND2X0_RVT)     1.67     0.04     0.03     0.20 f
+  genblk1_0__adder_inst/adder_inst/U11/A2 (NAND2X0_RVT)     0.04     0.01      0.21 f
+  genblk1_0__adder_inst/adder_inst/U11/Y (NAND2X0_RVT)     1.59     0.04     0.04     0.25 r
+  genblk1_0__adder_inst/adder_inst/U17/A2 (NAND2X0_RVT)     0.04     0.01      0.27 r
+  genblk1_0__adder_inst/adder_inst/U17/Y (NAND2X0_RVT)     1.67     0.04     0.03     0.30 f
+  genblk1_0__adder_inst/adder_inst/U18/A2 (NAND2X0_RVT)     0.04     0.01      0.31 f
+  genblk1_0__adder_inst/adder_inst/U18/Y (NAND2X0_RVT)     1.59     0.04     0.04     0.36 r
+  genblk1_0__adder_inst/adder_inst/U24/A2 (NAND2X0_RVT)     0.04     0.01      0.37 r
+  genblk1_0__adder_inst/adder_inst/U24/Y (NAND2X0_RVT)     1.67     0.04     0.03     0.40 f
+  genblk1_0__adder_inst/adder_inst/U25/A2 (NAND2X0_RVT)     0.04     0.01      0.42 f
+  genblk1_0__adder_inst/adder_inst/U25/Y (NAND2X0_RVT)     1.59     0.04     0.04     0.46 r
+  genblk1_0__adder_inst/adder_inst/U31/A2 (NAND2X0_RVT)     0.04     0.01      0.47 r
+  genblk1_0__adder_inst/adder_inst/U31/Y (NAND2X0_RVT)     1.67     0.04     0.03     0.51 f
+  genblk1_0__adder_inst/adder_inst/U32/A2 (NAND2X0_RVT)     0.04     0.01      0.52 f
+  genblk1_0__adder_inst/adder_inst/U32/Y (NAND2X0_RVT)     1.59     0.04     0.04     0.56 r
+  genblk1_0__adder_inst/adder_inst/U38/A2 (NAND2X0_RVT)     0.04     0.01      0.58 r
+  genblk1_0__adder_inst/adder_inst/U38/Y (NAND2X0_RVT)     1.67     0.04     0.03     0.61 f
+  genblk1_0__adder_inst/adder_inst/U39/A2 (NAND2X0_RVT)     0.04     0.01      0.63 f
+  genblk1_0__adder_inst/adder_inst/U39/Y (NAND2X0_RVT)     1.59     0.04     0.04     0.67 r
+  genblk1_0__adder_inst/adder_inst/U45/A2 (NAND2X0_RVT)     0.04     0.01      0.68 r
+  genblk1_0__adder_inst/adder_inst/U45/Y (NAND2X0_RVT)     1.67     0.04     0.03     0.72 f
+  genblk1_0__adder_inst/adder_inst/U46/A2 (NAND2X0_RVT)     0.04     0.01      0.73 f
+  genblk1_0__adder_inst/adder_inst/U46/Y (NAND2X0_RVT)     1.59     0.04     0.04     0.77 r
+  genblk1_0__adder_inst/adder_inst/U47/A2 (NAND2X0_RVT)     0.04     0.01      0.78 r
+  genblk1_0__adder_inst/adder_inst/U47/Y (NAND2X0_RVT)     1.67     0.04     0.03     0.82 f
+  genblk1_0__adder_inst/adder_inst/co (adder_WIDTH7_7)              0.00       0.82 f
+  genblk1_0__adder_inst/mfa_inst/ci (MFA_nco_7)                     0.00       0.82 f
+  genblk1_0__adder_inst/mfa_inst/U5/A2 (NAND2X0_RVT)      0.04      0.01       0.83 f
+  genblk1_0__adder_inst/mfa_inst/U5/Y (NAND2X0_RVT)     1.67     0.04     0.04     0.87 r
+  genblk1_0__adder_inst/mfa_inst/U6/A1 (NAND2X0_RVT)      0.04      0.02       0.89 r
+  genblk1_0__adder_inst/mfa_inst/U6/Y (NAND2X0_RVT)     0.83     0.03     0.02     0.91 f
+  genblk1_0__adder_inst/mfa_inst/U7/A1 (AND2X1_RVT)       0.03      0.01       0.93 f
+  genblk1_0__adder_inst/mfa_inst/U7/Y (AND2X1_RVT)     1.19     0.02     0.04     0.97 f
+  genblk1_0__adder_inst/mfa_inst/co (MFA_nco_7)                     0.00       0.97 f
+  genblk1_0__adder_inst/co (adder_nco_WIDTH8_7)                     0.00       0.97 f
+  genblk1_1__adder_inst/ci (adder_nco_WIDTH8_6)                     0.00       0.97 f
+  genblk1_1__adder_inst/adder_inst/ci (adder_WIDTH7_6)              0.00       0.97 f
+  genblk1_1__adder_inst/adder_inst/U4/A2 (NAND2X0_RVT)     0.02     0.01       0.98 f
+  genblk1_1__adder_inst/adder_inst/U4/Y (NAND2X0_RVT)     1.59     0.03     0.03     1.01 r
+  genblk1_1__adder_inst/adder_inst/U10/A2 (NAND2X0_RVT)     0.03     0.01      1.02 r
+  genblk1_1__adder_inst/adder_inst/U10/Y (NAND2X0_RVT)     1.67     0.04     0.03     1.06 f
+  genblk1_1__adder_inst/adder_inst/U11/A2 (NAND2X0_RVT)     0.04     0.01      1.07 f
+  genblk1_1__adder_inst/adder_inst/U11/Y (NAND2X0_RVT)     1.59     0.04     0.04     1.11 r
+  genblk1_1__adder_inst/adder_inst/U17/A2 (NAND2X0_RVT)     0.04     0.01      1.13 r
+  genblk1_1__adder_inst/adder_inst/U17/Y (NAND2X0_RVT)     1.67     0.04     0.03     1.16 f
+  genblk1_1__adder_inst/adder_inst/U18/A2 (NAND2X0_RVT)     0.04     0.01      1.17 f
+  genblk1_1__adder_inst/adder_inst/U18/Y (NAND2X0_RVT)     1.59     0.04     0.04     1.22 r
+  genblk1_1__adder_inst/adder_inst/U24/A2 (NAND2X0_RVT)     0.04     0.01      1.23 r
+  genblk1_1__adder_inst/adder_inst/U24/Y (NAND2X0_RVT)     1.67     0.04     0.03     1.26 f
+  genblk1_1__adder_inst/adder_inst/U25/A2 (NAND2X0_RVT)     0.04     0.01      1.28 f
+  genblk1_1__adder_inst/adder_inst/U25/Y (NAND2X0_RVT)     1.59     0.04     0.04     1.32 r
+  genblk1_1__adder_inst/adder_inst/U31/A2 (NAND2X0_RVT)     0.04     0.01      1.33 r
+  genblk1_1__adder_inst/adder_inst/U31/Y (NAND2X0_RVT)     1.67     0.04     0.03     1.37 f
+  genblk1_1__adder_inst/adder_inst/U32/A2 (NAND2X0_RVT)     0.04     0.01      1.38 f
+  genblk1_1__adder_inst/adder_inst/U32/Y (NAND2X0_RVT)     1.59     0.04     0.04     1.42 r
+  genblk1_1__adder_inst/adder_inst/U38/A2 (NAND2X0_RVT)     0.04     0.01      1.44 r
+  genblk1_1__adder_inst/adder_inst/U38/Y (NAND2X0_RVT)     1.67     0.04     0.03     1.47 f
+  genblk1_1__adder_inst/adder_inst/U39/A2 (NAND2X0_RVT)     0.04     0.01      1.48 f
+  genblk1_1__adder_inst/adder_inst/U39/Y (NAND2X0_RVT)     1.59     0.04     0.04     1.53 r
+  genblk1_1__adder_inst/adder_inst/U45/A2 (NAND2X0_RVT)     0.04     0.01      1.54 r
+  genblk1_1__adder_inst/adder_inst/U45/Y (NAND2X0_RVT)     1.67     0.04     0.03     1.57 f
+  genblk1_1__adder_inst/adder_inst/U46/A2 (NAND2X0_RVT)     0.04     0.01      1.59 f
+  genblk1_1__adder_inst/adder_inst/U46/Y (NAND2X0_RVT)     1.59     0.04     0.04     1.63 r
+  genblk1_1__adder_inst/adder_inst/U47/A2 (NAND2X0_RVT)     0.04     0.01      1.64 r
+  genblk1_1__adder_inst/adder_inst/U47/Y (NAND2X0_RVT)     1.67     0.04     0.03     1.68 f
+  genblk1_1__adder_inst/adder_inst/co (adder_WIDTH7_6)              0.00       1.68 f
+  genblk1_1__adder_inst/mfa_inst/ci (MFA_nco_6)                     0.00       1.68 f
+  genblk1_1__adder_inst/mfa_inst/U5/A2 (NAND2X0_RVT)      0.04      0.01       1.69 f
+  genblk1_1__adder_inst/mfa_inst/U5/Y (NAND2X0_RVT)     1.67     0.04     0.04     1.73 r
+  genblk1_1__adder_inst/mfa_inst/U6/A1 (NAND2X0_RVT)      0.04      0.02       1.75 r
+  genblk1_1__adder_inst/mfa_inst/U6/Y (NAND2X0_RVT)     0.83     0.03     0.02     1.77 f
+  genblk1_1__adder_inst/mfa_inst/U7/A1 (AND2X1_RVT)       0.03      0.01       1.79 f
+  genblk1_1__adder_inst/mfa_inst/U7/Y (AND2X1_RVT)     1.19     0.02     0.04     1.82 f
+  genblk1_1__adder_inst/mfa_inst/co (MFA_nco_6)                     0.00       1.82 f
+  genblk1_1__adder_inst/co (adder_nco_WIDTH8_6)                     0.00       1.82 f
+  genblk1_2__adder_inst/ci (adder_nco_WIDTH8_5)                     0.00       1.82 f
+  genblk1_2__adder_inst/adder_inst/ci (adder_WIDTH7_5)              0.00       1.82 f
+  genblk1_2__adder_inst/adder_inst/U4/A2 (NAND2X0_RVT)     0.02     0.01       1.84 f
+  genblk1_2__adder_inst/adder_inst/U4/Y (NAND2X0_RVT)     1.59     0.03     0.03     1.87 r
+  genblk1_2__adder_inst/adder_inst/U10/A2 (NAND2X0_RVT)     0.03     0.01      1.88 r
+  genblk1_2__adder_inst/adder_inst/U10/Y (NAND2X0_RVT)     1.67     0.04     0.03     1.91 f
+  genblk1_2__adder_inst/adder_inst/U11/A2 (NAND2X0_RVT)     0.04     0.01      1.93 f
+  genblk1_2__adder_inst/adder_inst/U11/Y (NAND2X0_RVT)     1.59     0.04     0.04     1.97 r
+  genblk1_2__adder_inst/adder_inst/U17/A2 (NAND2X0_RVT)     0.04     0.01      1.98 r
+  genblk1_2__adder_inst/adder_inst/U17/Y (NAND2X0_RVT)     1.67     0.04     0.03     2.02 f
+  genblk1_2__adder_inst/adder_inst/U18/A2 (NAND2X0_RVT)     0.04     0.01      2.03 f
+  genblk1_2__adder_inst/adder_inst/U18/Y (NAND2X0_RVT)     1.59     0.04     0.04     2.07 r
+  genblk1_2__adder_inst/adder_inst/U24/A2 (NAND2X0_RVT)     0.04     0.01      2.09 r
+  genblk1_2__adder_inst/adder_inst/U24/Y (NAND2X0_RVT)     1.67     0.04     0.03     2.12 f
+  genblk1_2__adder_inst/adder_inst/U25/A2 (NAND2X0_RVT)     0.04     0.01      2.14 f
+  genblk1_2__adder_inst/adder_inst/U25/Y (NAND2X0_RVT)     1.59     0.04     0.04     2.18 r
+  genblk1_2__adder_inst/adder_inst/U31/A2 (NAND2X0_RVT)     0.04     0.01      2.19 r
+  genblk1_2__adder_inst/adder_inst/U31/Y (NAND2X0_RVT)     1.67     0.04     0.03     2.23 f
+  genblk1_2__adder_inst/adder_inst/U32/A2 (NAND2X0_RVT)     0.04     0.01      2.24 f
+  genblk1_2__adder_inst/adder_inst/U32/Y (NAND2X0_RVT)     1.59     0.04     0.04     2.28 r
+  genblk1_2__adder_inst/adder_inst/U38/A2 (NAND2X0_RVT)     0.04     0.01      2.29 r
+  genblk1_2__adder_inst/adder_inst/U38/Y (NAND2X0_RVT)     1.67     0.04     0.03     2.33 f
+  genblk1_2__adder_inst/adder_inst/U39/A2 (NAND2X0_RVT)     0.04     0.01      2.34 f
+  genblk1_2__adder_inst/adder_inst/U39/Y (NAND2X0_RVT)     1.59     0.04     0.04     2.38 r
+  genblk1_2__adder_inst/adder_inst/U45/A2 (NAND2X0_RVT)     0.04     0.01      2.40 r
+  genblk1_2__adder_inst/adder_inst/U45/Y (NAND2X0_RVT)     1.67     0.04     0.03     2.43 f
+  genblk1_2__adder_inst/adder_inst/U46/A2 (NAND2X0_RVT)     0.04     0.01      2.45 f
+  genblk1_2__adder_inst/adder_inst/U46/Y (NAND2X0_RVT)     1.59     0.04     0.04     2.49 r
+  genblk1_2__adder_inst/adder_inst/U47/A2 (NAND2X0_RVT)     0.04     0.01      2.50 r
+  genblk1_2__adder_inst/adder_inst/U47/Y (NAND2X0_RVT)     1.67     0.04     0.03     2.54 f
+  genblk1_2__adder_inst/adder_inst/co (adder_WIDTH7_5)              0.00       2.54 f
+  genblk1_2__adder_inst/mfa_inst/ci (MFA_nco_5)                     0.00       2.54 f
+  genblk1_2__adder_inst/mfa_inst/U5/A2 (NAND2X0_RVT)      0.04      0.01       2.55 f
+  genblk1_2__adder_inst/mfa_inst/U5/Y (NAND2X0_RVT)     1.67     0.04     0.04     2.59 r
+  genblk1_2__adder_inst/mfa_inst/U6/A1 (NAND2X0_RVT)      0.04      0.02       2.61 r
+  genblk1_2__adder_inst/mfa_inst/U6/Y (NAND2X0_RVT)     0.83     0.03     0.02     2.63 f
+  genblk1_2__adder_inst/mfa_inst/U7/A1 (AND2X1_RVT)       0.03      0.01       2.65 f
+  genblk1_2__adder_inst/mfa_inst/U7/Y (AND2X1_RVT)     1.19     0.02     0.04     2.68 f
+  genblk1_2__adder_inst/mfa_inst/co (MFA_nco_5)                     0.00       2.68 f
+  genblk1_2__adder_inst/co (adder_nco_WIDTH8_5)                     0.00       2.68 f
+  genblk1_3__adder_inst/ci (adder_nco_WIDTH8_4)                     0.00       2.68 f
+  genblk1_3__adder_inst/adder_inst/ci (adder_WIDTH7_4)              0.00       2.68 f
+  genblk1_3__adder_inst/adder_inst/U4/A2 (NAND2X0_RVT)     0.02     0.01       2.69 f
+  genblk1_3__adder_inst/adder_inst/U4/Y (NAND2X0_RVT)     1.59     0.03     0.03     2.73 r
+  genblk1_3__adder_inst/adder_inst/U10/A2 (NAND2X0_RVT)     0.03     0.01      2.74 r
+  genblk1_3__adder_inst/adder_inst/U10/Y (NAND2X0_RVT)     1.67     0.04     0.03     2.77 f
+  genblk1_3__adder_inst/adder_inst/U11/A2 (NAND2X0_RVT)     0.04     0.01      2.79 f
+  genblk1_3__adder_inst/adder_inst/U11/Y (NAND2X0_RVT)     1.59     0.04     0.04     2.83 r
+  genblk1_3__adder_inst/adder_inst/U17/A2 (NAND2X0_RVT)     0.04     0.01      2.84 r
+  genblk1_3__adder_inst/adder_inst/U17/Y (NAND2X0_RVT)     1.67     0.04     0.03     2.88 f
+  genblk1_3__adder_inst/adder_inst/U18/A2 (NAND2X0_RVT)     0.04     0.01      2.89 f
+  genblk1_3__adder_inst/adder_inst/U18/Y (NAND2X0_RVT)     1.59     0.04     0.04     2.93 r
+  genblk1_3__adder_inst/adder_inst/U24/A2 (NAND2X0_RVT)     0.04     0.01      2.95 r
+  genblk1_3__adder_inst/adder_inst/U24/Y (NAND2X0_RVT)     1.67     0.04     0.03     2.98 f
+  genblk1_3__adder_inst/adder_inst/U25/A2 (NAND2X0_RVT)     0.04     0.01      2.99 f
+  genblk1_3__adder_inst/adder_inst/U25/Y (NAND2X0_RVT)     1.59     0.04     0.04     3.04 r
+  genblk1_3__adder_inst/adder_inst/U31/A2 (NAND2X0_RVT)     0.04     0.01      3.05 r
+  genblk1_3__adder_inst/adder_inst/U31/Y (NAND2X0_RVT)     1.67     0.04     0.03     3.08 f
+  genblk1_3__adder_inst/adder_inst/U32/A2 (NAND2X0_RVT)     0.04     0.01      3.10 f
+  genblk1_3__adder_inst/adder_inst/U32/Y (NAND2X0_RVT)     1.59     0.04     0.04     3.14 r
+  genblk1_3__adder_inst/adder_inst/U38/A2 (NAND2X0_RVT)     0.04     0.01      3.15 r
+  genblk1_3__adder_inst/adder_inst/U38/Y (NAND2X0_RVT)     1.67     0.04     0.03     3.19 f
+  genblk1_3__adder_inst/adder_inst/U39/A2 (NAND2X0_RVT)     0.04     0.01      3.20 f
+  genblk1_3__adder_inst/adder_inst/U39/Y (NAND2X0_RVT)     1.59     0.04     0.04     3.24 r
+  genblk1_3__adder_inst/adder_inst/U45/A2 (NAND2X0_RVT)     0.04     0.01      3.26 r
+  genblk1_3__adder_inst/adder_inst/U45/Y (NAND2X0_RVT)     1.67     0.04     0.03     3.29 f
+  genblk1_3__adder_inst/adder_inst/U46/A2 (NAND2X0_RVT)     0.04     0.01      3.31 f
+  genblk1_3__adder_inst/adder_inst/U46/Y (NAND2X0_RVT)     1.59     0.04     0.04     3.35 r
+  genblk1_3__adder_inst/adder_inst/U47/A2 (NAND2X0_RVT)     0.04     0.01      3.36 r
+  genblk1_3__adder_inst/adder_inst/U47/Y (NAND2X0_RVT)     1.67     0.04     0.03     3.39 f
+  genblk1_3__adder_inst/adder_inst/co (adder_WIDTH7_4)              0.00       3.39 f
+  genblk1_3__adder_inst/mfa_inst/ci (MFA_nco_4)                     0.00       3.39 f
+  genblk1_3__adder_inst/mfa_inst/U5/A2 (NAND2X0_RVT)      0.04      0.01       3.41 f
+  genblk1_3__adder_inst/mfa_inst/U5/Y (NAND2X0_RVT)     1.67     0.04     0.04     3.45 r
+  genblk1_3__adder_inst/mfa_inst/U6/A1 (NAND2X0_RVT)      0.04      0.02       3.47 r
+  genblk1_3__adder_inst/mfa_inst/U6/Y (NAND2X0_RVT)     0.83     0.03     0.02     3.49 f
+  genblk1_3__adder_inst/mfa_inst/U7/A1 (AND2X1_RVT)       0.03      0.01       3.50 f
+  genblk1_3__adder_inst/mfa_inst/U7/Y (AND2X1_RVT)     1.19     0.02     0.04     3.54 f
+  genblk1_3__adder_inst/mfa_inst/co (MFA_nco_4)                     0.00       3.54 f
+  genblk1_3__adder_inst/co (adder_nco_WIDTH8_4)                     0.00       3.54 f
+  genblk1_4__adder_inst/ci (adder_nco_WIDTH8_3)                     0.00       3.54 f
+  genblk1_4__adder_inst/adder_inst/ci (adder_WIDTH7_3)              0.00       3.54 f
+  genblk1_4__adder_inst/adder_inst/U4/A2 (NAND2X0_RVT)     0.02     0.01       3.55 f
+  genblk1_4__adder_inst/adder_inst/U4/Y (NAND2X0_RVT)     1.59     0.03     0.03     3.58 r
+  genblk1_4__adder_inst/adder_inst/U10/A2 (NAND2X0_RVT)     0.03     0.01      3.60 r
+  genblk1_4__adder_inst/adder_inst/U10/Y (NAND2X0_RVT)     1.67     0.04     0.03     3.63 f
+  genblk1_4__adder_inst/adder_inst/U11/A2 (NAND2X0_RVT)     0.04     0.01      3.65 f
+  genblk1_4__adder_inst/adder_inst/U11/Y (NAND2X0_RVT)     1.59     0.04     0.04     3.69 r
+  genblk1_4__adder_inst/adder_inst/U17/A2 (NAND2X0_RVT)     0.04     0.01      3.70 r
+  genblk1_4__adder_inst/adder_inst/U17/Y (NAND2X0_RVT)     1.67     0.04     0.03     3.74 f
+  genblk1_4__adder_inst/adder_inst/U18/A2 (NAND2X0_RVT)     0.04     0.01      3.75 f
+  genblk1_4__adder_inst/adder_inst/U18/Y (NAND2X0_RVT)     1.59     0.04     0.04     3.79 r
+  genblk1_4__adder_inst/adder_inst/U24/A2 (NAND2X0_RVT)     0.04     0.01      3.80 r
+  genblk1_4__adder_inst/adder_inst/U24/Y (NAND2X0_RVT)     1.67     0.04     0.03     3.84 f
+  genblk1_4__adder_inst/adder_inst/U25/A2 (NAND2X0_RVT)     0.04     0.01      3.85 f
+  genblk1_4__adder_inst/adder_inst/U25/Y (NAND2X0_RVT)     1.59     0.04     0.04     3.89 r
+  genblk1_4__adder_inst/adder_inst/U31/A2 (NAND2X0_RVT)     0.04     0.01      3.91 r
+  genblk1_4__adder_inst/adder_inst/U31/Y (NAND2X0_RVT)     1.67     0.04     0.03     3.94 f
+  genblk1_4__adder_inst/adder_inst/U32/A2 (NAND2X0_RVT)     0.04     0.01      3.96 f
+  genblk1_4__adder_inst/adder_inst/U32/Y (NAND2X0_RVT)     1.59     0.04     0.04     4.00 r
+  genblk1_4__adder_inst/adder_inst/U38/A2 (NAND2X0_RVT)     0.04     0.01      4.01 r
+  genblk1_4__adder_inst/adder_inst/U38/Y (NAND2X0_RVT)     1.67     0.04     0.03     4.05 f
+  genblk1_4__adder_inst/adder_inst/U39/A2 (NAND2X0_RVT)     0.04     0.01      4.06 f
+  genblk1_4__adder_inst/adder_inst/U39/Y (NAND2X0_RVT)     1.59     0.04     0.04     4.10 r
+  genblk1_4__adder_inst/adder_inst/U45/A2 (NAND2X0_RVT)     0.04     0.01      4.12 r
+  genblk1_4__adder_inst/adder_inst/U45/Y (NAND2X0_RVT)     1.67     0.04     0.03     4.15 f
+  genblk1_4__adder_inst/adder_inst/U46/A2 (NAND2X0_RVT)     0.04     0.01      4.16 f
+  genblk1_4__adder_inst/adder_inst/U46/Y (NAND2X0_RVT)     1.59     0.04     0.04     4.21 r
+  genblk1_4__adder_inst/adder_inst/U47/A2 (NAND2X0_RVT)     0.04     0.01      4.22 r
+  genblk1_4__adder_inst/adder_inst/U47/Y (NAND2X0_RVT)     1.67     0.04     0.03     4.25 f
+  genblk1_4__adder_inst/adder_inst/co (adder_WIDTH7_3)              0.00       4.25 f
+  genblk1_4__adder_inst/mfa_inst/ci (MFA_nco_3)                     0.00       4.25 f
+  genblk1_4__adder_inst/mfa_inst/U5/A2 (NAND2X0_RVT)      0.04      0.01       4.27 f
+  genblk1_4__adder_inst/mfa_inst/U5/Y (NAND2X0_RVT)     1.67     0.04     0.04     4.31 r
+  genblk1_4__adder_inst/mfa_inst/U6/A1 (NAND2X0_RVT)      0.04      0.02       4.32 r
+  genblk1_4__adder_inst/mfa_inst/U6/Y (NAND2X0_RVT)     0.83     0.03     0.02     4.35 f
+  genblk1_4__adder_inst/mfa_inst/U7/A1 (AND2X1_RVT)       0.03      0.01       4.36 f
+  genblk1_4__adder_inst/mfa_inst/U7/Y (AND2X1_RVT)     1.19     0.02     0.04     4.40 f
+  genblk1_4__adder_inst/mfa_inst/co (MFA_nco_3)                     0.00       4.40 f
+  genblk1_4__adder_inst/co (adder_nco_WIDTH8_3)                     0.00       4.40 f
+  genblk1_5__adder_inst/ci (adder_nco_WIDTH8_2)                     0.00       4.40 f
+  genblk1_5__adder_inst/adder_inst/ci (adder_WIDTH7_2)              0.00       4.40 f
+  genblk1_5__adder_inst/adder_inst/U4/A2 (NAND2X0_RVT)     0.02     0.01       4.41 f
+  genblk1_5__adder_inst/adder_inst/U4/Y (NAND2X0_RVT)     1.59     0.03     0.03     4.44 r
+  genblk1_5__adder_inst/adder_inst/U10/A2 (NAND2X0_RVT)     0.03     0.01      4.46 r
+  genblk1_5__adder_inst/adder_inst/U10/Y (NAND2X0_RVT)     1.67     0.04     0.03     4.49 f
+  genblk1_5__adder_inst/adder_inst/U11/A2 (NAND2X0_RVT)     0.04     0.01      4.50 f
+  genblk1_5__adder_inst/adder_inst/U11/Y (NAND2X0_RVT)     1.59     0.04     0.04     4.55 r
+  genblk1_5__adder_inst/adder_inst/U17/A2 (NAND2X0_RVT)     0.04     0.01      4.56 r
+  genblk1_5__adder_inst/adder_inst/U17/Y (NAND2X0_RVT)     1.67     0.04     0.03     4.59 f
+  genblk1_5__adder_inst/adder_inst/U18/A2 (NAND2X0_RVT)     0.04     0.01      4.61 f
+  genblk1_5__adder_inst/adder_inst/U18/Y (NAND2X0_RVT)     1.59     0.04     0.04     4.65 r
+  genblk1_5__adder_inst/adder_inst/U24/A2 (NAND2X0_RVT)     0.04     0.01      4.66 r
+  genblk1_5__adder_inst/adder_inst/U24/Y (NAND2X0_RVT)     1.67     0.04     0.03     4.70 f
+  genblk1_5__adder_inst/adder_inst/U25/A2 (NAND2X0_RVT)     0.04     0.01      4.71 f
+  genblk1_5__adder_inst/adder_inst/U25/Y (NAND2X0_RVT)     1.59     0.04     0.04     4.75 r
+  genblk1_5__adder_inst/adder_inst/U31/A2 (NAND2X0_RVT)     0.04     0.01      4.77 r
+  genblk1_5__adder_inst/adder_inst/U31/Y (NAND2X0_RVT)     1.67     0.04     0.03     4.80 f
+  genblk1_5__adder_inst/adder_inst/U32/A2 (NAND2X0_RVT)     0.04     0.01      4.82 f
+  genblk1_5__adder_inst/adder_inst/U32/Y (NAND2X0_RVT)     1.59     0.04     0.04     4.86 r
+  genblk1_5__adder_inst/adder_inst/U38/A2 (NAND2X0_RVT)     0.04     0.01      4.87 r
+  genblk1_5__adder_inst/adder_inst/U38/Y (NAND2X0_RVT)     1.67     0.04     0.03     4.91 f
+  genblk1_5__adder_inst/adder_inst/U39/A2 (NAND2X0_RVT)     0.04     0.01      4.92 f
+  genblk1_5__adder_inst/adder_inst/U39/Y (NAND2X0_RVT)     1.59     0.04     0.04     4.96 r
+  genblk1_5__adder_inst/adder_inst/U45/A2 (NAND2X0_RVT)     0.04     0.01      4.97 r
+  genblk1_5__adder_inst/adder_inst/U45/Y (NAND2X0_RVT)     1.67     0.04     0.03     5.01 f
+  genblk1_5__adder_inst/adder_inst/U46/A2 (NAND2X0_RVT)     0.04     0.01      5.02 f
+  genblk1_5__adder_inst/adder_inst/U46/Y (NAND2X0_RVT)     1.59     0.04     0.04     5.06 r
+  genblk1_5__adder_inst/adder_inst/U47/A2 (NAND2X0_RVT)     0.04     0.01      5.08 r
+  genblk1_5__adder_inst/adder_inst/U47/Y (NAND2X0_RVT)     1.67     0.04     0.03     5.11 f
+  genblk1_5__adder_inst/adder_inst/co (adder_WIDTH7_2)              0.00       5.11 f
+  genblk1_5__adder_inst/mfa_inst/ci (MFA_nco_2)                     0.00       5.11 f
+  genblk1_5__adder_inst/mfa_inst/U5/A2 (NAND2X0_RVT)      0.04      0.01       5.13 f
+  genblk1_5__adder_inst/mfa_inst/U5/Y (NAND2X0_RVT)     1.67     0.04     0.04     5.17 r
+  genblk1_5__adder_inst/mfa_inst/U6/A1 (NAND2X0_RVT)      0.04      0.02       5.18 r
+  genblk1_5__adder_inst/mfa_inst/U6/Y (NAND2X0_RVT)     0.83     0.03     0.02     5.21 f
+  genblk1_5__adder_inst/mfa_inst/U7/A1 (AND2X1_RVT)       0.03      0.01       5.22 f
+  genblk1_5__adder_inst/mfa_inst/U7/Y (AND2X1_RVT)     1.19     0.02     0.04     5.26 f
+  genblk1_5__adder_inst/mfa_inst/co (MFA_nco_2)                     0.00       5.26 f
+  genblk1_5__adder_inst/co (adder_nco_WIDTH8_2)                     0.00       5.26 f
+  genblk1_6__adder_inst/ci (adder_nco_WIDTH8_1)                     0.00       5.26 f
+  genblk1_6__adder_inst/adder_inst/ci (adder_WIDTH7_1)              0.00       5.26 f
+  genblk1_6__adder_inst/adder_inst/U4/A2 (NAND2X0_RVT)     0.02     0.01       5.27 f
+  genblk1_6__adder_inst/adder_inst/U4/Y (NAND2X0_RVT)     1.59     0.03     0.03     5.30 r
+  genblk1_6__adder_inst/adder_inst/U10/A2 (NAND2X0_RVT)     0.03     0.01      5.32 r
+  genblk1_6__adder_inst/adder_inst/U10/Y (NAND2X0_RVT)     1.67     0.04     0.03     5.35 f
+  genblk1_6__adder_inst/adder_inst/U11/A2 (NAND2X0_RVT)     0.04     0.01      5.36 f
+  genblk1_6__adder_inst/adder_inst/U11/Y (NAND2X0_RVT)     1.59     0.04     0.04     5.40 r
+  genblk1_6__adder_inst/adder_inst/U17/A2 (NAND2X0_RVT)     0.04     0.01      5.42 r
+  genblk1_6__adder_inst/adder_inst/U17/Y (NAND2X0_RVT)     1.67     0.04     0.03     5.45 f
+  genblk1_6__adder_inst/adder_inst/U18/A2 (NAND2X0_RVT)     0.04     0.01      5.47 f
+  genblk1_6__adder_inst/adder_inst/U18/Y (NAND2X0_RVT)     1.59     0.04     0.04     5.51 r
+  genblk1_6__adder_inst/adder_inst/U24/A2 (NAND2X0_RVT)     0.04     0.01      5.52 r
+  genblk1_6__adder_inst/adder_inst/U24/Y (NAND2X0_RVT)     1.67     0.04     0.03     5.56 f
+  genblk1_6__adder_inst/adder_inst/U25/A2 (NAND2X0_RVT)     0.04     0.01      5.57 f
+  genblk1_6__adder_inst/adder_inst/U25/Y (NAND2X0_RVT)     1.59     0.04     0.04     5.61 r
+  genblk1_6__adder_inst/adder_inst/U31/A2 (NAND2X0_RVT)     0.04     0.01      5.63 r
+  genblk1_6__adder_inst/adder_inst/U31/Y (NAND2X0_RVT)     1.67     0.04     0.03     5.66 f
+  genblk1_6__adder_inst/adder_inst/U32/A2 (NAND2X0_RVT)     0.04     0.01      5.67 f
+  genblk1_6__adder_inst/adder_inst/U32/Y (NAND2X0_RVT)     1.59     0.04     0.04     5.72 r
+  genblk1_6__adder_inst/adder_inst/U38/A2 (NAND2X0_RVT)     0.04     0.01      5.73 r
+  genblk1_6__adder_inst/adder_inst/U38/Y (NAND2X0_RVT)     1.67     0.04     0.03     5.76 f
+  genblk1_6__adder_inst/adder_inst/U39/A2 (NAND2X0_RVT)     0.04     0.01      5.78 f
+  genblk1_6__adder_inst/adder_inst/U39/Y (NAND2X0_RVT)     1.59     0.04     0.04     5.82 r
+  genblk1_6__adder_inst/adder_inst/U45/A2 (NAND2X0_RVT)     0.04     0.01      5.83 r
+  genblk1_6__adder_inst/adder_inst/U45/Y (NAND2X0_RVT)     1.67     0.04     0.03     5.87 f
+  genblk1_6__adder_inst/adder_inst/U46/A2 (NAND2X0_RVT)     0.04     0.01      5.88 f
+  genblk1_6__adder_inst/adder_inst/U46/Y (NAND2X0_RVT)     1.59     0.04     0.04     5.92 r
+  genblk1_6__adder_inst/adder_inst/U47/A2 (NAND2X0_RVT)     0.04     0.01      5.94 r
+  genblk1_6__adder_inst/adder_inst/U47/Y (NAND2X0_RVT)     1.67     0.04     0.03     5.97 f
+  genblk1_6__adder_inst/adder_inst/co (adder_WIDTH7_1)              0.00       5.97 f
+  genblk1_6__adder_inst/mfa_inst/ci (MFA_nco_1)                     0.00       5.97 f
+  genblk1_6__adder_inst/mfa_inst/U5/A2 (NAND2X0_RVT)      0.04      0.01       5.98 f
+  genblk1_6__adder_inst/mfa_inst/U5/Y (NAND2X0_RVT)     1.67     0.04     0.04     6.03 r
+  genblk1_6__adder_inst/mfa_inst/U6/A1 (NAND2X0_RVT)      0.04      0.02       6.04 r
+  genblk1_6__adder_inst/mfa_inst/U6/Y (NAND2X0_RVT)     0.83     0.03     0.02     6.07 f
+  genblk1_6__adder_inst/mfa_inst/U7/A1 (AND2X1_RVT)       0.03      0.01       6.08 f
+  genblk1_6__adder_inst/mfa_inst/U7/Y (AND2X1_RVT)     1.19     0.02     0.04     6.12 f
+  genblk1_6__adder_inst/mfa_inst/co (MFA_nco_1)                     0.00       6.12 f
+  genblk1_6__adder_inst/co (adder_nco_WIDTH8_1)                     0.00       6.12 f
+  genblk1_7__adder_inst/ci (adder_nco_WIDTH8_0)                     0.00       6.12 f
+  genblk1_7__adder_inst/adder_inst/ci (adder_WIDTH7_0)              0.00       6.12 f
+  genblk1_7__adder_inst/adder_inst/U4/A2 (NAND2X0_RVT)     0.02     0.01       6.13 f
+  genblk1_7__adder_inst/adder_inst/U4/Y (NAND2X0_RVT)     1.59     0.03     0.03     6.16 r
+  genblk1_7__adder_inst/adder_inst/U10/A2 (NAND2X0_RVT)     0.03     0.01      6.17 r
+  genblk1_7__adder_inst/adder_inst/U10/Y (NAND2X0_RVT)     1.67     0.04     0.03     6.21 f
+  genblk1_7__adder_inst/adder_inst/U11/A2 (NAND2X0_RVT)     0.04     0.01      6.22 f
+  genblk1_7__adder_inst/adder_inst/U11/Y (NAND2X0_RVT)     1.59     0.04     0.04     6.26 r
+  genblk1_7__adder_inst/adder_inst/U17/A2 (NAND2X0_RVT)     0.04     0.01      6.28 r
+  genblk1_7__adder_inst/adder_inst/U17/Y (NAND2X0_RVT)     1.67     0.04     0.03     6.31 f
+  genblk1_7__adder_inst/adder_inst/U18/A2 (NAND2X0_RVT)     0.04     0.01      6.33 f
+  genblk1_7__adder_inst/adder_inst/U18/Y (NAND2X0_RVT)     1.59     0.04     0.04     6.37 r
+  genblk1_7__adder_inst/adder_inst/U24/A2 (NAND2X0_RVT)     0.04     0.01      6.38 r
+  genblk1_7__adder_inst/adder_inst/U24/Y (NAND2X0_RVT)     1.67     0.04     0.03     6.42 f
+  genblk1_7__adder_inst/adder_inst/U25/A2 (NAND2X0_RVT)     0.04     0.01      6.43 f
+  genblk1_7__adder_inst/adder_inst/U25/Y (NAND2X0_RVT)     1.59     0.04     0.04     6.47 r
+  genblk1_7__adder_inst/adder_inst/U31/A2 (NAND2X0_RVT)     0.04     0.01      6.48 r
+  genblk1_7__adder_inst/adder_inst/U31/Y (NAND2X0_RVT)     1.67     0.04     0.03     6.52 f
+  genblk1_7__adder_inst/adder_inst/U32/A2 (NAND2X0_RVT)     0.04     0.01      6.53 f
+  genblk1_7__adder_inst/adder_inst/U32/Y (NAND2X0_RVT)     1.59     0.04     0.04     6.57 r
+  genblk1_7__adder_inst/adder_inst/U38/A2 (NAND2X0_RVT)     0.04     0.01      6.59 r
+  genblk1_7__adder_inst/adder_inst/U38/Y (NAND2X0_RVT)     1.67     0.04     0.03     6.62 f
+  genblk1_7__adder_inst/adder_inst/U39/A2 (NAND2X0_RVT)     0.04     0.01      6.64 f
+  genblk1_7__adder_inst/adder_inst/U39/Y (NAND2X0_RVT)     1.59     0.04     0.04     6.68 r
+  genblk1_7__adder_inst/adder_inst/U45/A2 (NAND2X0_RVT)     0.04     0.01      6.69 r
+  genblk1_7__adder_inst/adder_inst/U45/Y (NAND2X0_RVT)     1.67     0.04     0.03     6.73 f
+  genblk1_7__adder_inst/adder_inst/U46/A2 (NAND2X0_RVT)     0.04     0.01      6.74 f
+  genblk1_7__adder_inst/adder_inst/U46/Y (NAND2X0_RVT)     1.59     0.04     0.04     6.78 r
+  genblk1_7__adder_inst/adder_inst/U47/A2 (NAND2X0_RVT)     0.04     0.01      6.80 r
+  genblk1_7__adder_inst/adder_inst/U47/Y (NAND2X0_RVT)     1.67     0.04     0.03     6.83 f
+  genblk1_7__adder_inst/adder_inst/co (adder_WIDTH7_0)              0.00       6.83 f
+  genblk1_7__adder_inst/mfa_inst/ci (MFA_nco_0)                     0.00       6.83 f
+  genblk1_7__adder_inst/mfa_inst/U5/A2 (NAND2X0_RVT)      0.04      0.01       6.84 f
+  genblk1_7__adder_inst/mfa_inst/U5/Y (NAND2X0_RVT)     1.67     0.04     0.04     6.89 r
+  genblk1_7__adder_inst/mfa_inst/U6/A1 (NAND2X0_RVT)      0.04      0.02       6.90 r
+  genblk1_7__adder_inst/mfa_inst/U6/Y (NAND2X0_RVT)     0.83     0.03     0.02     6.92 f
+  genblk1_7__adder_inst/mfa_inst/U7/A1 (AND2X1_RVT)       0.03      0.01       6.94 f
+  genblk1_7__adder_inst/mfa_inst/U7/Y (AND2X1_RVT)     0.55     0.01     0.03     6.97 f
+  genblk1_7__adder_inst/mfa_inst/co (MFA_nco_0)                     0.00       6.97 f
+  genblk1_7__adder_inst/co (adder_nco_WIDTH8_0)                     0.00       6.97 f
+  U10/A2 (AND2X1_RVT)                                     0.01      0.01       6.98 f
+  U10/Y (AND2X1_RVT)                            0.00      0.01      0.03       7.01 f
+  co (out)                                                0.01      0.00       7.01 f
+  data arrival time                                                            7.01
   ------------------------------------------------------------------------------------
   (Path is unconstrained)
 

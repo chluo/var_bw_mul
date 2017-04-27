@@ -8,7 +8,7 @@ Report : power
         -analysis_effort low
 Design : vbw_cla_bsln
 Version: K-2015.06-SP4
-Date   : Sun Apr 23 19:50:34 2017
+Date   : Wed Apr 26 19:35:11 2017
 ****************************************
 
 
@@ -25,29 +25,23 @@ Design        Wire Load Model            Library
 vbw_cla_bsln           8000              saed32rvt_tt1p05v25c
 cla_adder_WIDTH64      8000              saed32rvt_tt1p05v25c
 cla_adder_WIDTH32      8000              saed32rvt_tt1p05v25c
-cla_adder_WIDTH16_2    8000              saed32rvt_tt1p05v25c
 cla_adder_WIDTH16_1    8000              saed32rvt_tt1p05v25c
-cla_adder_WIDTH8_6     ForQA             saed32rvt_tt1p05v25c
-cla_adder_WIDTH8_5     ForQA             saed32rvt_tt1p05v25c
+cla_adder_WIDTH16_0    8000              saed32rvt_tt1p05v25c
+cla_adder_WIDTH8_3     ForQA             saed32rvt_tt1p05v25c
 MFA_56                 ForQA             saed32rvt_tt1p05v25c
 LA4_20                 ForQA             saed32rvt_tt1p05v25c
 MFA_24                 ForQA             saed32rvt_tt1p05v25c
 MFA_55                 ForQA             saed32rvt_tt1p05v25c
 LA4_8                  ForQA             saed32rvt_tt1p05v25c
 LA4_15                 ForQA             saed32rvt_tt1p05v25c
-LA4_66                 ForQA             saed32rvt_tt1p05v25c
-LA4_65                 ForQA             saed32rvt_tt1p05v25c
-LA4_61                 ForQA             saed32rvt_tt1p05v25c
-cla_adder_WIDTH16_0    8000              saed32rvt_tt1p05v25c
+LA2_4                  ForQA             saed32rvt_tt1p05v25c
+LA4_2                  ForQA             saed32rvt_tt1p05v25c
+LA4_47                 ForQA             saed32rvt_tt1p05v25c
 cla_adder_WIDTH8_0     ForQA             saed32rvt_tt1p05v25c
 cla_adder_WIDTH8_1     ForQA             saed32rvt_tt1p05v25c
 cla_adder_WIDTH8_2     ForQA             saed32rvt_tt1p05v25c
-cla_adder_WIDTH8_3     ForQA             saed32rvt_tt1p05v25c
-cla_adder_WIDTH8_4     ForQA             saed32rvt_tt1p05v25c
-LA4_58                 ForQA             saed32rvt_tt1p05v25c
-LA4_57                 ForQA             saed32rvt_tt1p05v25c
-LA4_63                 ForQA             saed32rvt_tt1p05v25c
-LA4_62                 ForQA             saed32rvt_tt1p05v25c
+LA4_45                 ForQA             saed32rvt_tt1p05v25c
+LA4_44                 ForQA             saed32rvt_tt1p05v25c
 LA4_4                  ForQA             saed32rvt_tt1p05v25c
 LA4_3                  ForQA             saed32rvt_tt1p05v25c
 LA4_14                 ForQA             saed32rvt_tt1p05v25c
@@ -56,7 +50,7 @@ LA4_12                 ForQA             saed32rvt_tt1p05v25c
 LA4_11                 ForQA             saed32rvt_tt1p05v25c
 LA4_10                 ForQA             saed32rvt_tt1p05v25c
 LA4_9                  ForQA             saed32rvt_tt1p05v25c
-LA4_67                 ForQA             saed32rvt_tt1p05v25c
+LA4_48                 ForQA             saed32rvt_tt1p05v25c
 LA4_19                 ForQA             saed32rvt_tt1p05v25c
 LA4_18                 ForQA             saed32rvt_tt1p05v25c
 LA4_17                 ForQA             saed32rvt_tt1p05v25c
@@ -76,29 +70,20 @@ LA4_24                 ForQA             saed32rvt_tt1p05v25c
 LA4_23                 ForQA             saed32rvt_tt1p05v25c
 LA4_22                 ForQA             saed32rvt_tt1p05v25c
 LA4_21                 ForQA             saed32rvt_tt1p05v25c
-LA4_37                 ForQA             saed32rvt_tt1p05v25c
-LA4_40                 ForQA             saed32rvt_tt1p05v25c
-LA4_43                 ForQA             saed32rvt_tt1p05v25c
-LA4_46                 ForQA             saed32rvt_tt1p05v25c
-LA4_49                 ForQA             saed32rvt_tt1p05v25c
-LA4_52                 ForQA             saed32rvt_tt1p05v25c
-LA4_56                 ForQA             saed32rvt_tt1p05v25c
-LA4_0                  ForQA             saed32rvt_tt1p05v25c
-LA4_2                  ForQA             saed32rvt_tt1p05v25c
-LA4_6                  ForQA             saed32rvt_tt1p05v25c
+LA4_36                 ForQA             saed32rvt_tt1p05v25c
 LA4_38                 ForQA             saed32rvt_tt1p05v25c
+LA4_40                 ForQA             saed32rvt_tt1p05v25c
+LA4_0                  ForQA             saed32rvt_tt1p05v25c
+LA4_43                 ForQA             saed32rvt_tt1p05v25c
+LA4_6                  ForQA             saed32rvt_tt1p05v25c
+LA4_37                 ForQA             saed32rvt_tt1p05v25c
+LA4_39                 ForQA             saed32rvt_tt1p05v25c
 LA4_41                 ForQA             saed32rvt_tt1p05v25c
-LA4_44                 ForQA             saed32rvt_tt1p05v25c
-LA4_47                 ForQA             saed32rvt_tt1p05v25c
-LA4_50                 ForQA             saed32rvt_tt1p05v25c
-LA4_53                 ForQA             saed32rvt_tt1p05v25c
 LA4_1                  ForQA             saed32rvt_tt1p05v25c
-LA4_59                 ForQA             saed32rvt_tt1p05v25c
-LA4_64                 ForQA             saed32rvt_tt1p05v25c
+LA4_46                 ForQA             saed32rvt_tt1p05v25c
 LA4_5                  ForQA             saed32rvt_tt1p05v25c
 LA4_7                  ForQA             saed32rvt_tt1p05v25c
-LA4_55                 ForQA             saed32rvt_tt1p05v25c
-LA4_60                 ForQA             saed32rvt_tt1p05v25c
+LA4_42                 ForQA             saed32rvt_tt1p05v25c
 MFA_126                ForQA             saed32rvt_tt1p05v25c
 MFA_125                ForQA             saed32rvt_tt1p05v25c
 MFA_124                ForQA             saed32rvt_tt1p05v25c
@@ -117,58 +102,26 @@ MFA_140                ForQA             saed32rvt_tt1p05v25c
 MFA_139                ForQA             saed32rvt_tt1p05v25c
 MFA_138                ForQA             saed32rvt_tt1p05v25c
 MFA_137                ForQA             saed32rvt_tt1p05v25c
-MFA_150                ForQA             saed32rvt_tt1p05v25c
-MFA_149                ForQA             saed32rvt_tt1p05v25c
-MFA_148                ForQA             saed32rvt_tt1p05v25c
-MFA_147                ForQA             saed32rvt_tt1p05v25c
-MFA_146                ForQA             saed32rvt_tt1p05v25c
-MFA_145                ForQA             saed32rvt_tt1p05v25c
-MFA_158                ForQA             saed32rvt_tt1p05v25c
-MFA_157                ForQA             saed32rvt_tt1p05v25c
-MFA_156                ForQA             saed32rvt_tt1p05v25c
-MFA_155                ForQA             saed32rvt_tt1p05v25c
-MFA_154                ForQA             saed32rvt_tt1p05v25c
-MFA_153                ForQA             saed32rvt_tt1p05v25c
-MFA_166                ForQA             saed32rvt_tt1p05v25c
-MFA_165                ForQA             saed32rvt_tt1p05v25c
-MFA_164                ForQA             saed32rvt_tt1p05v25c
-MFA_163                ForQA             saed32rvt_tt1p05v25c
-MFA_162                ForQA             saed32rvt_tt1p05v25c
-MFA_161                ForQA             saed32rvt_tt1p05v25c
 MFA_6                  ForQA             saed32rvt_tt1p05v25c
 MFA_5                  ForQA             saed32rvt_tt1p05v25c
 MFA_4                  ForQA             saed32rvt_tt1p05v25c
 MFA_3                  ForQA             saed32rvt_tt1p05v25c
 MFA_2                  ForQA             saed32rvt_tt1p05v25c
 MFA_1                  ForQA             saed32rvt_tt1p05v25c
-MFA_182                ForQA             saed32rvt_tt1p05v25c
-MFA_181                ForQA             saed32rvt_tt1p05v25c
-MFA_180                ForQA             saed32rvt_tt1p05v25c
-MFA_179                ForQA             saed32rvt_tt1p05v25c
-MFA_178                ForQA             saed32rvt_tt1p05v25c
-MFA_177                ForQA             saed32rvt_tt1p05v25c
-MFA_176                ForQA             saed32rvt_tt1p05v25c
-MFA_175                ForQA             saed32rvt_tt1p05v25c
-MFA_174                ForQA             saed32rvt_tt1p05v25c
-MFA_173                ForQA             saed32rvt_tt1p05v25c
-MFA_172                ForQA             saed32rvt_tt1p05v25c
-MFA_171                ForQA             saed32rvt_tt1p05v25c
-MFA_170                ForQA             saed32rvt_tt1p05v25c
-MFA_169                ForQA             saed32rvt_tt1p05v25c
-MFA_198                ForQA             saed32rvt_tt1p05v25c
-MFA_197                ForQA             saed32rvt_tt1p05v25c
-MFA_196                ForQA             saed32rvt_tt1p05v25c
-MFA_195                ForQA             saed32rvt_tt1p05v25c
-MFA_194                ForQA             saed32rvt_tt1p05v25c
-MFA_193                ForQA             saed32rvt_tt1p05v25c
-MFA_192                ForQA             saed32rvt_tt1p05v25c
-MFA_191                ForQA             saed32rvt_tt1p05v25c
-MFA_190                ForQA             saed32rvt_tt1p05v25c
-MFA_189                ForQA             saed32rvt_tt1p05v25c
-MFA_188                ForQA             saed32rvt_tt1p05v25c
-MFA_187                ForQA             saed32rvt_tt1p05v25c
-MFA_186                ForQA             saed32rvt_tt1p05v25c
-MFA_185                ForQA             saed32rvt_tt1p05v25c
+MFA_158                ForQA             saed32rvt_tt1p05v25c
+MFA_157                ForQA             saed32rvt_tt1p05v25c
+MFA_156                ForQA             saed32rvt_tt1p05v25c
+MFA_155                ForQA             saed32rvt_tt1p05v25c
+MFA_154                ForQA             saed32rvt_tt1p05v25c
+MFA_153                ForQA             saed32rvt_tt1p05v25c
+MFA_152                ForQA             saed32rvt_tt1p05v25c
+MFA_151                ForQA             saed32rvt_tt1p05v25c
+MFA_150                ForQA             saed32rvt_tt1p05v25c
+MFA_149                ForQA             saed32rvt_tt1p05v25c
+MFA_148                ForQA             saed32rvt_tt1p05v25c
+MFA_147                ForQA             saed32rvt_tt1p05v25c
+MFA_146                ForQA             saed32rvt_tt1p05v25c
+MFA_145                ForQA             saed32rvt_tt1p05v25c
 MFA_22                 ForQA             saed32rvt_tt1p05v25c
 MFA_21                 ForQA             saed32rvt_tt1p05v25c
 MFA_20                 ForQA             saed32rvt_tt1p05v25c
@@ -279,30 +232,19 @@ MFA_57                 ForQA             saed32rvt_tt1p05v25c
 MFA_127                ForQA             saed32rvt_tt1p05v25c
 MFA_135                ForQA             saed32rvt_tt1p05v25c
 MFA_143                ForQA             saed32rvt_tt1p05v25c
-MFA_151                ForQA             saed32rvt_tt1p05v25c
-MFA_159                ForQA             saed32rvt_tt1p05v25c
-MFA_167                ForQA             saed32rvt_tt1p05v25c
 MFA_7                  ForQA             saed32rvt_tt1p05v25c
-MFA_183                ForQA             saed32rvt_tt1p05v25c
-MFA_199                ForQA             saed32rvt_tt1p05v25c
+MFA_159                ForQA             saed32rvt_tt1p05v25c
 MFA_23                 ForQA             saed32rvt_tt1p05v25c
 MFA_120                ForQA             saed32rvt_tt1p05v25c
 MFA_128                ForQA             saed32rvt_tt1p05v25c
 MFA_136                ForQA             saed32rvt_tt1p05v25c
-MFA_144                ForQA             saed32rvt_tt1p05v25c
-MFA_152                ForQA             saed32rvt_tt1p05v25c
-MFA_160                ForQA             saed32rvt_tt1p05v25c
 MFA_0                  ForQA             saed32rvt_tt1p05v25c
-MFA_168                ForQA             saed32rvt_tt1p05v25c
-MFA_184                ForQA             saed32rvt_tt1p05v25c
+MFA_144                ForQA             saed32rvt_tt1p05v25c
 MFA_8                  ForQA             saed32rvt_tt1p05v25c
-LA4_36                 ForQA             saed32rvt_tt1p05v25c
-LA4_39                 ForQA             saed32rvt_tt1p05v25c
-LA4_42                 ForQA             saed32rvt_tt1p05v25c
-LA4_45                 ForQA             saed32rvt_tt1p05v25c
-LA4_48                 ForQA             saed32rvt_tt1p05v25c
-LA4_51                 ForQA             saed32rvt_tt1p05v25c
-LA4_54                 ForQA             saed32rvt_tt1p05v25c
+LA2_0                  ForQA             saed32rvt_tt1p05v25c
+LA2_1                  ForQA             saed32rvt_tt1p05v25c
+LA2_2                  ForQA             saed32rvt_tt1p05v25c
+LA2_3                  ForQA             saed32rvt_tt1p05v25c
 
 
 Global Operating Voltage = 1.05 
@@ -318,285 +260,227 @@ Power-specific unit information :
                                        Switch   Int      Leak     Total
 Hierarchy                              Power    Power    Power    Power    %
 --------------------------------------------------------------------------------
-vbw_cla_bsln                            143.228  429.669 3.97e+08  969.451 100.0
-  add8_1 (cla_adder_WIDTH8_0)             4.051   10.452 1.09e+07   25.398   2.6
-    genblk1_layer2 (LA4_36)               0.000    0.000    0.000    0.000   0.0
-    genblk1_layer1_1_ (LA4_38)            0.879    1.571 1.23e+06    3.679   0.4
-    genblk1_layer1_0_ (LA4_37)            0.753    1.317 1.17e+06    3.245   0.3
-    mfa_inst_7_ (MFA_127)              9.70e-02    0.607 5.09e+05    1.214   0.1
-    mfa_inst_6_ (MFA_126)                 0.365    1.110 1.21e+06    2.688   0.3
-    mfa_inst_5_ (MFA_125)                 0.367    1.106 1.21e+06    2.685   0.3
-    mfa_inst_4_ (MFA_124)                 0.356    1.100 1.21e+06    2.669   0.3
-    mfa_inst_3_ (MFA_123)                 0.355    1.088 1.21e+06    2.657   0.3
-    mfa_inst_2_ (MFA_122)                 0.357    1.094 1.21e+06    2.665   0.3
-    mfa_inst_1_ (MFA_121)                 0.344    1.070 1.21e+06    2.627   0.3
-    mfa_inst_0_ (MFA_120)                 0.178    0.390 7.01e+05    1.269   0.1
-  add8_2 (cla_adder_WIDTH8_1)             4.097   10.542 1.09e+07   25.545   2.6
-    genblk1_layer2 (LA4_39)               0.000    0.000    0.000    0.000   0.0
-    genblk1_layer1_1_ (LA4_41)            0.896    1.608 1.24e+06    3.745   0.4
-    genblk1_layer1_0_ (LA4_40)            0.753    1.315 1.18e+06    3.246   0.3
-    mfa_inst_7_ (MFA_135)                 0.104    0.613 5.08e+05    1.225   0.1
-    mfa_inst_6_ (MFA_134)                 0.368    1.114 1.21e+06    2.695   0.3
-    mfa_inst_5_ (MFA_133)                 0.370    1.114 1.21e+06    2.697   0.3
-    mfa_inst_4_ (MFA_132)                 0.364    1.106 1.21e+06    2.682   0.3
-    mfa_inst_3_ (MFA_131)                 0.363    1.109 1.21e+06    2.685   0.3
-    mfa_inst_2_ (MFA_130)                 0.358    1.098 1.21e+06    2.669   0.3
-    mfa_inst_1_ (MFA_129)                 0.345    1.069 1.21e+06    2.627   0.3
-    mfa_inst_0_ (MFA_128)                 0.176    0.396 7.01e+05    1.273   0.1
-  add8_3 (cla_adder_WIDTH8_2)             4.125   10.612 1.09e+07   25.630   2.6
-    genblk1_layer2 (LA4_42)               0.000    0.000    0.000    0.000   0.0
-    genblk1_layer1_1_ (LA4_44)            0.900    1.608 1.23e+06    3.738   0.4
-    genblk1_layer1_0_ (LA4_43)            0.752    1.312 1.18e+06    3.241   0.3
-    mfa_inst_7_ (MFA_143)                 0.105    0.622 5.08e+05    1.236   0.1
-    mfa_inst_6_ (MFA_142)                 0.375    1.127 1.21e+06    2.713   0.3
-    mfa_inst_5_ (MFA_141)                 0.373    1.121 1.21e+06    2.706   0.3
-    mfa_inst_4_ (MFA_140)                 0.372    1.133 1.21e+06    2.718   0.3
-    mfa_inst_3_ (MFA_139)                 0.369    1.119 1.21e+06    2.701   0.3
-    mfa_inst_2_ (MFA_138)                 0.365    1.109 1.21e+06    2.686   0.3
-    mfa_inst_1_ (MFA_137)                 0.341    1.065 1.21e+06    2.620   0.3
-    mfa_inst_0_ (MFA_136)                 0.174    0.396 7.01e+05    1.271   0.1
-  add8_4 (cla_adder_WIDTH8_3)             4.072   10.516 1.09e+07   25.483   2.6
-    genblk1_layer2 (LA4_45)               0.000    0.000    0.000    0.000   0.0
-    genblk1_layer1_1_ (LA4_47)            0.873    1.561 1.23e+06    3.665   0.4
-    genblk1_layer1_0_ (LA4_46)            0.746    1.303 1.18e+06    3.226   0.3
-    mfa_inst_7_ (MFA_151)                 0.102    0.609 5.08e+05    1.220   0.1
-    mfa_inst_6_ (MFA_150)                 0.369    1.121 1.21e+06    2.703   0.3
-    mfa_inst_5_ (MFA_149)                 0.368    1.113 1.21e+06    2.693   0.3
-    mfa_inst_4_ (MFA_148)                 0.362    1.114 1.21e+06    2.687   0.3
-    mfa_inst_3_ (MFA_147)                 0.368    1.113 1.21e+06    2.694   0.3
-    mfa_inst_2_ (MFA_146)                 0.368    1.118 1.21e+06    2.699   0.3
-    mfa_inst_1_ (MFA_145)                 0.345    1.069 1.21e+06    2.626   0.3
-    mfa_inst_0_ (MFA_144)                 0.173    0.396 7.01e+05    1.269   0.1
-  add8_5 (cla_adder_WIDTH8_4)             4.116   10.579 1.09e+07   25.591   2.6
-    genblk1_layer2 (LA4_48)               0.000    0.000    0.000    0.000   0.0
-    genblk1_layer1_1_ (LA4_50)            0.886    1.586 1.23e+06    3.702   0.4
-    genblk1_layer1_0_ (LA4_49)            0.759    1.329 1.18e+06    3.271   0.3
-    mfa_inst_7_ (MFA_159)                 0.104    0.602 5.09e+05    1.215   0.1
-    mfa_inst_6_ (MFA_158)                 0.368    1.115 1.21e+06    2.696   0.3
-    mfa_inst_5_ (MFA_157)                 0.372    1.122 1.21e+06    2.705   0.3
-    mfa_inst_4_ (MFA_156)                 0.365    1.117 1.21e+06    2.695   0.3
-    mfa_inst_3_ (MFA_155)                 0.365    1.115 1.21e+06    2.693   0.3
-    mfa_inst_2_ (MFA_154)                 0.371    1.119 1.21e+06    2.704   0.3
-    mfa_inst_1_ (MFA_153)                 0.349    1.077 1.21e+06    2.639   0.3
-    mfa_inst_0_ (MFA_152)                 0.175    0.396 7.01e+05    1.272   0.1
-  add8_6 (cla_adder_WIDTH8_5)             4.098   10.555 1.09e+07   25.558   2.6
-    genblk1_layer2 (LA4_51)               0.000    0.000    0.000    0.000   0.0
-    genblk1_layer1_1_ (LA4_53)            0.885    1.585 1.23e+06    3.705   0.4
-    genblk1_layer1_0_ (LA4_52)            0.757    1.324 1.18e+06    3.264   0.3
-    mfa_inst_7_ (MFA_167)                 0.101    0.613 5.09e+05    1.223   0.1
-    mfa_inst_6_ (MFA_166)                 0.370    1.120 1.21e+06    2.704   0.3
-    mfa_inst_5_ (MFA_165)                 0.374    1.130 1.21e+06    2.717   0.3
-    mfa_inst_4_ (MFA_164)                 0.365    1.113 1.21e+06    2.690   0.3
-    mfa_inst_3_ (MFA_163)                 0.366    1.108 1.21e+06    2.687   0.3
-    mfa_inst_2_ (MFA_162)                 0.362    1.102 1.21e+06    2.678   0.3
-    mfa_inst_1_ (MFA_161)                 0.343    1.064 1.21e+06    2.619   0.3
-    mfa_inst_0_ (MFA_160)                 0.175    0.396 7.01e+05    1.273   0.1
-  add8_7 (cla_adder_WIDTH8_6)             4.084   10.517 1.09e+07   25.508   2.6
-    genblk1_layer2 (LA4_54)               0.000    0.000    0.000    0.000   0.0
-    genblk1_layer1_1_ (LA4_1)             0.883    1.579 1.24e+06    3.699   0.4
-    genblk1_layer1_0_ (LA4_0)             0.745    1.307 1.18e+06    3.234   0.3
-    mfa_inst_7_ (MFA_7)                   0.104    0.612 5.09e+05    1.225   0.1
-    mfa_inst_6_ (MFA_6)                   0.377    1.129 1.21e+06    2.719   0.3
-    mfa_inst_5_ (MFA_5)                   0.367    1.111 1.21e+06    2.691   0.3
-    mfa_inst_4_ (MFA_4)                   0.359    1.101 1.21e+06    2.671   0.3
-    mfa_inst_3_ (MFA_3)                   0.363    1.106 1.21e+06    2.682   0.3
-    mfa_inst_2_ (MFA_2)                   0.357    1.093 1.21e+06    2.664   0.3
-    mfa_inst_1_ (MFA_1)                   0.349    1.082 1.21e+06    2.645   0.3
-    mfa_inst_0_ (MFA_0)                   0.180    0.397 7.01e+05    1.278   0.1
-  add16_1 (cla_adder_WIDTH16_0)           9.520   26.337 2.64e+07   62.213   6.4
-    genblk1_layer2 (LA4_55)               0.433    0.728 7.23e+05    1.885   0.2
-    genblk1_layer1_3_ (LA4_59)            0.798    1.641 1.24e+06    3.676   0.4
-    genblk1_layer1_2_ (LA4_58)            1.104    3.097 2.51e+06    6.711   0.7
-    genblk1_layer1_1_ (LA4_57)            1.114    3.139 2.52e+06    6.771   0.7
-    genblk1_layer1_0_ (LA4_56)            0.685    1.313 1.18e+06    3.176   0.3
-    mfa_inst_15_ (MFA_183)                0.106    0.622 5.08e+05    1.236   0.1
-    mfa_inst_14_ (MFA_182)                0.312    1.072 1.21e+06    2.596   0.3
-    mfa_inst_13_ (MFA_181)                0.311    1.069 1.21e+06    2.592   0.3
-    mfa_inst_12_ (MFA_180)                0.309    1.072 1.21e+06    2.595   0.3
-    mfa_inst_11_ (MFA_179)                0.361    1.123 1.21e+06    2.697   0.3
-    mfa_inst_10_ (MFA_178)                0.469    1.165 1.21e+06    2.846   0.3
-    mfa_inst_9_ (MFA_177)                 0.448    1.148 1.21e+06    2.809   0.3
-    mfa_inst_8_ (MFA_176)                 0.382    1.116 1.21e+06    2.711   0.3
-    mfa_inst_7_ (MFA_175)                 0.362    1.127 1.21e+06    2.701   0.3
-    mfa_inst_6_ (MFA_174)                 0.462    1.150 1.21e+06    2.825   0.3
-    mfa_inst_5_ (MFA_173)                 0.450    1.143 1.21e+06    2.807   0.3
-    mfa_inst_4_ (MFA_172)                 0.385    1.105 1.21e+06    2.702   0.3
-    mfa_inst_3_ (MFA_171)                 0.302    1.055 1.21e+06    2.570   0.3
-    mfa_inst_2_ (MFA_170)                 0.297    1.044 1.21e+06    2.555   0.3
-    mfa_inst_1_ (MFA_169)                 0.282    1.010 1.21e+06    2.506   0.3
-    mfa_inst_0_ (MFA_168)                 0.150    0.396 7.01e+05    1.246   0.1
-  add16_2 (cla_adder_WIDTH16_1)           9.471   26.209 2.64e+07   62.035   6.4
-    genblk1_layer2 (LA4_60)               0.428    0.719 7.27e+05    1.874   0.2
-    genblk1_layer1_3_ (LA4_64)            0.786    1.617 1.24e+06    3.640   0.4
-    genblk1_layer1_2_ (LA4_63)            1.114    3.128 2.52e+06    6.759   0.7
-    genblk1_layer1_1_ (LA4_62)            1.078    3.040 2.51e+06    6.628   0.7
-    genblk1_layer1_0_ (LA4_61)            0.678    1.301 1.18e+06    3.156   0.3
-    mfa_inst_15_ (MFA_199)                0.105    0.604 5.09e+05    1.218   0.1
-    mfa_inst_14_ (MFA_198)                0.307    1.063 1.21e+06    2.582   0.3
-    mfa_inst_13_ (MFA_197)                0.310    1.068 1.21e+06    2.589   0.3
-    mfa_inst_12_ (MFA_196)                0.304    1.061 1.21e+06    2.577   0.3
-    mfa_inst_11_ (MFA_195)                0.357    1.118 1.21e+06    2.688   0.3
-    mfa_inst_10_ (MFA_194)                0.478    1.172 1.21e+06    2.863   0.3
-    mfa_inst_9_ (MFA_193)                 0.458    1.157 1.21e+06    2.827   0.3
-    mfa_inst_8_ (MFA_192)                 0.383    1.113 1.21e+06    2.710   0.3
-    mfa_inst_7_ (MFA_191)                 0.355    1.110 1.21e+06    2.677   0.3
-    mfa_inst_6_ (MFA_190)                 0.464    1.156 1.21e+06    2.833   0.3
-    mfa_inst_5_ (MFA_189)                 0.448    1.141 1.21e+06    2.801   0.3
-    mfa_inst_4_ (MFA_188)                 0.381    1.113 1.21e+06    2.706   0.3
-    mfa_inst_3_ (MFA_187)                 0.305    1.059 1.21e+06    2.577   0.3
-    mfa_inst_2_ (MFA_186)                 0.304    1.063 1.21e+06    2.581   0.3
-    mfa_inst_1_ (MFA_185)                 0.282    1.010 1.21e+06    2.505   0.3
-    mfa_inst_0_ (MFA_184)                 0.147    0.396 7.01e+05    1.244   0.1
-  add16_3 (cla_adder_WIDTH16_2)           9.471   26.190 2.64e+07   62.040   6.4
-    genblk1_layer2 (LA4_65)               0.425    0.712 7.24e+05    1.861   0.2
-    genblk1_layer1_3_ (LA4_5)             0.784    1.612 1.24e+06    3.641   0.4
-    genblk1_layer1_2_ (LA4_4)             1.105    3.096 2.52e+06    6.725   0.7
-    genblk1_layer1_1_ (LA4_3)             1.094    3.080 2.51e+06    6.687   0.7
-    genblk1_layer1_0_ (LA4_2)             0.688    1.322 1.18e+06    3.193   0.3
-    mfa_inst_15_ (MFA_23)                 0.104    0.613 5.09e+05    1.226   0.1
-    mfa_inst_14_ (MFA_22)                 0.314    1.075 1.21e+06    2.602   0.3
-    mfa_inst_13_ (MFA_21)                 0.306    1.058 1.21e+06    2.578   0.3
-    mfa_inst_12_ (MFA_20)                 0.299    1.046 1.21e+06    2.555   0.3
-    mfa_inst_11_ (MFA_19)                 0.356    1.115 1.21e+06    2.683   0.3
-    mfa_inst_10_ (MFA_18)                 0.460    1.148 1.21e+06    2.822   0.3
-    mfa_inst_9_ (MFA_17)                  0.457    1.150 1.21e+06    2.819   0.3
-    mfa_inst_8_ (MFA_16)                  0.389    1.123 1.21e+06    2.726   0.3
-    mfa_inst_7_ (MFA_15)                  0.351    1.107 1.21e+06    2.671   0.3
-    mfa_inst_6_ (MFA_14)                  0.465    1.156 1.21e+06    2.834   0.3
-    mfa_inst_5_ (MFA_13)                  0.456    1.159 1.21e+06    2.828   0.3
-    mfa_inst_4_ (MFA_12)                  0.386    1.112 1.21e+06    2.710   0.3
-    mfa_inst_3_ (MFA_11)                  0.304    1.054 1.21e+06    2.571   0.3
-    mfa_inst_2_ (MFA_10)                  0.299    1.049 1.21e+06    2.562   0.3
-    mfa_inst_1_ (MFA_9)                   0.281    1.006 1.21e+06    2.499   0.3
-    mfa_inst_0_ (MFA_8)                   0.149    0.396 7.01e+05    1.247   0.1
-  add32_1 (cla_adder_WIDTH32)            21.583   58.379 5.74e+07  137.346  14.2
-    genblk1_layer3 (LA4_66)               0.000    0.000    0.000    0.000   0.0
-    genblk1_layer2_1_ (LA4_7)             0.676    1.086 1.13e+06    2.891   0.3
-    genblk1_layer2_0_ (LA4_6)             0.748    1.102 1.13e+06    2.977   0.3
-    genblk1_layer1_7_ (LA4_15)            0.785    1.613 1.24e+06    3.642   0.4
-    genblk1_layer1_6_ (LA4_14)            1.106    3.099 2.52e+06    6.729   0.7
-    genblk1_layer1_5_ (LA4_13)            1.114    3.121 2.52e+06    6.756   0.7
-    genblk1_layer1_4_ (LA4_12)            1.124    3.153 2.52e+06    6.800   0.7
-    genblk1_layer1_3_ (LA4_11)            1.122    3.157 2.52e+06    6.798   0.7
-    genblk1_layer1_2_ (LA4_10)            1.114    3.128 2.52e+06    6.759   0.7
-    genblk1_layer1_1_ (LA4_9)             1.078    3.040 2.51e+06    6.628   0.7
-    genblk1_layer1_0_ (LA4_8)             0.678    1.301 1.18e+06    3.156   0.3
-    mfa_inst_31_ (MFA_55)                 0.104    0.613 5.09e+05    1.226   0.1
-    mfa_inst_30_ (MFA_54)                 0.314    1.075 1.21e+06    2.602   0.3
-    mfa_inst_29_ (MFA_53)                 0.306    1.058 1.21e+06    2.578   0.3
-    mfa_inst_28_ (MFA_52)                 0.299    1.046 1.21e+06    2.556   0.3
-    mfa_inst_27_ (MFA_51)                 0.356    1.115 1.21e+06    2.683   0.3
-    mfa_inst_26_ (MFA_50)                 0.460    1.148 1.21e+06    2.822   0.3
-    mfa_inst_25_ (MFA_49)                 0.457    1.150 1.21e+06    2.820   0.3
-    mfa_inst_24_ (MFA_48)                 0.389    1.124 1.21e+06    2.727   0.3
-    mfa_inst_23_ (MFA_47)                 0.351    1.108 1.21e+06    2.672   0.3
-    mfa_inst_22_ (MFA_46)                 0.466    1.157 1.21e+06    2.836   0.3
-    mfa_inst_21_ (MFA_45)                 0.457    1.161 1.21e+06    2.832   0.3
-    mfa_inst_20_ (MFA_44)                 0.388    1.115 1.21e+06    2.715   0.3
-    mfa_inst_19_ (MFA_43)                 0.358    1.115 1.21e+06    2.685   0.3
-    mfa_inst_18_ (MFA_42)                 0.465    1.164 1.21e+06    2.843   0.3
-    mfa_inst_17_ (MFA_41)                 0.451    1.145 1.21e+06    2.807   0.3
-    mfa_inst_16_ (MFA_40)                 0.389    1.134 1.21e+06    2.736   0.3
-    mfa_inst_15_ (MFA_39)                 0.365    1.120 1.21e+06    2.696   0.3
-    mfa_inst_14_ (MFA_38)                 0.463    1.151 1.21e+06    2.827   0.3
-    mfa_inst_13_ (MFA_37)                 0.454    1.151 1.21e+06    2.816   0.3
-    mfa_inst_12_ (MFA_36)                 0.387    1.119 1.21e+06    2.718   0.3
-    mfa_inst_11_ (MFA_35)                 0.357    1.118 1.21e+06    2.688   0.3
-    mfa_inst_10_ (MFA_34)                 0.478    1.172 1.21e+06    2.863   0.3
-    mfa_inst_9_ (MFA_33)                  0.458    1.157 1.21e+06    2.827   0.3
-    mfa_inst_8_ (MFA_32)                  0.383    1.113 1.21e+06    2.710   0.3
-    mfa_inst_7_ (MFA_31)                  0.355    1.110 1.21e+06    2.677   0.3
-    mfa_inst_6_ (MFA_30)                  0.464    1.156 1.21e+06    2.833   0.3
-    mfa_inst_5_ (MFA_29)                  0.448    1.141 1.21e+06    2.801   0.3
-    mfa_inst_4_ (MFA_28)                  0.381    1.113 1.21e+06    2.706   0.3
-    mfa_inst_3_ (MFA_27)                  0.305    1.059 1.21e+06    2.577   0.3
-    mfa_inst_2_ (MFA_26)                  0.304    1.063 1.21e+06    2.581   0.3
-    mfa_inst_1_ (MFA_25)                  0.282    1.010 1.21e+06    2.505   0.3
-    mfa_inst_0_ (MFA_24)                  0.147    0.396 7.01e+05    1.244   0.1
-  add64 (cla_adder_WIDTH64)              49.921  129.672 1.30e+08  309.220  31.9
-    genblk1_layer3 (LA4_67)               1.020    1.815 2.27e+06    5.109   0.5
-    genblk1_layer2_3_ (LA4_19)            0.963    2.193 2.32e+06    5.473   0.6
-    genblk1_layer2_2_ (LA4_18)            1.032    2.207 2.32e+06    5.562   0.6
-    genblk1_layer2_1_ (LA4_17)            1.034    2.210 2.31e+06    5.556   0.6
-    genblk1_layer2_0_ (LA4_16)            0.990    2.102 2.29e+06    5.380   0.6
-    genblk1_layer1_15_ (LA4_35)           1.140    3.139 2.52e+06    6.803   0.7
-    genblk1_layer1_14_ (LA4_34)           1.215    3.090 2.52e+06    6.829   0.7
-    genblk1_layer1_13_ (LA4_33)           1.219    3.113 2.52e+06    6.853   0.7
-    genblk1_layer1_12_ (LA4_32)           1.203    3.147 2.52e+06    6.875   0.7
-    genblk1_layer1_11_ (LA4_31)           1.145    3.153 2.52e+06    6.818   0.7
-    genblk1_layer1_10_ (LA4_30)           1.227    3.123 2.52e+06    6.868   0.7
-    genblk1_layer1_9_ (LA4_29)            1.201    3.066 2.52e+06    6.785   0.7
-    genblk1_layer1_8_ (LA4_28)            1.184    3.104 2.51e+06    6.802   0.7
-    genblk1_layer1_7_ (LA4_27)            1.157    3.183 2.52e+06    6.856   0.7
-    genblk1_layer1_6_ (LA4_26)            1.219    3.093 2.51e+06    6.823   0.7
-    genblk1_layer1_5_ (LA4_25)            1.239    3.163 2.53e+06    6.929   0.7
-    genblk1_layer1_4_ (LA4_24)            1.175    3.083 2.51e+06    6.770   0.7
-    genblk1_layer1_3_ (LA4_23)            1.123    3.086 2.52e+06    6.726   0.7
-    genblk1_layer1_2_ (LA4_22)            1.220    3.102 2.51e+06    6.835   0.7
-    genblk1_layer1_1_ (LA4_21)            1.197    3.059 2.52e+06    6.774   0.7
-    genblk1_layer1_0_ (LA4_20)            1.012    2.689 2.43e+06    6.126   0.6
-    mfa_inst_63_ (MFA_119)                0.361    1.121 1.21e+06    2.694   0.3
-    mfa_inst_62_ (MFA_118)                0.474    1.166 1.21e+06    2.854   0.3
-    mfa_inst_61_ (MFA_117)                0.448    1.140 1.21e+06    2.802   0.3
-    mfa_inst_60_ (MFA_116)                0.381    1.102 1.21e+06    2.694   0.3
-    mfa_inst_59_ (MFA_115)                0.356    1.115 1.21e+06    2.683   0.3
-    mfa_inst_58_ (MFA_114)                0.460    1.148 1.21e+06    2.822   0.3
-    mfa_inst_57_ (MFA_113)                0.457    1.150 1.21e+06    2.820   0.3
-    mfa_inst_56_ (MFA_112)                0.389    1.124 1.21e+06    2.727   0.3
-    mfa_inst_55_ (MFA_111)                0.351    1.108 1.21e+06    2.672   0.3
-    mfa_inst_54_ (MFA_110)                0.466    1.157 1.21e+06    2.836   0.3
-    mfa_inst_53_ (MFA_109)                0.457    1.161 1.21e+06    2.832   0.3
-    mfa_inst_52_ (MFA_108)                0.388    1.115 1.21e+06    2.715   0.3
-    mfa_inst_51_ (MFA_107)                0.358    1.115 1.21e+06    2.685   0.3
-    mfa_inst_50_ (MFA_106)                0.465    1.164 1.21e+06    2.843   0.3
-    mfa_inst_49_ (MFA_105)                0.451    1.145 1.21e+06    2.807   0.3
-    mfa_inst_48_ (MFA_104)                0.389    1.134 1.21e+06    2.736   0.3
-    mfa_inst_47_ (MFA_103)                0.365    1.120 1.21e+06    2.696   0.3
-    mfa_inst_46_ (MFA_102)                0.463    1.152 1.21e+06    2.827   0.3
-    mfa_inst_45_ (MFA_101)                0.454    1.152 1.21e+06    2.816   0.3
-    mfa_inst_44_ (MFA_100)                0.387    1.119 1.21e+06    2.718   0.3
-    mfa_inst_43_ (MFA_99)                 0.357    1.118 1.21e+06    2.688   0.3
-    mfa_inst_42_ (MFA_98)                 0.478    1.173 1.21e+06    2.863   0.3
-    mfa_inst_41_ (MFA_97)                 0.458    1.157 1.21e+06    2.826   0.3
-    mfa_inst_40_ (MFA_96)                 0.383    1.113 1.21e+06    2.710   0.3
-    mfa_inst_39_ (MFA_95)                 0.355    1.109 1.21e+06    2.678   0.3
-    mfa_inst_38_ (MFA_94)                 0.464    1.156 1.21e+06    2.833   0.3
-    mfa_inst_37_ (MFA_93)                 0.449    1.142 1.21e+06    2.803   0.3
-    mfa_inst_36_ (MFA_92)                 0.383    1.116 1.21e+06    2.711   0.3
-    mfa_inst_35_ (MFA_91)                 0.360    1.118 1.21e+06    2.691   0.3
-    mfa_inst_34_ (MFA_90)                 0.473    1.172 1.21e+06    2.859   0.3
-    mfa_inst_33_ (MFA_89)                 0.453    1.152 1.21e+06    2.817   0.3
-    mfa_inst_32_ (MFA_88)                 0.385    1.120 1.21e+06    2.717   0.3
-    mfa_inst_31_ (MFA_87)                 0.375    1.164 1.21e+06    2.752   0.3
-    mfa_inst_30_ (MFA_86)                 0.482    1.191 1.21e+06    2.885   0.3
-    mfa_inst_29_ (MFA_85)                 0.466    1.180 1.21e+06    2.858   0.3
-    mfa_inst_28_ (MFA_84)                 0.405    1.159 1.21e+06    2.778   0.3
-    mfa_inst_27_ (MFA_83)                 0.372    1.151 1.21e+06    2.737   0.3
-    mfa_inst_26_ (MFA_82)                 0.480    1.193 1.21e+06    2.885   0.3
-    mfa_inst_25_ (MFA_81)                 0.459    1.177 1.21e+06    2.848   0.3
-    mfa_inst_24_ (MFA_80)                 0.393    1.144 1.21e+06    2.750   0.3
-    mfa_inst_23_ (MFA_79)                 0.373    1.156 1.21e+06    2.741   0.3
-    mfa_inst_22_ (MFA_78)                 0.473    1.177 1.21e+06    2.863   0.3
-    mfa_inst_21_ (MFA_77)                 0.462    1.170 1.21e+06    2.845   0.3
-    mfa_inst_20_ (MFA_76)                 0.398    1.137 1.21e+06    2.746   0.3
-    mfa_inst_19_ (MFA_75)                 0.366    1.141 1.21e+06    2.721   0.3
-    mfa_inst_18_ (MFA_74)                 0.471    1.178 1.21e+06    2.862   0.3
-    mfa_inst_17_ (MFA_73)                 0.461    1.165 1.21e+06    2.839   0.3
-    mfa_inst_16_ (MFA_72)                 0.393    1.136 1.21e+06    2.744   0.3
-    mfa_inst_15_ (MFA_71)                 0.355    1.111 1.21e+06    2.679   0.3
-    mfa_inst_14_ (MFA_70)                 0.463    1.153 1.21e+06    2.830   0.3
-    mfa_inst_13_ (MFA_69)                 0.452    1.146 1.21e+06    2.809   0.3
-    mfa_inst_12_ (MFA_68)                 0.381    1.107 1.21e+06    2.701   0.3
-    mfa_inst_11_ (MFA_67)                 0.350    1.102 1.21e+06    2.667   0.3
-    mfa_inst_10_ (MFA_66)                 0.463    1.153 1.21e+06    2.830   0.3
-    mfa_inst_9_ (MFA_65)                  0.453    1.145 1.21e+06    2.810   0.3
-    mfa_inst_8_ (MFA_64)                  0.390    1.115 1.21e+06    2.718   0.3
-    mfa_inst_7_ (MFA_63)                  0.260    0.653 1.21e+06    2.127   0.2
-    mfa_inst_6_ (MFA_62)                  0.357    0.677 1.21e+06    2.248   0.2
-    mfa_inst_5_ (MFA_61)                  0.351    0.681 1.21e+06    2.246   0.2
-    mfa_inst_4_ (MFA_60)                  0.275    0.636 1.21e+06    2.125   0.2
-    mfa_inst_3_ (MFA_59)                  0.253    0.656 1.21e+06    2.122   0.2
-    mfa_inst_2_ (MFA_58)                  0.358    0.697 1.21e+06    2.269   0.2
-    mfa_inst_1_ (MFA_57)                  0.355    0.724 1.21e+06    2.293   0.2
-    mfa_inst_0_ (MFA_56)                  0.285    0.714 1.21e+06    2.213   0.2
+vbw_cla_bsln                            182.498  322.026 2.32e+08  736.503 100.0
+  add8_4 (cla_adder_WIDTH8_0)             7.248   12.491 1.02e+07   29.924   4.1
+    genblk1_layer2 (LA2_0)                0.000    0.000    0.000    0.000   0.0
+    genblk1_layer1_1_ (LA4_37)            1.013    1.562 1.23e+06    3.806   0.5
+    genblk1_layer1_0_ (LA4_36)            0.995    1.308 1.18e+06    3.480   0.5
+    mfa_inst_7_ (MFA_127)                 0.667    1.208 9.06e+05    2.781   0.4
+    mfa_inst_6_ (MFA_126)                 0.704    1.347 1.05e+06    3.106   0.4
+    mfa_inst_5_ (MFA_125)                 0.707    1.356 1.05e+06    3.115   0.4
+    mfa_inst_4_ (MFA_124)                 0.713    1.365 1.05e+06    3.131   0.4
+    mfa_inst_3_ (MFA_123)                 0.716    1.341 1.05e+06    3.108   0.4
+    mfa_inst_2_ (MFA_122)                 0.699    1.288 1.05e+06    3.039   0.4
+    mfa_inst_1_ (MFA_121)                 0.674    1.185 1.05e+06    2.908   0.4
+    mfa_inst_0_ (MFA_120)                 0.361    0.531 5.59e+05    1.451   0.2
+  add8_5 (cla_adder_WIDTH8_1)             7.252   12.615 1.02e+07   30.037   4.1
+    genblk1_layer2 (LA2_1)                0.000    0.000    0.000    0.000   0.0
+    genblk1_layer1_1_ (LA4_39)            1.023    1.577 1.22e+06    3.823   0.5
+    genblk1_layer1_0_ (LA4_38)            1.028    1.346 1.17e+06    3.548   0.5
+    mfa_inst_7_ (MFA_135)                 0.664    1.219 9.05e+05    2.788   0.4
+    mfa_inst_6_ (MFA_134)                 0.712    1.384 1.05e+06    3.145   0.4
+    mfa_inst_5_ (MFA_133)                 0.709    1.369 1.05e+06    3.131   0.4
+    mfa_inst_4_ (MFA_132)                 0.706    1.374 1.06e+06    3.135   0.4
+    mfa_inst_3_ (MFA_131)                 0.704    1.351 1.05e+06    3.106   0.4
+    mfa_inst_2_ (MFA_130)                 0.691    1.291 1.05e+06    3.033   0.4
+    mfa_inst_1_ (MFA_129)                 0.663    1.181 1.05e+06    2.893   0.4
+    mfa_inst_0_ (MFA_128)                 0.352    0.523 5.60e+05    1.434   0.2
+  add8_6 (cla_adder_WIDTH8_2)             7.289   12.684 1.02e+07   30.145   4.1
+    genblk1_layer2 (LA2_2)                0.000    0.000    0.000    0.000   0.0
+    genblk1_layer1_1_ (LA4_41)            1.036    1.599 1.23e+06    3.860   0.5
+    genblk1_layer1_0_ (LA4_40)            1.016    1.332 1.18e+06    3.523   0.5
+    mfa_inst_7_ (MFA_143)                 0.680    1.246 9.04e+05    2.830   0.4
+    mfa_inst_6_ (MFA_142)                 0.713    1.386 1.05e+06    3.150   0.4
+    mfa_inst_5_ (MFA_141)                 0.724    1.395 1.05e+06    3.173   0.4
+    mfa_inst_4_ (MFA_140)                 0.713    1.385 1.05e+06    3.151   0.4
+    mfa_inst_3_ (MFA_139)                 0.703    1.341 1.05e+06    3.096   0.4
+    mfa_inst_2_ (MFA_138)                 0.691    1.291 1.05e+06    3.033   0.4
+    mfa_inst_1_ (MFA_137)                 0.662    1.179 1.05e+06    2.889   0.4
+    mfa_inst_0_ (MFA_136)                 0.351    0.530 5.58e+05    1.439   0.2
+  add8_7 (cla_adder_WIDTH8_3)             7.245   12.597 1.02e+07   30.020   4.1
+    genblk1_layer2 (LA2_3)                0.000    0.000    0.000    0.000   0.0
+    genblk1_layer1_1_ (LA4_1)             1.038    1.597 1.23e+06    3.862   0.5
+    genblk1_layer1_0_ (LA4_0)             0.998    1.312 1.17e+06    3.483   0.5
+    mfa_inst_7_ (MFA_7)                   0.672    1.234 9.06e+05    2.812   0.4
+    mfa_inst_6_ (MFA_6)                   0.720    1.396 1.05e+06    3.167   0.4
+    mfa_inst_5_ (MFA_5)                   0.699    1.363 1.05e+06    3.117   0.4
+    mfa_inst_4_ (MFA_4)                   0.713    1.380 1.05e+06    3.145   0.4
+    mfa_inst_3_ (MFA_3)                   0.697    1.329 1.05e+06    3.077   0.4
+    mfa_inst_2_ (MFA_2)                   0.696    1.288 1.05e+06    3.037   0.4
+    mfa_inst_1_ (MFA_1)                   0.654    1.163 1.05e+06    2.869   0.4
+    mfa_inst_0_ (MFA_0)                   0.357    0.534 5.60e+05    1.450   0.2
+  add16_2 (cla_adder_WIDTH16_0)          15.809   27.732 2.14e+07   64.944   8.8
+    genblk1_layer2 (LA4_42)               0.566    0.729 7.20e+05    2.015   0.3
+    genblk1_layer1_3_ (LA4_46)            0.846    1.602 1.23e+06    3.679   0.5
+    genblk1_layer1_2_ (LA4_45)            1.435    1.632 1.04e+06    4.112   0.6
+    genblk1_layer1_1_ (LA4_44)            1.393    1.581 1.04e+06    4.017   0.5
+    genblk1_layer1_0_ (LA4_43)            0.872    1.332 1.18e+06    3.381   0.5
+    mfa_inst_15_ (MFA_159)                0.665    1.221 9.04e+05    2.791   0.4
+    mfa_inst_14_ (MFA_158)                0.651    1.386 1.05e+06    3.086   0.4
+    mfa_inst_13_ (MFA_157)                0.650    1.375 1.05e+06    3.078   0.4
+    mfa_inst_12_ (MFA_156)                0.648    1.390 1.06e+06    3.094   0.4
+    mfa_inst_11_ (MFA_155)                0.694    1.398 1.05e+06    3.144   0.4
+    mfa_inst_10_ (MFA_154)                0.750    1.406 1.05e+06    3.208   0.4
+    mfa_inst_9_ (MFA_153)                 0.757    1.417 1.05e+06    3.225   0.4
+    mfa_inst_8_ (MFA_152)                 0.709    1.379 1.05e+06    3.142   0.4
+    mfa_inst_7_ (MFA_151)                 0.705    1.384 1.05e+06    3.141   0.4
+    mfa_inst_6_ (MFA_150)                 0.766    1.401 1.05e+06    3.219   0.4
+    mfa_inst_5_ (MFA_149)                 0.753    1.389 1.05e+06    3.193   0.4
+    mfa_inst_4_ (MFA_148)                 0.709    1.359 1.05e+06    3.119   0.4
+    mfa_inst_3_ (MFA_147)                 0.657    1.346 1.05e+06    3.053   0.4
+    mfa_inst_2_ (MFA_146)                 0.653    1.308 1.05e+06    3.012   0.4
+    mfa_inst_1_ (MFA_145)                 0.615    1.180 1.05e+06    2.843   0.4
+    mfa_inst_0_ (MFA_144)                 0.314    0.517 5.61e+05    1.392   0.2
+  add16_3 (cla_adder_WIDTH16_1)          15.742   27.759 2.14e+07   64.918   8.8
+    genblk1_layer2 (LA4_47)               0.572    0.734 7.20e+05    2.026   0.3
+    genblk1_layer1_3_ (LA4_5)             0.857    1.622 1.23e+06    3.714   0.5
+    genblk1_layer1_2_ (LA4_4)             1.424    1.608 1.05e+06    4.077   0.6
+    genblk1_layer1_1_ (LA4_3)             1.400    1.595 1.04e+06    4.038   0.5
+    genblk1_layer1_0_ (LA4_2)             0.857    1.308 1.18e+06    3.340   0.5
+    mfa_inst_15_ (MFA_23)                 0.673    1.235 9.06e+05    2.814   0.4
+    mfa_inst_14_ (MFA_22)                 0.658    1.396 1.05e+06    3.105   0.4
+    mfa_inst_13_ (MFA_21)                 0.641    1.371 1.05e+06    3.066   0.4
+    mfa_inst_12_ (MFA_20)                 0.653    1.396 1.05e+06    3.101   0.4
+    mfa_inst_11_ (MFA_19)                 0.689    1.384 1.05e+06    3.124   0.4
+    mfa_inst_10_ (MFA_18)                 0.759    1.415 1.05e+06    3.227   0.4
+    mfa_inst_9_ (MFA_17)                  0.748    1.399 1.05e+06    3.200   0.4
+    mfa_inst_8_ (MFA_16)                  0.722    1.410 1.05e+06    3.182   0.4
+    mfa_inst_7_ (MFA_15)                  0.703    1.409 1.05e+06    3.166   0.4
+    mfa_inst_6_ (MFA_14)                  0.754    1.397 1.05e+06    3.204   0.4
+    mfa_inst_5_ (MFA_13)                  0.753    1.400 1.05e+06    3.206   0.4
+    mfa_inst_4_ (MFA_12)                  0.703    1.356 1.05e+06    3.112   0.4
+    mfa_inst_3_ (MFA_11)                  0.642    1.342 1.05e+06    3.037   0.4
+    mfa_inst_2_ (MFA_10)                  0.627    1.279 1.05e+06    2.960   0.4
+    mfa_inst_1_ (MFA_9)                   0.602    1.173 1.05e+06    2.824   0.4
+    mfa_inst_0_ (MFA_8)                   0.306    0.529 5.58e+05    1.393   0.2
+  add32_1 (cla_adder_WIDTH32)            34.702   58.325 4.40e+07  136.984  18.6
+    genblk1_layer3 (LA2_4)                0.000    0.000    0.000    0.000   0.0
+    genblk1_layer2_1_ (LA4_7)             0.885    1.104 1.12e+06    3.112   0.4
+    genblk1_layer2_0_ (LA4_6)             0.942    1.100 1.12e+06    3.163   0.4
+    genblk1_layer1_7_ (LA4_15)            0.858    1.622 1.23e+06    3.715   0.5
+    genblk1_layer1_6_ (LA4_14)            1.424    1.609 1.05e+06    4.078   0.6
+    genblk1_layer1_5_ (LA4_13)            1.415    1.605 1.04e+06    4.063   0.6
+    genblk1_layer1_4_ (LA4_12)            1.423    1.604 1.04e+06    4.069   0.6
+    genblk1_layer1_3_ (LA4_11)            1.442    1.641 1.05e+06    4.129   0.6
+    genblk1_layer1_2_ (LA4_10)            1.416    1.600 1.04e+06    4.059   0.6
+    genblk1_layer1_1_ (LA4_9)             1.432    1.627 1.05e+06    4.108   0.6
+    genblk1_layer1_0_ (LA4_8)             0.870    1.328 1.18e+06    3.374   0.5
+    mfa_inst_31_ (MFA_55)                 0.673    1.235 9.06e+05    2.814   0.4
+    mfa_inst_30_ (MFA_54)                 0.658    1.395 1.05e+06    3.105   0.4
+    mfa_inst_29_ (MFA_53)                 0.641    1.371 1.05e+06    3.067   0.4
+    mfa_inst_28_ (MFA_52)                 0.653    1.396 1.05e+06    3.101   0.4
+    mfa_inst_27_ (MFA_51)                 0.689    1.384 1.05e+06    3.124   0.4
+    mfa_inst_26_ (MFA_50)                 0.759    1.415 1.05e+06    3.227   0.4
+    mfa_inst_25_ (MFA_49)                 0.748    1.399 1.05e+06    3.200   0.4
+    mfa_inst_24_ (MFA_48)                 0.722    1.410 1.05e+06    3.182   0.4
+    mfa_inst_23_ (MFA_47)                 0.704    1.411 1.05e+06    3.169   0.4
+    mfa_inst_22_ (MFA_46)                 0.755    1.402 1.05e+06    3.210   0.4
+    mfa_inst_21_ (MFA_45)                 0.755    1.409 1.05e+06    3.216   0.4
+    mfa_inst_20_ (MFA_44)                 0.709    1.384 1.05e+06    3.146   0.4
+    mfa_inst_19_ (MFA_43)                 0.696    1.404 1.05e+06    3.154   0.4
+    mfa_inst_18_ (MFA_42)                 0.749    1.403 1.05e+06    3.206   0.4
+    mfa_inst_17_ (MFA_41)                 0.761    1.425 1.05e+06    3.238   0.4
+    mfa_inst_16_ (MFA_40)                 0.716    1.401 1.05e+06    3.167   0.4
+    mfa_inst_15_ (MFA_39)                 0.725    1.421 1.05e+06    3.200   0.4
+    mfa_inst_14_ (MFA_38)                 0.768    1.412 1.05e+06    3.230   0.4
+    mfa_inst_13_ (MFA_37)                 0.783    1.427 1.05e+06    3.264   0.4
+    mfa_inst_12_ (MFA_36)                 0.737    1.407 1.05e+06    3.197   0.4
+    mfa_inst_11_ (MFA_35)                 0.709    1.393 1.05e+06    3.154   0.4
+    mfa_inst_10_ (MFA_34)                 0.766    1.409 1.05e+06    3.227   0.4
+    mfa_inst_9_ (MFA_33)                  0.769    1.400 1.05e+06    3.219   0.4
+    mfa_inst_8_ (MFA_32)                  0.731    1.392 1.05e+06    3.175   0.4
+    mfa_inst_7_ (MFA_31)                  0.711    1.409 1.05e+06    3.174   0.4
+    mfa_inst_6_ (MFA_30)                  0.778    1.428 1.05e+06    3.258   0.4
+    mfa_inst_5_ (MFA_29)                  0.769    1.412 1.05e+06    3.233   0.4
+    mfa_inst_4_ (MFA_28)                  0.720    1.370 1.05e+06    3.141   0.4
+    mfa_inst_3_ (MFA_27)                  0.665    1.364 1.05e+06    3.080   0.4
+    mfa_inst_2_ (MFA_26)                  0.650    1.299 1.05e+06    2.999   0.4
+    mfa_inst_1_ (MFA_25)                  0.615    1.178 1.05e+06    2.845   0.4
+    mfa_inst_0_ (MFA_24)                  0.312    0.518 5.60e+05    1.391   0.2
+  add64_0 (cla_adder_WIDTH64)            77.100  120.960 8.94e+07  287.461  39.0
+    genblk1_layer3 (LA4_48)               1.538    0.935 1.01e+06    3.482   0.5
+    genblk1_layer2_3_ (LA4_19)            1.496    1.153 1.02e+06    3.668   0.5
+    genblk1_layer2_2_ (LA4_18)            1.498    1.155 1.02e+06    3.671   0.5
+    genblk1_layer2_1_ (LA4_17)            1.490    1.136 1.02e+06    3.642   0.5
+    genblk1_layer2_0_ (LA4_16)            1.483    1.091 1.00e+06    3.578   0.5
+    genblk1_layer1_15_ (LA4_35)           1.440    1.606 1.04e+06    4.087   0.6
+    genblk1_layer1_14_ (LA4_34)           1.467    1.604 1.05e+06    4.116   0.6
+    genblk1_layer1_13_ (LA4_33)           1.457    1.601 1.04e+06    4.102   0.6
+    genblk1_layer1_12_ (LA4_32)           1.483    1.603 1.04e+06    4.127   0.6
+    genblk1_layer1_11_ (LA4_31)           1.462    1.639 1.05e+06    4.147   0.6
+    genblk1_layer1_10_ (LA4_30)           1.456    1.596 1.04e+06    4.096   0.6
+    genblk1_layer1_9_ (LA4_29)            1.496    1.636 1.05e+06    4.180   0.6
+    genblk1_layer1_8_ (LA4_28)            1.488    1.621 1.04e+06    4.153   0.6
+    genblk1_layer1_7_ (LA4_27)            1.431    1.595 1.04e+06    4.068   0.6
+    genblk1_layer1_6_ (LA4_26)            1.480    1.629 1.04e+06    4.153   0.6
+    genblk1_layer1_5_ (LA4_25)            1.451    1.589 1.04e+06    4.082   0.6
+    genblk1_layer1_4_ (LA4_24)            1.477    1.617 1.05e+06    4.140   0.6
+    genblk1_layer1_3_ (LA4_23)            1.404    1.564 1.04e+06    4.006   0.5
+    genblk1_layer1_2_ (LA4_22)            1.451    1.589 1.04e+06    4.084   0.6
+    genblk1_layer1_1_ (LA4_21)            1.457    1.591 1.04e+06    4.092   0.6
+    genblk1_layer1_0_ (LA4_20)            1.314    1.460 1.05e+06    3.822   0.5
+    mfa_inst_63_ (MFA_119)                0.711    1.426 1.05e+06    3.189   0.4
+    mfa_inst_62_ (MFA_118)                0.760    1.419 1.05e+06    3.231   0.4
+    mfa_inst_61_ (MFA_117)                0.740    1.395 1.05e+06    3.190   0.4
+    mfa_inst_60_ (MFA_116)                0.720    1.416 1.05e+06    3.188   0.4
+    mfa_inst_59_ (MFA_115)                0.689    1.384 1.05e+06    3.124   0.4
+    mfa_inst_58_ (MFA_114)                0.759    1.415 1.05e+06    3.227   0.4
+    mfa_inst_57_ (MFA_113)                0.748    1.400 1.05e+06    3.201   0.4
+    mfa_inst_56_ (MFA_112)                0.722    1.436 1.05e+06    3.208   0.4
+    mfa_inst_55_ (MFA_111)                0.704    1.411 1.05e+06    3.169   0.4
+    mfa_inst_54_ (MFA_110)                0.755    1.402 1.05e+06    3.210   0.4
+    mfa_inst_53_ (MFA_109)                0.755    1.410 1.05e+06    3.217   0.4
+    mfa_inst_52_ (MFA_108)                0.709    1.410 1.05e+06    3.172   0.4
+    mfa_inst_51_ (MFA_107)                0.696    1.404 1.05e+06    3.154   0.4
+    mfa_inst_50_ (MFA_106)                0.749    1.403 1.05e+06    3.206   0.4
+    mfa_inst_49_ (MFA_105)                0.761    1.427 1.05e+06    3.239   0.4
+    mfa_inst_48_ (MFA_104)                0.716    1.429 1.05e+06    3.195   0.4
+    mfa_inst_47_ (MFA_103)                0.709    1.421 1.05e+06    3.185   0.4
+    mfa_inst_46_ (MFA_102)                0.752    1.411 1.05e+06    3.215   0.4
+    mfa_inst_45_ (MFA_101)                0.768    1.427 1.05e+06    3.249   0.4
+    mfa_inst_44_ (MFA_100)                0.721    1.426 1.05e+06    3.200   0.4
+    mfa_inst_43_ (MFA_99)                 0.694    1.393 1.05e+06    3.139   0.4
+    mfa_inst_42_ (MFA_98)                 0.751    1.409 1.05e+06    3.212   0.4
+    mfa_inst_41_ (MFA_97)                 0.754    1.401 1.05e+06    3.206   0.4
+    mfa_inst_40_ (MFA_96)                 0.716    1.420 1.05e+06    3.188   0.4
+    mfa_inst_39_ (MFA_95)                 0.708    1.410 1.05e+06    3.172   0.4
+    mfa_inst_38_ (MFA_94)                 0.776    1.436 1.05e+06    3.264   0.4
+    mfa_inst_37_ (MFA_93)                 0.769    1.427 1.05e+06    3.247   0.4
+    mfa_inst_36_ (MFA_92)                 0.722    1.422 1.05e+06    3.195   0.4
+    mfa_inst_35_ (MFA_91)                 0.718    1.426 1.05e+06    3.196   0.4
+    mfa_inst_34_ (MFA_90)                 0.772    1.422 1.05e+06    3.246   0.4
+    mfa_inst_33_ (MFA_89)                 0.771    1.415 1.05e+06    3.239   0.4
+    mfa_inst_32_ (MFA_88)                 0.712    1.406 1.05e+06    3.169   0.4
+    mfa_inst_31_ (MFA_87)                 0.713    1.401 1.05e+06    3.167   0.4
+    mfa_inst_30_ (MFA_86)                 0.767    1.410 1.05e+06    3.226   0.4
+    mfa_inst_29_ (MFA_85)                 0.767    1.399 1.05e+06    3.219   0.4
+    mfa_inst_28_ (MFA_84)                 0.728    1.410 1.06e+06    3.195   0.4
+    mfa_inst_27_ (MFA_83)                 0.710    1.398 1.05e+06    3.160   0.4
+    mfa_inst_26_ (MFA_82)                 0.765    1.407 1.05e+06    3.224   0.4
+    mfa_inst_25_ (MFA_81)                 0.773    1.418 1.05e+06    3.242   0.4
+    mfa_inst_24_ (MFA_80)                 0.724    1.405 1.05e+06    3.184   0.4
+    mfa_inst_23_ (MFA_79)                 0.702    1.387 1.05e+06    3.141   0.4
+    mfa_inst_22_ (MFA_78)                 0.765    1.408 1.05e+06    3.225   0.4
+    mfa_inst_21_ (MFA_77)                 0.752    1.399 1.05e+06    3.201   0.4
+    mfa_inst_20_ (MFA_76)                 0.710    1.406 1.05e+06    3.168   0.4
+    mfa_inst_19_ (MFA_75)                 0.706    1.395 1.05e+06    3.152   0.4
+    mfa_inst_18_ (MFA_74)                 0.775    1.424 1.05e+06    3.251   0.4
+    mfa_inst_17_ (MFA_73)                 0.771    1.414 1.05e+06    3.236   0.4
+    mfa_inst_16_ (MFA_72)                 0.712    1.402 1.05e+06    3.166   0.4
+    mfa_inst_15_ (MFA_71)                 0.711    1.388 1.05e+06    3.151   0.4
+    mfa_inst_14_ (MFA_70)                 0.747    1.372 1.05e+06    3.173   0.4
+    mfa_inst_13_ (MFA_69)                 0.751    1.382 1.05e+06    3.185   0.4
+    mfa_inst_12_ (MFA_68)                 0.722    1.394 1.05e+06    3.170   0.4
+    mfa_inst_11_ (MFA_67)                 0.710    1.393 1.05e+06    3.154   0.4
+    mfa_inst_10_ (MFA_66)                 0.763    1.405 1.05e+06    3.222   0.4
+    mfa_inst_9_ (MFA_65)                  0.773    1.418 1.05e+06    3.241   0.4
+    mfa_inst_8_ (MFA_64)                  0.727    1.411 1.05e+06    3.190   0.4
+    mfa_inst_7_ (MFA_63)                  0.602    1.379 1.05e+06    3.036   0.4
+    mfa_inst_6_ (MFA_62)                  0.658    1.403 1.05e+06    3.114   0.4
+    mfa_inst_5_ (MFA_61)                  0.672    1.415 1.05e+06    3.141   0.4
+    mfa_inst_4_ (MFA_60)                  0.632    1.418 1.05e+06    3.102   0.4
+    mfa_inst_3_ (MFA_59)                  0.610    1.386 1.05e+06    3.048   0.4
+    mfa_inst_2_ (MFA_58)                  0.667    1.360 1.05e+06    3.080   0.4
+    mfa_inst_1_ (MFA_57)                  0.646    1.268 1.05e+06    2.964   0.4
+    mfa_inst_0_ (MFA_56)                  0.589    1.113 1.05e+06    2.751   0.4
 1
